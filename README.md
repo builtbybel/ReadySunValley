@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin11/blob/master/src/moin-11/appicon.ico" alt="Moin11" width="200"></a>
+  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin-11/blob/master/src/moin-11/appicon.ico" alt="Moin11" width="200"></a>
   <br>
   Moin11
   <br>
@@ -10,18 +10,18 @@
 <h4 align="center">�🐦 Windows 11 compatibility checker</h4>
 
 <p align="center">
-<a href="https://github.com/builtbybel/burnbytes/releases/latest" target="_blank">
+<a href="https://github.com/builtbybel/moin-11/releases/latest" target="_blank">
 <img alt="Latest GitHub release" src="https://img.shields.io/github/release/builtbybel/moin-11.svg?style=flat-square" />
 </a>
 	
-<a href="https://github.com/builtbybel/burnbytes/releases" target="_blank">
+<a href="https://github.com/builtbybel/moin-11/releases" target="_blank">
 <img alt="Downloads on GitHub" src="https://img.shields.io/github/downloads/builtbybel/moin-11/total.svg?style=flat-square" />
 </a>
 
-<a href="https://github.com/builtbybel/moin11/commits/master">
+<a href="https://github.com/builtbybel/moin-11/commits/master">
 <img src="https://img.shields.io/github/last-commit/builtbybel/moin-11.svg?style=flat-square&logo=github&logoColor=white"
 alt="GitHub last commit">
-<a href="https://github.com/builtbybel/moin11/issues">
+<a href="https://github.com/builtbybel/moin-11/issues">
 <img src="https://img.shields.io/github/issues-raw/builtbybel/moin-11.svg?style=flat-square&logo=github&logoColor=white"
 alt="GitHub issues">   
   
