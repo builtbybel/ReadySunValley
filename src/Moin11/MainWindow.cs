@@ -69,7 +69,7 @@ namespace Moin11
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void LnkTPMStatus_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start("windowsdefender://devicesecurity");
+        private void LnkTPMStatus_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start("tpm.msc");
 
         private void LnkOpenGitHub_Click(object sender, EventArgs e) => Process.Start("https://github.com/builtbybel/moin-11");
 
@@ -436,7 +436,7 @@ namespace Moin11
             {
                 LoadingForm.StatusText = "Getting TPM...";
 
-                System.Diagnostics.Process.Start("windowsdefender://devicesecurity");
+                System.Diagnostics.Process.Start("tpm.msc");
 
                 LoadingForm.Hide();
             }
