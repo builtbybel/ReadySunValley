@@ -33,7 +33,7 @@ alt="GitHub issues">
   <a href="#credits">Credits</a> •
 </p>
 
-![screenshot](https://github.com/builtbybel/burnbytes/blob/master/assets/burnbytes.png)
+![screenshot](https://github.com/builtbybel/burnbytes/blob/master/assets/moin11.png)
 
 ## Features
 Just a tiny tool to help you check if your device is ready for Windows 11
