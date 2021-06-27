@@ -37,6 +37,9 @@ alt="GitHub issues">
 
 ## Features
 Just a tiny tool to help you check if your device is ready for Windows 11
+	
+*Btw, "moin" is low german and means "hello"*
+	
 ## Download
 
 - (Latest release) [Download](https://github.com/builtbybel/moin-11/releases)
