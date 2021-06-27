@@ -1,13 +1,13 @@
 
 <h1 align="center">
   <br>
-  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin-11/blob/main/src/moin11/AppIcon.ico" alt="Moin11" width="200"></a>
+  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin-11/blob/main/src/Moin11/AppIcon.ico" alt="Moin11" width="200"></a>
   <br>
   Moin11
   <br>
 </h1>
 
-<h4 align="center">�🐦 Windows 11 compatibility checker</h4>
+<h4 align="center">🐦 Windows 11 compatibility checker</h4>
 
 <p align="center">
 <a href="https://github.com/builtbybel/moin-11/releases/latest" target="_blank">
