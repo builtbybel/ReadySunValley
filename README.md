@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin11/blob/master/src/moin11/appicon.ico" alt="Moin11" width="200"></a>
+  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin11/blob/master/src/moin-11/appicon.ico" alt="Moin11" width="200"></a>
   <br>
   Moin11
   <br>
@@ -11,18 +11,18 @@
 
 <p align="center">
 <a href="https://github.com/builtbybel/burnbytes/releases/latest" target="_blank">
-<img alt="Latest GitHub release" src="https://img.shields.io/github/release/builtbybel/moin11.svg?style=flat-square" />
+<img alt="Latest GitHub release" src="https://img.shields.io/github/release/builtbybel/moin-11.svg?style=flat-square" />
 </a>
 	
 <a href="https://github.com/builtbybel/burnbytes/releases" target="_blank">
-<img alt="Downloads on GitHub" src="https://img.shields.io/github/downloads/builtbybel/moin11/total.svg?style=flat-square" />
+<img alt="Downloads on GitHub" src="https://img.shields.io/github/downloads/builtbybel/moin-11/total.svg?style=flat-square" />
 </a>
 
 <a href="https://github.com/builtbybel/moin11/commits/master">
-<img src="https://img.shields.io/github/last-commit/builtbybel/moin11.svg?style=flat-square&logo=github&logoColor=white"
+<img src="https://img.shields.io/github/last-commit/builtbybel/moin-11.svg?style=flat-square&logo=github&logoColor=white"
 alt="GitHub last commit">
 <a href="https://github.com/builtbybel/moin11/issues">
-<img src="https://img.shields.io/github/issues-raw/builtbybel/moin11.svg?style=flat-square&logo=github&logoColor=white"
+<img src="https://img.shields.io/github/issues-raw/builtbybel/moin-11.svg?style=flat-square&logo=github&logoColor=white"
 alt="GitHub issues">   
   
 </p>
@@ -33,7 +33,7 @@ alt="GitHub issues">
   <a href="#credits">Credits</a> •
 </p>
 
-![screenshot](https://github.com/builtbybel/burnbytes/blob/master/assets/moin11.png)
+![screenshot](https://github.com/builtbybel/moin-11/blob/master/assets/moin11.png)
 
 ## Features
 Just a tiny tool to help you check if your device is ready for Windows 11
