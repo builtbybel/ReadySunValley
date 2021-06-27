@@ -30,7 +30,7 @@ alt="GitHub issues">
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
+  <a href="#credits">Credits</a> 
 </p>
 
 ![screenshot](https://github.com/builtbybel/moin-11/blob/main/assets/moin11.png)
