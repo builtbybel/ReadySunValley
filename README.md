@@ -39,8 +39,8 @@ alt="GitHub issues">
 Just a tiny tool to help you check if your device is ready for Windows 11
 ## Download
 
-- (Latest release) [Download](https://github.com/builtbybel/moin11/releases)
-- (Source Code) [Download](https://github.com/builtbybel/moin11/releases) 
+- (Latest release) [Download](https://github.com/builtbybel/moin-11/releases)
+- (Source Code) [Download](https://github.com/builtbybel/moin-11/releases) 
 
 
 ## Credits
