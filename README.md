@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin11/blob/master/src/moin11/appicon.ico" alt="Burnbytes" width="200"></a>
+  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin11/blob/master/src/moin11/appicon.ico" alt="Moin11" width="200"></a>
   <br>
   Moin11
   <br>
