@@ -127,7 +127,7 @@ namespace Moin11
             this.panel1.Controls.Add(this.close);
             this.panel1.Location = new System.Drawing.Point(-1, 663);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(719, 75);
+            this.panel1.Size = new System.Drawing.Size(799, 75);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -149,7 +149,7 @@ namespace Moin11
             this.close.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close.Image = global::Moin11.Properties.Resources.power1;
-            this.close.Location = new System.Drawing.Point(673, 25);
+            this.close.Location = new System.Drawing.Point(753, 25);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(25, 25);
             this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -293,10 +293,10 @@ namespace Moin11
             this.lbl_tpm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tpm.Location = new System.Drawing.Point(50, 515);
             this.lbl_tpm.Name = "lbl_tpm";
-            this.lbl_tpm.Size = new System.Drawing.Size(659, 21);
+            this.lbl_tpm.Size = new System.Drawing.Size(740, 42);
             this.lbl_tpm.TabIndex = 29;
-            this.lbl_tpm.Text = "If TPM is enabled, you’ll see the link on the Windows Defender Security processor" +
-    " details page\r\n";
+            this.lbl_tpm.Text = "If TPM is installed, you can see the manufacturer information about the TPM in th" +
+    "e TPM Management Tool\r\n\r\n";
             // 
             // lbl_directx
             // 
@@ -718,7 +718,7 @@ namespace Moin11
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(718, 737);
+            this.ClientSize = new System.Drawing.Size(798, 737);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.LnkTPMStatus);
@@ -782,6 +782,7 @@ namespace Moin11
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Moin11";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel1.ResumeLayout(false);
