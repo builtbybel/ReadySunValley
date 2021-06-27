@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin-11/blob/master/src/moin-11/appicon.ico" alt="Moin11" width="200"></a>
+  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin-11/blob/main/src/moin11/AppIcon.ico" alt="Moin11" width="200"></a>
   <br>
   Moin11
   <br>
@@ -33,7 +33,7 @@ alt="GitHub issues">
   <a href="#credits">Credits</a> •
 </p>
 
-![screenshot](https://github.com/builtbybel/moin-11/blob/master/assets/moin11.png)
+![screenshot](https://github.com/builtbybel/moin-11/blob/main/assets/moin11.png)
 
 ## Features
 Just a tiny tool to help you check if your device is ready for Windows 11
