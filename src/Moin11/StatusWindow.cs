@@ -35,7 +35,7 @@ namespace Moin11
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 5, 5));
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void StatusWindow_Load(object sender, EventArgs e)
         {
         }
     }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
@@ -188,7 +189,7 @@ namespace Moin11
             StatusWindow LoadingForm = new StatusWindow();
             LoadingForm.Show();
 
-            LoadingForm.StatusText = "Checking system requirements...";
+            LoadingForm.StatusText = "Checking system requirements... [1/9]";
             lbl_screen.Text = "";
             screengood.Visible = true;
             screenbad.Visible = false;
@@ -219,7 +220,7 @@ namespace Moin11
                 bootgood.Visible = false;
                 bootbad.Visible = true;
             }
-            LoadingForm.StatusText = "Checking CPU speed...";
+            LoadingForm.StatusText = "Checking CPU speed... [2/9]";
             var clockspeed = ClockSpeed();
             lbl_clockspeed.Text = clockspeed + " MHz Frequency";
             int x = Int32.Parse(clockspeed);
@@ -233,7 +234,7 @@ namespace Moin11
                 freqgood.Visible = false;
                 freqbad.Visible = true;
             }
-            LoadingForm.StatusText = "Getting core counts...";
+            LoadingForm.StatusText = "Getting core counts... [3/9]";
             int coreCount = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
@@ -251,7 +252,7 @@ namespace Moin11
                 coresgood.Visible = false;
                 coresbad.Visible = true;
             }
-            LoadingForm.StatusText = "Checking CPU Compatibility...";
+            LoadingForm.StatusText = "Checking CPU Compatibility... [4/9]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
                 lbl_cpu.Text = item["Name"].ToString();
@@ -297,7 +298,7 @@ namespace Moin11
                     }
                 }
             }
-            LoadingForm.StatusText = "Checking Partition Types...";
+            LoadingForm.StatusText = "Checking Partition Types... [5/9]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition").Get())
             {
                 if (item["Type"].ToString().Contains("System"))
@@ -316,7 +317,7 @@ namespace Moin11
                     }
                 }
             }
-            LoadingForm.StatusText = "Checking Secure Boot Status...";
+            LoadingForm.StatusText = "Checking Secure Boot Status... [6/9]";
             lbl_secureboot.Text = SecureBootStatus();
 
             if (lbl_secureboot.Text.Contains("ON"))
@@ -330,7 +331,7 @@ namespace Moin11
                 securebootbad.Visible = true;
             }
             long ram = 0;
-            LoadingForm.StatusText = "Checking RAM Compatibility...";
+            LoadingForm.StatusText = "Checking RAM Compatibility... [7/9]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_PhysicalMemory").Get())
             {
                 string ramstr = item["Capacity"].ToString();
@@ -354,7 +355,7 @@ namespace Moin11
                     rambad.Visible = true;
                 }
             }
-            LoadingForm.StatusText = "Checking disk size...";
+            LoadingForm.StatusText = "Checking disk size... [8/9]";
             var systemdrive = Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
 
             long systemfreespace = GetTotalFreeSpace(systemdrive);
@@ -389,7 +390,7 @@ namespace Moin11
                 hddbad.Visible = true;
             }
 
-            LoadingForm.StatusText = "Getting DirectX && WDDM info...";
+            LoadingForm.StatusText = "Getting DirectX && WDDM info... [9/9]";
             Process.Start("dxdiag", "/x dxv.xml");
             while (!File.Exists("dxv.xml"))
                 Thread.Sleep(1000);
@@ -423,7 +424,6 @@ namespace Moin11
 
             if (bypassTPM)
             {
-      
                 tpminfo.Visible = false;
                 lbl_tpm.Text = "Cannot get TPM info without admin privileges. Run as admin and try again.";
                 LoadingForm.Hide();
@@ -438,6 +438,25 @@ namespace Moin11
             }
         }
 
+        private void CaptureScreen()
+        {
+            Form f = ActiveForm;
+            Bitmap bmp = new Bitmap(f.Width, f.Height);
+            f.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.InitialDirectory = Application.StartupPath;
+            dialog.Title = "Location";
+            dialog.Filter = "PNG Images|*.png";
+            dialog.FileName = "Compatibility-Screen-Win11";
+
+            DialogResult result = dialog.ShowDialog(this);
+
+            if (result == DialogResult.OK)
+            {
+                bmp.Save(dialog.FileName);
+            }
+        }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -511,8 +530,6 @@ namespace Moin11
             tt.SetToolTip(this.hddbad, "Your drive does not have enough capacity to run Windows 11.");
         }
 
- 
-
         private void directbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
@@ -547,6 +564,6 @@ namespace Moin11
 
         private void LnkOpenGitHub_Click(object sender, EventArgs e) => Process.Start("https://github.com/builtbybel/moin-11/releases");
 
-
+        private void BtnCapture_Click(object sender, EventArgs e) => CaptureScreen();
     }
 }

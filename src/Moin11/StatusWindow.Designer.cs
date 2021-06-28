@@ -41,16 +41,16 @@ namespace Moin11
             // StatusWindow
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.Controls.Add(this.status);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StatusWindow";
-            this.Opacity = 0.8D;
+            this.Opacity = 0.7D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.StatusWindow_Load);
             this.ResumeLayout(false);
 
         }
