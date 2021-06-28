@@ -265,6 +265,7 @@ namespace Moin11
             this.LnkTPMStatus.TabIndex = 109;
             this.LnkTPMStatus.TabStop = true;
             this.LnkTPMStatus.Text = "here";
+            this.LnkTPMStatus.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkTPMStatus_LinkClicked);
             // 
             // lbl_secureboot
             // 
