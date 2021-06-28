@@ -32,7 +32,6 @@ namespace Moin11
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panel1 = new System.Windows.Forms.Panel();
             this.LnkOpenGitHub = new System.Windows.Forms.PictureBox();
-            this.close = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +48,18 @@ namespace Moin11
             this.lbl_tpm = new System.Windows.Forms.Label();
             this.lbl_directx = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.lbl_screen = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbl_wddm = new System.Windows.Forms.Label();
+            this.lbl_freespace = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbl_secureboot = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.LnkTPMStatus = new System.Windows.Forms.LinkLabel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.securebootbad = new System.Windows.Forms.PictureBox();
             this.bootbad = new System.Windows.Forms.PictureBox();
             this.freqbad = new System.Windows.Forms.PictureBox();
             this.bootgood = new System.Windows.Forms.PictureBox();
@@ -67,29 +78,18 @@ namespace Moin11
             this.directgood = new System.Windows.Forms.PictureBox();
             this.cpuinfo = new System.Windows.Forms.PictureBox();
             this.tpminfo = new System.Windows.Forms.PictureBox();
-            this.lbl_screen = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.screenbad = new System.Windows.Forms.PictureBox();
             this.screengood = new System.Windows.Forms.PictureBox();
-            this.lbl_wddm = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.wddmbad = new System.Windows.Forms.PictureBox();
             this.wddmgood = new System.Windows.Forms.PictureBox();
-            this.lbl_freespace = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.freespaceinfo = new System.Windows.Forms.PictureBox();
             this.freespacegood = new System.Windows.Forms.PictureBox();
-            this.lbl_secureboot = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.securebootgood = new System.Windows.Forms.PictureBox();
-            this.securebootbad = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.LnkTPMStatus = new System.Windows.Forms.LinkLabel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.LblAppVersion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LnkOpenGitHub)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securebootbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freqbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootgood)).BeginInit();
@@ -115,7 +115,6 @@ namespace Moin11
             ((System.ComponentModel.ISupportInitialize)(this.freespaceinfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.securebootbad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,8 +122,8 @@ namespace Moin11
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.LblAppVersion);
             this.panel1.Controls.Add(this.LnkOpenGitHub);
-            this.panel1.Controls.Add(this.close);
             this.panel1.Location = new System.Drawing.Point(-1, 663);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(799, 75);
@@ -137,31 +136,18 @@ namespace Moin11
             this.LnkOpenGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LnkOpenGitHub.Image = ((System.Drawing.Image)(resources.GetObject("LnkOpenGitHub.Image")));
             this.LnkOpenGitHub.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LnkOpenGitHub.Location = new System.Drawing.Point(25, 26);
+            this.LnkOpenGitHub.Location = new System.Drawing.Point(21, 26);
             this.LnkOpenGitHub.Name = "LnkOpenGitHub";
             this.LnkOpenGitHub.Size = new System.Drawing.Size(24, 24);
             this.LnkOpenGitHub.TabIndex = 34;
             this.LnkOpenGitHub.TabStop = false;
             this.LnkOpenGitHub.Click += new System.EventHandler(this.LnkOpenGitHub_Click);
             // 
-            // close
-            // 
-            this.close.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.close.Image = global::Moin11.Properties.Resources.power1;
-            this.close.Location = new System.Drawing.Point(753, 25);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(25, 25);
-            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.close.TabIndex = 33;
-            this.close.TabStop = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 186);
+            this.label1.Location = new System.Drawing.Point(60, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 21);
             this.label1.TabIndex = 1;
@@ -171,7 +157,7 @@ namespace Moin11
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 69);
+            this.label2.Location = new System.Drawing.Point(60, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 21);
             this.label2.TabIndex = 4;
@@ -181,7 +167,7 @@ namespace Moin11
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 262);
+            this.label3.Location = new System.Drawing.Point(60, 281);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 21);
             this.label3.TabIndex = 7;
@@ -191,7 +177,7 @@ namespace Moin11
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 336);
+            this.label4.Location = new System.Drawing.Point(60, 322);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 21);
             this.label4.TabIndex = 10;
@@ -201,7 +187,7 @@ namespace Moin11
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 408);
+            this.label5.Location = new System.Drawing.Point(60, 415);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 21);
             this.label5.TabIndex = 13;
@@ -211,7 +197,7 @@ namespace Moin11
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 483);
+            this.label6.Location = new System.Drawing.Point(60, 513);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(147, 21);
             this.label6.TabIndex = 16;
@@ -221,7 +207,7 @@ namespace Moin11
             // 
             this.lbl_type.AutoSize = true;
             this.lbl_type.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_type.Location = new System.Drawing.Point(50, 221);
+            this.lbl_type.Location = new System.Drawing.Point(268, 187);
             this.lbl_type.Name = "lbl_type";
             this.lbl_type.Size = new System.Drawing.Size(75, 21);
             this.lbl_type.TabIndex = 19;
@@ -231,7 +217,7 @@ namespace Moin11
             // 
             this.lbl_cpu.AutoSize = true;
             this.lbl_cpu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cpu.Location = new System.Drawing.Point(49, 100);
+            this.lbl_cpu.Location = new System.Drawing.Point(268, 100);
             this.lbl_cpu.Name = "lbl_cpu";
             this.lbl_cpu.Size = new System.Drawing.Size(75, 21);
             this.lbl_cpu.TabIndex = 20;
@@ -241,7 +227,7 @@ namespace Moin11
             // 
             this.lbl_clockspeed.AutoSize = true;
             this.lbl_clockspeed.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clockspeed.Location = new System.Drawing.Point(49, 142);
+            this.lbl_clockspeed.Location = new System.Drawing.Point(303, 144);
             this.lbl_clockspeed.Name = "lbl_clockspeed";
             this.lbl_clockspeed.Size = new System.Drawing.Size(75, 21);
             this.lbl_clockspeed.TabIndex = 22;
@@ -251,7 +237,7 @@ namespace Moin11
             // 
             this.lbl_coresnthreads.AutoSize = true;
             this.lbl_coresnthreads.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_coresnthreads.Location = new System.Drawing.Point(274, 144);
+            this.lbl_coresnthreads.Location = new System.Drawing.Point(525, 144);
             this.lbl_coresnthreads.Name = "lbl_coresnthreads";
             this.lbl_coresnthreads.Size = new System.Drawing.Size(75, 21);
             this.lbl_coresnthreads.TabIndex = 25;
@@ -261,7 +247,7 @@ namespace Moin11
             // 
             this.lbl_part.AutoSize = true;
             this.lbl_part.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_part.Location = new System.Drawing.Point(50, 294);
+            this.lbl_part.Location = new System.Drawing.Point(268, 281);
             this.lbl_part.Name = "lbl_part";
             this.lbl_part.Size = new System.Drawing.Size(75, 21);
             this.lbl_part.TabIndex = 26;
@@ -271,7 +257,7 @@ namespace Moin11
             // 
             this.lbl_ram.AutoSize = true;
             this.lbl_ram.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ram.Location = new System.Drawing.Point(50, 368);
+            this.lbl_ram.Location = new System.Drawing.Point(268, 322);
             this.lbl_ram.Name = "lbl_ram";
             this.lbl_ram.Size = new System.Drawing.Size(75, 21);
             this.lbl_ram.TabIndex = 27;
@@ -281,7 +267,7 @@ namespace Moin11
             // 
             this.lbl_storage.AutoSize = true;
             this.lbl_storage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_storage.Location = new System.Drawing.Point(50, 438);
+            this.lbl_storage.Location = new System.Drawing.Point(268, 419);
             this.lbl_storage.Name = "lbl_storage";
             this.lbl_storage.Size = new System.Drawing.Size(75, 21);
             this.lbl_storage.TabIndex = 28;
@@ -289,11 +275,10 @@ namespace Moin11
             // 
             // lbl_tpm
             // 
-            this.lbl_tpm.AutoSize = true;
             this.lbl_tpm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tpm.Location = new System.Drawing.Point(50, 515);
+            this.lbl_tpm.Location = new System.Drawing.Point(268, 513);
             this.lbl_tpm.Name = "lbl_tpm";
-            this.lbl_tpm.Size = new System.Drawing.Size(740, 42);
+            this.lbl_tpm.Size = new System.Drawing.Size(526, 42);
             this.lbl_tpm.TabIndex = 29;
             this.lbl_tpm.Text = "If TPM is installed, you can see the manufacturer information about the TPM in th" +
     "e TPM Management Tool\r\n\r\n";
@@ -302,7 +287,7 @@ namespace Moin11
             // 
             this.lbl_directx.AutoSize = true;
             this.lbl_directx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_directx.Location = new System.Drawing.Point(51, 616);
+            this.lbl_directx.Location = new System.Drawing.Point(268, 577);
             this.lbl_directx.Name = "lbl_directx";
             this.lbl_directx.Size = new System.Drawing.Size(75, 21);
             this.lbl_directx.TabIndex = 35;
@@ -312,207 +297,17 @@ namespace Moin11
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(19, 583);
+            this.label8.Location = new System.Drawing.Point(60, 578);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 21);
             this.label8.TabIndex = 32;
             this.label8.Text = "DirectX";
             // 
-            // bootbad
-            // 
-            this.bootbad.Image = global::Moin11.Properties.Resources.x;
-            this.bootbad.Location = new System.Drawing.Point(22, 219);
-            this.bootbad.Name = "bootbad";
-            this.bootbad.Size = new System.Drawing.Size(25, 25);
-            this.bootbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bootbad.TabIndex = 3;
-            this.bootbad.TabStop = false;
-            this.bootbad.MouseHover += new System.EventHandler(this.bootbad_MouseHover);
-            // 
-            // freqbad
-            // 
-            this.freqbad.Image = global::Moin11.Properties.Resources.x;
-            this.freqbad.Location = new System.Drawing.Point(21, 140);
-            this.freqbad.Name = "freqbad";
-            this.freqbad.Size = new System.Drawing.Size(25, 25);
-            this.freqbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.freqbad.TabIndex = 23;
-            this.freqbad.TabStop = false;
-            this.freqbad.MouseHover += new System.EventHandler(this.freqbad_MouseHover);
-            // 
-            // bootgood
-            // 
-            this.bootgood.Image = global::Moin11.Properties.Resources.check;
-            this.bootgood.Location = new System.Drawing.Point(22, 219);
-            this.bootgood.Name = "bootgood";
-            this.bootgood.Size = new System.Drawing.Size(25, 25);
-            this.bootgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bootgood.TabIndex = 2;
-            this.bootgood.TabStop = false;
-            // 
-            // freqgood
-            // 
-            this.freqgood.Image = global::Moin11.Properties.Resources.check;
-            this.freqgood.Location = new System.Drawing.Point(22, 140);
-            this.freqgood.Name = "freqgood";
-            this.freqgood.Size = new System.Drawing.Size(25, 25);
-            this.freqgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.freqgood.TabIndex = 21;
-            this.freqgood.TabStop = false;
-            // 
-            // coresbad
-            // 
-            this.coresbad.Image = global::Moin11.Properties.Resources.x;
-            this.coresbad.Location = new System.Drawing.Point(246, 142);
-            this.coresbad.Name = "coresbad";
-            this.coresbad.Size = new System.Drawing.Size(25, 25);
-            this.coresbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.coresbad.TabIndex = 31;
-            this.coresbad.TabStop = false;
-            this.coresbad.MouseHover += new System.EventHandler(this.coresbad_MouseHover);
-            // 
-            // coresgood
-            // 
-            this.coresgood.Image = global::Moin11.Properties.Resources.check;
-            this.coresgood.Location = new System.Drawing.Point(246, 142);
-            this.coresgood.Name = "coresgood";
-            this.coresgood.Size = new System.Drawing.Size(25, 25);
-            this.coresgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.coresgood.TabIndex = 24;
-            this.coresgood.TabStop = false;
-            // 
-            // cpubad
-            // 
-            this.cpubad.Image = global::Moin11.Properties.Resources.x;
-            this.cpubad.Location = new System.Drawing.Point(21, 100);
-            this.cpubad.Name = "cpubad";
-            this.cpubad.Size = new System.Drawing.Size(25, 25);
-            this.cpubad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpubad.TabIndex = 6;
-            this.cpubad.TabStop = false;
-            this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
-            // 
-            // cpugood
-            // 
-            this.cpugood.Image = global::Moin11.Properties.Resources.check;
-            this.cpugood.Location = new System.Drawing.Point(21, 100);
-            this.cpugood.Name = "cpugood";
-            this.cpugood.Size = new System.Drawing.Size(25, 25);
-            this.cpugood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpugood.TabIndex = 5;
-            this.cpugood.TabStop = false;
-            // 
-            // partbad
-            // 
-            this.partbad.Image = global::Moin11.Properties.Resources.x;
-            this.partbad.Location = new System.Drawing.Point(22, 292);
-            this.partbad.Name = "partbad";
-            this.partbad.Size = new System.Drawing.Size(25, 25);
-            this.partbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.partbad.TabIndex = 9;
-            this.partbad.TabStop = false;
-            this.partbad.MouseHover += new System.EventHandler(this.partbad_MouseHover);
-            // 
-            // partgood
-            // 
-            this.partgood.Image = global::Moin11.Properties.Resources.check;
-            this.partgood.Location = new System.Drawing.Point(22, 292);
-            this.partgood.Name = "partgood";
-            this.partgood.Size = new System.Drawing.Size(25, 25);
-            this.partgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.partgood.TabIndex = 8;
-            this.partgood.TabStop = false;
-            // 
-            // rambad
-            // 
-            this.rambad.Image = global::Moin11.Properties.Resources.x;
-            this.rambad.Location = new System.Drawing.Point(22, 366);
-            this.rambad.Name = "rambad";
-            this.rambad.Size = new System.Drawing.Size(25, 25);
-            this.rambad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rambad.TabIndex = 12;
-            this.rambad.TabStop = false;
-            this.rambad.MouseHover += new System.EventHandler(this.rambad_MouseHover);
-            // 
-            // ramgood
-            // 
-            this.ramgood.Image = global::Moin11.Properties.Resources.check;
-            this.ramgood.Location = new System.Drawing.Point(22, 366);
-            this.ramgood.Name = "ramgood";
-            this.ramgood.Size = new System.Drawing.Size(25, 25);
-            this.ramgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ramgood.TabIndex = 11;
-            this.ramgood.TabStop = false;
-            // 
-            // hddbad
-            // 
-            this.hddbad.Image = global::Moin11.Properties.Resources.x;
-            this.hddbad.Location = new System.Drawing.Point(22, 436);
-            this.hddbad.Name = "hddbad";
-            this.hddbad.Size = new System.Drawing.Size(25, 25);
-            this.hddbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hddbad.TabIndex = 15;
-            this.hddbad.TabStop = false;
-            this.hddbad.MouseHover += new System.EventHandler(this.hddbad_MouseHover);
-            // 
-            // hddgood
-            // 
-            this.hddgood.Image = global::Moin11.Properties.Resources.check;
-            this.hddgood.Location = new System.Drawing.Point(22, 436);
-            this.hddgood.Name = "hddgood";
-            this.hddgood.Size = new System.Drawing.Size(25, 25);
-            this.hddgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hddgood.TabIndex = 14;
-            this.hddgood.TabStop = false;
-            // 
-            // directbad
-            // 
-            this.directbad.Image = global::Moin11.Properties.Resources.x;
-            this.directbad.Location = new System.Drawing.Point(23, 613);
-            this.directbad.Name = "directbad";
-            this.directbad.Size = new System.Drawing.Size(25, 25);
-            this.directbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.directbad.TabIndex = 34;
-            this.directbad.TabStop = false;
-            this.directbad.MouseHover += new System.EventHandler(this.directbad_MouseHover);
-            // 
-            // directgood
-            // 
-            this.directgood.Image = global::Moin11.Properties.Resources.check;
-            this.directgood.Location = new System.Drawing.Point(23, 612);
-            this.directgood.Name = "directgood";
-            this.directgood.Size = new System.Drawing.Size(25, 25);
-            this.directgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.directgood.TabIndex = 33;
-            this.directgood.TabStop = false;
-            // 
-            // cpuinfo
-            // 
-            this.cpuinfo.Image = global::Moin11.Properties.Resources.info;
-            this.cpuinfo.Location = new System.Drawing.Point(21, 100);
-            this.cpuinfo.Name = "cpuinfo";
-            this.cpuinfo.Size = new System.Drawing.Size(25, 25);
-            this.cpuinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpuinfo.TabIndex = 36;
-            this.cpuinfo.TabStop = false;
-            this.cpuinfo.MouseHover += new System.EventHandler(this.cpuinfo_MouseHover);
-            // 
-            // tpminfo
-            // 
-            this.tpminfo.Image = global::Moin11.Properties.Resources.info;
-            this.tpminfo.Location = new System.Drawing.Point(22, 513);
-            this.tpminfo.Name = "tpminfo";
-            this.tpminfo.Size = new System.Drawing.Size(25, 25);
-            this.tpminfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tpminfo.TabIndex = 37;
-            this.tpminfo.TabStop = false;
-            this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
-            // 
             // lbl_screen
             // 
             this.lbl_screen.AutoSize = true;
             this.lbl_screen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_screen.Location = new System.Drawing.Point(274, 371);
+            this.lbl_screen.Location = new System.Drawing.Point(268, 367);
             this.lbl_screen.Name = "lbl_screen";
             this.lbl_screen.Size = new System.Drawing.Size(75, 21);
             this.lbl_screen.TabIndex = 41;
@@ -522,79 +317,27 @@ namespace Moin11
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(242, 336);
+            this.label9.Location = new System.Drawing.Point(60, 370);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 21);
             this.label9.TabIndex = 38;
             this.label9.Text = "Monitor Info";
             // 
-            // screenbad
-            // 
-            this.screenbad.Image = global::Moin11.Properties.Resources.x;
-            this.screenbad.Location = new System.Drawing.Point(246, 369);
-            this.screenbad.Name = "screenbad";
-            this.screenbad.Size = new System.Drawing.Size(25, 25);
-            this.screenbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.screenbad.TabIndex = 40;
-            this.screenbad.TabStop = false;
-            this.screenbad.MouseHover += new System.EventHandler(this.screenbad_MouseHover);
-            // 
-            // screengood
-            // 
-            this.screengood.Image = global::Moin11.Properties.Resources.check;
-            this.screengood.Location = new System.Drawing.Point(246, 369);
-            this.screengood.Name = "screengood";
-            this.screengood.Size = new System.Drawing.Size(25, 25);
-            this.screengood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.screengood.TabIndex = 39;
-            this.screengood.TabStop = false;
-            // 
             // lbl_wddm
             // 
             this.lbl_wddm.AutoSize = true;
             this.lbl_wddm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_wddm.Location = new System.Drawing.Point(274, 616);
+            this.lbl_wddm.Location = new System.Drawing.Point(268, 625);
             this.lbl_wddm.Name = "lbl_wddm";
             this.lbl_wddm.Size = new System.Drawing.Size(75, 21);
             this.lbl_wddm.TabIndex = 45;
             this.lbl_wddm.Text = "Loading...";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(242, 583);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 21);
-            this.label10.TabIndex = 42;
-            this.label10.Text = "WDDM";
-            // 
-            // wddmbad
-            // 
-            this.wddmbad.Image = global::Moin11.Properties.Resources.x;
-            this.wddmbad.Location = new System.Drawing.Point(246, 613);
-            this.wddmbad.Name = "wddmbad";
-            this.wddmbad.Size = new System.Drawing.Size(25, 25);
-            this.wddmbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.wddmbad.TabIndex = 44;
-            this.wddmbad.TabStop = false;
-            this.wddmbad.MouseHover += new System.EventHandler(this.wddmbad_MouseHover);
-            // 
-            // wddmgood
-            // 
-            this.wddmgood.Image = global::Moin11.Properties.Resources.check;
-            this.wddmgood.Location = new System.Drawing.Point(246, 612);
-            this.wddmgood.Name = "wddmgood";
-            this.wddmgood.Size = new System.Drawing.Size(25, 25);
-            this.wddmgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.wddmgood.TabIndex = 43;
-            this.wddmgood.TabStop = false;
-            // 
             // lbl_freespace
             // 
             this.lbl_freespace.AutoSize = true;
             this.lbl_freespace.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_freespace.Location = new System.Drawing.Point(274, 440);
+            this.lbl_freespace.Location = new System.Drawing.Point(268, 462);
             this.lbl_freespace.Name = "lbl_freespace";
             this.lbl_freespace.Size = new System.Drawing.Size(75, 21);
             this.lbl_freespace.TabIndex = 49;
@@ -604,38 +347,17 @@ namespace Moin11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(242, 408);
+            this.label11.Location = new System.Drawing.Point(60, 462);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 21);
             this.label11.TabIndex = 46;
             this.label11.Text = "Free Space";
             // 
-            // freespaceinfo
-            // 
-            this.freespaceinfo.Image = global::Moin11.Properties.Resources.info;
-            this.freespaceinfo.Location = new System.Drawing.Point(246, 438);
-            this.freespaceinfo.Name = "freespaceinfo";
-            this.freespaceinfo.Size = new System.Drawing.Size(25, 25);
-            this.freespaceinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.freespaceinfo.TabIndex = 48;
-            this.freespaceinfo.TabStop = false;
-            this.freespaceinfo.MouseHover += new System.EventHandler(this.freespaceinfo_MouseHover);
-            // 
-            // freespacegood
-            // 
-            this.freespacegood.Image = global::Moin11.Properties.Resources.check;
-            this.freespacegood.Location = new System.Drawing.Point(246, 438);
-            this.freespacegood.Name = "freespacegood";
-            this.freespacegood.Size = new System.Drawing.Size(25, 25);
-            this.freespacegood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.freespacegood.TabIndex = 47;
-            this.freespacegood.TabStop = false;
-            // 
             // lbl_secureboot
             // 
             this.lbl_secureboot.AutoSize = true;
             this.lbl_secureboot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_secureboot.Location = new System.Drawing.Point(274, 221);
+            this.lbl_secureboot.Location = new System.Drawing.Point(268, 239);
             this.lbl_secureboot.Name = "lbl_secureboot";
             this.lbl_secureboot.Size = new System.Drawing.Size(75, 21);
             this.lbl_secureboot.TabIndex = 53;
@@ -645,37 +367,16 @@ namespace Moin11
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(242, 186);
+            this.label12.Location = new System.Drawing.Point(60, 239);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(101, 21);
             this.label12.TabIndex = 50;
             this.label12.Text = "Secure Boot";
             // 
-            // securebootgood
-            // 
-            this.securebootgood.Image = global::Moin11.Properties.Resources.check;
-            this.securebootgood.Location = new System.Drawing.Point(246, 219);
-            this.securebootgood.Name = "securebootgood";
-            this.securebootgood.Size = new System.Drawing.Size(25, 25);
-            this.securebootgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.securebootgood.TabIndex = 51;
-            this.securebootgood.TabStop = false;
-            // 
-            // securebootbad
-            // 
-            this.securebootbad.Image = global::Moin11.Properties.Resources.x;
-            this.securebootbad.Location = new System.Drawing.Point(246, 219);
-            this.securebootbad.Name = "securebootbad";
-            this.securebootbad.Size = new System.Drawing.Size(25, 25);
-            this.securebootbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.securebootbad.TabIndex = 52;
-            this.securebootbad.TabStop = false;
-            this.securebootbad.MouseHover += new System.EventHandler(this.securebootbad_MouseHover);
-            // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(54, 541);
+            this.label7.Location = new System.Drawing.Point(512, 534);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 21);
             this.label7.TabIndex = 54;
@@ -685,7 +386,7 @@ namespace Moin11
             // 
             this.LnkTPMStatus.AutoSize = true;
             this.LnkTPMStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LnkTPMStatus.Location = new System.Drawing.Point(141, 541);
+            this.LnkTPMStatus.Location = new System.Drawing.Point(596, 534);
             this.LnkTPMStatus.Name = "LnkTPMStatus";
             this.LnkTPMStatus.Size = new System.Drawing.Size(41, 21);
             this.LnkTPMStatus.TabIndex = 55;
@@ -696,10 +397,10 @@ namespace Moin11
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(140, 9);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(379, 30);
+            this.label13.Size = new System.Drawing.Size(432, 32);
             this.label13.TabIndex = 56;
             this.label13.Text = "Your Windows 11 Compatibility Results";
             // 
@@ -707,11 +408,304 @@ namespace Moin11
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(190, 39);
+            this.label14.Location = new System.Drawing.Point(143, 41);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(288, 13);
             this.label14.TabIndex = 57;
             this.label14.Text = "*Move the cusor over a failed result to get more information";
+            // 
+            // securebootbad
+            // 
+            this.securebootbad.Image = global::Moin11.Properties.Resources.x;
+            this.securebootbad.Location = new System.Drawing.Point(21, 239);
+            this.securebootbad.Name = "securebootbad";
+            this.securebootbad.Size = new System.Drawing.Size(25, 25);
+            this.securebootbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.securebootbad.TabIndex = 52;
+            this.securebootbad.TabStop = false;
+            this.securebootbad.MouseHover += new System.EventHandler(this.securebootbad_MouseHover);
+            // 
+            // bootbad
+            // 
+            this.bootbad.Image = global::Moin11.Properties.Resources.x;
+            this.bootbad.Location = new System.Drawing.Point(21, 187);
+            this.bootbad.Name = "bootbad";
+            this.bootbad.Size = new System.Drawing.Size(25, 25);
+            this.bootbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bootbad.TabIndex = 3;
+            this.bootbad.TabStop = false;
+            this.bootbad.MouseHover += new System.EventHandler(this.bootbad_MouseHover);
+            // 
+            // freqbad
+            // 
+            this.freqbad.Image = global::Moin11.Properties.Resources.x;
+            this.freqbad.Location = new System.Drawing.Point(272, 144);
+            this.freqbad.Name = "freqbad";
+            this.freqbad.Size = new System.Drawing.Size(25, 25);
+            this.freqbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.freqbad.TabIndex = 23;
+            this.freqbad.TabStop = false;
+            this.freqbad.MouseHover += new System.EventHandler(this.freqbad_MouseHover);
+            // 
+            // bootgood
+            // 
+            this.bootgood.Image = global::Moin11.Properties.Resources.check;
+            this.bootgood.Location = new System.Drawing.Point(22, 187);
+            this.bootgood.Name = "bootgood";
+            this.bootgood.Size = new System.Drawing.Size(25, 25);
+            this.bootgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bootgood.TabIndex = 2;
+            this.bootgood.TabStop = false;
+            // 
+            // freqgood
+            // 
+            this.freqgood.Image = global::Moin11.Properties.Resources.check;
+            this.freqgood.Location = new System.Drawing.Point(272, 144);
+            this.freqgood.Name = "freqgood";
+            this.freqgood.Size = new System.Drawing.Size(25, 25);
+            this.freqgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.freqgood.TabIndex = 21;
+            this.freqgood.TabStop = false;
+            // 
+            // coresbad
+            // 
+            this.coresbad.Image = global::Moin11.Properties.Resources.x;
+            this.coresbad.Location = new System.Drawing.Point(497, 142);
+            this.coresbad.Name = "coresbad";
+            this.coresbad.Size = new System.Drawing.Size(25, 25);
+            this.coresbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coresbad.TabIndex = 31;
+            this.coresbad.TabStop = false;
+            this.coresbad.MouseHover += new System.EventHandler(this.coresbad_MouseHover);
+            // 
+            // coresgood
+            // 
+            this.coresgood.Image = global::Moin11.Properties.Resources.check;
+            this.coresgood.Location = new System.Drawing.Point(497, 142);
+            this.coresgood.Name = "coresgood";
+            this.coresgood.Size = new System.Drawing.Size(25, 25);
+            this.coresgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coresgood.TabIndex = 24;
+            this.coresgood.TabStop = false;
+            // 
+            // cpubad
+            // 
+            this.cpubad.Image = global::Moin11.Properties.Resources.x;
+            this.cpubad.Location = new System.Drawing.Point(21, 101);
+            this.cpubad.Name = "cpubad";
+            this.cpubad.Size = new System.Drawing.Size(25, 25);
+            this.cpubad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cpubad.TabIndex = 6;
+            this.cpubad.TabStop = false;
+            this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
+            // 
+            // cpugood
+            // 
+            this.cpugood.Image = global::Moin11.Properties.Resources.check;
+            this.cpugood.Location = new System.Drawing.Point(22, 101);
+            this.cpugood.Name = "cpugood";
+            this.cpugood.Size = new System.Drawing.Size(25, 25);
+            this.cpugood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cpugood.TabIndex = 5;
+            this.cpugood.TabStop = false;
+            // 
+            // partbad
+            // 
+            this.partbad.Image = global::Moin11.Properties.Resources.x;
+            this.partbad.Location = new System.Drawing.Point(21, 281);
+            this.partbad.Name = "partbad";
+            this.partbad.Size = new System.Drawing.Size(25, 25);
+            this.partbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.partbad.TabIndex = 9;
+            this.partbad.TabStop = false;
+            this.partbad.MouseHover += new System.EventHandler(this.partbad_MouseHover);
+            // 
+            // partgood
+            // 
+            this.partgood.Image = global::Moin11.Properties.Resources.check;
+            this.partgood.Location = new System.Drawing.Point(21, 281);
+            this.partgood.Name = "partgood";
+            this.partgood.Size = new System.Drawing.Size(25, 25);
+            this.partgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.partgood.TabIndex = 8;
+            this.partgood.TabStop = false;
+            // 
+            // rambad
+            // 
+            this.rambad.Image = global::Moin11.Properties.Resources.x;
+            this.rambad.Location = new System.Drawing.Point(21, 322);
+            this.rambad.Name = "rambad";
+            this.rambad.Size = new System.Drawing.Size(25, 25);
+            this.rambad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rambad.TabIndex = 12;
+            this.rambad.TabStop = false;
+            this.rambad.MouseHover += new System.EventHandler(this.rambad_MouseHover);
+            // 
+            // ramgood
+            // 
+            this.ramgood.Image = global::Moin11.Properties.Resources.check;
+            this.ramgood.Location = new System.Drawing.Point(21, 322);
+            this.ramgood.Name = "ramgood";
+            this.ramgood.Size = new System.Drawing.Size(25, 25);
+            this.ramgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ramgood.TabIndex = 11;
+            this.ramgood.TabStop = false;
+            // 
+            // hddbad
+            // 
+            this.hddbad.Image = global::Moin11.Properties.Resources.x;
+            this.hddbad.Location = new System.Drawing.Point(21, 415);
+            this.hddbad.Name = "hddbad";
+            this.hddbad.Size = new System.Drawing.Size(25, 25);
+            this.hddbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hddbad.TabIndex = 15;
+            this.hddbad.TabStop = false;
+            this.hddbad.MouseHover += new System.EventHandler(this.hddbad_MouseHover);
+            // 
+            // hddgood
+            // 
+            this.hddgood.Image = global::Moin11.Properties.Resources.check;
+            this.hddgood.Location = new System.Drawing.Point(22, 415);
+            this.hddgood.Name = "hddgood";
+            this.hddgood.Size = new System.Drawing.Size(25, 25);
+            this.hddgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hddgood.TabIndex = 14;
+            this.hddgood.TabStop = false;
+            // 
+            // directbad
+            // 
+            this.directbad.Image = global::Moin11.Properties.Resources.x;
+            this.directbad.Location = new System.Drawing.Point(21, 579);
+            this.directbad.Name = "directbad";
+            this.directbad.Size = new System.Drawing.Size(25, 25);
+            this.directbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.directbad.TabIndex = 34;
+            this.directbad.TabStop = false;
+            this.directbad.MouseHover += new System.EventHandler(this.directbad_MouseHover);
+            // 
+            // directgood
+            // 
+            this.directgood.Image = global::Moin11.Properties.Resources.check;
+            this.directgood.Location = new System.Drawing.Point(21, 579);
+            this.directgood.Name = "directgood";
+            this.directgood.Size = new System.Drawing.Size(25, 25);
+            this.directgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.directgood.TabIndex = 33;
+            this.directgood.TabStop = false;
+            // 
+            // cpuinfo
+            // 
+            this.cpuinfo.Image = global::Moin11.Properties.Resources.info;
+            this.cpuinfo.Location = new System.Drawing.Point(22, 101);
+            this.cpuinfo.Name = "cpuinfo";
+            this.cpuinfo.Size = new System.Drawing.Size(25, 25);
+            this.cpuinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cpuinfo.TabIndex = 36;
+            this.cpuinfo.TabStop = false;
+            this.cpuinfo.MouseHover += new System.EventHandler(this.cpuinfo_MouseHover);
+            // 
+            // tpminfo
+            // 
+            this.tpminfo.Image = global::Moin11.Properties.Resources.info;
+            this.tpminfo.Location = new System.Drawing.Point(21, 513);
+            this.tpminfo.Name = "tpminfo";
+            this.tpminfo.Size = new System.Drawing.Size(25, 25);
+            this.tpminfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tpminfo.TabIndex = 37;
+            this.tpminfo.TabStop = false;
+            this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
+            // 
+            // screenbad
+            // 
+            this.screenbad.Image = global::Moin11.Properties.Resources.x;
+            this.screenbad.Location = new System.Drawing.Point(21, 370);
+            this.screenbad.Name = "screenbad";
+            this.screenbad.Size = new System.Drawing.Size(25, 25);
+            this.screenbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.screenbad.TabIndex = 40;
+            this.screenbad.TabStop = false;
+            this.screenbad.MouseHover += new System.EventHandler(this.screenbad_MouseHover);
+            // 
+            // screengood
+            // 
+            this.screengood.Image = global::Moin11.Properties.Resources.check;
+            this.screengood.Location = new System.Drawing.Point(22, 370);
+            this.screengood.Name = "screengood";
+            this.screengood.Size = new System.Drawing.Size(25, 25);
+            this.screengood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.screengood.TabIndex = 39;
+            this.screengood.TabStop = false;
+            // 
+            // wddmbad
+            // 
+            this.wddmbad.Image = global::Moin11.Properties.Resources.x;
+            this.wddmbad.Location = new System.Drawing.Point(21, 625);
+            this.wddmbad.Name = "wddmbad";
+            this.wddmbad.Size = new System.Drawing.Size(25, 25);
+            this.wddmbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.wddmbad.TabIndex = 44;
+            this.wddmbad.TabStop = false;
+            this.wddmbad.MouseHover += new System.EventHandler(this.wddmbad_MouseHover);
+            // 
+            // wddmgood
+            // 
+            this.wddmgood.Image = global::Moin11.Properties.Resources.check;
+            this.wddmgood.Location = new System.Drawing.Point(21, 625);
+            this.wddmgood.Name = "wddmgood";
+            this.wddmgood.Size = new System.Drawing.Size(25, 25);
+            this.wddmgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.wddmgood.TabIndex = 43;
+            this.wddmgood.TabStop = false;
+            // 
+            // freespaceinfo
+            // 
+            this.freespaceinfo.Image = global::Moin11.Properties.Resources.info;
+            this.freespaceinfo.Location = new System.Drawing.Point(21, 462);
+            this.freespaceinfo.Name = "freespaceinfo";
+            this.freespaceinfo.Size = new System.Drawing.Size(25, 25);
+            this.freespaceinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.freespaceinfo.TabIndex = 48;
+            this.freespaceinfo.TabStop = false;
+            this.freespaceinfo.MouseHover += new System.EventHandler(this.freespaceinfo_MouseHover);
+            // 
+            // freespacegood
+            // 
+            this.freespacegood.Image = global::Moin11.Properties.Resources.check;
+            this.freespacegood.Location = new System.Drawing.Point(22, 462);
+            this.freespacegood.Name = "freespacegood";
+            this.freespacegood.Size = new System.Drawing.Size(25, 25);
+            this.freespacegood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.freespacegood.TabIndex = 47;
+            this.freespacegood.TabStop = false;
+            // 
+            // securebootgood
+            // 
+            this.securebootgood.Image = global::Moin11.Properties.Resources.check;
+            this.securebootgood.Location = new System.Drawing.Point(21, 239);
+            this.securebootgood.Name = "securebootgood";
+            this.securebootgood.Size = new System.Drawing.Size(25, 25);
+            this.securebootgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.securebootgood.TabIndex = 51;
+            this.securebootgood.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(60, 625);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 21);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "WDDM2";
+            // 
+            // LblAppVersion
+            // 
+            this.LblAppVersion.AutoSize = true;
+            this.LblAppVersion.Location = new System.Drawing.Point(60, 32);
+            this.LblAppVersion.Name = "LblAppVersion";
+            this.LblAppVersion.Size = new System.Drawing.Size(45, 13);
+            this.LblAppVersion.TabIndex = 35;
+            this.LblAppVersion.Text = "Version";
             // 
             // MainWindow
             // 
@@ -778,16 +772,16 @@ namespace Moin11
             this.HelpButton = true;
             this.MinimumSize = new System.Drawing.Size(734, 776);
             this.Name = "MainWindow";
-            this.Opacity = 0.95D;
+            this.Opacity = 0.9D;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Moin11";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LnkOpenGitHub)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securebootbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freqbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootgood)).EndInit();
@@ -813,7 +807,6 @@ namespace Moin11
             ((System.ComponentModel.ISupportInitialize)(this.freespaceinfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.securebootbad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -849,7 +842,6 @@ namespace Moin11
         private System.Windows.Forms.Label lbl_ram;
         private System.Windows.Forms.Label lbl_storage;
         private System.Windows.Forms.Label lbl_tpm;
-        private System.Windows.Forms.PictureBox close;
         private System.Windows.Forms.PictureBox coresbad;
         private System.Windows.Forms.Label lbl_directx;
         private System.Windows.Forms.Label label8;
@@ -862,7 +854,6 @@ namespace Moin11
         private System.Windows.Forms.PictureBox screenbad;
         private System.Windows.Forms.PictureBox screengood;
         private System.Windows.Forms.Label lbl_wddm;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox wddmbad;
         private System.Windows.Forms.PictureBox wddmgood;
         private System.Windows.Forms.Label lbl_freespace;
@@ -878,6 +869,8 @@ namespace Moin11
         private System.Windows.Forms.PictureBox LnkOpenGitHub;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label LblAppVersion;
     }
 }
 

@@ -69,12 +69,6 @@ namespace Moin11
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void LnkTPMStatus_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start("tpm.msc");
-
-        private void LnkOpenGitHub_Click(object sender, EventArgs e) => Process.Start("https://github.com/builtbybel/moin-11");
-
-        private void close_Click(object sender, EventArgs e) => Environment.Exit(-1);
-
         private static string FormatBytes(long bytes)
         {
             string[] Suffix = { "B", "KB", "MB", "GB", "TB" };
@@ -161,6 +155,8 @@ namespace Moin11
         public MainWindow()
         {
             InitializeComponent();
+
+            LblAppVersion.Text = Program.GetCurrentVersionTostring();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -171,11 +167,13 @@ namespace Moin11
 
             if (!hasAdministrativeRight)
             {
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.UseShellExecute = true;
-                startInfo.WorkingDirectory = Environment.CurrentDirectory;
-                startInfo.FileName = Application.ExecutablePath;
-                startInfo.Verb = "runas";
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    UseShellExecute = true,
+                    WorkingDirectory = Environment.CurrentDirectory,
+                    FileName = Application.ExecutablePath,
+                    Verb = "runas"
+                };
                 try
                 {
                     Process p = Process.Start(startInfo);
@@ -191,17 +189,16 @@ namespace Moin11
             LoadingForm.Show();
 
             LoadingForm.StatusText = "Checking system requirements...";
-            double diagonal = 0;
             lbl_screen.Text = "";
             screengood.Visible = true;
             screenbad.Visible = false;
             int counter = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("\\root\\wmi", "SELECT * FROM WmiMonitorBasicDisplayParams").Get())
             {
-                counter = counter + 1;
+                counter++;
                 double width = (byte)item["MaxHorizontalImageSize"] / 2.54;
                 double height = (byte)item["MaxVerticalImageSize"] / 2.54;
-                diagonal = Math.Sqrt(width * width + height * height);
+                double diagonal = Math.Sqrt(width * width + height * height);
                 lbl_screen.Text = lbl_screen.Text + counter + ". " + diagonal.ToString("0.00") + " inch ";
                 if (diagonal <= 9)
                 {
@@ -333,11 +330,10 @@ namespace Moin11
                 securebootbad.Visible = true;
             }
             long ram = 0;
-            string ramstr = "";
             LoadingForm.StatusText = "Checking RAM Compatibility...";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_PhysicalMemory").Get())
             {
-                ramstr = item["Capacity"].ToString();
+                string ramstr = item["Capacity"].ToString();
                 ram = ram += long.Parse(ramstr);
             }
             lbl_ram.Text = FormatBytes(ram).ToString();
@@ -546,6 +542,11 @@ namespace Moin11
             ToolTip tt = new ToolTip();
             tt.SetToolTip(this.freespaceinfo, "You don't have enough free space per the requirements, this doesn't mean you don't have enough total space. Just keep in mind Windows 11 requires at least 64GB of available space.");
         }
-        
+
+        private void LnkTPMStatus_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start("tpm.msc");
+
+        private void LnkOpenGitHub_Click(object sender, EventArgs e) => Process.Start("https://github.com/builtbybel/moin-11/releases");
+
+
     }
 }

@@ -8,6 +8,8 @@ namespace Moin11
 {
     static class Program
     {
+        internal static string GetCurrentVersionTostring() => new Version(Application.ProductVersion).ToString(3);
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

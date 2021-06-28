@@ -47,6 +47,8 @@ namespace Moin11
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StatusWindow";
             this.Opacity = 0.8D;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
