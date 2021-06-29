@@ -157,6 +157,8 @@ namespace Moin11
         {
             InitializeComponent();
 
+            var bit = Environment.Is64BitOperatingSystem ? "64bit" : "32bit";
+            LblSystem.Text = "My OS version is " + RuntimeInformation.OSDescription + bit;
             LblAppVersion.Text = Program.GetCurrentVersionTostring();
         }
 
@@ -186,6 +188,8 @@ namespace Moin11
                 }
             }
 
+            int performCompatibilityCount = 0;
+
             StatusWindow LoadingForm = new StatusWindow();
             LoadingForm.Show();
 
@@ -205,6 +209,8 @@ namespace Moin11
                 {
                     screengood.Visible = false;
                     screenbad.Visible = true;
+
+                    performCompatibilityCount += 1;
                 }
             }
 
@@ -233,6 +239,8 @@ namespace Moin11
             {
                 freqgood.Visible = false;
                 freqbad.Visible = true;
+
+                performCompatibilityCount += 1;
             }
             LoadingForm.StatusText = "Getting core counts... [3/9]";
             int coreCount = 0;
@@ -251,6 +259,8 @@ namespace Moin11
             {
                 coresgood.Visible = false;
                 coresbad.Visible = true;
+
+                performCompatibilityCount += 1;
             }
             LoadingForm.StatusText = "Checking CPU Compatibility... [4/9]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
@@ -295,6 +305,8 @@ namespace Moin11
                         cpugood.Visible = false;
                         cpubad.Visible = true;
                         cpuinfo.Visible = false;
+
+                        performCompatibilityCount += 1;
                     }
                 }
             }
@@ -314,9 +326,13 @@ namespace Moin11
                         lbl_part.Text = "MBR";
                         partgood.Visible = false;
                         partbad.Visible = true;
+
+                        performCompatibilityCount += 1;
+                        break;
                     }
                 }
             }
+
             LoadingForm.StatusText = "Checking Secure Boot Status... [6/9]";
             lbl_secureboot.Text = SecureBootStatus();
 
@@ -329,6 +345,8 @@ namespace Moin11
             {
                 securebootgood.Visible = false;
                 securebootbad.Visible = true;
+
+                performCompatibilityCount += 1;
             }
             long ram = 0;
             LoadingForm.StatusText = "Checking RAM Compatibility... [7/9]";
@@ -353,6 +371,8 @@ namespace Moin11
                 {
                     ramgood.Visible = false;
                     rambad.Visible = true;
+
+                    performCompatibilityCount += 1;
                 }
             }
             LoadingForm.StatusText = "Checking disk size... [8/9]";
@@ -372,6 +392,8 @@ namespace Moin11
             {
                 freespacegood.Visible = false;
                 freespaceinfo.Visible = true;
+
+                performCompatibilityCount += 1;
             }
 
             long systemtotalspace = GetTotalSpace(systemdrive);
@@ -388,6 +410,8 @@ namespace Moin11
             {
                 hddgood.Visible = false;
                 hddbad.Visible = true;
+
+                performCompatibilityCount += 1;
             }
 
             LoadingForm.StatusText = "Getting DirectX && WDDM info... [9/9]";
@@ -409,6 +433,8 @@ namespace Moin11
             {
                 directgood.Visible = false;
                 directbad.Visible = true;
+
+                performCompatibilityCount += 1;
             }
             else
             {
@@ -435,6 +461,18 @@ namespace Moin11
                 System.Diagnostics.Process.Start("tpm.msc");
 
                 LoadingForm.Hide();
+            }
+
+            var sum = performCompatibilityCount;
+            LblBadCompatibilty.Text = sum.ToString();
+
+            if (sum <= 0)
+            {
+                LblBadCompatibilty.ForeColor = Color.Green;
+            }
+            else
+            {
+                LblBadCompatibilty.ForeColor = Color.Red;
             }
         }
 
@@ -482,16 +520,16 @@ namespace Moin11
             tt.SetToolTip(this.cpuinfo, "Your CPU meets the soft requirements, it's just not listed on the offical list of supported processors.");
         }
 
-        private void tpminfo_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.tpminfo, "The recommended TPM version is 2.0.");
-        }
-
         private void bootbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
             tt.SetToolTip(this.bootbad, "Your system needs to support a UEFI boot mode, right now your system is booting using Legacy. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual or bios for more information.");
+        }
+
+        private void tpminfo_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.tpminfo, "The recommended TPM version is 2.0");
         }
 
         private void cpubad_MouseHover(object sender, EventArgs e)

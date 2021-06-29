@@ -31,10 +31,13 @@ namespace Moin11
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.LblBadCompatibilty = new System.Windows.Forms.Label();
             this.BtnCapture = new System.Windows.Forms.Button();
             this.LblAppVersion = new System.Windows.Forms.Label();
             this.LnkOpenGitHub = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LblSystem = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.LnkTPMStatus = new System.Windows.Forms.LinkLabel();
@@ -124,6 +127,8 @@ namespace Moin11
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.LblBadCompatibilty);
             this.panel1.Controls.Add(this.BtnCapture);
             this.panel1.Controls.Add(this.LblAppVersion);
             this.panel1.Controls.Add(this.LnkOpenGitHub);
@@ -133,15 +138,37 @@ namespace Moin11
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(219, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(364, 25);
+            this.label7.TabIndex = 114;
+            this.label7.Text = "Components not ready for Windows 11";
+            // 
+            // LblBadCompatibilty
+            // 
+            this.LblBadCompatibilty.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LblBadCompatibilty.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblBadCompatibilty.ForeColor = System.Drawing.Color.Black;
+            this.LblBadCompatibilty.Location = new System.Drawing.Point(344, 31);
+            this.LblBadCompatibilty.Name = "LblBadCompatibilty";
+            this.LblBadCompatibilty.Size = new System.Drawing.Size(136, 43);
+            this.LblBadCompatibilty.TabIndex = 113;
+            this.LblBadCompatibilty.Text = "None";
+            // 
             // BtnCapture
             // 
-            this.BtnCapture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCapture.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BtnCapture.BackColor = System.Drawing.Color.Silver;
             this.BtnCapture.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.BtnCapture.FlatAppearance.BorderSize = 0;
             this.BtnCapture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCapture.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCapture.Location = new System.Drawing.Point(623, 19);
+            this.BtnCapture.Location = new System.Drawing.Point(627, 19);
             this.BtnCapture.Name = "BtnCapture";
             this.BtnCapture.Size = new System.Drawing.Size(160, 36);
             this.BtnCapture.TabIndex = 58;
@@ -151,6 +178,7 @@ namespace Moin11
             // 
             // LblAppVersion
             // 
+            this.LblAppVersion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblAppVersion.AutoSize = true;
             this.LblAppVersion.Location = new System.Drawing.Point(60, 32);
             this.LblAppVersion.Name = "LblAppVersion";
@@ -160,7 +188,7 @@ namespace Moin11
             // 
             // LnkOpenGitHub
             // 
-            this.LnkOpenGitHub.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LnkOpenGitHub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LnkOpenGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LnkOpenGitHub.Image = ((System.Drawing.Image)(resources.GetObject("LnkOpenGitHub.Image")));
             this.LnkOpenGitHub.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -177,6 +205,7 @@ namespace Moin11
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.LblSystem);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.LnkTPMStatus);
@@ -230,16 +259,32 @@ namespace Moin11
             this.panel2.Controls.Add(this.freespaceinfo);
             this.panel2.Controls.Add(this.freespacegood);
             this.panel2.Controls.Add(this.securebootgood);
-            this.panel2.Location = new System.Drawing.Point(-1, 3);
+            this.panel2.Location = new System.Drawing.Point(12, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(799, 654);
+            this.panel2.Size = new System.Drawing.Size(786, 654);
             this.panel2.TabIndex = 1;
+            // 
+            // LblSystem
+            // 
+            this.LblSystem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblSystem.AutoSize = true;
+            this.LblSystem.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSystem.Location = new System.Drawing.Point(146, 38);
+            this.LblSystem.Name = "LblSystem";
+            this.LblSystem.Size = new System.Drawing.Size(70, 15);
+            this.LblSystem.TabIndex = 112;
+            this.LblSystem.Text = "Upgrade OS";
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.Window;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(258, 38);
+            this.label14.ForeColor = System.Drawing.Color.DarkRed;
+            this.label14.Location = new System.Drawing.Point(146, 64);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(288, 13);
             this.label14.TabIndex = 111;
@@ -247,6 +292,8 @@ namespace Moin11
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(129, 6);
@@ -296,6 +343,7 @@ namespace Moin11
             this.securebootbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.securebootbad.TabIndex = 106;
             this.securebootbad.TabStop = false;
+            this.securebootbad.MouseHover += new System.EventHandler(this.securebootbad_MouseHover);
             // 
             // lbl_freespace
             // 
@@ -379,6 +427,7 @@ namespace Moin11
             // 
             // lbl_tpm
             // 
+            this.lbl_tpm.AutoEllipsis = true;
             this.lbl_tpm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tpm.Location = new System.Drawing.Point(257, 510);
             this.lbl_tpm.Name = "lbl_tpm";
@@ -526,6 +575,7 @@ namespace Moin11
             this.bootbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bootbad.TabIndex = 60;
             this.bootbad.TabStop = false;
+            this.bootbad.MouseHover += new System.EventHandler(this.bootbad_MouseHover);
             // 
             // freqbad
             // 
@@ -536,6 +586,7 @@ namespace Moin11
             this.freqbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.freqbad.TabIndex = 78;
             this.freqbad.TabStop = false;
+            this.freqbad.MouseHover += new System.EventHandler(this.freqbad_MouseHover);
             // 
             // bootgood
             // 
@@ -566,6 +617,7 @@ namespace Moin11
             this.coresbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.coresbad.TabIndex = 85;
             this.coresbad.TabStop = false;
+            this.coresbad.MouseHover += new System.EventHandler(this.coresbad_MouseHover);
             // 
             // coresgood
             // 
@@ -580,17 +632,18 @@ namespace Moin11
             // cpubad
             // 
             this.cpubad.Image = global::Moin11.Properties.Resources.x;
-            this.cpubad.Location = new System.Drawing.Point(10, 98);
+            this.cpubad.Location = new System.Drawing.Point(11, 97);
             this.cpubad.Name = "cpubad";
             this.cpubad.Size = new System.Drawing.Size(25, 25);
             this.cpubad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpubad.TabIndex = 63;
             this.cpubad.TabStop = false;
+            this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
             // 
             // cpugood
             // 
             this.cpugood.Image = global::Moin11.Properties.Resources.check;
-            this.cpugood.Location = new System.Drawing.Point(11, 98);
+            this.cpugood.Location = new System.Drawing.Point(11, 97);
             this.cpugood.Name = "cpugood";
             this.cpugood.Size = new System.Drawing.Size(25, 25);
             this.cpugood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -606,6 +659,7 @@ namespace Moin11
             this.partbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.partbad.TabIndex = 66;
             this.partbad.TabStop = false;
+            this.partbad.MouseHover += new System.EventHandler(this.partbad_MouseHover);
             // 
             // partgood
             // 
@@ -626,6 +680,7 @@ namespace Moin11
             this.rambad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rambad.TabIndex = 69;
             this.rambad.TabStop = false;
+            this.rambad.MouseHover += new System.EventHandler(this.rambad_MouseHover);
             // 
             // ramgood
             // 
@@ -646,6 +701,7 @@ namespace Moin11
             this.hddbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.hddbad.TabIndex = 72;
             this.hddbad.TabStop = false;
+            this.hddbad.MouseHover += new System.EventHandler(this.hddbad_MouseHover);
             // 
             // hddgood
             // 
@@ -666,6 +722,7 @@ namespace Moin11
             this.directbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.directbad.TabIndex = 88;
             this.directbad.TabStop = false;
+            this.directbad.MouseHover += new System.EventHandler(this.directbad_MouseHover);
             // 
             // directgood
             // 
@@ -686,6 +743,7 @@ namespace Moin11
             this.cpuinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpuinfo.TabIndex = 90;
             this.cpuinfo.TabStop = false;
+            this.cpuinfo.MouseHover += new System.EventHandler(this.cpuinfo_MouseHover);
             // 
             // tpminfo
             // 
@@ -696,6 +754,7 @@ namespace Moin11
             this.tpminfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tpminfo.TabIndex = 91;
             this.tpminfo.TabStop = false;
+            this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
             // 
             // screenbad
             // 
@@ -706,6 +765,7 @@ namespace Moin11
             this.screenbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.screenbad.TabIndex = 94;
             this.screenbad.TabStop = false;
+            this.screenbad.MouseHover += new System.EventHandler(this.screenbad_MouseHover);
             // 
             // screengood
             // 
@@ -726,6 +786,7 @@ namespace Moin11
             this.wddmbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wddmbad.TabIndex = 98;
             this.wddmbad.TabStop = false;
+            this.wddmbad.MouseHover += new System.EventHandler(this.wddmbad_MouseHover);
             // 
             // wddmgood
             // 
@@ -746,6 +807,7 @@ namespace Moin11
             this.freespaceinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.freespaceinfo.TabIndex = 102;
             this.freespaceinfo.TabStop = false;
+            this.freespaceinfo.MouseHover += new System.EventHandler(this.freespaceinfo_MouseHover);
             // 
             // freespacegood
             // 
@@ -880,6 +942,9 @@ namespace Moin11
         private System.Windows.Forms.PictureBox freespaceinfo;
         private System.Windows.Forms.PictureBox freespacegood;
         private System.Windows.Forms.PictureBox securebootgood;
+        private System.Windows.Forms.Label LblSystem;
+        private System.Windows.Forms.Label LblBadCompatibilty;
+        private System.Windows.Forms.Label label7;
     }
 }
 
