@@ -11,7 +11,7 @@
 
 <p align="center">
 <a href="https://github.com/builtbybel/ReadySunValley/releases/latest" target="_blank">
-<img alt="Latest GitHub release" src="https://img.shields.io/github/release/builtbybel/rsv.svg?style=flat-square" />
+<img alt="Latest GitHub release" src="https://img.shields.io/github/release/builtbybel/readysunvalley.svg?style=flat-square" />
 </a>
 	
 <a href="https://github.com/builtbybel/ReadySunValley/releases" target="_blank">
