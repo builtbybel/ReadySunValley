@@ -146,21 +146,22 @@ namespace ReadySunValley
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(219, 10);
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(219, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(364, 25);
+            this.label7.Size = new System.Drawing.Size(342, 25);
             this.label7.TabIndex = 114;
             this.label7.Text = "Components not ready for Windows 11";
             // 
             // LblBadCompatibilty
             // 
             this.LblBadCompatibilty.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LblBadCompatibilty.AutoSize = true;
             this.LblBadCompatibilty.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblBadCompatibilty.ForeColor = System.Drawing.Color.Black;
-            this.LblBadCompatibilty.Location = new System.Drawing.Point(353, 32);
+            this.LblBadCompatibilty.Location = new System.Drawing.Point(353, 28);
             this.LblBadCompatibilty.Name = "LblBadCompatibilty";
-            this.LblBadCompatibilty.Size = new System.Drawing.Size(136, 43);
+            this.LblBadCompatibilty.Size = new System.Drawing.Size(116, 50);
             this.LblBadCompatibilty.TabIndex = 113;
             this.LblBadCompatibilty.Text = "None";
             // 
@@ -255,7 +256,7 @@ namespace ReadySunValley
             this.LblMainMenu.Font = new System.Drawing.Font("Segoe MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMainMenu.ForeColor = System.Drawing.Color.DeepPink;
             this.LblMainMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LblMainMenu.Location = new System.Drawing.Point(726, 9);
+            this.LblMainMenu.Location = new System.Drawing.Point(737, 9);
             this.LblMainMenu.Name = "LblMainMenu";
             this.LblMainMenu.Size = new System.Drawing.Size(48, 51);
             this.LblMainMenu.TabIndex = 113;
@@ -268,7 +269,7 @@ namespace ReadySunValley
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LblSystem.AutoSize = true;
             this.LblSystem.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSystem.Location = new System.Drawing.Point(146, 38);
+            this.LblSystem.Location = new System.Drawing.Point(186, 38);
             this.LblSystem.Name = "LblSystem";
             this.LblSystem.Size = new System.Drawing.Size(70, 15);
             this.LblSystem.TabIndex = 112;
@@ -282,7 +283,7 @@ namespace ReadySunValley
             this.label14.BackColor = System.Drawing.SystemColors.Window;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DeepPink;
-            this.label14.Location = new System.Drawing.Point(146, 64);
+            this.label14.Location = new System.Drawing.Point(186, 53);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(288, 13);
             this.label14.TabIndex = 111;
@@ -294,7 +295,7 @@ namespace ReadySunValley
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(129, 6);
+            this.label13.Location = new System.Drawing.Point(169, 6);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(432, 32);
             this.label13.TabIndex = 110;
@@ -304,6 +305,7 @@ namespace ReadySunValley
             // 
             this.LnkTPMStatus.AutoSize = true;
             this.LnkTPMStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkTPMStatus.LinkColor = System.Drawing.Color.DeepPink;
             this.LnkTPMStatus.Location = new System.Drawing.Point(585, 531);
             this.LnkTPMStatus.Name = "LnkTPMStatus";
             this.LnkTPMStatus.Size = new System.Drawing.Size(41, 21);
@@ -838,7 +840,7 @@ namespace ReadySunValley
             this.AppInfo});
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MainMenu.Size = new System.Drawing.Size(205, 144);
+            this.MainMenu.Size = new System.Drawing.Size(205, 122);
             // 
             // AppScreenshot
             // 

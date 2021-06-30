@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Management;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
@@ -394,39 +395,63 @@ namespace ReadySunValley
             }
 
             LoadingForm.StatusText = "Getting DirectX && WDDM2 info [9/9]";
-            Process.Start("dxdiag", "/x dxv.xml");
-            while (!File.Exists("dxv.xml"))
-                Thread.Sleep(1000);
 
-            XmlDocument doc = new XmlDocument();
-            doc.Load("dxv.xml");
-            XmlNode dxd = doc.SelectSingleNode("//DxDiag");
-            XmlNode dxv = dxd.SelectSingleNode("//DirectXVersion");
-            XmlNode wddmv = dxd.SelectSingleNode("//DriverModel");
-            Double directXver = Convert.ToDouble(dxv.InnerText.Split(' ')[1]);
-            Double wver = Convert.ToDouble(wddmv.InnerText.Split(' ')[1]);
-            lbl_directx.Text = "DirectX " + directXver;
-            lbl_wddm.Text = "Version: " + wver;
-
-            if (directXver < 12)
+            try
             {
-                directgood.Visible = false;
-                directbad.Visible = true;
+                Process.Start("dxdiag", "/x dxv.xml");
+                while (!File.Exists("dxv.xml"))
+                    Thread.Sleep(1000);
 
-                performCompatibilityCount += 1;
-            }
-            else
-            {
-                directgood.Visible = true;
-                directbad.Visible = false;
-            }
+                XmlDocument doc = new XmlDocument();
+                doc.Load("dxv.xml");
+                XmlNode dxd = doc.SelectSingleNode("//DxDiag");
+                XmlNode dxv = dxd.SelectSingleNode("//DirectXVersion");
+                XmlNode wddmv = dxd.SelectSingleNode("//DriverModel");
+                Double directXver = Convert.ToDouble(dxv.InnerText.Split(' ')[1]);
+                Double wver = Convert.ToDouble(wddmv.InnerText.Split(' ')[1]);
+                lbl_directx.Text = "DirectX " + directXver;
+                lbl_wddm.Text = "Version: " + wver;
 
-            if (wver >= 2)
+                if (directXver < 12)
+                {
+                    directgood.Visible = false;
+                    directbad.Visible = true;
+
+                    performCompatibilityCount += 1;
+                }
+                else
+                {
+                    directgood.Visible = true;
+                    directbad.Visible = false;
+                }
+
+                if (wver >= 2)
+                {
+                    wddmbad.Visible = false;
+                    wddmgood.Visible = true;
+                    LoadingForm.Hide();
+                }
+            } catch {}
+
+            LoadingForm.StatusText = "Getting Graphics card [9/9]";
+            try
             {
-                wddmbad.Visible = false;
-                wddmgood.Visible = true;
-                LoadingForm.Hide();
+                ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController");
+
+                string gpu= string.Empty;
+                foreach (ManagementObject mo in searcher.Get())
+                {
+                    foreach (PropertyData property in mo.Properties)
+                    {
+                        if (property.Name == "Description")
+                        {
+                            gpu = property.Value.ToString();
+                            lbl_wddm.Text += " (" + gpu + ")";
+                        }
+                    }
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             // Load tpm.msc
             Process.Start("tpm.msc");
@@ -553,7 +578,7 @@ namespace ReadySunValley
             tt.SetToolTip(this.freespaceinfo, "You don't have enough free space per the requirements, this doesn't mean you don't have enough total space. Just keep in mind Windows 11 requires at least 64GB of available space.");
         }
 
-        private void LnkOpenGitHub_Click(object sender, EventArgs e) => Process.Start("https://github.com/builtbybel/moin-11/releases");
+        private void LnkOpenGitHub_Click(object sender, EventArgs e) => Process.Start("https://github.com/builtbybel/ReadySunValley/releases");
 
         private void LnkTPMStatus_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start("tpm.msc");
 
