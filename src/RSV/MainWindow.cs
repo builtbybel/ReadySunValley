@@ -22,10 +22,18 @@ namespace ReadySunValley
                                     "\ttwitter.com/builtbybel\r\n\n" +
                                     "(C) 2021, Builtbybel";
 
-        private readonly string _uriUtility = "https://github.com/rcmaehl/WhyNotWin11/releases/download/";
-        private readonly string _uriVersion = "https://raw.githubusercontent.com/builtbybel/ReadySunValley/main/utilversion.txt";
+        // App update
+        private readonly string _releaseURL = "https://raw.githubusercontent.com/builtbybel/readysunvalley/master/appversion.txt";
 
-        public Version uriLatestVersion;
+        public Version CurrentVersion = new Version(Application.ProductVersion);
+        public Version LatestVersion;
+
+        //Compare utilty update
+        private readonly string _uriUtility = "https://github.com/rcmaehl/WhyNotWin11/releases/download/";
+
+        private readonly string _uriUtilVersion = "https://raw.githubusercontent.com/builtbybel/ReadySunValley/main/utilversion.txt";
+
+        public Version uriUtilLatestVersion;
 
         //UEFI or legacy mode
         public const int ERROR_INVALID_FUNCTION = 1;
@@ -81,6 +89,42 @@ namespace ReadySunValley
             public bool bAllowWHQLChecks;
             public IntPtr pReserved;
         };
+
+        private void checkAppUpdate()
+        {
+            try
+            {
+                WebRequest hreq = WebRequest.Create(_releaseURL);
+                hreq.Timeout = 10000;
+                hreq.Headers.Set("Cache-Control", "no-cache, no-store, must-revalidate");
+
+                WebResponse hres = hreq.GetResponse();
+                StreamReader sr = new StreamReader(hres.GetResponseStream());
+
+                LatestVersion = new Version(sr.ReadToEnd().Trim());
+
+                sr.Dispose();
+                hres.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); // Update check failed!
+            }
+
+            var equals = LatestVersion.CompareTo(CurrentVersion);
+
+            if (equals == 0)
+            {
+                return; // Up-to-date
+            }
+            else // New release available!
+            {
+                if (MessageBox.Show("A new app version " + LatestVersion + " is available.\nDo you want to goto the Github update page?\n\nPress <No> to continue with comaptibility check.", "App update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // New release available!
+                {
+                    Process.Start("https://github.com/builtbybel/readysunvalley/releases/tag/" + LatestVersion);
+                }
+            }
+        }
 
         private String FormatBytes(long byteCount)
         {
@@ -186,6 +230,8 @@ namespace ReadySunValley
             LoadingForm.Show();
 
             LoadingForm.StatusText = "Checking system requirements [1/10]";
+            checkAppUpdate(); // Run here app also update check
+
             lbl_screen.Text = "";
             screengood.Visible = true;
             screenbad.Visible = false;
@@ -625,19 +671,19 @@ namespace ReadySunValley
             {
                 PBar.Visible = true;
 
-                WebRequest hreq = WebRequest.Create(_uriVersion);
+                WebRequest hreq = WebRequest.Create(_uriUtilVersion);
                 hreq.Timeout = 10000;
                 hreq.Headers.Set("Cache-Control", "no-cache, no-store, must-revalidate");
 
                 WebResponse hres = hreq.GetResponse();
                 StreamReader sr = new StreamReader(hres.GetResponseStream());
 
-                uriLatestVersion = new Version(sr.ReadToEnd().Trim());
+                uriUtilLatestVersion = new Version(sr.ReadToEnd().Trim());
 
                 sr.Dispose();
                 hres.Dispose();
 
-                var pkg = _uriUtility + uriLatestVersion + "/" + "WhyNotWin11.exe";
+                var pkg = _uriUtility + uriUtilLatestVersion + "/" + "WhyNotWin11.exe";
 
                 try
                 {

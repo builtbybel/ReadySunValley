@@ -38,7 +38,6 @@ namespace ReadySunValley
             this.panel2 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.lbl_inet = new System.Windows.Forms.Label();
-            this.inetgood = new System.Windows.Forms.PictureBox();
             this.inetbad = new System.Windows.Forms.PictureBox();
             this.PBar = new System.Windows.Forms.ProgressBar();
             this.LblMainMenu = new System.Windows.Forms.Button();
@@ -96,17 +95,17 @@ namespace ReadySunValley
             this.freespaceinfo = new System.Windows.Forms.PictureBox();
             this.freespacegood = new System.Windows.Forms.PictureBox();
             this.securebootgood = new System.Windows.Forms.PictureBox();
+            this.inetgood = new System.Windows.Forms.PictureBox();
             this.MainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.AppCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.AppScreenshot = new System.Windows.Forms.ToolStripMenuItem();
             this.AppCompare = new System.Windows.Forms.ToolStripMenuItem();
             this.AppHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.AppInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.AppCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LnkOpenGitHub)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inetgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootbad)).BeginInit();
@@ -134,6 +133,7 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.freespaceinfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inetgood)).BeginInit();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -277,16 +277,6 @@ namespace ReadySunValley
             this.lbl_inet.TabIndex = 117;
             this.lbl_inet.Text = "Loading...";
             // 
-            // inetgood
-            // 
-            this.inetgood.Image = global::ReadySunValley.Properties.Resources.check;
-            this.inetgood.Location = new System.Drawing.Point(11, 665);
-            this.inetgood.Name = "inetgood";
-            this.inetgood.Size = new System.Drawing.Size(25, 25);
-            this.inetgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.inetgood.TabIndex = 116;
-            this.inetgood.TabStop = false;
-            // 
             // inetbad
             // 
             this.inetbad.Image = global::ReadySunValley.Properties.Resources.x;
@@ -296,6 +286,7 @@ namespace ReadySunValley
             this.inetbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.inetbad.TabIndex = 115;
             this.inetbad.TabStop = false;
+            this.inetbad.MouseHover += new System.EventHandler(this.inetbad_MouseHover);
             // 
             // PBar
             // 
@@ -890,6 +881,16 @@ namespace ReadySunValley
             this.securebootgood.TabIndex = 105;
             this.securebootgood.TabStop = false;
             // 
+            // inetgood
+            // 
+            this.inetgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.inetgood.Location = new System.Drawing.Point(11, 665);
+            this.inetgood.Name = "inetgood";
+            this.inetgood.Size = new System.Drawing.Size(25, 25);
+            this.inetgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inetgood.TabIndex = 116;
+            this.inetgood.TabStop = false;
+            // 
             // MainMenu
             // 
             this.MainMenu.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -903,6 +904,13 @@ namespace ReadySunValley
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.MainMenu.Size = new System.Drawing.Size(205, 150);
+            // 
+            // AppCheck
+            // 
+            this.AppCheck.Name = "AppCheck";
+            this.AppCheck.Size = new System.Drawing.Size(204, 28);
+            this.AppCheck.Text = "Repeat check";
+            this.AppCheck.Click += new System.EventHandler(this.AppCheck_Click);
             // 
             // AppScreenshot
             // 
@@ -936,13 +944,6 @@ namespace ReadySunValley
             this.AppInfo.Text = "Info";
             this.AppInfo.Click += new System.EventHandler(this.AppInfo_Click);
             // 
-            // AppCheck
-            // 
-            this.AppCheck.Name = "AppCheck";
-            this.AppCheck.Size = new System.Drawing.Size(204, 28);
-            this.AppCheck.Text = "Repeat check";
-            this.AppCheck.Click += new System.EventHandler(this.AppCheck_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -964,7 +965,6 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.LnkOpenGitHub)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inetgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootbad)).EndInit();
@@ -992,6 +992,7 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.freespaceinfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inetgood)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
