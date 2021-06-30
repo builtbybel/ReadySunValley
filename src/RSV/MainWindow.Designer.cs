@@ -97,6 +97,7 @@ namespace ReadySunValley
             this.AppHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.AppInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.PBar = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LnkOpenGitHub)).BeginInit();
             this.panel2.SuspendLayout();
@@ -184,6 +185,7 @@ namespace ReadySunValley
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.PBar);
             this.panel2.Controls.Add(this.LblMainMenu);
             this.panel2.Controls.Add(this.LblSystem);
             this.panel2.Controls.Add(this.label14);
@@ -874,6 +876,14 @@ namespace ReadySunValley
             this.AppInfo.Text = "Info";
             this.AppInfo.Click += new System.EventHandler(this.AppInfo_Click);
             // 
+            // PBar
+            // 
+            this.PBar.Location = new System.Drawing.Point(183, 78);
+            this.PBar.Name = "PBar";
+            this.PBar.Size = new System.Drawing.Size(418, 5);
+            this.PBar.TabIndex = 114;
+            this.PBar.Visible = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -994,6 +1004,7 @@ namespace ReadySunValley
         private System.Windows.Forms.ToolStripMenuItem AppInfo;
         private System.Windows.Forms.ToolStripMenuItem AppScreenshot;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ProgressBar PBar;
     }
 }
 

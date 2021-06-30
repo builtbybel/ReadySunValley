@@ -1,9 +1,11 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Management;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
@@ -14,11 +16,16 @@ namespace ReadySunValley
     public partial class MainWindow : Form
     {
         private readonly string _infoApp = "ReadySunValley" + "\nVersion " + Program.GetCurrentVersionTostring() +
-                                    "\n\nChecks if your device is ready for Windows 11.\r\n\n" +
+                                    "\n\nChecks if your device is ready for Windows 11/Sun Valley update.\r\n\n" +
                                     "This project was forked from https://github.com/mag-nif-i-cent/Affinity11\r\n\n" +
                                     "You can also reach out to me on\n" +
                                     "\ttwitter.com/builtbybel\r\n\n" +
                                     "(C) 2021, Builtbybel";
+
+        private readonly string _uriUtility = "https://github.com/rcmaehl/WhyNotWin11/releases/download/";
+        private readonly string _uriVersion = "https://raw.githubusercontent.com/builtbybel/ReadySunValley/main/utilversion.txt";
+
+        public Version uriLatestVersion;
 
         public const int HT_CAPTION = 0x2;
         public const int ERROR_INVALID_FUNCTION = 1;
@@ -119,12 +126,6 @@ namespace ReadySunValley
                 clockSpeed = clockSpeedx.ToString();
             }
             return clockSpeed;
-        }
-
-        private static T GetProperty<T>(IDxDiagContainer container, string propName)
-        {
-            container.GetProp(propName, out object variant);
-            return (T)Convert.ChangeType(variant, typeof(T));
         }
 
         private long GetTotalFreeSpace(string driveName)
@@ -431,14 +432,15 @@ namespace ReadySunValley
                     wddmgood.Visible = true;
                     LoadingForm.Hide();
                 }
-            } catch {}
+            }
+            catch { }
 
             LoadingForm.StatusText = "Getting Graphics card [9/9]";
             try
             {
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController");
 
-                string gpu= string.Empty;
+                string gpu = string.Empty;
                 foreach (ManagementObject mo in searcher.Get())
                 {
                     foreach (PropertyData property in mo.Properties)
@@ -578,6 +580,66 @@ namespace ReadySunValley
             tt.SetToolTip(this.freespaceinfo, "You don't have enough free space per the requirements, this doesn't mean you don't have enough total space. Just keep in mind Windows 11 requires at least 64GB of available space.");
         }
 
+        private void GetCompareUtil()
+        {
+            if (MessageBox.Show("Do you want to compare these results with the Utility \"WhyNotWin11\"?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                PBar.Visible = true;
+
+                WebRequest hreq = WebRequest.Create(_uriVersion);
+                hreq.Timeout = 10000;
+                hreq.Headers.Set("Cache-Control", "no-cache, no-store, must-revalidate");
+
+                WebResponse hres = hreq.GetResponse();
+                StreamReader sr = new StreamReader(hres.GetResponseStream());
+
+                uriLatestVersion = new Version(sr.ReadToEnd().Trim());
+
+                sr.Dispose();
+                hres.Dispose();
+
+                var pkg = _uriUtility + uriLatestVersion + "/" + "WhyNotWin11.exe";
+
+                try
+                {
+                    WebClient wc = new WebClient();
+                    wc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressChanged);
+                    wc.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
+
+                    wc.DownloadFileAsync(new Uri(pkg), @"WhyNotWin11.exe");
+                }
+                catch (Exception ex)
+                { MessageBox.Show(ex.Message, this.Text); }
+            }
+        }
+
+        public void DownloadProgressChanged(Object sender, DownloadProgressChangedEventArgs e)
+        {
+            PBar.Value = e.ProgressPercentage;
+        }
+
+        public void Completed(object sender, AsyncCompletedEventArgs e)
+        {
+            try
+            {
+                var startInfo = new ProcessStartInfo()
+                {
+                    FileName = "WhyNotWin11.exe",
+                    UseShellExecute = true,
+                };
+                Process.Start(startInfo);
+
+                PBar.Visible = false;
+
+                MessageBox.Show("Ready! So now put the two apps next to each other and take a look at the results.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, this.Text);
+                PBar.Visible = false;
+            }
+        }
+
         private void LnkOpenGitHub_Click(object sender, EventArgs e) => Process.Start("https://github.com/builtbybel/ReadySunValley/releases");
 
         private void LnkTPMStatus_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start("tpm.msc");
@@ -588,6 +650,6 @@ namespace ReadySunValley
 
         private void AppScreenshot_Click(object sender, EventArgs e) => CaptureScreen();
 
-        private void AppCompare_Click(object sender, EventArgs e) => MessageBox.Show("Coming...", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private void AppCompare_Click(object sender, EventArgs e) => GetCompareUtil();
     }
 }
