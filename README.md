@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin-11/blob/main/src/RSV/AppIcon.ico" alt="ReadySunValley" width="200"></a>
+  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/ReadySunValley/blob/main/src/RSV/AppIcon.ico" alt="ReadySunValley" width="200"></a>
   <br>
   ReadySunValley
   <br>
@@ -33,7 +33,7 @@ alt="GitHub issues">
   <a href="#credits">Credits</a> 
 </p>
 
-![screenshot](https://github.com/builtbybel/moin-11/blob/main/assets/rsv.png)
+![screenshot](https://github.com/builtbybel//ReadySunValley/blob/main/assets/rsv.png)
 
 ## Features
 Just a tiny tool to help you check if your device is ready for Windows 11
