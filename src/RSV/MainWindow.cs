@@ -27,8 +27,7 @@ namespace ReadySunValley
 
         public Version uriLatestVersion;
 
-        public const int HT_CAPTION = 0x2;
-        public const int ERROR_INVALID_FUNCTION = 1;
+        public const int ERROR_INVALID_FUNCTION = 1; //UEFI/Legacy Boot
 
         [Guid("7D0F462F-4064-4862-BC7F-933E5058C10F")]
         [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
