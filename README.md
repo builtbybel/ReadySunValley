@@ -14,14 +14,14 @@
 <img alt="Latest GitHub release" src="https://img.shields.io/github/release/builtbybel/rsv.svg?style=flat-square" />
 </a>
 	
-<a href="https://github.com/builtbybel/moin-11/releases" target="_blank">
+<a href="https://github.com/builtbybel/ReadySunValley/releases" target="_blank">
 <img alt="Downloads on GitHub" src="https://img.shields.io/github/downloads/builtbybel/ReadySunValley/total.svg?style=flat-square" />
 </a>
 
-<a href="https://github.com/builtbybel/moin-11/commits/master">
+<a href="https://github.com/builtbybel/ReadySunValley/commits/master">
 <img src="https://img.shields.io/github/last-commit/builtbybel/rsv.svg?style=flat-square&logo=github&logoColor=white"
 alt="GitHub last commit">
-<a href="https://github.com/builtbybel/moin-11/issues">
+<a href="https://github.com/builtbybel/ReadySunValley/issues">
 <img src="https://img.shields.io/github/issues-raw/builtbybel/rsv.svg?style=flat-square&logo=github&logoColor=white"
 alt="GitHub issues">   
   
