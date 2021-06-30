@@ -3,7 +3,7 @@
   <br>
   <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin-11/blob/main/src/RSV/AppIcon.ico" alt="ReadySunValley" width="200"></a>
   <br>
-  Moin11
+  ReadySunValley
   <br>
 </h1>
 
