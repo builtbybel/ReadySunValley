@@ -38,6 +38,10 @@ namespace ReadySunValley
             CallingConvention = CallingConvention.StdCall)]
         public static extern int GetFirmwareType(string lpName, string lpGUID, IntPtr pBuffer, uint size);
 
+        // Internet conncetion
+        [System.Runtime.InteropServices.DllImport("wininet.dll")]
+        private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
+
         // Detecting DirectX wrapping COM objects
         [Guid("7D0F462F-4064-4862-BC7F-933E5058C10F")]
         [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
@@ -101,6 +105,12 @@ namespace ReadySunValley
             {
                 return true;
             }
+        }
+
+        public static bool isINet()
+        {
+            int desc;
+            return InternetGetConnectedState(out desc, 0);
         }
 
         public string SecureBootStatus()
@@ -175,7 +185,7 @@ namespace ReadySunValley
             StatusWindow LoadingForm = new StatusWindow();
             LoadingForm.Show();
 
-            LoadingForm.StatusText = "Checking system requirements [1/9]";
+            LoadingForm.StatusText = "Checking system requirements [1/10]";
             lbl_screen.Text = "";
             screengood.Visible = true;
             screenbad.Visible = false;
@@ -210,7 +220,8 @@ namespace ReadySunValley
 
                 performCompatibilityCount += 1;
             }
-            LoadingForm.StatusText = "Checking CPU speed [2/9]";
+
+            LoadingForm.StatusText = "Checking CPU speed [2/10]";
             var clockspeed = ClockSpeed();
             lbl_clockspeed.Text = clockspeed + " MHz Frequency";
             int x = Int32.Parse(clockspeed);
@@ -226,7 +237,8 @@ namespace ReadySunValley
 
                 performCompatibilityCount += 1;
             }
-            LoadingForm.StatusText = "Getting Core counts [3/9]";
+
+            LoadingForm.StatusText = "Getting Core counts [3/10]";
             int coreCount = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
@@ -246,7 +258,8 @@ namespace ReadySunValley
 
                 performCompatibilityCount += 1;
             }
-            LoadingForm.StatusText = "Checking CPU Compatibility [4/9]";
+
+            LoadingForm.StatusText = "Checking CPU Compatibility [4/10]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
                 lbl_cpu.Text = item["Name"].ToString();
@@ -294,7 +307,8 @@ namespace ReadySunValley
                     }
                 }
             }
-            LoadingForm.StatusText = "Checking Partition Types [5/9]";
+
+            LoadingForm.StatusText = "Checking Partition Types [5/10]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition").Get())
             {
                 if (item["Type"].ToString().Contains("System"))
@@ -317,7 +331,7 @@ namespace ReadySunValley
                 }
             }
 
-            LoadingForm.StatusText = "Checking Secure Boot Status [6/9]";
+            LoadingForm.StatusText = "Checking Secure Boot Status [6/10]";
             lbl_secureboot.Text = SecureBootStatus();
 
             if (lbl_secureboot.Text.Contains("ON"))
@@ -332,8 +346,9 @@ namespace ReadySunValley
 
                 performCompatibilityCount += 1;
             }
+
+            LoadingForm.StatusText = "Checking RAM Compatibility [7/10]";
             long ram = 0;
-            LoadingForm.StatusText = "Checking RAM Compatibility [7/9]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_PhysicalMemory").Get())
             {
                 string ramstr = item["Capacity"].ToString();
@@ -359,7 +374,8 @@ namespace ReadySunValley
                     performCompatibilityCount += 1;
                 }
             }
-            LoadingForm.StatusText = "Checking Disk size [8/9]";
+
+            LoadingForm.StatusText = "Checking Disk size [8/10]";
             var systemdrive = Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
 
             long systemfreespace = GetTotalFreeSpace(systemdrive);
@@ -398,8 +414,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Getting DirectX && WDDM2 info [9/9]";
-
+            LoadingForm.StatusText = "Getting DirectX && WDDM2 info [9/10]";
             try
             {
                 Process.Start("dxdiag", "/x dxv.xml");
@@ -438,7 +453,7 @@ namespace ReadySunValley
             }
             catch { }
 
-            LoadingForm.StatusText = "Getting Graphics card [9/9]";
+            LoadingForm.StatusText = "Getting Graphics card [9/10]";
             try
             {
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController");
@@ -460,8 +475,23 @@ namespace ReadySunValley
 
             // Load tpm.msc
             Process.Start("tpm.msc");
-
             LoadingForm.Hide();
+
+            LoadingForm.StatusText = "Checking Internet connection [10/10]";
+            if (isINet())
+            {
+                lbl_inet.Text = "Available";
+                inetgood.Visible = true;
+                inetbad.Visible = false;
+            }
+            else
+            {
+                lbl_inet.Text = "No";
+                inetgood.Visible = false;
+                inetbad.Visible = true;
+
+                performCompatibilityCount += 1;
+            }
 
             // Sum summary
             var sum = performCompatibilityCount;
@@ -583,6 +613,12 @@ namespace ReadySunValley
             tt.SetToolTip(this.freespaceinfo, "You don't have enough free space per the requirements, this doesn't mean you don't have enough total space. Just keep in mind Windows 11 requires at least 64GB of available space.");
         }
 
+        private void inetbad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.inetbad, "Windows 11 Home edition requires internet connectivity and a Microsoft account to complete device setup on first use. Switching a device out of Windows 11 Home in S mode also requires internet connectivity. ");
+        }
+
         private void GetCompareUtil()
         {
             if (MessageBox.Show("Do you want to compare these results with the Utility \"WhyNotWin11\"?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -654,5 +690,7 @@ namespace ReadySunValley
         private void AppScreenshot_Click(object sender, EventArgs e) => CaptureScreen();
 
         private void AppCompare_Click(object sender, EventArgs e) => GetCompareUtil();
+
+        private void AppCheck_Click(object sender, EventArgs e) => DoCompatibilityCheck();
     }
 }
