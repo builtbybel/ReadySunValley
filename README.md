@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">🐦 Checks if your device is ready for the new Windows 11/Sun Valley update</h4>
+<h4 align="center">Checks if your device is ready for the new Windows 11/Sun Valley update</h4>
 
 <p align="center">
 <a href="https://github.com/builtbybel/ReadySunValley/releases/latest" target="_blank">
