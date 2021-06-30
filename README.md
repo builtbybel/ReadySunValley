@@ -1,28 +1,28 @@
 
 <h1 align="center">
   <br>
-  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin-11/blob/main/src/Moin11/AppIcon.ico" alt="Moin11" width="200"></a>
+  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/moin-11/blob/main/src/RSV/AppIcon.ico" alt="ReadySunValley" width="200"></a>
   <br>
   Moin11
   <br>
 </h1>
 
-<h4 align="center">🐦 Windows 11 compatibility checker</h4>
+<h4 align="center">🐦 Checks if your device is ready for the new Windows 11/Sun Valley update</h4>
 
 <p align="center">
 <a href="https://github.com/builtbybel/moin-11/releases/latest" target="_blank">
-<img alt="Latest GitHub release" src="https://img.shields.io/github/release/builtbybel/moin-11.svg?style=flat-square" />
+<img alt="Latest GitHub release" src="https://img.shields.io/github/release/builtbybel/rsv.svg?style=flat-square" />
 </a>
 	
 <a href="https://github.com/builtbybel/moin-11/releases" target="_blank">
-<img alt="Downloads on GitHub" src="https://img.shields.io/github/downloads/builtbybel/moin-11/total.svg?style=flat-square" />
+<img alt="Downloads on GitHub" src="https://img.shields.io/github/downloads/builtbybel/ReadySunValley/total.svg?style=flat-square" />
 </a>
 
 <a href="https://github.com/builtbybel/moin-11/commits/master">
-<img src="https://img.shields.io/github/last-commit/builtbybel/moin-11.svg?style=flat-square&logo=github&logoColor=white"
+<img src="https://img.shields.io/github/last-commit/builtbybel/rsv.svg?style=flat-square&logo=github&logoColor=white"
 alt="GitHub last commit">
 <a href="https://github.com/builtbybel/moin-11/issues">
-<img src="https://img.shields.io/github/issues-raw/builtbybel/moin-11.svg?style=flat-square&logo=github&logoColor=white"
+<img src="https://img.shields.io/github/issues-raw/builtbybel/rsv.svg?style=flat-square&logo=github&logoColor=white"
 alt="GitHub issues">   
   
 </p>
@@ -33,7 +33,7 @@ alt="GitHub issues">
   <a href="#credits">Credits</a> 
 </p>
 
-![screenshot](https://github.com/builtbybel/moin-11/blob/main/assets/moin11.png)
+![screenshot](https://github.com/builtbybel/moin-11/blob/main/assets/rsv.png)
 
 ## Features
 Just a tiny tool to help you check if your device is ready for Windows 11
@@ -42,8 +42,8 @@ Just a tiny tool to help you check if your device is ready for Windows 11
 	
 ## Download
 
-- (Latest release) [Download](https://github.com/builtbybel/moin-11/releases)
-- (Source Code) [Download](https://github.com/builtbybel/moin-11/releases) 
+- (Latest release) [Download](https://github.com/builtbybel/ReadySunValley/releases)
+- (Source Code) [Download](https://github.com/builtbybel/ReadySunValley/releases) 
 
 
 ## Credits
