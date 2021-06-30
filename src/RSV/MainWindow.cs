@@ -27,8 +27,18 @@ namespace ReadySunValley
 
         public Version uriLatestVersion;
 
-        public const int ERROR_INVALID_FUNCTION = 1; //UEFI/Legacy Boot
+        //UEFI or legacy mode
+        public const int ERROR_INVALID_FUNCTION = 1;
 
+        [DllImport("kernel32.dll",
+            EntryPoint = "GetFirmwareEnvironmentVariableA",
+            SetLastError = true,
+            CharSet = CharSet.Unicode,
+            ExactSpelling = true,
+            CallingConvention = CallingConvention.StdCall)]
+        public static extern int GetFirmwareType(string lpName, string lpGUID, IntPtr pBuffer, uint size);
+
+        // Detecting DirectX wrapping COM objects
         [Guid("7D0F462F-4064-4862-BC7F-933E5058C10F")]
         [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
         public interface IDxDiagContainer
@@ -67,14 +77,6 @@ namespace ReadySunValley
             public bool bAllowWHQLChecks;
             public IntPtr pReserved;
         };
-
-        [DllImport("kernel32.dll",
-            EntryPoint = "GetFirmwareEnvironmentVariableA",
-            SetLastError = true,
-            CharSet = CharSet.Unicode,
-            ExactSpelling = true,
-            CallingConvention = CallingConvention.StdCall)]
-        public static extern int GetFirmwareType(string lpName, string lpGUID, IntPtr pBuffer, uint size);
 
         private String FormatBytes(long byteCount)
         {
@@ -205,6 +207,8 @@ namespace ReadySunValley
                 lbl_type.Text = "Legacy";
                 bootgood.Visible = false;
                 bootbad.Visible = true;
+
+                performCompatibilityCount += 1;
             }
             LoadingForm.StatusText = "Checking CPU speed [2/9]";
             var clockspeed = ClockSpeed();
