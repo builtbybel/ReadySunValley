@@ -127,6 +127,17 @@ namespace ReadySunValley
             catch { MessageBox.Show("App update check failed...", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
+        private String FormatBytes(long byteCount)
+        {
+            string[] suf = { " B", " KB", " MB", " GB", " TB", " PB", " EB" };
+            if (byteCount == 0)
+                return "0" + suf[0];
+            long bytes = Math.Abs(byteCount);
+            int place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
+            double num = Math.Round(bytes / Math.Pow(1024, place), 1);
+            return (Math.Sign(byteCount) * num).ToString() + suf[place];
+        }
+
         private void GetProcessorArchitecture()
         {
             switch (typeof(string).Assembly.GetName().ProcessorArchitecture)
@@ -152,17 +163,6 @@ namespace ReadySunValley
                     archbad.Visible = false;
                     break;
             }
-        }
-
-        private String FormatBytes(long byteCount)
-        {
-            string[] suf = { " B", " KB", " MB", " GB", " TB", " PB", " EB" };
-            if (byteCount == 0)
-                return "0" + suf[0];
-            long bytes = Math.Abs(byteCount);
-            int place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
-            double num = Math.Round(bytes / Math.Pow(1024, place), 1);
-            return (Math.Sign(byteCount) * num).ToString() + suf[place];
         }
 
         public static bool isUEFI()
@@ -241,7 +241,7 @@ namespace ReadySunValley
             DoCompatibilityCheck();
 
             // GUI options
-            LblMainMenu.Text = "\ue700";    // Hamburger Menu
+            LblMainMenu.Text = "\ue700";
         }
 
         private void DoCompatibilityCheck()
@@ -256,14 +256,16 @@ namespace ReadySunValley
             StatusWindow LoadingForm = new StatusWindow();
             LoadingForm.Show();
 
-            LoadingForm.StatusText = "Checking system requirements [1/12]";
+            LoadingForm.StatusText = "Checking system requirements [1/13]";
 
             // Run here app also update check
-
             CheckAppUpdate();
-            LoadingForm.StatusText = "Checking CPU architecture [2/12]";
+
+            LoadingForm.StatusText = "Checking CPU architecture [2/13]";
             GetProcessorArchitecture();
 
+            // Calculate and output size for each monitor, Ref. https://theezitguy.wordpress.com/category/c-sharp/
+            LoadingForm.StatusText = "Checking Monitor size [3/13]";
             lbl_screen.Text = "";
             screengood.Visible = true;
             screenbad.Visible = false;
@@ -299,7 +301,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Checking CPU speed [3/12]";
+            LoadingForm.StatusText = "Checking CPU speed [4/13]";
             var clockspeed = ClockSpeed();
             lbl_clockspeed.Text = clockspeed + " MHz Frequency";
             int x = Int32.Parse(clockspeed);
@@ -316,7 +318,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Getting Core counts [4/12]";
+            LoadingForm.StatusText = "Getting Core counts [5/13]";
             int coreCount = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
@@ -337,7 +339,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Checking CPU Compatibility [5/12]";
+            LoadingForm.StatusText = "Checking CPU Compatibility [6/13]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
                 lbl_cpu.Text = item["Name"].ToString();
@@ -349,7 +351,6 @@ namespace ReadySunValley
                 string intelsupported = System.Text.Encoding.UTF8.GetString(intelbytes);
 
                 string supportedCPUs = amdsupported + "\n" + intelsupported;
-
                 string myCPU = lbl_cpu.Text.ToUpper();
 
                 bool FoundCPU = false;
@@ -386,7 +387,7 @@ namespace ReadySunValley
                 }
             }
 
-            LoadingForm.StatusText = "Checking Partition Types [6/12]";
+            LoadingForm.StatusText = "Checking Partition Types [7/13]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition").Get())
             {
                 if (item["Type"].ToString().Contains("System"))
@@ -409,7 +410,7 @@ namespace ReadySunValley
                 }
             }
 
-            LoadingForm.StatusText = "Checking Secure Boot Status [7/12]";
+            LoadingForm.StatusText = "Checking Secure Boot Status [8/13]";
             lbl_secureboot.Text = SecureBootStatus();
 
             if (lbl_secureboot.Text.Contains("ON"))
@@ -425,7 +426,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Checking RAM Compatibility [8/12]";
+            LoadingForm.StatusText = "Checking RAM Compatibility [9/13]";
             long ram = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_PhysicalMemory").Get())
             {
@@ -453,7 +454,7 @@ namespace ReadySunValley
                 }
             }
 
-            LoadingForm.StatusText = "Checking Disk size [9/12]";
+            LoadingForm.StatusText = "Checking Disk size [10/13]";
             var systemdrive = Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
 
             long systemfreespace = GetTotalFreeSpace(systemdrive);
@@ -497,7 +498,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Getting DirectX && WDDM2 info [10/12]";
+            LoadingForm.StatusText = "Getting DirectX && WDDM2 info [11/13]";
             try
             {
                 Process.Start("dxdiag", "/x dxv.xml");
@@ -509,8 +510,8 @@ namespace ReadySunValley
                 XmlNode dxd = doc.SelectSingleNode("//DxDiag");
                 XmlNode dxv = dxd.SelectSingleNode("//DirectXVersion");
                 XmlNode wddmv = dxd.SelectSingleNode("//DriverModel");
-                Double directXver = Convert.ToDouble(dxv.InnerText.Split(' ')[1]);
-                Double wver = Convert.ToDouble(wddmv.InnerText.Split(' ')[1]);
+                Double directXver = Convert.ToDouble(dxv.InnerText.Split(' ')[1], System.Globalization.CultureInfo.InvariantCulture);
+                Double wver = Convert.ToDouble(wddmv.InnerText.Split(' ')[1], System.Globalization.CultureInfo.InvariantCulture);
                 lbl_directx.Text = "DirectX " + directXver;
                 lbl_wddm.Text = "Version: " + wver;
 
@@ -531,12 +532,18 @@ namespace ReadySunValley
                 {
                     wddmbad.Visible = false;
                     wddmgood.Visible = true;
-                    LoadingForm.Hide();
+                } 
+                if (wver < 2)
+                {
+                    wddmbad.Visible = true;
+                    wddmgood.Visible = false;
+
+                    performCompatibilityCount += 1;
                 }
             }
             catch { }
 
-            LoadingForm.StatusText = "Getting Graphics card [11/12]";
+            LoadingForm.StatusText = "Getting Graphics card [12/13]";
             try
             {
                 ManagementObjectSearcher graphics = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController");
@@ -575,7 +582,7 @@ namespace ReadySunValley
                     tpmgood.Visible = true;
                     tpmbad.Visible = false;
                     tpminfo.Visible = false;
-                    LoadingForm.Hide();
+
                 }
                 if (splitted[0].Contains("1.2"))
                 {
@@ -584,7 +591,7 @@ namespace ReadySunValley
                     tpmgood.Visible = false;
                     tpmbad.Visible = false;
                     tpminfo.Visible = true;
-                    LoadingForm.Hide();
+      
                     performCompatibilityCount += 1;
                 }
             }
@@ -593,15 +600,17 @@ namespace ReadySunValley
                 tpmbad.Visible = true;
                 tpmgood.Visible = false;
                 tpminfo.Visible = false;
+     
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Checking Internet connection [12/12]";
+            LoadingForm.StatusText = "Checking Internet connection [13/13]";
             if (isINet())
             {
                 lbl_inet.Text = "Available";
                 inetgood.Visible = true;
                 inetbad.Visible = false;
+                LoadingForm.Hide();
             }
             else
             {

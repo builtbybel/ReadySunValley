@@ -33,12 +33,12 @@ namespace ReadySunValley
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.checkMSRequirements = new System.Windows.Forms.CheckBox();
             this.LblSumBad = new System.Windows.Forms.Label();
             this.LnkOpenGitHub = new System.Windows.Forms.PictureBox();
             this.PBar = new System.Windows.Forms.ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pic_msrequirements = new System.Windows.Forms.PictureBox();
-            this.checkMSRequirements = new System.Windows.Forms.CheckBox();
             this.tpminfo = new System.Windows.Forms.PictureBox();
             this.lbl_arch = new System.Windows.Forms.Label();
             this.archbad = new System.Windows.Forms.PictureBox();
@@ -176,6 +176,25 @@ namespace ReadySunValley
             this.label7.TabIndex = 114;
             this.label7.Text = "Components not ready for Windows 11";
             // 
+            // checkMSRequirements
+            // 
+            this.checkMSRequirements.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkMSRequirements.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkMSRequirements.AutoSize = true;
+            this.checkMSRequirements.BackColor = System.Drawing.Color.Gainsboro;
+            this.checkMSRequirements.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.checkMSRequirements.FlatAppearance.BorderSize = 0;
+            this.checkMSRequirements.FlatAppearance.CheckedBackColor = System.Drawing.Color.HotPink;
+            this.checkMSRequirements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkMSRequirements.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkMSRequirements.Location = new System.Drawing.Point(604, 8);
+            this.checkMSRequirements.Name = "checkMSRequirements";
+            this.checkMSRequirements.Size = new System.Drawing.Size(166, 23);
+            this.checkMSRequirements.TabIndex = 128;
+            this.checkMSRequirements.Text = "Show Microsoft requirements";
+            this.checkMSRequirements.UseVisualStyleBackColor = false;
+            this.checkMSRequirements.CheckedChanged += new System.EventHandler(this.checkMSRequirements_CheckedChanged);
+            // 
             // LblSumBad
             // 
             this.LblSumBad.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -298,26 +317,6 @@ namespace ReadySunValley
             this.pic_msrequirements.TabIndex = 127;
             this.pic_msrequirements.TabStop = false;
             this.pic_msrequirements.Visible = false;
-            // 
-            // checkMSRequirements
-            // 
-            this.checkMSRequirements.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkMSRequirements.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkMSRequirements.AutoEllipsis = true;
-            this.checkMSRequirements.AutoSize = true;
-            this.checkMSRequirements.BackColor = System.Drawing.Color.Gainsboro;
-            this.checkMSRequirements.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.checkMSRequirements.FlatAppearance.BorderSize = 0;
-            this.checkMSRequirements.FlatAppearance.CheckedBackColor = System.Drawing.Color.HotPink;
-            this.checkMSRequirements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkMSRequirements.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkMSRequirements.Location = new System.Drawing.Point(604, 8);
-            this.checkMSRequirements.Name = "checkMSRequirements";
-            this.checkMSRequirements.Size = new System.Drawing.Size(166, 23);
-            this.checkMSRequirements.TabIndex = 128;
-            this.checkMSRequirements.Text = "Show Microsoft requirements";
-            this.checkMSRequirements.UseVisualStyleBackColor = false;
-            this.checkMSRequirements.CheckedChanged += new System.EventHandler(this.checkMSRequirements_CheckedChanged);
             // 
             // tpminfo
             // 
@@ -535,9 +534,9 @@ namespace ReadySunValley
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(49, 367);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 21);
+            this.label9.Size = new System.Drawing.Size(72, 21);
             this.label9.TabIndex = 92;
-            this.label9.Text = "Monitor Info";
+            this.label9.Text = "Monitor";
             // 
             // lbl_directx
             // 
@@ -666,9 +665,9 @@ namespace ReadySunValley
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(49, 319);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 21);
+            this.label4.Size = new System.Drawing.Size(116, 21);
             this.label4.TabIndex = 67;
-            this.label4.Text = "System RAM";
+            this.label4.Text = "RAM Installed";
             // 
             // label3
             // 
