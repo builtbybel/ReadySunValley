@@ -90,7 +90,7 @@ namespace ReadySunValley
             public IntPtr pReserved;
         };
 
-        private void checkAppUpdate()
+        private void CheckAppUpdate()
         {
             try
             {
@@ -125,6 +125,33 @@ namespace ReadySunValley
                 }
             }
             catch { MessageBox.Show("App update check failed...", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void GetProcessorArchitecture()
+        {
+            switch (typeof(string).Assembly.GetName().ProcessorArchitecture)
+            {
+                case System.Reflection.ProcessorArchitecture.X86:
+                    lbl_arch.Text = "x86";
+
+                    archbad.Visible = true;
+                    archgood.Visible = false;
+                    break;
+
+                case System.Reflection.ProcessorArchitecture.Amd64:
+                    lbl_arch.Text = "x64";
+
+                    archgood.Visible = true;
+                    archbad.Visible = false;
+                    break;
+
+                case System.Reflection.ProcessorArchitecture.Arm:
+                    lbl_arch.Text = "ARM";
+
+                    archgood.Visible = true;
+                    archbad.Visible = false;
+                    break;
+            }
         }
 
         private String FormatBytes(long byteCount)
@@ -230,7 +257,12 @@ namespace ReadySunValley
             LoadingForm.Show();
 
             LoadingForm.StatusText = "Checking system requirements [1/10]";
-            checkAppUpdate(); // Run here app also update check
+
+            // Run here app also update check
+
+            CheckAppUpdate();
+            LoadingForm.StatusText = "Checking CPU architecture [1/10]";
+            GetProcessorArchitecture();
 
             lbl_screen.Text = "";
             screengood.Visible = true;
@@ -740,5 +772,6 @@ namespace ReadySunValley
         private void AppCheck_Click(object sender, EventArgs e) => DoCompatibilityCheck();
 
         private void AppHelp_Click(object sender, EventArgs e) => Process.Start("https://www.builtbybel.com/blog/19-apps/41-check-with-the-readysunvalley-app-if-your-device-works-with-windows11-sun-valley-update");
+
     }
 }
