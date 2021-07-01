@@ -17,7 +17,7 @@ namespace ReadySunValley
     {
         private readonly string _infoApp = "ReadySunValley" + "\nVersion " + Program.GetCurrentVersionTostring() +
                                     "\n\nChecks if your device is ready for Windows 11/Sun Valley update.\r\n\n" +
-                                    "This project was forked from https://github.com/mag-nif-i-cent/Affinity11\r\n\n" +
+                                    "This project was forked initially from https://github.com/mag-nif-i-cent/Affinity11\r\n\n" +
                                     "You can also reach out to me on\n" +
                                     "\ttwitter.com/builtbybel\r\n\n" +
                                     "(C) 2021, Builtbybel";
@@ -256,12 +256,12 @@ namespace ReadySunValley
             StatusWindow LoadingForm = new StatusWindow();
             LoadingForm.Show();
 
-            LoadingForm.StatusText = "Checking system requirements [1/10]";
+            LoadingForm.StatusText = "Checking system requirements [1/12]";
 
             // Run here app also update check
 
             CheckAppUpdate();
-            LoadingForm.StatusText = "Checking CPU architecture [1/10]";
+            LoadingForm.StatusText = "Checking CPU architecture [2/12]";
             GetProcessorArchitecture();
 
             lbl_screen.Text = "";
@@ -299,7 +299,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Checking CPU speed [2/10]";
+            LoadingForm.StatusText = "Checking CPU speed [3/12]";
             var clockspeed = ClockSpeed();
             lbl_clockspeed.Text = clockspeed + " MHz Frequency";
             int x = Int32.Parse(clockspeed);
@@ -316,7 +316,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Getting Core counts [3/10]";
+            LoadingForm.StatusText = "Getting Core counts [4/12]";
             int coreCount = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
@@ -337,7 +337,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Checking CPU Compatibility [4/10]";
+            LoadingForm.StatusText = "Checking CPU Compatibility [5/12]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
                 lbl_cpu.Text = item["Name"].ToString();
@@ -386,7 +386,7 @@ namespace ReadySunValley
                 }
             }
 
-            LoadingForm.StatusText = "Checking Partition Types [5/10]";
+            LoadingForm.StatusText = "Checking Partition Types [6/12]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition").Get())
             {
                 if (item["Type"].ToString().Contains("System"))
@@ -409,7 +409,7 @@ namespace ReadySunValley
                 }
             }
 
-            LoadingForm.StatusText = "Checking Secure Boot Status [6/10]";
+            LoadingForm.StatusText = "Checking Secure Boot Status [7/12]";
             lbl_secureboot.Text = SecureBootStatus();
 
             if (lbl_secureboot.Text.Contains("ON"))
@@ -425,7 +425,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Checking RAM Compatibility [7/10]";
+            LoadingForm.StatusText = "Checking RAM Compatibility [8/12]";
             long ram = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_PhysicalMemory").Get())
             {
@@ -453,7 +453,7 @@ namespace ReadySunValley
                 }
             }
 
-            LoadingForm.StatusText = "Checking Disk size [8/10]";
+            LoadingForm.StatusText = "Checking Disk size [9/12]";
             var systemdrive = Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
 
             long systemfreespace = GetTotalFreeSpace(systemdrive);
@@ -461,7 +461,7 @@ namespace ReadySunValley
             Double systemfreespacedouble = Convert.ToDouble(systemfreespacestr);
             lbl_freespace.Text = FormatBytes(systemfreespace).ToString();
 
-            if  (systemfreespacedouble >= 64)
+            if (systemfreespacedouble >= 64)
             {
                 freespacegood.Visible = true;
                 freespaceinfo.Visible = false;
@@ -497,7 +497,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Getting DirectX && WDDM2 info [9/10]";
+            LoadingForm.StatusText = "Getting DirectX && WDDM2 info [10/12]";
             try
             {
                 Process.Start("dxdiag", "/x dxv.xml");
@@ -536,7 +536,7 @@ namespace ReadySunValley
             }
             catch { }
 
-            LoadingForm.StatusText = "Getting Graphics card [9/10]";
+            LoadingForm.StatusText = "Getting Graphics card [11/12]";
             try
             {
                 ManagementObjectSearcher graphics = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController");
@@ -557,7 +557,7 @@ namespace ReadySunValley
             catch (Exception ex) { MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             // Ref. https://wutils.com/wmi/root/cimv2/security/microsofttpm/win32_tpm/cs-samples.html
-            LoadingForm.StatusText = "Getting TPM version...";
+            LoadingForm.StatusText = "Getting TPM version... [10/11]";
             ManagementScope scope = new ManagementScope("\\\\.\\ROOT\\CIMV2\\Security\\MicrosoftTpm");
             ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Tpm");
             ManagementObjectSearcher searcher =
@@ -574,6 +574,7 @@ namespace ReadySunValley
 
                     tpmgood.Visible = true;
                     tpmbad.Visible = false;
+                    tpminfo.Visible = false;
                     LoadingForm.Hide();
                 }
                 if (splitted[0].Contains("1.2"))
@@ -581,14 +582,21 @@ namespace ReadySunValley
                     lbl_tpm.Text = splitted[0] + " (Not supported)";
 
                     tpmgood.Visible = false;
-                    tpmbad.Visible = true;
+                    tpmbad.Visible = false;
+                    tpminfo.Visible = true;
                     LoadingForm.Hide();
                     performCompatibilityCount += 1;
                 }
-    
+            }
+            if (lbl_tpm.Text == "Not present")
+            {
+                tpmbad.Visible = true;
+                tpmgood.Visible = false;
+                tpminfo.Visible = false;
+                performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Checking Internet connection [10/10]";
+            LoadingForm.StatusText = "Checking Internet connection [12/12]";
             if (isINet())
             {
                 lbl_inet.Text = "Available";
@@ -606,15 +614,16 @@ namespace ReadySunValley
 
             // Sum summary
             var sum = performCompatibilityCount;
-            LblBadCompatibilty.Text = sum.ToString();
+            LblSumBad.Text = sum.ToString();
 
-            if (sum <= 0)
+            if (sum == 0)
             {
-                LblBadCompatibilty.ForeColor = Color.Green;
+                LblSumBad.ForeColor = Color.Green;
+                LblSumBad.Text = "You're ready for Sun Valley!";
             }
             else
             {
-                LblBadCompatibilty.ForeColor = Color.DeepPink;
+                LblSumBad.ForeColor = Color.DeepPink;
             }
         }
 
@@ -706,10 +715,16 @@ namespace ReadySunValley
             tt.SetToolTip(this.wddmbad, "Your Windows Display Driver Model version does not meet the minimum requirements for Windows 11.");
         }
 
+        private void tpminfo_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.tpminfo, "Your TPM version is too low. If you’re running an older version of TPM (1.2 typically), then you may be able to update it to TPM 2.0 with a firmware update.");
+        }
+
         private void tpmbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.tpmbad, "Your TPM version is too low. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual, or bios for more information. See TPM or PPT.");
+            tt.SetToolTip(this.tpmbad, "If no TPM is present, you’ll probably find it’s been disabled in the UEFI.");
         }
 
         private void securebootbad_MouseHover(object sender, EventArgs e)
@@ -787,6 +802,27 @@ namespace ReadySunValley
             {
                 MessageBox.Show(ex.Message, this.Text);
                 PBar.Visible = false;
+            }
+        }
+
+        private void checkMSRequirements_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkMSRequirements.Checked)
+            {
+                pic_msrequirements.Visible = true;
+                checkMSRequirements.Text = "Back to my Configuration";
+
+                var request = WebRequest.Create("https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv-microsoft-requirements.png?raw=true");
+
+                using (var response = request.GetResponse())
+                using (var stream = response.GetResponseStream())
+
+                    pic_msrequirements.Image = Bitmap.FromStream(stream);
+            }
+            else if (!checkMSRequirements.Checked)
+            {
+                checkMSRequirements.Text = "Show Microsoft requirements";
+                pic_msrequirements.Visible = false;
             }
         }
 

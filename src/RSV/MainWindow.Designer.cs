@@ -33,10 +33,13 @@ namespace ReadySunValley
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.LblBadCompatibilty = new System.Windows.Forms.Label();
+            this.LblSumBad = new System.Windows.Forms.Label();
             this.LnkOpenGitHub = new System.Windows.Forms.PictureBox();
             this.PBar = new System.Windows.Forms.ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pic_msrequirements = new System.Windows.Forms.PictureBox();
+            this.checkMSRequirements = new System.Windows.Forms.CheckBox();
+            this.tpminfo = new System.Windows.Forms.PictureBox();
             this.lbl_arch = new System.Windows.Forms.Label();
             this.archbad = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -111,6 +114,8 @@ namespace ReadySunValley
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LnkOpenGitHub)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_msrequirements)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.archbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootbad)).BeginInit();
@@ -151,7 +156,8 @@ namespace ReadySunValley
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.LblBadCompatibilty);
+            this.panel1.Controls.Add(this.checkMSRequirements);
+            this.panel1.Controls.Add(this.LblSumBad);
             this.panel1.Controls.Add(this.LnkOpenGitHub);
             this.panel1.Controls.Add(this.PBar);
             this.panel1.Location = new System.Drawing.Point(-1, 702);
@@ -170,17 +176,17 @@ namespace ReadySunValley
             this.label7.TabIndex = 114;
             this.label7.Text = "Components not ready for Windows 11";
             // 
-            // LblBadCompatibilty
+            // LblSumBad
             // 
-            this.LblBadCompatibilty.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LblBadCompatibilty.AutoSize = true;
-            this.LblBadCompatibilty.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBadCompatibilty.ForeColor = System.Drawing.Color.Black;
-            this.LblBadCompatibilty.Location = new System.Drawing.Point(353, 28);
-            this.LblBadCompatibilty.Name = "LblBadCompatibilty";
-            this.LblBadCompatibilty.Size = new System.Drawing.Size(116, 50);
-            this.LblBadCompatibilty.TabIndex = 113;
-            this.LblBadCompatibilty.Text = "None";
+            this.LblSumBad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LblSumBad.AutoSize = true;
+            this.LblSumBad.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSumBad.ForeColor = System.Drawing.Color.Black;
+            this.LblSumBad.Location = new System.Drawing.Point(353, 28);
+            this.LblSumBad.Name = "LblSumBad";
+            this.LblSumBad.Size = new System.Drawing.Size(116, 50);
+            this.LblSumBad.TabIndex = 113;
+            this.LblSumBad.Text = "None";
             // 
             // LnkOpenGitHub
             // 
@@ -211,6 +217,8 @@ namespace ReadySunValley
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.pic_msrequirements);
+            this.panel2.Controls.Add(this.tpminfo);
             this.panel2.Controls.Add(this.lbl_arch);
             this.panel2.Controls.Add(this.archbad);
             this.panel2.Controls.Add(this.label16);
@@ -279,6 +287,49 @@ namespace ReadySunValley
             this.panel2.Size = new System.Drawing.Size(786, 678);
             this.panel2.TabIndex = 1;
             // 
+            // pic_msrequirements
+            // 
+            this.pic_msrequirements.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_msrequirements.Location = new System.Drawing.Point(10, 88);
+            this.pic_msrequirements.Name = "pic_msrequirements";
+            this.pic_msrequirements.Size = new System.Drawing.Size(770, 587);
+            this.pic_msrequirements.TabIndex = 127;
+            this.pic_msrequirements.TabStop = false;
+            this.pic_msrequirements.Visible = false;
+            // 
+            // checkMSRequirements
+            // 
+            this.checkMSRequirements.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkMSRequirements.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkMSRequirements.AutoEllipsis = true;
+            this.checkMSRequirements.AutoSize = true;
+            this.checkMSRequirements.BackColor = System.Drawing.Color.Gainsboro;
+            this.checkMSRequirements.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.checkMSRequirements.FlatAppearance.BorderSize = 0;
+            this.checkMSRequirements.FlatAppearance.CheckedBackColor = System.Drawing.Color.HotPink;
+            this.checkMSRequirements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkMSRequirements.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkMSRequirements.Location = new System.Drawing.Point(604, 8);
+            this.checkMSRequirements.Name = "checkMSRequirements";
+            this.checkMSRequirements.Size = new System.Drawing.Size(166, 23);
+            this.checkMSRequirements.TabIndex = 128;
+            this.checkMSRequirements.Text = "Show Microsoft requirements";
+            this.checkMSRequirements.UseVisualStyleBackColor = false;
+            this.checkMSRequirements.CheckedChanged += new System.EventHandler(this.checkMSRequirements_CheckedChanged);
+            // 
+            // tpminfo
+            // 
+            this.tpminfo.Image = global::ReadySunValley.Properties.Resources.info;
+            this.tpminfo.Location = new System.Drawing.Point(11, 510);
+            this.tpminfo.Name = "tpminfo";
+            this.tpminfo.Size = new System.Drawing.Size(25, 25);
+            this.tpminfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tpminfo.TabIndex = 125;
+            this.tpminfo.TabStop = false;
+            this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
+            // 
             // lbl_arch
             // 
             this.lbl_arch.AutoSize = true;
@@ -345,7 +396,7 @@ namespace ReadySunValley
             this.LblMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblMainMenu.AutoSize = true;
             this.LblMainMenu.BackColor = System.Drawing.Color.White;
-            this.LblMainMenu.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.LblMainMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.LblMainMenu.FlatAppearance.BorderSize = 0;
             this.LblMainMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.HotPink;
             this.LblMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1029,6 +1080,8 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.LnkOpenGitHub)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_msrequirements)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.archbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootbad)).EndInit();
@@ -1122,7 +1175,7 @@ namespace ReadySunValley
         private System.Windows.Forms.PictureBox freespacegood;
         private System.Windows.Forms.PictureBox securebootgood;
         private System.Windows.Forms.Label LblSystem;
-        private System.Windows.Forms.Label LblBadCompatibilty;
+        private System.Windows.Forms.Label LblSumBad;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button LblMainMenu;
         private System.Windows.Forms.ContextMenuStrip MainMenu;
@@ -1145,6 +1198,9 @@ namespace ReadySunValley
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox tpmbad;
         private System.Windows.Forms.PictureBox tpmgood;
+        private System.Windows.Forms.PictureBox tpminfo;
+        private System.Windows.Forms.PictureBox pic_msrequirements;
+        private System.Windows.Forms.CheckBox checkMSRequirements;
     }
 }
 
