@@ -461,7 +461,7 @@ namespace ReadySunValley
             Double systemfreespacedouble = Convert.ToDouble(systemfreespacestr);
             lbl_freespace.Text = FormatBytes(systemfreespace).ToString();
 
-            if (systemfreespacedouble >= 64)
+            if  (systemfreespacedouble >= 64)
             {
                 freespacegood.Visible = true;
                 freespaceinfo.Visible = false;
@@ -479,7 +479,12 @@ namespace ReadySunValley
             Double systemspacedouble = Convert.ToDouble(systemspacestr);
             lbl_storage.Text = FormatBytes(systemtotalspace).ToString();
 
-            if (systemspacedouble >= 64)
+            if (lbl_storage.Text.Contains("GB") && (systemspacedouble >= 64))
+            {
+                hddgood.Visible = true;
+                hddbad.Visible = false;
+            }
+            else if (lbl_storage.Text.Contains("TB") && (systemspacedouble >= 1))
             {
                 hddgood.Visible = true;
                 hddbad.Visible = false;
@@ -534,10 +539,10 @@ namespace ReadySunValley
             LoadingForm.StatusText = "Getting Graphics card [9/10]";
             try
             {
-                ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController");
+                ManagementObjectSearcher graphics = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController");
 
                 string gpu = string.Empty;
-                foreach (ManagementObject mo in searcher.Get())
+                foreach (ManagementObject mo in graphics.Get())
                 {
                     foreach (PropertyData property in mo.Properties)
                     {
@@ -551,9 +556,37 @@ namespace ReadySunValley
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
-            // Load tpm.msc
-            Process.Start("tpm.msc");
-            LoadingForm.Hide();
+            // Ref. https://wutils.com/wmi/root/cimv2/security/microsofttpm/win32_tpm/cs-samples.html
+            LoadingForm.StatusText = "Getting TPM version...";
+            ManagementScope scope = new ManagementScope("\\\\.\\ROOT\\CIMV2\\Security\\MicrosoftTpm");
+            ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Tpm");
+            ManagementObjectSearcher searcher =
+                                    new ManagementObjectSearcher(scope, query);
+            ManagementObjectCollection queryCollection = searcher.Get();
+            foreach (ManagementObject m in queryCollection)
+            {
+                string tpmver = m["SpecVersion"].ToString();
+                string[] splitted = tpmver.Split(',');
+
+                if (splitted[0].Contains("2.0"))
+                {
+                    lbl_tpm.Text = splitted[0];
+
+                    tpmgood.Visible = true;
+                    tpmbad.Visible = false;
+                    LoadingForm.Hide();
+                }
+                if (splitted[0].Contains("1.2"))
+                {
+                    lbl_tpm.Text = splitted[0] + " (Not supported)";
+
+                    tpmgood.Visible = false;
+                    tpmbad.Visible = true;
+                    LoadingForm.Hide();
+                    performCompatibilityCount += 1;
+                }
+    
+            }
 
             LoadingForm.StatusText = "Checking Internet connection [10/10]";
             if (isINet())
@@ -619,12 +652,6 @@ namespace ReadySunValley
             tt.SetToolTip(this.bootbad, "Your system needs to support a UEFI boot mode, right now your system is booting using Legacy. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual or bios for more information.");
         }
 
-        private void tpminfo_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.tpminfo, "The recommended TPM version is 2.0");
-        }
-
         private void cpubad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
@@ -649,6 +676,12 @@ namespace ReadySunValley
             tt.SetToolTip(this.partbad, "Your system needs to support GPT partition types, right now your system is booting using MBR. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual or bios for more information.");
         }
 
+        private void screenbad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.screenbad, "One or more of your monitors are too small to work on Windows 11.");
+        }
+
         private void rambad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
@@ -667,16 +700,16 @@ namespace ReadySunValley
             tt.SetToolTip(this.directbad, "Your DirectX version is too low. This doesn't necessarily mean that your system doesn't support higher versions. Check DXDIAG for more information.");
         }
 
-        private void screenbad_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.screenbad, "One or more of your monitors are too small to work on Windows 11.");
-        }
-
         private void wddmbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
             tt.SetToolTip(this.wddmbad, "Your Windows Display Driver Model version does not meet the minimum requirements for Windows 11.");
+        }
+
+        private void tpmbad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.tpmbad, "Your TPM version is too low. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual, or bios for more information. See TPM or PPT.");
         }
 
         private void securebootbad_MouseHover(object sender, EventArgs e)
@@ -759,8 +792,6 @@ namespace ReadySunValley
 
         private void LnkOpenGitHub_Click(object sender, EventArgs e) => Process.Start("https://github.com/builtbybel/ReadySunValley/releases");
 
-        private void LnkTPMStatus_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start("tpm.msc");
-
         private void LblMainMenu_Click(object sender, EventArgs e) => this.MainMenu.Show(Cursor.Position.X, Cursor.Position.Y);
 
         private void AppInfo_Click(object sender, EventArgs e) => MessageBox.Show(_infoApp, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -772,6 +803,5 @@ namespace ReadySunValley
         private void AppCheck_Click(object sender, EventArgs e) => DoCompatibilityCheck();
 
         private void AppHelp_Click(object sender, EventArgs e) => Process.Start("https://www.builtbybel.com/blog/19-apps/41-check-with-the-readysunvalley-app-if-your-device-works-with-windows11-sun-valley-update");
-
     }
 }

@@ -47,7 +47,6 @@ namespace ReadySunValley
             this.LblSystem = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.LnkTPMStatus = new System.Windows.Forms.LinkLabel();
             this.lbl_secureboot = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.securebootbad = new System.Windows.Forms.PictureBox();
@@ -90,16 +89,17 @@ namespace ReadySunValley
             this.directbad = new System.Windows.Forms.PictureBox();
             this.directgood = new System.Windows.Forms.PictureBox();
             this.cpuinfo = new System.Windows.Forms.PictureBox();
-            this.tpminfo = new System.Windows.Forms.PictureBox();
             this.screenbad = new System.Windows.Forms.PictureBox();
             this.screengood = new System.Windows.Forms.PictureBox();
             this.wddmbad = new System.Windows.Forms.PictureBox();
             this.wddmgood = new System.Windows.Forms.PictureBox();
-            this.freespaceinfo = new System.Windows.Forms.PictureBox();
-            this.freespacegood = new System.Windows.Forms.PictureBox();
             this.securebootgood = new System.Windows.Forms.PictureBox();
             this.inetgood = new System.Windows.Forms.PictureBox();
             this.archgood = new System.Windows.Forms.PictureBox();
+            this.tpmbad = new System.Windows.Forms.PictureBox();
+            this.tpmgood = new System.Windows.Forms.PictureBox();
+            this.freespaceinfo = new System.Windows.Forms.PictureBox();
+            this.freespacegood = new System.Windows.Forms.PictureBox();
             this.MainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.AppCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.AppScreenshot = new System.Windows.Forms.ToolStripMenuItem();
@@ -131,16 +131,17 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.directbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.directgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.screenbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.screengood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wddmgood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.freespaceinfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.archgood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpmbad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freespaceinfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).BeginInit();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -220,7 +221,6 @@ namespace ReadySunValley
             this.panel2.Controls.Add(this.LblSystem);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.LnkTPMStatus);
             this.panel2.Controls.Add(this.lbl_secureboot);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.securebootbad);
@@ -263,19 +263,20 @@ namespace ReadySunValley
             this.panel2.Controls.Add(this.directbad);
             this.panel2.Controls.Add(this.directgood);
             this.panel2.Controls.Add(this.cpuinfo);
-            this.panel2.Controls.Add(this.tpminfo);
             this.panel2.Controls.Add(this.screenbad);
             this.panel2.Controls.Add(this.screengood);
             this.panel2.Controls.Add(this.wddmbad);
             this.panel2.Controls.Add(this.wddmgood);
-            this.panel2.Controls.Add(this.freespaceinfo);
-            this.panel2.Controls.Add(this.freespacegood);
             this.panel2.Controls.Add(this.securebootgood);
             this.panel2.Controls.Add(this.inetgood);
             this.panel2.Controls.Add(this.archgood);
+            this.panel2.Controls.Add(this.tpmbad);
+            this.panel2.Controls.Add(this.tpmgood);
+            this.panel2.Controls.Add(this.freespaceinfo);
+            this.panel2.Controls.Add(this.freespacegood);
             this.panel2.Location = new System.Drawing.Point(12, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(786, 693);
+            this.panel2.Size = new System.Drawing.Size(786, 678);
             this.panel2.TabIndex = 1;
             // 
             // lbl_arch
@@ -312,7 +313,7 @@ namespace ReadySunValley
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(49, 665);
+            this.label15.Location = new System.Drawing.Point(49, 645);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 21);
             this.label15.TabIndex = 118;
@@ -322,7 +323,7 @@ namespace ReadySunValley
             // 
             this.lbl_inet.AutoSize = true;
             this.lbl_inet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_inet.Location = new System.Drawing.Point(257, 665);
+            this.lbl_inet.Location = new System.Drawing.Point(257, 645);
             this.lbl_inet.Name = "lbl_inet";
             this.lbl_inet.Size = new System.Drawing.Size(83, 21);
             this.lbl_inet.TabIndex = 117;
@@ -331,7 +332,7 @@ namespace ReadySunValley
             // inetbad
             // 
             this.inetbad.Image = ((System.Drawing.Image)(resources.GetObject("inetbad.Image")));
-            this.inetbad.Location = new System.Drawing.Point(11, 665);
+            this.inetbad.Location = new System.Drawing.Point(11, 645);
             this.inetbad.Name = "inetbad";
             this.inetbad.Size = new System.Drawing.Size(25, 25);
             this.inetbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -351,7 +352,7 @@ namespace ReadySunValley
             this.LblMainMenu.Font = new System.Drawing.Font("Segoe MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMainMenu.ForeColor = System.Drawing.Color.DeepPink;
             this.LblMainMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LblMainMenu.Location = new System.Drawing.Point(737, 9);
+            this.LblMainMenu.Location = new System.Drawing.Point(738, 6);
             this.LblMainMenu.Name = "LblMainMenu";
             this.LblMainMenu.Size = new System.Drawing.Size(48, 51);
             this.LblMainMenu.TabIndex = 113;
@@ -395,19 +396,6 @@ namespace ReadySunValley
             this.label13.Size = new System.Drawing.Size(432, 32);
             this.label13.TabIndex = 110;
             this.label13.Text = "Your Windows 11 Compatibility Results";
-            // 
-            // LnkTPMStatus
-            // 
-            this.LnkTPMStatus.AutoSize = true;
-            this.LnkTPMStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LnkTPMStatus.LinkColor = System.Drawing.Color.DeepPink;
-            this.LnkTPMStatus.Location = new System.Drawing.Point(585, 531);
-            this.LnkTPMStatus.Name = "LnkTPMStatus";
-            this.LnkTPMStatus.Size = new System.Drawing.Size(41, 21);
-            this.LnkTPMStatus.TabIndex = 109;
-            this.LnkTPMStatus.TabStop = true;
-            this.LnkTPMStatus.Text = "here";
-            this.LnkTPMStatus.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkTPMStatus_LinkClicked);
             // 
             // lbl_secureboot
             // 
@@ -464,7 +452,7 @@ namespace ReadySunValley
             // 
             this.lbl_wddm.AutoSize = true;
             this.lbl_wddm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_wddm.Location = new System.Drawing.Point(257, 622);
+            this.lbl_wddm.Location = new System.Drawing.Point(257, 602);
             this.lbl_wddm.Name = "lbl_wddm";
             this.lbl_wddm.Size = new System.Drawing.Size(45, 21);
             this.lbl_wddm.TabIndex = 99;
@@ -474,7 +462,7 @@ namespace ReadySunValley
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(49, 622);
+            this.label10.Location = new System.Drawing.Point(49, 602);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 21);
             this.label10.TabIndex = 96;
@@ -504,7 +492,7 @@ namespace ReadySunValley
             // 
             this.lbl_directx.AutoSize = true;
             this.lbl_directx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_directx.Location = new System.Drawing.Point(257, 574);
+            this.lbl_directx.Location = new System.Drawing.Point(257, 554);
             this.lbl_directx.Name = "lbl_directx";
             this.lbl_directx.Size = new System.Drawing.Size(45, 21);
             this.lbl_directx.TabIndex = 89;
@@ -514,7 +502,7 @@ namespace ReadySunValley
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(49, 575);
+            this.label8.Location = new System.Drawing.Point(49, 555);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 21);
             this.label8.TabIndex = 86;
@@ -523,13 +511,13 @@ namespace ReadySunValley
             // lbl_tpm
             // 
             this.lbl_tpm.AutoEllipsis = true;
+            this.lbl_tpm.AutoSize = true;
             this.lbl_tpm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tpm.Location = new System.Drawing.Point(257, 510);
             this.lbl_tpm.Name = "lbl_tpm";
-            this.lbl_tpm.Size = new System.Drawing.Size(526, 42);
+            this.lbl_tpm.Size = new System.Drawing.Size(92, 21);
             this.lbl_tpm.TabIndex = 84;
-            this.lbl_tpm.Text = "If TPM is installed, you can see the manufacturer information about the TPM in th" +
-    "e TPM Management Tool or just click";
+            this.lbl_tpm.Text = "Not present";
             // 
             // lbl_storage
             // 
@@ -607,9 +595,9 @@ namespace ReadySunValley
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(49, 510);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 21);
+            this.label6.Size = new System.Drawing.Size(105, 21);
             this.label6.TabIndex = 73;
-            this.label6.Text = "TPM Requirement";
+            this.label6.Text = "TPM Version";
             // 
             // label5
             // 
@@ -811,7 +799,7 @@ namespace ReadySunValley
             // directbad
             // 
             this.directbad.Image = ((System.Drawing.Image)(resources.GetObject("directbad.Image")));
-            this.directbad.Location = new System.Drawing.Point(10, 576);
+            this.directbad.Location = new System.Drawing.Point(10, 556);
             this.directbad.Name = "directbad";
             this.directbad.Size = new System.Drawing.Size(25, 25);
             this.directbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -822,7 +810,7 @@ namespace ReadySunValley
             // directgood
             // 
             this.directgood.Image = ((System.Drawing.Image)(resources.GetObject("directgood.Image")));
-            this.directgood.Location = new System.Drawing.Point(10, 576);
+            this.directgood.Location = new System.Drawing.Point(10, 556);
             this.directgood.Name = "directgood";
             this.directgood.Size = new System.Drawing.Size(25, 25);
             this.directgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -839,17 +827,6 @@ namespace ReadySunValley
             this.cpuinfo.TabIndex = 90;
             this.cpuinfo.TabStop = false;
             this.cpuinfo.MouseHover += new System.EventHandler(this.cpuinfo_MouseHover);
-            // 
-            // tpminfo
-            // 
-            this.tpminfo.Image = global::ReadySunValley.Properties.Resources.info;
-            this.tpminfo.Location = new System.Drawing.Point(10, 510);
-            this.tpminfo.Name = "tpminfo";
-            this.tpminfo.Size = new System.Drawing.Size(25, 25);
-            this.tpminfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tpminfo.TabIndex = 91;
-            this.tpminfo.TabStop = false;
-            this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
             // 
             // screenbad
             // 
@@ -875,7 +852,7 @@ namespace ReadySunValley
             // wddmbad
             // 
             this.wddmbad.Image = ((System.Drawing.Image)(resources.GetObject("wddmbad.Image")));
-            this.wddmbad.Location = new System.Drawing.Point(11, 622);
+            this.wddmbad.Location = new System.Drawing.Point(11, 602);
             this.wddmbad.Name = "wddmbad";
             this.wddmbad.Size = new System.Drawing.Size(25, 25);
             this.wddmbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -886,12 +863,63 @@ namespace ReadySunValley
             // wddmgood
             // 
             this.wddmgood.Image = ((System.Drawing.Image)(resources.GetObject("wddmgood.Image")));
-            this.wddmgood.Location = new System.Drawing.Point(10, 622);
+            this.wddmgood.Location = new System.Drawing.Point(10, 602);
             this.wddmgood.Name = "wddmgood";
             this.wddmgood.Size = new System.Drawing.Size(25, 25);
             this.wddmgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wddmgood.TabIndex = 97;
             this.wddmgood.TabStop = false;
+            // 
+            // securebootgood
+            // 
+            this.securebootgood.Image = ((System.Drawing.Image)(resources.GetObject("securebootgood.Image")));
+            this.securebootgood.Location = new System.Drawing.Point(9, 230);
+            this.securebootgood.Name = "securebootgood";
+            this.securebootgood.Size = new System.Drawing.Size(25, 25);
+            this.securebootgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.securebootgood.TabIndex = 105;
+            this.securebootgood.TabStop = false;
+            // 
+            // inetgood
+            // 
+            this.inetgood.Image = ((System.Drawing.Image)(resources.GetObject("inetgood.Image")));
+            this.inetgood.Location = new System.Drawing.Point(11, 645);
+            this.inetgood.Name = "inetgood";
+            this.inetgood.Size = new System.Drawing.Size(25, 25);
+            this.inetgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inetgood.TabIndex = 116;
+            this.inetgood.TabStop = false;
+            // 
+            // archgood
+            // 
+            this.archgood.Image = ((System.Drawing.Image)(resources.GetObject("archgood.Image")));
+            this.archgood.Location = new System.Drawing.Point(11, 139);
+            this.archgood.Name = "archgood";
+            this.archgood.Size = new System.Drawing.Size(25, 25);
+            this.archgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.archgood.TabIndex = 121;
+            this.archgood.TabStop = false;
+            // 
+            // tpmbad
+            // 
+            this.tpmbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.tpmbad.Location = new System.Drawing.Point(11, 510);
+            this.tpmbad.Name = "tpmbad";
+            this.tpmbad.Size = new System.Drawing.Size(25, 25);
+            this.tpmbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tpmbad.TabIndex = 124;
+            this.tpmbad.TabStop = false;
+            this.tpmbad.MouseHover += new System.EventHandler(this.tpmbad_MouseHover);
+            // 
+            // tpmgood
+            // 
+            this.tpmgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.tpmgood.Location = new System.Drawing.Point(11, 510);
+            this.tpmgood.Name = "tpmgood";
+            this.tpmgood.Size = new System.Drawing.Size(25, 25);
+            this.tpmgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tpmgood.TabIndex = 123;
+            this.tpmgood.TabStop = false;
             // 
             // freespaceinfo
             // 
@@ -913,36 +941,6 @@ namespace ReadySunValley
             this.freespacegood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.freespacegood.TabIndex = 101;
             this.freespacegood.TabStop = false;
-            // 
-            // securebootgood
-            // 
-            this.securebootgood.Image = ((System.Drawing.Image)(resources.GetObject("securebootgood.Image")));
-            this.securebootgood.Location = new System.Drawing.Point(9, 230);
-            this.securebootgood.Name = "securebootgood";
-            this.securebootgood.Size = new System.Drawing.Size(25, 25);
-            this.securebootgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.securebootgood.TabIndex = 105;
-            this.securebootgood.TabStop = false;
-            // 
-            // inetgood
-            // 
-            this.inetgood.Image = ((System.Drawing.Image)(resources.GetObject("inetgood.Image")));
-            this.inetgood.Location = new System.Drawing.Point(11, 665);
-            this.inetgood.Name = "inetgood";
-            this.inetgood.Size = new System.Drawing.Size(25, 25);
-            this.inetgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.inetgood.TabIndex = 116;
-            this.inetgood.TabStop = false;
-            // 
-            // archgood
-            // 
-            this.archgood.Image = ((System.Drawing.Image)(resources.GetObject("archgood.Image")));
-            this.archgood.Location = new System.Drawing.Point(11, 139);
-            this.archgood.Name = "archgood";
-            this.archgood.Size = new System.Drawing.Size(25, 25);
-            this.archgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.archgood.TabIndex = 121;
-            this.archgood.TabStop = false;
             // 
             // MainMenu
             // 
@@ -1051,16 +1049,17 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.directbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.directgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.screenbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.screengood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wddmgood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.freespaceinfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.archgood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpmbad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freespaceinfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -1073,7 +1072,6 @@ namespace ReadySunValley
         private System.Windows.Forms.PictureBox LnkOpenGitHub;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.LinkLabel LnkTPMStatus;
         private System.Windows.Forms.Label lbl_secureboot;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox securebootbad;
@@ -1116,7 +1114,6 @@ namespace ReadySunValley
         private System.Windows.Forms.PictureBox directbad;
         private System.Windows.Forms.PictureBox directgood;
         private System.Windows.Forms.PictureBox cpuinfo;
-        private System.Windows.Forms.PictureBox tpminfo;
         private System.Windows.Forms.PictureBox screenbad;
         private System.Windows.Forms.PictureBox screengood;
         private System.Windows.Forms.PictureBox wddmbad;
@@ -1146,6 +1143,8 @@ namespace ReadySunValley
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox archgood;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox tpmbad;
+        private System.Windows.Forms.PictureBox tpmgood;
     }
 }
 
