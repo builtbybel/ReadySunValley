@@ -105,25 +105,26 @@ namespace ReadySunValley
 
                 sr.Dispose();
                 hres.Dispose();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); // Update check failed!
-            }
 
-            var equals = LatestVersion.CompareTo(CurrentVersion);
+                var equals = LatestVersion.CompareTo(CurrentVersion);
 
-            if (equals == 0)
-            {
-                return; // Up-to-date
-            }
-            else // New release available!
-            {
-                if (MessageBox.Show("A new app version " + LatestVersion + " is available.\nDo you want to goto the Github update page?\n\nPress <No> to continue with comaptibility check.", "App update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // New release available!
+                if (equals == 0)
                 {
-                    Process.Start("https://github.com/builtbybel/readysunvalley/releases/tag/" + LatestVersion);
+                    return; // up-to-date
+                }
+                else if (equals < 0)
+                {
+                    return; // higher than available
+                }
+                else // new version
+                {
+                    if (MessageBox.Show("A new app version " + LatestVersion + " is available.\nDo you want to goto the Github update page?\n\nPress <No> to continue with compatibility check.", "App update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // New release available!
+                    {
+                        Process.Start("https://github.com/builtbybel/readysunvalley/releases/tag/" + LatestVersion);
+                    }
                 }
             }
+            catch { MessageBox.Show("App update check failed...", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private String FormatBytes(long byteCount)
@@ -153,8 +154,7 @@ namespace ReadySunValley
 
         public static bool isINet()
         {
-            int desc;
-            return InternetGetConnectedState(out desc, 0);
+            return InternetGetConnectedState(out _, 0);
         }
 
         public string SecureBootStatus()
@@ -738,5 +738,7 @@ namespace ReadySunValley
         private void AppCompare_Click(object sender, EventArgs e) => GetCompareUtil();
 
         private void AppCheck_Click(object sender, EventArgs e) => DoCompatibilityCheck();
+
+        private void AppHelp_Click(object sender, EventArgs e) => Process.Start("https://www.builtbybel.com/blog/19-apps/41-check-with-the-readysunvalley-app-if-your-device-works-with-windows11-sun-valley-update");
     }
 }

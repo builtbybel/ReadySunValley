@@ -103,6 +103,7 @@ namespace ReadySunValley
             this.AppHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.AppInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LnkOpenGitHub)).BeginInit();
             this.panel2.SuspendLayout();
@@ -279,7 +280,7 @@ namespace ReadySunValley
             // 
             // inetbad
             // 
-            this.inetbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.inetbad.Image = ((System.Drawing.Image)(resources.GetObject("inetbad.Image")));
             this.inetbad.Location = new System.Drawing.Point(11, 665);
             this.inetbad.Name = "inetbad";
             this.inetbad.Size = new System.Drawing.Size(25, 25);
@@ -388,7 +389,7 @@ namespace ReadySunValley
             // 
             // securebootbad
             // 
-            this.securebootbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.securebootbad.Image = ((System.Drawing.Image)(resources.GetObject("securebootbad.Image")));
             this.securebootbad.Location = new System.Drawing.Point(10, 226);
             this.securebootbad.Name = "securebootbad";
             this.securebootbad.Size = new System.Drawing.Size(25, 25);
@@ -620,7 +621,7 @@ namespace ReadySunValley
             // 
             // bootbad
             // 
-            this.bootbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.bootbad.Image = ((System.Drawing.Image)(resources.GetObject("bootbad.Image")));
             this.bootbad.Location = new System.Drawing.Point(10, 184);
             this.bootbad.Name = "bootbad";
             this.bootbad.Size = new System.Drawing.Size(25, 25);
@@ -631,7 +632,7 @@ namespace ReadySunValley
             // 
             // freqbad
             // 
-            this.freqbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.freqbad.Image = ((System.Drawing.Image)(resources.GetObject("freqbad.Image")));
             this.freqbad.Location = new System.Drawing.Point(261, 141);
             this.freqbad.Name = "freqbad";
             this.freqbad.Size = new System.Drawing.Size(25, 25);
@@ -642,7 +643,7 @@ namespace ReadySunValley
             // 
             // bootgood
             // 
-            this.bootgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.bootgood.Image = ((System.Drawing.Image)(resources.GetObject("bootgood.Image")));
             this.bootgood.Location = new System.Drawing.Point(11, 184);
             this.bootgood.Name = "bootgood";
             this.bootgood.Size = new System.Drawing.Size(25, 25);
@@ -652,7 +653,7 @@ namespace ReadySunValley
             // 
             // freqgood
             // 
-            this.freqgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.freqgood.Image = ((System.Drawing.Image)(resources.GetObject("freqgood.Image")));
             this.freqgood.Location = new System.Drawing.Point(261, 141);
             this.freqgood.Name = "freqgood";
             this.freqgood.Size = new System.Drawing.Size(25, 25);
@@ -662,7 +663,7 @@ namespace ReadySunValley
             // 
             // coresbad
             // 
-            this.coresbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.coresbad.Image = ((System.Drawing.Image)(resources.GetObject("coresbad.Image")));
             this.coresbad.Location = new System.Drawing.Point(486, 139);
             this.coresbad.Name = "coresbad";
             this.coresbad.Size = new System.Drawing.Size(25, 25);
@@ -673,7 +674,7 @@ namespace ReadySunValley
             // 
             // coresgood
             // 
-            this.coresgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.coresgood.Image = ((System.Drawing.Image)(resources.GetObject("coresgood.Image")));
             this.coresgood.Location = new System.Drawing.Point(486, 139);
             this.coresgood.Name = "coresgood";
             this.coresgood.Size = new System.Drawing.Size(25, 25);
@@ -683,7 +684,7 @@ namespace ReadySunValley
             // 
             // cpubad
             // 
-            this.cpubad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.cpubad.Image = ((System.Drawing.Image)(resources.GetObject("cpubad.Image")));
             this.cpubad.Location = new System.Drawing.Point(11, 97);
             this.cpubad.Name = "cpubad";
             this.cpubad.Size = new System.Drawing.Size(25, 25);
@@ -694,7 +695,7 @@ namespace ReadySunValley
             // 
             // cpugood
             // 
-            this.cpugood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.cpugood.Image = ((System.Drawing.Image)(resources.GetObject("cpugood.Image")));
             this.cpugood.Location = new System.Drawing.Point(11, 97);
             this.cpugood.Name = "cpugood";
             this.cpugood.Size = new System.Drawing.Size(25, 25);
@@ -704,7 +705,7 @@ namespace ReadySunValley
             // 
             // partbad
             // 
-            this.partbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.partbad.Image = ((System.Drawing.Image)(resources.GetObject("partbad.Image")));
             this.partbad.Location = new System.Drawing.Point(10, 268);
             this.partbad.Name = "partbad";
             this.partbad.Size = new System.Drawing.Size(25, 25);
@@ -715,7 +716,7 @@ namespace ReadySunValley
             // 
             // partgood
             // 
-            this.partgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.partgood.Image = ((System.Drawing.Image)(resources.GetObject("partgood.Image")));
             this.partgood.Location = new System.Drawing.Point(11, 268);
             this.partgood.Name = "partgood";
             this.partgood.Size = new System.Drawing.Size(25, 25);
@@ -725,7 +726,7 @@ namespace ReadySunValley
             // 
             // rambad
             // 
-            this.rambad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.rambad.Image = ((System.Drawing.Image)(resources.GetObject("rambad.Image")));
             this.rambad.Location = new System.Drawing.Point(10, 319);
             this.rambad.Name = "rambad";
             this.rambad.Size = new System.Drawing.Size(25, 25);
@@ -736,7 +737,7 @@ namespace ReadySunValley
             // 
             // ramgood
             // 
-            this.ramgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.ramgood.Image = ((System.Drawing.Image)(resources.GetObject("ramgood.Image")));
             this.ramgood.Location = new System.Drawing.Point(10, 319);
             this.ramgood.Name = "ramgood";
             this.ramgood.Size = new System.Drawing.Size(25, 25);
@@ -746,7 +747,7 @@ namespace ReadySunValley
             // 
             // hddbad
             // 
-            this.hddbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.hddbad.Image = ((System.Drawing.Image)(resources.GetObject("hddbad.Image")));
             this.hddbad.Location = new System.Drawing.Point(10, 412);
             this.hddbad.Name = "hddbad";
             this.hddbad.Size = new System.Drawing.Size(25, 25);
@@ -757,7 +758,7 @@ namespace ReadySunValley
             // 
             // hddgood
             // 
-            this.hddgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.hddgood.Image = ((System.Drawing.Image)(resources.GetObject("hddgood.Image")));
             this.hddgood.Location = new System.Drawing.Point(11, 412);
             this.hddgood.Name = "hddgood";
             this.hddgood.Size = new System.Drawing.Size(25, 25);
@@ -767,7 +768,7 @@ namespace ReadySunValley
             // 
             // directbad
             // 
-            this.directbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.directbad.Image = ((System.Drawing.Image)(resources.GetObject("directbad.Image")));
             this.directbad.Location = new System.Drawing.Point(10, 576);
             this.directbad.Name = "directbad";
             this.directbad.Size = new System.Drawing.Size(25, 25);
@@ -778,7 +779,7 @@ namespace ReadySunValley
             // 
             // directgood
             // 
-            this.directgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.directgood.Image = ((System.Drawing.Image)(resources.GetObject("directgood.Image")));
             this.directgood.Location = new System.Drawing.Point(10, 576);
             this.directgood.Name = "directgood";
             this.directgood.Size = new System.Drawing.Size(25, 25);
@@ -810,7 +811,7 @@ namespace ReadySunValley
             // 
             // screenbad
             // 
-            this.screenbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.screenbad.Image = ((System.Drawing.Image)(resources.GetObject("screenbad.Image")));
             this.screenbad.Location = new System.Drawing.Point(10, 367);
             this.screenbad.Name = "screenbad";
             this.screenbad.Size = new System.Drawing.Size(25, 25);
@@ -821,7 +822,7 @@ namespace ReadySunValley
             // 
             // screengood
             // 
-            this.screengood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.screengood.Image = ((System.Drawing.Image)(resources.GetObject("screengood.Image")));
             this.screengood.Location = new System.Drawing.Point(11, 367);
             this.screengood.Name = "screengood";
             this.screengood.Size = new System.Drawing.Size(25, 25);
@@ -831,7 +832,7 @@ namespace ReadySunValley
             // 
             // wddmbad
             // 
-            this.wddmbad.Image = global::ReadySunValley.Properties.Resources.x;
+            this.wddmbad.Image = ((System.Drawing.Image)(resources.GetObject("wddmbad.Image")));
             this.wddmbad.Location = new System.Drawing.Point(11, 622);
             this.wddmbad.Name = "wddmbad";
             this.wddmbad.Size = new System.Drawing.Size(25, 25);
@@ -842,7 +843,7 @@ namespace ReadySunValley
             // 
             // wddmgood
             // 
-            this.wddmgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.wddmgood.Image = ((System.Drawing.Image)(resources.GetObject("wddmgood.Image")));
             this.wddmgood.Location = new System.Drawing.Point(10, 622);
             this.wddmgood.Name = "wddmgood";
             this.wddmgood.Size = new System.Drawing.Size(25, 25);
@@ -863,7 +864,7 @@ namespace ReadySunValley
             // 
             // freespacegood
             // 
-            this.freespacegood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.freespacegood.Image = ((System.Drawing.Image)(resources.GetObject("freespacegood.Image")));
             this.freespacegood.Location = new System.Drawing.Point(11, 459);
             this.freespacegood.Name = "freespacegood";
             this.freespacegood.Size = new System.Drawing.Size(25, 25);
@@ -873,7 +874,7 @@ namespace ReadySunValley
             // 
             // securebootgood
             // 
-            this.securebootgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.securebootgood.Image = ((System.Drawing.Image)(resources.GetObject("securebootgood.Image")));
             this.securebootgood.Location = new System.Drawing.Point(9, 226);
             this.securebootgood.Name = "securebootgood";
             this.securebootgood.Size = new System.Drawing.Size(25, 25);
@@ -883,7 +884,7 @@ namespace ReadySunValley
             // 
             // inetgood
             // 
-            this.inetgood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.inetgood.Image = ((System.Drawing.Image)(resources.GetObject("inetgood.Image")));
             this.inetgood.Location = new System.Drawing.Point(11, 665);
             this.inetgood.Name = "inetgood";
             this.inetgood.Size = new System.Drawing.Size(25, 25);
@@ -898,12 +899,13 @@ namespace ReadySunValley
             this.AppCheck,
             this.AppScreenshot,
             this.AppCompare,
+            this.toolStripTextBox1,
             this.AppHelp,
             this.toolStripSeparator1,
             this.AppInfo});
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MainMenu.Size = new System.Drawing.Size(205, 150);
+            this.MainMenu.Size = new System.Drawing.Size(361, 194);
             // 
             // AppCheck
             // 
@@ -929,8 +931,9 @@ namespace ReadySunValley
             // AppHelp
             // 
             this.AppHelp.Name = "AppHelp";
-            this.AppHelp.Size = new System.Drawing.Size(204, 28);
-            this.AppHelp.Text = "Help";
+            this.AppHelp.Size = new System.Drawing.Size(360, 28);
+            this.AppHelp.Text = "Vote here!";
+            this.AppHelp.Click += new System.EventHandler(this.AppHelp_Click);
             // 
             // toolStripSeparator1
             // 
@@ -943,6 +946,17 @@ namespace ReadySunValley
             this.AppInfo.Size = new System.Drawing.Size(204, 28);
             this.AppInfo.Text = "Info";
             this.AppInfo.Click += new System.EventHandler(this.AppInfo_Click);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.BackColor = System.Drawing.Color.Khaki;
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripTextBox1.ForeColor = System.Drawing.Color.DeepPink;
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.ReadOnly = true;
+            this.toolStripTextBox1.Size = new System.Drawing.Size(300, 20);
+            this.toolStripTextBox1.Text = "Does your hardware qualify for windows 11?";
             // 
             // MainWindow
             // 
@@ -994,6 +1008,7 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetgood)).EndInit();
             this.MainMenu.ResumeLayout(false);
+            this.MainMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1072,6 +1087,7 @@ namespace ReadySunValley
         private System.Windows.Forms.PictureBox inetgood;
         private System.Windows.Forms.PictureBox inetbad;
         private System.Windows.Forms.ToolStripMenuItem AppCheck;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }
 }
 
