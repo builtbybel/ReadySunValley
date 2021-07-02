@@ -389,7 +389,7 @@ namespace ReadySunValley
             }
 
             LoadingForm.StatusText = "Checking Partition Types [7/13]";
-            foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition").Get())
+            foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition WHERE BootPartition=True"").Get())
             {
                 if (item["Type"].ToString().Contains("System"))
                 {
