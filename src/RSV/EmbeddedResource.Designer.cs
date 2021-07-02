@@ -61,11 +61,99 @@ namespace ReadySunValley {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die 3015e
+        ///3020e
+        ///3150C
+        ///3150U
+        ///3050C
+        ///3050e
+        ///3050U
+        ///3000G
+        ///300GE
+        ///300U
+        ///320GE
+        ///3150G
+        ///3150GE
+        ///3050GE
+        ///7232P
+        ///7252
+        ///7262
+        ///7272
+        ///7282
+        ///7302
+        ///7302P
+        ///7352
+        ///7402
+        ///7402P
+        ///7452
+        ///7502
+        ///7502P
+        ///7532
+        ///7542
+        ///7552
+        ///7642
+        ///7662
+        ///7702
+        ///7702P
+        ///7742
+        ///7F32
+        ///7F52
+        ///7F72
+        ///7H12
+        ///72F3
+        ///7313
+        ///7313P
+        ///7343
+        ///73F3
+        ///7413
+        ///7443
+        ///7443P
+        ///7453
+        ///74F3
+        ///7513
+        ///7543
+        ///7543P
+        ///75F3
+        ///7643
+        ///7663
+        ///7713
+        ///7713P
+        ///7763
+        ///3250C
+        ///3250U
+        ///3200G
+        ///3200GE
+        ///3200U
+        ///3350U
+        ///2300X
+        ///5300U
+        ///3100
+        ///3300U
+        ///4300G
+        ///4300GE
+        ///4300U
+        ///5400U
+        ///3200G
+        ///3200GE
+        ///3300U
+        ///4350G
+        ///4350GE
+        ///4450 [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        /// </summary>
+        internal static string amdsupport {
+            get {
+                return ResourceManager.GetString("amdsupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Windows Registry Editor Version 5.00
         ///
         ///[HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig]
         ///&quot;BypassTPMCheck&quot;=dword:00000001
-        ///&quot;BypassSecureBootCheck&quot;=dword:00000001 ähnelt.
+        ///&quot;BypassSecureBootCheck&quot;=dword:00000001
+        ///&quot;BypassRAMCheck&quot;=dword:00000001
+        /// ähnelt.
         /// </summary>
         internal static string bypass {
             get {
@@ -74,11 +162,86 @@ namespace ReadySunValley {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die x6200FE
+        ///x6211E
+        ///x6212RE
+        ///x6413E
+        ///x6414RE
+        ///x6425E
+        ///x6425RE
+        ///x6427FE
+        ///G4900
+        ///G4900T
+        ///G4920
+        ///G4930
+        ///G4930E
+        ///G4930T
+        ///G4932E
+        ///G4950
+        ///J4005
+        ///J4105
+        ///J4115
+        ///N4000
+        ///N4100
+        ///3867U
+        ///4205U
+        ///4305U
+        ///4305UE
+        ///J4025
+        ///J4125
+        ///N4020
+        ///N4120
+        ///5205U
+        ///5305U
+        ///G5900
+        ///G5900E
+        ///G5900T
+        ///G5900TE
+        ///G5905
+        ///G5905T
+        ///G5920
+        ///G5925
+        ///J6412
+        ///J6413
+        ///N6210
+        ///N6211
+        ///N4500
+        ///N4505
+        ///N5100
+        ///N5105
+        ///6305
+        ///6305E
+        ///10210Y
+        ///10310Y
+        ///8200Y
+        ///8210Y
+        ///8310Y
+        ///10510Y
+        ///8500Y
+        ///m3-8100Y
+        ///8100
+        ///8100B
+        ///8100H
+        ///8100T
+        ///8109U
+        ///8140U
+        ///8300
+        ///8300T
+        ///8350K
+        ///i5+8400
+        ///i5+8500
+        ///8257U        /// [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        /// </summary>
+        internal static string intelsupport {
+            get {
+                return ResourceManager.GetString("intelsupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Windows Registry Editor Version 5.00
         ///
-        ///[HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig]
-        ///@=-
-        ///@=- ähnelt.
+        ///[-HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig] ähnelt.
         /// </summary>
         internal static string undo_bypass {
             get {

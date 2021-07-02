@@ -583,6 +583,10 @@ namespace ReadySunValley
                     tpmgood.Visible = true;
                     tpmbad.Visible = false;
                     tpminfo.Visible = false;
+
+                    // It's all good, so disable TPM bypass options in menu
+                    AppBypass.Enabled = false;
+                    AppUndoBypass.Enabled = false;
                 }
                 if (splitted[0].Contains("1.2"))
                 {
@@ -753,6 +757,12 @@ namespace ReadySunValley
         {
             ToolTip tt = new ToolTip();
             tt.SetToolTip(this.inetbad, "Windows 11 Home edition requires internet connectivity and a Microsoft account to complete device setup on first use. Switching a device out of Windows 11 Home in S mode also requires internet connectivity. ");
+        }
+
+        private void LnkOpenGitHub_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.LnkOpenGitHub, "Follow on @github");
         }
 
         private void GetCompareUtil()

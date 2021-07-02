@@ -224,6 +224,7 @@ namespace ReadySunValley
             this.LnkOpenGitHub.TabIndex = 34;
             this.LnkOpenGitHub.TabStop = false;
             this.LnkOpenGitHub.Click += new System.EventHandler(this.LnkOpenGitHub_Click);
+            this.LnkOpenGitHub.MouseHover += new System.EventHandler(this.LnkOpenGitHub_MouseHover);
             // 
             // PBar
             // 
@@ -1014,7 +1015,7 @@ namespace ReadySunValley
             this.AppInfo});
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MainMenu.Size = new System.Drawing.Size(361, 262);
+            this.MainMenu.Size = new System.Drawing.Size(361, 240);
             // 
             // AppCheck
             // 

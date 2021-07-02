@@ -140,9 +140,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\amdsupport.data" />
     <None Include="Resources\bypass.reg" />
-    <None Include="Resources\intelsupport.data" />
     <None Include="Resources\undo_bypass.reg" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +160,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppIcon.ico" />
+    <None Include="Resources\intelsupport.txt" />
+    <None Include="Resources\amdsupport.txt" />
     <None Include="Resources\fail.png" />
     <None Include="Resources\ok.png" />
     <None Include="Resources\info.png" />

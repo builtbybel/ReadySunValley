@@ -75,7 +75,9 @@ namespace ReadySunValley.Properties {
         ///
         ///[HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig]
         ///&quot;BypassTPMCheck&quot;=dword:00000001
-        ///&quot;BypassSecureBootCheck&quot;=dword:00000001 ähnelt.
+        ///&quot;BypassSecureBootCheck&quot;=dword:00000001
+        ///&quot;BypassRAMCheck&quot;=dword:00000001
+        /// ähnelt.
         /// </summary>
         public static string bypass {
             get {
