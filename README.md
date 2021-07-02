@@ -36,7 +36,13 @@ alt="GitHub issues">
 ![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv.png)
 
 ## Features
-Just a tiny tool to help you check if your device is ready for Windows 11
+Lets you check if your device is ready for Windows 11/Sun Valley update.
+
+Next to this it also features options for
+- Bypassing TPM/Secure boot restrictions
+- Comparing results with another Compatibility checker [WhyNotWin11](https://github.com/rcmaehl/WhyNotWin11)
+- Comparing your results with Microsoft requirements
+- Grabbing a screenshot to directly share your results on social media
 	
 	
 ## Download
