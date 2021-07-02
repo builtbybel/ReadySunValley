@@ -107,6 +107,10 @@ namespace ReadySunValley
             this.AppCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.AppScreenshot = new System.Windows.Forms.ToolStripMenuItem();
             this.AppCompare = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.AppBypass = new System.Windows.Forms.ToolStripMenuItem();
+            this.AppUndoBypass = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.AppHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -170,7 +174,7 @@ namespace ReadySunValley
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(219, 5);
+            this.label7.Location = new System.Drawing.Point(247, 8);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(342, 25);
             this.label7.TabIndex = 114;
@@ -197,15 +201,16 @@ namespace ReadySunValley
             // 
             // LblSumBad
             // 
-            this.LblSumBad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LblSumBad.AutoSize = true;
+            this.LblSumBad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblSumBad.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSumBad.ForeColor = System.Drawing.Color.Black;
-            this.LblSumBad.Location = new System.Drawing.Point(353, 28);
+            this.LblSumBad.Location = new System.Drawing.Point(51, 28);
             this.LblSumBad.Name = "LblSumBad";
-            this.LblSumBad.Size = new System.Drawing.Size(116, 50);
+            this.LblSumBad.Size = new System.Drawing.Size(736, 50);
             this.LblSumBad.TabIndex = 113;
             this.LblSumBad.Text = "None";
+            this.LblSumBad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LnkOpenGitHub
             // 
@@ -999,13 +1004,17 @@ namespace ReadySunValley
             this.AppCheck,
             this.AppScreenshot,
             this.AppCompare,
+            this.toolStripSeparator3,
+            this.AppBypass,
+            this.AppUndoBypass,
+            this.toolStripSeparator2,
             this.toolStripTextBox1,
             this.AppHelp,
             this.toolStripSeparator1,
             this.AppInfo});
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MainMenu.Size = new System.Drawing.Size(361, 172);
+            this.MainMenu.Size = new System.Drawing.Size(361, 262);
             // 
             // AppCheck
             // 
@@ -1027,6 +1036,30 @@ namespace ReadySunValley
             this.AppCompare.Size = new System.Drawing.Size(360, 28);
             this.AppCompare.Text = "Compare results";
             this.AppCompare.Click += new System.EventHandler(this.AppCompare_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(357, 6);
+            // 
+            // AppBypass
+            // 
+            this.AppBypass.Name = "AppBypass";
+            this.AppBypass.Size = new System.Drawing.Size(360, 28);
+            this.AppBypass.Text = "Bypass TPM/Secure boot restriction";
+            this.AppBypass.Click += new System.EventHandler(this.AppBypass_Click);
+            // 
+            // AppUndoBypass
+            // 
+            this.AppUndoBypass.Name = "AppUndoBypass";
+            this.AppUndoBypass.Size = new System.Drawing.Size(360, 28);
+            this.AppUndoBypass.Text = "Undo Bypass";
+            this.AppUndoBypass.Click += new System.EventHandler(this.AppUndoBypass_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(357, 6);
             // 
             // toolStripTextBox1
             // 
@@ -1200,6 +1233,10 @@ namespace ReadySunValley
         private System.Windows.Forms.PictureBox tpminfo;
         private System.Windows.Forms.PictureBox pic_msrequirements;
         private System.Windows.Forms.CheckBox checkMSRequirements;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem AppBypass;
+        private System.Windows.Forms.ToolStripMenuItem AppUndoBypass;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

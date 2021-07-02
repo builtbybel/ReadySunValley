@@ -7,6 +7,7 @@ using System.IO;
 using System.Management;
 using System.Net;
 using System.Runtime.InteropServices;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
@@ -498,7 +499,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            LoadingForm.StatusText = "Getting DirectX && WDDM2 info [11/13]";
+            LoadingForm.StatusText = "Getting DirectX && WDDM2 [11/13]";
             try
             {
                 Process.Start("dxdiag", "/x dxv.xml");
@@ -532,7 +533,7 @@ namespace ReadySunValley
                 {
                     wddmbad.Visible = false;
                     wddmgood.Visible = true;
-                } 
+                }
                 if (wver < 2)
                 {
                     wddmbad.Visible = true;
@@ -582,7 +583,6 @@ namespace ReadySunValley
                     tpmgood.Visible = true;
                     tpmbad.Visible = false;
                     tpminfo.Visible = false;
-
                 }
                 if (splitted[0].Contains("1.2"))
                 {
@@ -591,7 +591,7 @@ namespace ReadySunValley
                     tpmgood.Visible = false;
                     tpmbad.Visible = false;
                     tpminfo.Visible = true;
-      
+
                     performCompatibilityCount += 1;
                 }
             }
@@ -600,7 +600,7 @@ namespace ReadySunValley
                 tpmbad.Visible = true;
                 tpmgood.Visible = false;
                 tpminfo.Visible = false;
-     
+
                 performCompatibilityCount += 1;
             }
 
@@ -610,7 +610,6 @@ namespace ReadySunValley
                 lbl_inet.Text = "Available";
                 inetgood.Visible = true;
                 inetbad.Visible = false;
-                LoadingForm.Hide();
             }
             else
             {
@@ -634,6 +633,8 @@ namespace ReadySunValley
             {
                 LblSumBad.ForeColor = Color.DeepPink;
             }
+
+            LoadingForm.Hide();
         }
 
         private void CaptureScreen()
@@ -848,5 +849,42 @@ namespace ReadySunValley
         private void AppCheck_Click(object sender, EventArgs e) => DoCompatibilityCheck();
 
         private void AppHelp_Click(object sender, EventArgs e) => Process.Start("https://www.builtbybel.com/blog/19-apps/41-check-with-the-readysunvalley-app-if-your-device-works-with-windows11-sun-valley-update");
+
+        private void AppBypass_Click(object sender, EventArgs e)
+        {
+            Bypass(EmbeddedResource.bypass);
+            MessageBox.Show("TPM and SecureBoot restriction has been bypassed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void AppUndoBypass_Click(object sender, EventArgs e)
+        {
+            Bypass(EmbeddedResource.undo_bypass);
+            MessageBox.Show("System setttings are in place again.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Bypass(string resource)
+        {
+            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+
+            proc.StartInfo.CreateNoWindow = true;
+            proc.StartInfo.RedirectStandardError = true;
+            proc.StartInfo.RedirectStandardOutput = true;
+            proc.StartInfo.UseShellExecute = false;
+
+            // Create temp filepath
+            string tempPath = System.IO.Path.GetTempPath() + @"\ReadySunValley" + Guid.NewGuid() + ".reg";
+            System.IO.StreamWriter sW = new System.IO.StreamWriter(tempPath, false, Encoding.Unicode);
+            sW.Write(resource);
+            sW.Close();
+
+            // Reg import bypass.reg
+            proc.StartInfo.FileName = "REG";
+            proc.StartInfo.Arguments = "IMPORT \"" + tempPath + "\"";
+            if (Environment.Is64BitOperatingSystem) proc.StartInfo.Arguments += " /reg:64";
+
+            proc.Start();
+            proc.WaitForExit();
+            System.IO.File.Delete(tempPath);
+        }
     }
 }
