@@ -389,7 +389,7 @@ namespace ReadySunValley
             }
 
             LoadingForm.StatusText = "Checking Partition Types [7/13]";
-            foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition WHERE BootPartition=True"").Get())
+            foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition WHERE BootPartition=True").Get())
             {
                 if (item["Type"].ToString().Contains("System"))
                 {
@@ -852,8 +852,15 @@ namespace ReadySunValley
 
         private void AppBypass_Click(object sender, EventArgs e)
         {
-            Bypass(EmbeddedResource.bypass);
-            MessageBox.Show("TPM and SecureBoot restriction has been bypassed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (MessageBox.Show("If you are attempting to install Windows 11 and receive a message stating," +
+                "\"This PC can't run Windows 11\" it is likely that you do not have a TPM 2.0 installed or enabled." +
+                "\n\nThe good news is that Microsoft includes a new \"LabConfig\" registry key that allows you to configure settings to bypass the TPM 2.0, the 4GB memory," +
+                "and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11." +
+                "\n\nDo you want to bypass these restrictions?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // New release available!
+            {
+                Bypass(EmbeddedResource.bypass);
+                MessageBox.Show("TPM and SecureBoot restriction has been bypassed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void AppUndoBypass_Click(object sender, EventArgs e)
