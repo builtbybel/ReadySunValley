@@ -510,9 +510,9 @@ namespace ReadySunValley
             this.lbl_wddm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_wddm.Location = new System.Drawing.Point(257, 602);
             this.lbl_wddm.Name = "lbl_wddm";
-            this.lbl_wddm.Size = new System.Drawing.Size(45, 21);
+            this.lbl_wddm.Size = new System.Drawing.Size(95, 21);
             this.lbl_wddm.TabIndex = 99;
-            this.lbl_wddm.Text = "Error";
+            this.lbl_wddm.Text = "No WDDM2";
             // 
             // label10
             // 
@@ -550,9 +550,9 @@ namespace ReadySunValley
             this.lbl_directx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_directx.Location = new System.Drawing.Point(257, 554);
             this.lbl_directx.Name = "lbl_directx";
-            this.lbl_directx.Size = new System.Drawing.Size(45, 21);
+            this.lbl_directx.Size = new System.Drawing.Size(107, 21);
             this.lbl_directx.TabIndex = 89;
-            this.lbl_directx.Text = "Error";
+            this.lbl_directx.Text = "No DirectX 12";
             // 
             // label8
             // 

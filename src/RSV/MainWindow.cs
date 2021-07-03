@@ -8,9 +8,8 @@ using System.Management;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace ReadySunValley
 {
@@ -502,44 +501,59 @@ namespace ReadySunValley
             LoadingForm.StatusText = "Getting DirectX && WDDM2 [11/13]";
             try
             {
-                Process.Start("dxdiag", "/x dxv.xml");
-                while (!File.Exists("dxv.xml"))
-                    Thread.Sleep(1000);
+                string directxver;
+                string wddmver;
+                string filepath = @"dxv.txt";
+                string check;
 
-                XmlDocument doc = new XmlDocument();
-                doc.Load("dxv.xml");
-                XmlNode dxd = doc.SelectSingleNode("//DxDiag");
-                XmlNode dxv = dxd.SelectSingleNode("//DirectXVersion");
-                XmlNode wddmv = dxd.SelectSingleNode("//DriverModel");
-                Double directXver = Convert.ToDouble(dxv.InnerText.Split(' ')[1], System.Globalization.CultureInfo.InvariantCulture);
-                Double wver = Convert.ToDouble(wddmv.InnerText.Split(' ')[1], System.Globalization.CultureInfo.InvariantCulture);
-                lbl_directx.Text = "DirectX " + directXver;
-                lbl_wddm.Text = "Version: " + wver;
-
-                if (directXver < 12)
+                Process.Start("dxdiag", "/t " + filepath);
+                do
+                    System.Threading.Thread.Sleep(100);
+                while (!File.Exists(filepath));
+                using (var sr = new StreamReader(filepath))
                 {
-                    directgood.Visible = false;
-                    directbad.Visible = true;
+                    while (sr.Peek() != -1)
+                    {
+                        check = sr.ReadLine();
+                        if (check.Contains("DirectX Version:"))
+                        {
+                            directxver = check;
+                            lbl_directx.Text = Regex.Replace(directxver, "[^0-9.]", "");
+                        }
 
-                    performCompatibilityCount += 1;
-                }
-                else
-                {
-                    directgood.Visible = true;
-                    directbad.Visible = false;
-                }
+                        if (check.Contains("Driver Model:"))
+                        {
+                            wddmver = check;
+                            lbl_wddm.Text = Regex.Replace(wddmver, "[^0-9.]", "");
+                            break;
+                        }
+                    }
 
-                if (wver >= 2)
-                {
-                    wddmbad.Visible = false;
-                    wddmgood.Visible = true;
-                }
-                if (wver < 2)
-                {
-                    wddmbad.Visible = true;
-                    wddmgood.Visible = false;
+                    if (lbl_directx.Text == "12")
+                    {
+                        directgood.Visible = true;
+                        directbad.Visible = false;
+                    }
+                    else
+                    {
+                        directgood.Visible = false;
+                        directbad.Visible = true;
 
-                    performCompatibilityCount += 1;
+                        performCompatibilityCount += 1;
+                    }
+
+                    if (lbl_wddm.Text.Contains("2.0") || lbl_wddm.Text.Contains("3.0"))
+                    {
+                        wddmbad.Visible = false;
+                        wddmgood.Visible = true;
+                    }
+                    else
+                    {
+                        wddmbad.Visible = true;
+                        wddmgood.Visible = false;
+
+                        performCompatibilityCount += 1;
+                    }
                 }
             }
             catch { }
