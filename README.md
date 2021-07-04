@@ -53,7 +53,7 @@ Internet connection and Microsoft account|For Windows 11 Home edition: internet 
 	
 	
 ## Features
-Lets you check if your device is ready for Windows 11/Sun Valley update.
+Lets you check if your device is ready for the above Windows 11/Sun Valley requirements.
 
 Next to this it also features options for
 - Bypassing TPM/Secure boot restrictions
