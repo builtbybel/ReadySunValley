@@ -143,14 +143,14 @@ namespace ReadySunValley
             switch (typeof(string).Assembly.GetName().ProcessorArchitecture)
             {
                 case System.Reflection.ProcessorArchitecture.X86:
-                    lbl_arch.Text = "x86";
+                    lbl_arch.Text = "32 Bit";
 
                     archbad.Visible = true;
                     archgood.Visible = false;
                     break;
 
                 case System.Reflection.ProcessorArchitecture.Amd64:
-                    lbl_arch.Text = "x64";
+                    lbl_arch.Text = "64 Bit";
 
                     archgood.Visible = true;
                     archbad.Visible = false;
@@ -253,6 +253,7 @@ namespace ReadySunValley
             int performCompatibilityCount = 0;
 
             // Compatibility checks
+            this.Enabled = false;
             LblStatus.Text = "Checking system requirements [1/13]";
 
             // Run here app also update check
@@ -640,12 +641,18 @@ namespace ReadySunValley
                 LblSumBad.ForeColor = Color.Green;
                 LblStatus.Visible = false;
                 LblSumBad.Text = "You're ready for Sun Valley!";
+
+                // It's all good, so hide bypass options
+                LnkCompatibilityFix.Visible = false;
+                AppUndoBypass.Visible = false;
             }
             else
             {
                 LblStatus.Text = "Components not ready for Windows 11";
                 LblSumBad.ForeColor = Color.DeepPink;
             }
+
+            this.Enabled = true;
         }
 
         private void CaptureScreen()
@@ -659,7 +666,7 @@ namespace ReadySunValley
                 InitialDirectory = Application.StartupPath,
                 Title = "Location",
                 Filter = "PNG Images|*.png",
-                FileName = "Compatibility-Screen-Win11"
+                FileName = "Compatibility-Screen-Win11-" + System.Environment.MachineName
             };
 
             DialogResult result = dialog.ShowDialog(this);

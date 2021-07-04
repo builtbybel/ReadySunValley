@@ -115,7 +115,6 @@ namespace ReadySunValley
             this.BtnScreenshot = new System.Windows.Forms.Button();
             this.LblHeader = new System.Windows.Forms.Label();
             this.LblSubHeader = new System.Windows.Forms.LinkLabel();
-            this.BtnMore = new System.Windows.Forms.Button();
             this.PnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpubad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpugood)).BeginInit();
@@ -213,8 +212,6 @@ namespace ReadySunValley
             this.PnlLeft.Controls.Add(this.label1);
             this.PnlLeft.Controls.Add(this.cpubad);
             this.PnlLeft.Controls.Add(this.cpugood);
-            this.PnlLeft.Controls.Add(this.tpmgood);
-            this.PnlLeft.Controls.Add(this.tpminfo);
             this.PnlLeft.Controls.Add(this.directgood);
             this.PnlLeft.Controls.Add(this.wddmgood);
             this.PnlLeft.Controls.Add(this.inetgood);
@@ -240,9 +237,11 @@ namespace ReadySunValley
             this.PnlLeft.Controls.Add(this.directbad);
             this.PnlLeft.Controls.Add(this.screenbad);
             this.PnlLeft.Controls.Add(this.wddmbad);
-            this.PnlLeft.Controls.Add(this.tpmbad);
             this.PnlLeft.Controls.Add(this.hddbad);
             this.PnlLeft.Controls.Add(this.freespaceinfo);
+            this.PnlLeft.Controls.Add(this.tpmbad);
+            this.PnlLeft.Controls.Add(this.tpmgood);
+            this.PnlLeft.Controls.Add(this.tpminfo);
             this.PnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlLeft.Location = new System.Drawing.Point(0, 0);
             this.PnlLeft.Name = "PnlLeft";
@@ -252,7 +251,7 @@ namespace ReadySunValley
             // BtnRecheck
             // 
             this.BtnRecheck.AutoSize = true;
-            this.BtnRecheck.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnRecheck.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnRecheck.FlatAppearance.BorderSize = 0;
             this.BtnRecheck.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.BtnRecheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -270,50 +269,50 @@ namespace ReadySunValley
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(66, 149);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 21);
+            this.label13.Size = new System.Drawing.Size(40, 21);
             this.label13.TabIndex = 127;
             this.label13.Text = "Mhz";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(66, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 21);
+            this.label7.Size = new System.Drawing.Size(50, 21);
             this.label7.TabIndex = 126;
             this.label7.Text = "Cores";
             // 
             // lbl_arch
             // 
             this.lbl_arch.AutoSize = true;
-            this.lbl_arch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_arch.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_arch.Location = new System.Drawing.Point(219, 192);
             this.lbl_arch.Name = "lbl_arch";
-            this.lbl_arch.Size = new System.Drawing.Size(83, 21);
+            this.lbl_arch.Size = new System.Drawing.Size(86, 21);
             this.lbl_arch.TabIndex = 122;
             this.lbl_arch.Text = "Checking...";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(66, 192);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(101, 21);
+            this.label16.Size = new System.Drawing.Size(94, 21);
             this.label16.TabIndex = 119;
             this.label16.Text = "Architecture";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(66, 682);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(69, 21);
+            this.label15.Size = new System.Drawing.Size(64, 21);
             this.label15.TabIndex = 118;
             this.label15.Text = "Internet";
             // 
@@ -338,110 +337,110 @@ namespace ReadySunValley
             // lbl_inet
             // 
             this.lbl_inet.AutoSize = true;
-            this.lbl_inet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_inet.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_inet.Location = new System.Drawing.Point(219, 682);
             this.lbl_inet.Name = "lbl_inet";
-            this.lbl_inet.Size = new System.Drawing.Size(83, 21);
+            this.lbl_inet.Size = new System.Drawing.Size(86, 21);
             this.lbl_inet.TabIndex = 117;
             this.lbl_inet.Text = "Checking...";
             // 
             // lbl_secureboot
             // 
             this.lbl_secureboot.AutoSize = true;
-            this.lbl_secureboot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_secureboot.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_secureboot.Location = new System.Drawing.Point(219, 280);
             this.lbl_secureboot.Name = "lbl_secureboot";
-            this.lbl_secureboot.Size = new System.Drawing.Size(83, 21);
+            this.lbl_secureboot.Size = new System.Drawing.Size(86, 21);
             this.lbl_secureboot.TabIndex = 107;
             this.lbl_secureboot.Text = "Checking...";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(66, 280);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 21);
+            this.label12.Size = new System.Drawing.Size(93, 21);
             this.label12.TabIndex = 104;
             this.label12.Text = "Secure Boot";
             // 
             // lbl_freespace
             // 
             this.lbl_freespace.AutoSize = true;
-            this.lbl_freespace.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_freespace.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_freespace.Location = new System.Drawing.Point(219, 506);
             this.lbl_freespace.Name = "lbl_freespace";
-            this.lbl_freespace.Size = new System.Drawing.Size(83, 21);
+            this.lbl_freespace.Size = new System.Drawing.Size(86, 21);
             this.lbl_freespace.TabIndex = 103;
             this.lbl_freespace.Text = "Checking...";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(66, 506);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 21);
+            this.label11.Size = new System.Drawing.Size(85, 21);
             this.label11.TabIndex = 100;
             this.label11.Text = "Free Space";
             // 
             // lbl_wddm
             // 
             this.lbl_wddm.AutoSize = true;
-            this.lbl_wddm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_wddm.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_wddm.Location = new System.Drawing.Point(219, 639);
             this.lbl_wddm.Name = "lbl_wddm";
-            this.lbl_wddm.Size = new System.Drawing.Size(83, 21);
+            this.lbl_wddm.Size = new System.Drawing.Size(86, 21);
             this.lbl_wddm.TabIndex = 99;
             this.lbl_wddm.Text = "Checking...";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(66, 639);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 21);
+            this.label10.Size = new System.Drawing.Size(70, 21);
             this.label10.TabIndex = 96;
             this.label10.Text = "WDDM2";
             // 
             // lbl_screen
             // 
             this.lbl_screen.AutoSize = true;
-            this.lbl_screen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_screen.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_screen.Location = new System.Drawing.Point(219, 414);
             this.lbl_screen.Name = "lbl_screen";
-            this.lbl_screen.Size = new System.Drawing.Size(83, 21);
+            this.lbl_screen.Size = new System.Drawing.Size(86, 21);
             this.lbl_screen.TabIndex = 95;
             this.lbl_screen.Text = "Checking...";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(66, 414);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 21);
+            this.label9.Size = new System.Drawing.Size(66, 21);
             this.label9.TabIndex = 92;
             this.label9.Text = "Monitor";
             // 
             // lbl_directx
             // 
             this.lbl_directx.AutoSize = true;
-            this.lbl_directx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_directx.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_directx.Location = new System.Drawing.Point(219, 592);
             this.lbl_directx.Name = "lbl_directx";
-            this.lbl_directx.Size = new System.Drawing.Size(83, 21);
+            this.lbl_directx.Size = new System.Drawing.Size(86, 21);
             this.lbl_directx.TabIndex = 89;
             this.lbl_directx.Text = "Checking...";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(66, 592);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 21);
+            this.label8.Size = new System.Drawing.Size(60, 21);
             this.label8.TabIndex = 86;
             this.label8.Text = "DirectX";
             // 
@@ -449,60 +448,60 @@ namespace ReadySunValley
             // 
             this.lbl_tpm.AutoEllipsis = true;
             this.lbl_tpm.AutoSize = true;
-            this.lbl_tpm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tpm.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tpm.Location = new System.Drawing.Point(219, 549);
             this.lbl_tpm.Name = "lbl_tpm";
-            this.lbl_tpm.Size = new System.Drawing.Size(92, 21);
+            this.lbl_tpm.Size = new System.Drawing.Size(91, 21);
             this.lbl_tpm.TabIndex = 84;
             this.lbl_tpm.Text = "Not present";
             // 
             // lbl_storage
             // 
             this.lbl_storage.AutoSize = true;
-            this.lbl_storage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_storage.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_storage.Location = new System.Drawing.Point(219, 459);
             this.lbl_storage.Name = "lbl_storage";
-            this.lbl_storage.Size = new System.Drawing.Size(83, 21);
+            this.lbl_storage.Size = new System.Drawing.Size(86, 21);
             this.lbl_storage.TabIndex = 83;
             this.lbl_storage.Text = "Checking...";
             // 
             // lbl_ram
             // 
             this.lbl_ram.AutoSize = true;
-            this.lbl_ram.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ram.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ram.Location = new System.Drawing.Point(219, 366);
             this.lbl_ram.Name = "lbl_ram";
-            this.lbl_ram.Size = new System.Drawing.Size(83, 21);
+            this.lbl_ram.Size = new System.Drawing.Size(86, 21);
             this.lbl_ram.TabIndex = 82;
             this.lbl_ram.Text = "Checking...";
             // 
             // lbl_part
             // 
             this.lbl_part.AutoSize = true;
-            this.lbl_part.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_part.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_part.Location = new System.Drawing.Point(219, 321);
             this.lbl_part.Name = "lbl_part";
-            this.lbl_part.Size = new System.Drawing.Size(83, 21);
+            this.lbl_part.Size = new System.Drawing.Size(86, 21);
             this.lbl_part.TabIndex = 81;
             this.lbl_part.Text = "Checking...";
             // 
             // lbl_coresnthreads
             // 
             this.lbl_coresnthreads.AutoSize = true;
-            this.lbl_coresnthreads.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_coresnthreads.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_coresnthreads.Location = new System.Drawing.Point(219, 108);
             this.lbl_coresnthreads.Name = "lbl_coresnthreads";
-            this.lbl_coresnthreads.Size = new System.Drawing.Size(83, 21);
+            this.lbl_coresnthreads.Size = new System.Drawing.Size(86, 21);
             this.lbl_coresnthreads.TabIndex = 80;
             this.lbl_coresnthreads.Text = "Checking...";
             // 
             // lbl_clockspeed
             // 
             this.lbl_clockspeed.AutoSize = true;
-            this.lbl_clockspeed.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_clockspeed.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_clockspeed.Location = new System.Drawing.Point(219, 149);
             this.lbl_clockspeed.Name = "lbl_clockspeed";
-            this.lbl_clockspeed.Size = new System.Drawing.Size(83, 21);
+            this.lbl_clockspeed.Size = new System.Drawing.Size(86, 21);
             this.lbl_clockspeed.TabIndex = 77;
             this.lbl_clockspeed.Text = "Checking...";
             // 
@@ -510,70 +509,70 @@ namespace ReadySunValley
             // 
             this.lbl_cpu.AutoEllipsis = true;
             this.lbl_cpu.AutoSize = true;
-            this.lbl_cpu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cpu.Location = new System.Drawing.Point(66, 70);
+            this.lbl_cpu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cpu.Location = new System.Drawing.Point(66, 68);
             this.lbl_cpu.Name = "lbl_cpu";
-            this.lbl_cpu.Size = new System.Drawing.Size(89, 21);
+            this.lbl_cpu.Size = new System.Drawing.Size(83, 21);
             this.lbl_cpu.TabIndex = 75;
             this.lbl_cpu.Text = "Checking...";
             // 
             // lbl_type
             // 
             this.lbl_type.AutoSize = true;
-            this.lbl_type.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_type.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_type.Location = new System.Drawing.Point(219, 237);
             this.lbl_type.Name = "lbl_type";
-            this.lbl_type.Size = new System.Drawing.Size(83, 21);
+            this.lbl_type.Size = new System.Drawing.Size(86, 21);
             this.lbl_type.TabIndex = 74;
             this.lbl_type.Text = "Checking...";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(66, 549);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 21);
+            this.label6.Size = new System.Drawing.Size(97, 21);
             this.label6.TabIndex = 73;
             this.label6.Text = "TPM Version";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(66, 459);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 21);
+            this.label5.Size = new System.Drawing.Size(63, 21);
             this.label5.TabIndex = 70;
             this.label5.Text = "Storage";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(66, 366);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 21);
+            this.label4.Size = new System.Drawing.Size(106, 21);
             this.label4.TabIndex = 67;
             this.label4.Text = "RAM Installed";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(66, 321);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 21);
+            this.label3.Size = new System.Drawing.Size(102, 21);
             this.label3.TabIndex = 64;
             this.label3.Text = "Disk Partition";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(66, 237);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 21);
+            this.label1.Size = new System.Drawing.Size(78, 21);
             this.label1.TabIndex = 58;
             this.label1.Text = "Boot Type";
             // 
@@ -613,12 +612,13 @@ namespace ReadySunValley
             // tpminfo
             // 
             this.tpminfo.Image = global::ReadySunValley.Properties.Resources.info;
-            this.tpminfo.Location = new System.Drawing.Point(28, 547);
+            this.tpminfo.Location = new System.Drawing.Point(28, 546);
             this.tpminfo.Name = "tpminfo";
             this.tpminfo.Size = new System.Drawing.Size(25, 25);
             this.tpminfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tpminfo.TabIndex = 125;
             this.tpminfo.TabStop = false;
+            this.tpminfo.Visible = false;
             this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
             // 
             // directgood
@@ -734,7 +734,7 @@ namespace ReadySunValley
             // archgood
             // 
             this.archgood.Image = ((System.Drawing.Image)(resources.GetObject("archgood.Image")));
-            this.archgood.Location = new System.Drawing.Point(28, 187);
+            this.archgood.Location = new System.Drawing.Point(28, 190);
             this.archgood.Name = "archgood";
             this.archgood.Size = new System.Drawing.Size(25, 25);
             this.archgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -803,7 +803,7 @@ namespace ReadySunValley
             // archbad
             // 
             this.archbad.Image = ((System.Drawing.Image)(resources.GetObject("archbad.Image")));
-            this.archbad.Location = new System.Drawing.Point(28, 188);
+            this.archbad.Location = new System.Drawing.Point(28, 190);
             this.archbad.Name = "archbad";
             this.archbad.Size = new System.Drawing.Size(25, 25);
             this.archbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -910,7 +910,7 @@ namespace ReadySunValley
             // tpmbad
             // 
             this.tpmbad.Image = global::ReadySunValley.Properties.Resources.x;
-            this.tpmbad.Location = new System.Drawing.Point(27, 546);
+            this.tpmbad.Location = new System.Drawing.Point(28, 546);
             this.tpmbad.Name = "tpmbad";
             this.tpmbad.Size = new System.Drawing.Size(25, 25);
             this.tpmbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -964,42 +964,42 @@ namespace ReadySunValley
             this.AppInfo});
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MainMenu.Size = new System.Drawing.Size(411, 118);
+            this.MainMenu.Size = new System.Drawing.Size(391, 118);
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.BackColor = System.Drawing.Color.Violet;
+            this.toolStripTextBox1.BackColor = System.Drawing.Color.Khaki;
             this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripTextBox1.ForeColor = System.Drawing.Color.DeepPink;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.ReadOnly = true;
-            this.toolStripTextBox1.Size = new System.Drawing.Size(350, 22);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(330, 22);
             this.toolStripTextBox1.Text = "Does your hardware qualify for Windows 11?";
             // 
             // AppHelp
             // 
             this.AppHelp.Name = "AppHelp";
-            this.AppHelp.Size = new System.Drawing.Size(410, 28);
+            this.AppHelp.Size = new System.Drawing.Size(390, 28);
             this.AppHelp.Text = "Vote here!";
             this.AppHelp.Click += new System.EventHandler(this.AppHelp_Click);
             // 
             // AppUndoBypass
             // 
             this.AppUndoBypass.Name = "AppUndoBypass";
-            this.AppUndoBypass.Size = new System.Drawing.Size(410, 28);
+            this.AppUndoBypass.Size = new System.Drawing.Size(390, 28);
             this.AppUndoBypass.Text = "Undo Bypass";
             this.AppUndoBypass.Click += new System.EventHandler(this.AppUndoBypass_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(407, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(387, 6);
             // 
             // AppInfo
             // 
             this.AppInfo.Name = "AppInfo";
-            this.AppInfo.Size = new System.Drawing.Size(410, 28);
+            this.AppInfo.Size = new System.Drawing.Size(390, 28);
             this.AppInfo.Text = "Info";
             this.AppInfo.Click += new System.EventHandler(this.AppInfo_Click);
             // 
@@ -1029,7 +1029,7 @@ namespace ReadySunValley
             this.BtnPnlScreenshot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPnlScreenshot.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
             this.BtnPnlScreenshot.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BtnPnlScreenshot.Location = new System.Drawing.Point(52, 82);
+            this.BtnPnlScreenshot.Location = new System.Drawing.Point(48, 146);
             this.BtnPnlScreenshot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnPnlScreenshot.Name = "BtnPnlScreenshot";
             this.BtnPnlScreenshot.Size = new System.Drawing.Size(294, 32);
@@ -1059,13 +1059,13 @@ namespace ReadySunValley
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LblStatus.AutoEllipsis = true;
             this.LblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LblStatus.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStatus.Location = new System.Drawing.Point(14, 187);
+            this.LblStatus.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStatus.Location = new System.Drawing.Point(18, 274);
             this.LblStatus.Name = "LblStatus";
             this.LblStatus.Size = new System.Drawing.Size(367, 68);
             this.LblStatus.TabIndex = 114;
             this.LblStatus.Text = "Components not ready for Windows 11";
-            this.LblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LblSumBad
             // 
@@ -1075,9 +1075,9 @@ namespace ReadySunValley
             this.LblSumBad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblSumBad.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSumBad.ForeColor = System.Drawing.Color.Black;
-            this.LblSumBad.Location = new System.Drawing.Point(14, 253);
+            this.LblSumBad.Location = new System.Drawing.Point(14, 180);
             this.LblSumBad.Name = "LblSumBad";
-            this.LblSumBad.Size = new System.Drawing.Size(367, 120);
+            this.LblSumBad.Size = new System.Drawing.Size(367, 105);
             this.LblSumBad.TabIndex = 113;
             this.LblSumBad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1092,7 +1092,7 @@ namespace ReadySunValley
             this.LnkCompatibilityFix.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.LnkCompatibilityFix.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LnkCompatibilityFix.LinkColor = System.Drawing.Color.DeepPink;
-            this.LnkCompatibilityFix.Location = new System.Drawing.Point(20, 377);
+            this.LnkCompatibilityFix.Location = new System.Drawing.Point(20, 351);
             this.LnkCompatibilityFix.Name = "LnkCompatibilityFix";
             this.LnkCompatibilityFix.Size = new System.Drawing.Size(363, 26);
             this.LnkCompatibilityFix.TabIndex = 128;
@@ -1119,7 +1119,6 @@ namespace ReadySunValley
             this.panel1.Controls.Add(this.PBar);
             this.panel1.Controls.Add(this.LblHeader);
             this.panel1.Controls.Add(this.LblSubHeader);
-            this.panel1.Controls.Add(this.BtnMore);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(423, 0);
             this.panel1.Name = "panel1";
@@ -1136,7 +1135,7 @@ namespace ReadySunValley
             this.BtnCompareUtil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCompareUtil.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
             this.BtnCompareUtil.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BtnCompareUtil.Location = new System.Drawing.Point(18, 253);
+            this.BtnCompareUtil.Location = new System.Drawing.Point(18, 248);
             this.BtnCompareUtil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCompareUtil.Name = "BtnCompareUtil";
             this.BtnCompareUtil.Size = new System.Drawing.Size(294, 32);
@@ -1160,7 +1159,7 @@ namespace ReadySunValley
             this.BtnScreenshot.Name = "BtnScreenshot";
             this.BtnScreenshot.Size = new System.Drawing.Size(294, 32);
             this.BtnScreenshot.TabIndex = 129;
-            this.BtnScreenshot.Text = "Take quick creenshot";
+            this.BtnScreenshot.Text = "Take quick Screenshot";
             this.BtnScreenshot.UseVisualStyleBackColor = false;
             this.BtnScreenshot.Click += new System.EventHandler(this.BtnScreenshot_Click);
             // 
@@ -1193,23 +1192,6 @@ namespace ReadySunValley
             this.LblSubHeader.TabIndex = 24;
             this.LblSubHeader.TabStop = true;
             this.LblSubHeader.Text = "*Move the cusor over a failed result to get more information";
-            // 
-            // BtnMore
-            // 
-            this.BtnMore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMore.AutoSize = true;
-            this.BtnMore.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnMore.FlatAppearance.BorderSize = 0;
-            this.BtnMore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.BtnMore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMore.Font = new System.Drawing.Font("Segoe MDL2 Assets", 14.25F);
-            this.BtnMore.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BtnMore.Location = new System.Drawing.Point(288, 46);
-            this.BtnMore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnMore.Name = "BtnMore";
-            this.BtnMore.Size = new System.Drawing.Size(41, 43);
-            this.BtnMore.TabIndex = 27;
-            this.BtnMore.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 
@@ -1270,7 +1252,6 @@ namespace ReadySunValley
             this.PnlRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.assetOpenGitHub)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1352,7 +1333,6 @@ namespace ReadySunValley
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label LblHeader;
         private System.Windows.Forms.LinkLabel LblSubHeader;
-        private System.Windows.Forms.Button BtnMore;
         private System.Windows.Forms.LinkLabel LnkCompatibilityFix;
         private System.Windows.Forms.Button BtnScreenshot;
         private System.Windows.Forms.Button BtnCompareUtil;
