@@ -55,11 +55,14 @@ Internet connection and Microsoft account|For Windows 11 Home edition: internet 
 ## Features
 Lets you check if your device is ready for the above Windows 11/Sun Valley requirements.
 
-Next to this it also features options for
+### Next to this it also features options for
 - Bypassing TPM/Secure boot restrictions
-- Comparing results with another Compatibility checker [WhyNotWin11](https://github.com/rcmaehl/WhyNotWin11)
 - Comparing your results with Microsoft requirements
+![ReadySunValley_SIGUZ0UaYH](https://user-images.githubusercontent.com/57478606/124481759-ef105000-dda8-11eb-9c54-0e22e9bbb57e.png)
+- Comparing results with another Compatibility checker [WhyNotWin11](https://github.com/rcmaehl/WhyNotWin11)
 - Grabbing a screenshot to directly share your results on social media
+![ReadySunValley_uMOmnf0UD7](https://user-images.githubusercontent.com/57478606/124481866-094a2e00-dda9-11eb-8f69-169bd1de3f9d.png)
+
 	
 	
 ## Download
