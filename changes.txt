@@ -1,4 +1,3 @@
-
 INFO
 ----
 This release fixes a critical UEFI detection bug.
