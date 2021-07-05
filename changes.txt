@@ -2,4 +2,4 @@
 This release fixes a critical UEFI detection bug.
 Issue: https://github.com/builtbybel/ReadySunValley/issues/10
 
-All changes of this release can be read on the Github release page.
+If you are affected you should update now.
