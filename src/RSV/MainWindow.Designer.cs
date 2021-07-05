@@ -58,7 +58,7 @@ namespace ReadySunValley
             this.lbl_coresnthreads = new System.Windows.Forms.Label();
             this.lbl_clockspeed = new System.Windows.Forms.Label();
             this.lbl_cpu = new System.Windows.Forms.Label();
-            this.lbl_type = new System.Windows.Forms.Label();
+            this.lbl_boot = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -204,7 +204,7 @@ namespace ReadySunValley
             this.PnlLeft.Controls.Add(this.lbl_coresnthreads);
             this.PnlLeft.Controls.Add(this.lbl_clockspeed);
             this.PnlLeft.Controls.Add(this.lbl_cpu);
-            this.PnlLeft.Controls.Add(this.lbl_type);
+            this.PnlLeft.Controls.Add(this.lbl_boot);
             this.PnlLeft.Controls.Add(this.label6);
             this.PnlLeft.Controls.Add(this.label5);
             this.PnlLeft.Controls.Add(this.label4);
@@ -515,15 +515,15 @@ namespace ReadySunValley
             this.lbl_cpu.TabIndex = 75;
             this.lbl_cpu.Text = "Checking...";
             // 
-            // lbl_type
+            // lbl_boot
             // 
-            this.lbl_type.AutoSize = true;
-            this.lbl_type.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_type.Location = new System.Drawing.Point(219, 237);
-            this.lbl_type.Name = "lbl_type";
-            this.lbl_type.Size = new System.Drawing.Size(86, 21);
-            this.lbl_type.TabIndex = 74;
-            this.lbl_type.Text = "Checking...";
+            this.lbl_boot.AutoSize = true;
+            this.lbl_boot.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_boot.Location = new System.Drawing.Point(219, 237);
+            this.lbl_boot.Name = "lbl_boot";
+            this.lbl_boot.Size = new System.Drawing.Size(86, 21);
+            this.lbl_boot.TabIndex = 74;
+            this.lbl_boot.Text = "Checking...";
             // 
             // label6
             // 
@@ -1275,7 +1275,7 @@ namespace ReadySunValley
         private System.Windows.Forms.Label lbl_coresnthreads;
         private System.Windows.Forms.Label lbl_clockspeed;
         private System.Windows.Forms.Label lbl_cpu;
-        private System.Windows.Forms.Label lbl_type;
+        private System.Windows.Forms.Label lbl_boot;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

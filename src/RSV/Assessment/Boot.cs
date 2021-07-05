@@ -1,33 +1,25 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using System.Diagnostics;
 
 namespace ReadySunValley.Assessment
 {
     public static class Boot
     {
-        // UEFI or legacy mode
-        public const int ERROR_INVALID_FUNCTION = 1;
-
-        [DllImport("kernel32.dll",
-            EntryPoint = "GetFirmwareEnvironmentVariableW",
-            SetLastError = true,
-            CharSet = CharSet.Unicode,
-            ExactSpelling = true,
-            CallingConvention = CallingConvention.StdCall)]
-        public static extern int GetFirmwareType(string lpName, string lpGUID, IntPtr pBuffer, uint size);
-
-        public static bool isUEFI()
+        public static string IsUEFI()
         {
-            GetFirmwareType("", "{00000000-0000-0000-0000-000000000000}", IntPtr.Zero, 0);
+            // Compatible with >= Win8.1
+            string env = "echo %firmware_type%";           
 
-            if (Marshal.GetLastWin32Error() == ERROR_INVALID_FUNCTION)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            Process p = new Process();
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.CreateNoWindow = true;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.Arguments = "/C" + env;
+            p.Start();
+            string output = p.StandardOutput.ReadToEnd();   
+            p.WaitForExit();
+
+            return output;
         }
     }
 }

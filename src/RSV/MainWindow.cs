@@ -93,15 +93,14 @@ namespace ReadySunValley
             }
 
             // Boot Method
-            if (Assessment.Boot.isUEFI())
+            lbl_boot.Text = Assessment.Boot.IsUEFI();
+            if (lbl_boot.Text.Contains("UEFI"))
             {
-                lbl_type.Text = "UEFI";
                 bootgood.Visible = true;
                 bootbad.Visible = false;
             }
             else
             {
-                lbl_type.Text = "Legacy";
                 bootgood.Visible = false;
                 bootbad.Visible = true;
 
