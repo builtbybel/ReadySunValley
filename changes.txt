@@ -1,5 +1,4 @@
-INFO
-----
+-----------------------------------
 This release fixes a critical UEFI detection bug.
 Issue: https://github.com/builtbybel/ReadySunValley/issues/10
 
