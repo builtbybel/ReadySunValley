@@ -91,6 +91,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assessment\Boot.cs" />
+    <Compile Include="Assessment\Bypass.cs" />
+    <Compile Include="Assessment\CPU.cs" />
+    <Compile Include="Assessment\DirectX.cs" />
+    <Compile Include="Assessment\GPU.cs" />
+    <Compile Include="Assessment\Inet.cs" />
+    <Compile Include="Assessment\SecureBoot.cs" />
+    <Compile Include="Assessment\Storage.cs" />
     <Compile Include="EmbeddedResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +117,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\Strings.cs" />
+    <Compile Include="Helpers\Utils.cs" />
     <EmbeddedResource Include="EmbeddedResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbeddedResource.Designer.cs</LastGenOutput>

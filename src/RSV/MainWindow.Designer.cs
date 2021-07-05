@@ -64,14 +64,6 @@ namespace ReadySunValley
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cpubad = new System.Windows.Forms.PictureBox();
-            this.cpugood = new System.Windows.Forms.PictureBox();
-            this.tpmgood = new System.Windows.Forms.PictureBox();
-            this.tpminfo = new System.Windows.Forms.PictureBox();
-            this.directgood = new System.Windows.Forms.PictureBox();
-            this.wddmgood = new System.Windows.Forms.PictureBox();
-            this.inetgood = new System.Windows.Forms.PictureBox();
-            this.bootgood = new System.Windows.Forms.PictureBox();
             this.freqgood = new System.Windows.Forms.PictureBox();
             this.coresgood = new System.Windows.Forms.PictureBox();
             this.partgood = new System.Windows.Forms.PictureBox();
@@ -79,23 +71,31 @@ namespace ReadySunValley
             this.screengood = new System.Windows.Forms.PictureBox();
             this.securebootgood = new System.Windows.Forms.PictureBox();
             this.archgood = new System.Windows.Forms.PictureBox();
-            this.hddgood = new System.Windows.Forms.PictureBox();
-            this.freespacegood = new System.Windows.Forms.PictureBox();
             this.cpuinfo = new System.Windows.Forms.PictureBox();
             this.coresbad = new System.Windows.Forms.PictureBox();
             this.freqbad = new System.Windows.Forms.PictureBox();
             this.archbad = new System.Windows.Forms.PictureBox();
-            this.inetbad = new System.Windows.Forms.PictureBox();
             this.securebootbad = new System.Windows.Forms.PictureBox();
-            this.bootbad = new System.Windows.Forms.PictureBox();
             this.partbad = new System.Windows.Forms.PictureBox();
             this.rambad = new System.Windows.Forms.PictureBox();
-            this.directbad = new System.Windows.Forms.PictureBox();
             this.screenbad = new System.Windows.Forms.PictureBox();
-            this.wddmbad = new System.Windows.Forms.PictureBox();
-            this.tpmbad = new System.Windows.Forms.PictureBox();
+            this.tpmgood = new System.Windows.Forms.PictureBox();
+            this.tpminfo = new System.Windows.Forms.PictureBox();
+            this.cpubad = new System.Windows.Forms.PictureBox();
+            this.cpugood = new System.Windows.Forms.PictureBox();
+            this.bootgood = new System.Windows.Forms.PictureBox();
+            this.bootbad = new System.Windows.Forms.PictureBox();
+            this.hddgood = new System.Windows.Forms.PictureBox();
             this.hddbad = new System.Windows.Forms.PictureBox();
+            this.freespacegood = new System.Windows.Forms.PictureBox();
             this.freespaceinfo = new System.Windows.Forms.PictureBox();
+            this.directgood = new System.Windows.Forms.PictureBox();
+            this.directbad = new System.Windows.Forms.PictureBox();
+            this.tpmbad = new System.Windows.Forms.PictureBox();
+            this.wddmgood = new System.Windows.Forms.PictureBox();
+            this.wddmbad = new System.Windows.Forms.PictureBox();
+            this.inetgood = new System.Windows.Forms.PictureBox();
+            this.inetbad = new System.Windows.Forms.PictureBox();
             this.PicCompare = new System.Windows.Forms.PictureBox();
             this.MainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
@@ -105,7 +105,7 @@ namespace ReadySunValley
             this.AppInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.PnlRight = new System.Windows.Forms.Panel();
             this.BtnPnlScreenshot = new System.Windows.Forms.Button();
-            this.assetOpenGitHub = new System.Windows.Forms.PictureBox();
+            this.AssetOpenGitHub = new System.Windows.Forms.PictureBox();
             this.LblStatus = new System.Windows.Forms.Label();
             this.LblSumBad = new System.Windows.Forms.Label();
             this.LnkCompatibilityFix = new System.Windows.Forms.LinkLabel();
@@ -116,14 +116,6 @@ namespace ReadySunValley
             this.LblHeader = new System.Windows.Forms.Label();
             this.LblSubHeader = new System.Windows.Forms.LinkLabel();
             this.PnlLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.directgood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wddmgood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inetgood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bootgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freqgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partgood)).BeginInit();
@@ -131,27 +123,35 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.screengood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.archgood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hddgood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freqbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.archbad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inetbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootbad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bootbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rambad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.directbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.screenbad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpmbad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bootgood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bootbad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hddgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hddbad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freespaceinfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.directgood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.directbad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpmbad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wddmgood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inetgood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inetbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCompare)).BeginInit();
             this.MainMenu.SuspendLayout();
             this.PnlRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.assetOpenGitHub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AssetOpenGitHub)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -210,12 +210,6 @@ namespace ReadySunValley
             this.PnlLeft.Controls.Add(this.label4);
             this.PnlLeft.Controls.Add(this.label3);
             this.PnlLeft.Controls.Add(this.label1);
-            this.PnlLeft.Controls.Add(this.cpubad);
-            this.PnlLeft.Controls.Add(this.cpugood);
-            this.PnlLeft.Controls.Add(this.directgood);
-            this.PnlLeft.Controls.Add(this.wddmgood);
-            this.PnlLeft.Controls.Add(this.inetgood);
-            this.PnlLeft.Controls.Add(this.bootgood);
             this.PnlLeft.Controls.Add(this.freqgood);
             this.PnlLeft.Controls.Add(this.coresgood);
             this.PnlLeft.Controls.Add(this.partgood);
@@ -223,25 +217,31 @@ namespace ReadySunValley
             this.PnlLeft.Controls.Add(this.screengood);
             this.PnlLeft.Controls.Add(this.securebootgood);
             this.PnlLeft.Controls.Add(this.archgood);
-            this.PnlLeft.Controls.Add(this.hddgood);
-            this.PnlLeft.Controls.Add(this.freespacegood);
             this.PnlLeft.Controls.Add(this.cpuinfo);
             this.PnlLeft.Controls.Add(this.coresbad);
             this.PnlLeft.Controls.Add(this.freqbad);
             this.PnlLeft.Controls.Add(this.archbad);
-            this.PnlLeft.Controls.Add(this.inetbad);
             this.PnlLeft.Controls.Add(this.securebootbad);
-            this.PnlLeft.Controls.Add(this.bootbad);
             this.PnlLeft.Controls.Add(this.partbad);
             this.PnlLeft.Controls.Add(this.rambad);
-            this.PnlLeft.Controls.Add(this.directbad);
             this.PnlLeft.Controls.Add(this.screenbad);
-            this.PnlLeft.Controls.Add(this.wddmbad);
-            this.PnlLeft.Controls.Add(this.hddbad);
-            this.PnlLeft.Controls.Add(this.freespaceinfo);
-            this.PnlLeft.Controls.Add(this.tpmbad);
             this.PnlLeft.Controls.Add(this.tpmgood);
             this.PnlLeft.Controls.Add(this.tpminfo);
+            this.PnlLeft.Controls.Add(this.cpubad);
+            this.PnlLeft.Controls.Add(this.cpugood);
+            this.PnlLeft.Controls.Add(this.bootgood);
+            this.PnlLeft.Controls.Add(this.bootbad);
+            this.PnlLeft.Controls.Add(this.hddgood);
+            this.PnlLeft.Controls.Add(this.hddbad);
+            this.PnlLeft.Controls.Add(this.freespacegood);
+            this.PnlLeft.Controls.Add(this.freespaceinfo);
+            this.PnlLeft.Controls.Add(this.directgood);
+            this.PnlLeft.Controls.Add(this.directbad);
+            this.PnlLeft.Controls.Add(this.tpmbad);
+            this.PnlLeft.Controls.Add(this.wddmgood);
+            this.PnlLeft.Controls.Add(this.wddmbad);
+            this.PnlLeft.Controls.Add(this.inetgood);
+            this.PnlLeft.Controls.Add(this.inetbad);
             this.PnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlLeft.Location = new System.Drawing.Point(0, 0);
             this.PnlLeft.Name = "PnlLeft";
@@ -250,7 +250,6 @@ namespace ReadySunValley
             // 
             // BtnRecheck
             // 
-            this.BtnRecheck.AutoSize = true;
             this.BtnRecheck.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnRecheck.FlatAppearance.BorderSize = 0;
             this.BtnRecheck.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
@@ -420,9 +419,9 @@ namespace ReadySunValley
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(66, 414);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 21);
+            this.label9.Size = new System.Drawing.Size(61, 21);
             this.label9.TabIndex = 92;
-            this.label9.Text = "Monitor";
+            this.label9.Text = "Display";
             // 
             // lbl_directx
             // 
@@ -572,103 +571,14 @@ namespace ReadySunValley
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(66, 237);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 21);
+            this.label1.Size = new System.Drawing.Size(100, 21);
             this.label1.TabIndex = 58;
-            this.label1.Text = "Boot Type";
-            // 
-            // cpubad
-            // 
-            this.cpubad.Image = ((System.Drawing.Image)(resources.GetObject("cpubad.Image")));
-            this.cpubad.Location = new System.Drawing.Point(27, 67);
-            this.cpubad.Name = "cpubad";
-            this.cpubad.Size = new System.Drawing.Size(25, 25);
-            this.cpubad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpubad.TabIndex = 63;
-            this.cpubad.TabStop = false;
-            this.cpubad.Visible = false;
-            this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
-            // 
-            // cpugood
-            // 
-            this.cpugood.Image = ((System.Drawing.Image)(resources.GetObject("cpugood.Image")));
-            this.cpugood.Location = new System.Drawing.Point(27, 67);
-            this.cpugood.Name = "cpugood";
-            this.cpugood.Size = new System.Drawing.Size(25, 25);
-            this.cpugood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpugood.TabIndex = 62;
-            this.cpugood.TabStop = false;
-            // 
-            // tpmgood
-            // 
-            this.tpmgood.Image = ((System.Drawing.Image)(resources.GetObject("tpmgood.Image")));
-            this.tpmgood.Location = new System.Drawing.Point(28, 546);
-            this.tpmgood.Name = "tpmgood";
-            this.tpmgood.Size = new System.Drawing.Size(25, 25);
-            this.tpmgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tpmgood.TabIndex = 123;
-            this.tpmgood.TabStop = false;
-            this.tpmgood.Visible = false;
-            // 
-            // tpminfo
-            // 
-            this.tpminfo.Image = global::ReadySunValley.Properties.Resources.info;
-            this.tpminfo.Location = new System.Drawing.Point(28, 546);
-            this.tpminfo.Name = "tpminfo";
-            this.tpminfo.Size = new System.Drawing.Size(25, 25);
-            this.tpminfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tpminfo.TabIndex = 125;
-            this.tpminfo.TabStop = false;
-            this.tpminfo.Visible = false;
-            this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
-            // 
-            // directgood
-            // 
-            this.directgood.Image = ((System.Drawing.Image)(resources.GetObject("directgood.Image")));
-            this.directgood.Location = new System.Drawing.Point(28, 592);
-            this.directgood.Name = "directgood";
-            this.directgood.Size = new System.Drawing.Size(25, 25);
-            this.directgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.directgood.TabIndex = 87;
-            this.directgood.TabStop = false;
-            this.directgood.Visible = false;
-            // 
-            // wddmgood
-            // 
-            this.wddmgood.Image = ((System.Drawing.Image)(resources.GetObject("wddmgood.Image")));
-            this.wddmgood.Location = new System.Drawing.Point(28, 638);
-            this.wddmgood.Name = "wddmgood";
-            this.wddmgood.Size = new System.Drawing.Size(25, 25);
-            this.wddmgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.wddmgood.TabIndex = 97;
-            this.wddmgood.TabStop = false;
-            this.wddmgood.Visible = false;
-            // 
-            // inetgood
-            // 
-            this.inetgood.Image = ((System.Drawing.Image)(resources.GetObject("inetgood.Image")));
-            this.inetgood.Location = new System.Drawing.Point(28, 681);
-            this.inetgood.Name = "inetgood";
-            this.inetgood.Size = new System.Drawing.Size(25, 25);
-            this.inetgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.inetgood.TabIndex = 116;
-            this.inetgood.TabStop = false;
-            this.inetgood.Visible = false;
-            // 
-            // bootgood
-            // 
-            this.bootgood.Image = ((System.Drawing.Image)(resources.GetObject("bootgood.Image")));
-            this.bootgood.Location = new System.Drawing.Point(28, 235);
-            this.bootgood.Name = "bootgood";
-            this.bootgood.Size = new System.Drawing.Size(25, 25);
-            this.bootgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bootgood.TabIndex = 59;
-            this.bootgood.TabStop = false;
-            this.bootgood.Visible = false;
+            this.label1.Text = "Boot Method";
             // 
             // freqgood
             // 
             this.freqgood.Image = ((System.Drawing.Image)(resources.GetObject("freqgood.Image")));
-            this.freqgood.Location = new System.Drawing.Point(28, 145);
+            this.freqgood.Location = new System.Drawing.Point(28, 147);
             this.freqgood.Name = "freqgood";
             this.freqgood.Size = new System.Drawing.Size(25, 25);
             this.freqgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -742,32 +652,10 @@ namespace ReadySunValley
             this.archgood.TabStop = false;
             this.archgood.Visible = false;
             // 
-            // hddgood
-            // 
-            this.hddgood.Image = ((System.Drawing.Image)(resources.GetObject("hddgood.Image")));
-            this.hddgood.Location = new System.Drawing.Point(28, 458);
-            this.hddgood.Name = "hddgood";
-            this.hddgood.Size = new System.Drawing.Size(25, 25);
-            this.hddgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hddgood.TabIndex = 71;
-            this.hddgood.TabStop = false;
-            this.hddgood.Visible = false;
-            // 
-            // freespacegood
-            // 
-            this.freespacegood.Image = global::ReadySunValley.Properties.Resources.check;
-            this.freespacegood.Location = new System.Drawing.Point(28, 505);
-            this.freespacegood.Name = "freespacegood";
-            this.freespacegood.Size = new System.Drawing.Size(25, 25);
-            this.freespacegood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.freespacegood.TabIndex = 101;
-            this.freespacegood.TabStop = false;
-            this.freespacegood.Visible = false;
-            // 
             // cpuinfo
             // 
             this.cpuinfo.Image = global::ReadySunValley.Properties.Resources.info;
-            this.cpuinfo.Location = new System.Drawing.Point(27, 67);
+            this.cpuinfo.Location = new System.Drawing.Point(28, 67);
             this.cpuinfo.Name = "cpuinfo";
             this.cpuinfo.Size = new System.Drawing.Size(25, 25);
             this.cpuinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -791,7 +679,7 @@ namespace ReadySunValley
             // freqbad
             // 
             this.freqbad.Image = ((System.Drawing.Image)(resources.GetObject("freqbad.Image")));
-            this.freqbad.Location = new System.Drawing.Point(29, 145);
+            this.freqbad.Location = new System.Drawing.Point(28, 147);
             this.freqbad.Name = "freqbad";
             this.freqbad.Size = new System.Drawing.Size(25, 25);
             this.freqbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -811,18 +699,6 @@ namespace ReadySunValley
             this.archbad.TabStop = false;
             this.archbad.Visible = false;
             // 
-            // inetbad
-            // 
-            this.inetbad.Image = ((System.Drawing.Image)(resources.GetObject("inetbad.Image")));
-            this.inetbad.Location = new System.Drawing.Point(28, 682);
-            this.inetbad.Name = "inetbad";
-            this.inetbad.Size = new System.Drawing.Size(25, 25);
-            this.inetbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.inetbad.TabIndex = 115;
-            this.inetbad.TabStop = false;
-            this.inetbad.Visible = false;
-            this.inetbad.MouseHover += new System.EventHandler(this.inetbad_MouseHover);
-            // 
             // securebootbad
             // 
             this.securebootbad.Image = ((System.Drawing.Image)(resources.GetObject("securebootbad.Image")));
@@ -834,18 +710,6 @@ namespace ReadySunValley
             this.securebootbad.TabStop = false;
             this.securebootbad.Visible = false;
             this.securebootbad.MouseHover += new System.EventHandler(this.securebootbad_MouseHover);
-            // 
-            // bootbad
-            // 
-            this.bootbad.Image = ((System.Drawing.Image)(resources.GetObject("bootbad.Image")));
-            this.bootbad.Location = new System.Drawing.Point(27, 235);
-            this.bootbad.Name = "bootbad";
-            this.bootbad.Size = new System.Drawing.Size(25, 25);
-            this.bootbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bootbad.TabIndex = 60;
-            this.bootbad.TabStop = false;
-            this.bootbad.Visible = false;
-            this.bootbad.MouseHover += new System.EventHandler(this.bootbad_MouseHover);
             // 
             // partbad
             // 
@@ -871,18 +735,6 @@ namespace ReadySunValley
             this.rambad.Visible = false;
             this.rambad.MouseHover += new System.EventHandler(this.rambad_MouseHover);
             // 
-            // directbad
-            // 
-            this.directbad.Image = ((System.Drawing.Image)(resources.GetObject("directbad.Image")));
-            this.directbad.Location = new System.Drawing.Point(27, 593);
-            this.directbad.Name = "directbad";
-            this.directbad.Size = new System.Drawing.Size(25, 25);
-            this.directbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.directbad.TabIndex = 88;
-            this.directbad.TabStop = false;
-            this.directbad.Visible = false;
-            this.directbad.MouseHover += new System.EventHandler(this.directbad_MouseHover);
-            // 
             // screenbad
             // 
             this.screenbad.Image = ((System.Drawing.Image)(resources.GetObject("screenbad.Image")));
@@ -895,17 +747,142 @@ namespace ReadySunValley
             this.screenbad.Visible = false;
             this.screenbad.MouseHover += new System.EventHandler(this.screenbad_MouseHover);
             // 
-            // wddmbad
+            // tpmgood
             // 
-            this.wddmbad.Image = ((System.Drawing.Image)(resources.GetObject("wddmbad.Image")));
-            this.wddmbad.Location = new System.Drawing.Point(28, 639);
-            this.wddmbad.Name = "wddmbad";
-            this.wddmbad.Size = new System.Drawing.Size(25, 25);
-            this.wddmbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.wddmbad.TabIndex = 98;
-            this.wddmbad.TabStop = false;
-            this.wddmbad.Visible = false;
-            this.wddmbad.MouseHover += new System.EventHandler(this.wddmbad_MouseHover);
+            this.tpmgood.Image = ((System.Drawing.Image)(resources.GetObject("tpmgood.Image")));
+            this.tpmgood.Location = new System.Drawing.Point(28, 546);
+            this.tpmgood.Name = "tpmgood";
+            this.tpmgood.Size = new System.Drawing.Size(25, 25);
+            this.tpmgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tpmgood.TabIndex = 123;
+            this.tpmgood.TabStop = false;
+            this.tpmgood.Visible = false;
+            // 
+            // tpminfo
+            // 
+            this.tpminfo.Image = global::ReadySunValley.Properties.Resources.info;
+            this.tpminfo.Location = new System.Drawing.Point(28, 546);
+            this.tpminfo.Name = "tpminfo";
+            this.tpminfo.Size = new System.Drawing.Size(25, 25);
+            this.tpminfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tpminfo.TabIndex = 125;
+            this.tpminfo.TabStop = false;
+            this.tpminfo.Visible = false;
+            this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
+            // 
+            // cpubad
+            // 
+            this.cpubad.Image = ((System.Drawing.Image)(resources.GetObject("cpubad.Image")));
+            this.cpubad.Location = new System.Drawing.Point(28, 67);
+            this.cpubad.Name = "cpubad";
+            this.cpubad.Size = new System.Drawing.Size(25, 25);
+            this.cpubad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cpubad.TabIndex = 63;
+            this.cpubad.TabStop = false;
+            this.cpubad.Visible = false;
+            this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
+            // 
+            // cpugood
+            // 
+            this.cpugood.Image = ((System.Drawing.Image)(resources.GetObject("cpugood.Image")));
+            this.cpugood.Location = new System.Drawing.Point(28, 67);
+            this.cpugood.Name = "cpugood";
+            this.cpugood.Size = new System.Drawing.Size(25, 25);
+            this.cpugood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cpugood.TabIndex = 62;
+            this.cpugood.TabStop = false;
+            // 
+            // bootgood
+            // 
+            this.bootgood.Image = ((System.Drawing.Image)(resources.GetObject("bootgood.Image")));
+            this.bootgood.Location = new System.Drawing.Point(28, 237);
+            this.bootgood.Name = "bootgood";
+            this.bootgood.Size = new System.Drawing.Size(25, 25);
+            this.bootgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bootgood.TabIndex = 59;
+            this.bootgood.TabStop = false;
+            this.bootgood.Visible = false;
+            // 
+            // bootbad
+            // 
+            this.bootbad.Image = ((System.Drawing.Image)(resources.GetObject("bootbad.Image")));
+            this.bootbad.Location = new System.Drawing.Point(28, 237);
+            this.bootbad.Name = "bootbad";
+            this.bootbad.Size = new System.Drawing.Size(25, 25);
+            this.bootbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bootbad.TabIndex = 60;
+            this.bootbad.TabStop = false;
+            this.bootbad.Visible = false;
+            this.bootbad.MouseHover += new System.EventHandler(this.bootbad_MouseHover);
+            // 
+            // hddgood
+            // 
+            this.hddgood.Image = ((System.Drawing.Image)(resources.GetObject("hddgood.Image")));
+            this.hddgood.Location = new System.Drawing.Point(28, 458);
+            this.hddgood.Name = "hddgood";
+            this.hddgood.Size = new System.Drawing.Size(25, 25);
+            this.hddgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hddgood.TabIndex = 71;
+            this.hddgood.TabStop = false;
+            this.hddgood.Visible = false;
+            // 
+            // hddbad
+            // 
+            this.hddbad.Image = ((System.Drawing.Image)(resources.GetObject("hddbad.Image")));
+            this.hddbad.Location = new System.Drawing.Point(28, 459);
+            this.hddbad.Name = "hddbad";
+            this.hddbad.Size = new System.Drawing.Size(25, 25);
+            this.hddbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hddbad.TabIndex = 72;
+            this.hddbad.TabStop = false;
+            this.hddbad.Visible = false;
+            this.hddbad.MouseHover += new System.EventHandler(this.hddbad_MouseHover);
+            // 
+            // freespacegood
+            // 
+            this.freespacegood.Image = global::ReadySunValley.Properties.Resources.check;
+            this.freespacegood.Location = new System.Drawing.Point(28, 505);
+            this.freespacegood.Name = "freespacegood";
+            this.freespacegood.Size = new System.Drawing.Size(25, 25);
+            this.freespacegood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.freespacegood.TabIndex = 101;
+            this.freespacegood.TabStop = false;
+            this.freespacegood.Visible = false;
+            // 
+            // freespaceinfo
+            // 
+            this.freespaceinfo.Image = global::ReadySunValley.Properties.Resources.info;
+            this.freespaceinfo.Location = new System.Drawing.Point(28, 506);
+            this.freespaceinfo.Name = "freespaceinfo";
+            this.freespaceinfo.Size = new System.Drawing.Size(25, 25);
+            this.freespaceinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.freespaceinfo.TabIndex = 102;
+            this.freespaceinfo.TabStop = false;
+            this.freespaceinfo.Visible = false;
+            this.freespaceinfo.MouseHover += new System.EventHandler(this.freespaceinfo_MouseHover);
+            // 
+            // directgood
+            // 
+            this.directgood.Image = ((System.Drawing.Image)(resources.GetObject("directgood.Image")));
+            this.directgood.Location = new System.Drawing.Point(28, 592);
+            this.directgood.Name = "directgood";
+            this.directgood.Size = new System.Drawing.Size(25, 25);
+            this.directgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.directgood.TabIndex = 87;
+            this.directgood.TabStop = false;
+            this.directgood.Visible = false;
+            // 
+            // directbad
+            // 
+            this.directbad.Image = ((System.Drawing.Image)(resources.GetObject("directbad.Image")));
+            this.directbad.Location = new System.Drawing.Point(28, 593);
+            this.directbad.Name = "directbad";
+            this.directbad.Size = new System.Drawing.Size(25, 25);
+            this.directbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.directbad.TabIndex = 88;
+            this.directbad.TabStop = false;
+            this.directbad.Visible = false;
+            this.directbad.MouseHover += new System.EventHandler(this.directbad_MouseHover);
             // 
             // tpmbad
             // 
@@ -919,29 +896,51 @@ namespace ReadySunValley
             this.tpmbad.Visible = false;
             this.tpmbad.MouseHover += new System.EventHandler(this.tpmbad_MouseHover);
             // 
-            // hddbad
+            // wddmgood
             // 
-            this.hddbad.Image = ((System.Drawing.Image)(resources.GetObject("hddbad.Image")));
-            this.hddbad.Location = new System.Drawing.Point(27, 459);
-            this.hddbad.Name = "hddbad";
-            this.hddbad.Size = new System.Drawing.Size(25, 25);
-            this.hddbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hddbad.TabIndex = 72;
-            this.hddbad.TabStop = false;
-            this.hddbad.Visible = false;
-            this.hddbad.MouseHover += new System.EventHandler(this.hddbad_MouseHover);
+            this.wddmgood.Image = ((System.Drawing.Image)(resources.GetObject("wddmgood.Image")));
+            this.wddmgood.Location = new System.Drawing.Point(28, 638);
+            this.wddmgood.Name = "wddmgood";
+            this.wddmgood.Size = new System.Drawing.Size(25, 25);
+            this.wddmgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.wddmgood.TabIndex = 97;
+            this.wddmgood.TabStop = false;
+            this.wddmgood.Visible = false;
             // 
-            // freespaceinfo
+            // wddmbad
             // 
-            this.freespaceinfo.Image = global::ReadySunValley.Properties.Resources.info;
-            this.freespaceinfo.Location = new System.Drawing.Point(27, 506);
-            this.freespaceinfo.Name = "freespaceinfo";
-            this.freespaceinfo.Size = new System.Drawing.Size(25, 25);
-            this.freespaceinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.freespaceinfo.TabIndex = 102;
-            this.freespaceinfo.TabStop = false;
-            this.freespaceinfo.Visible = false;
-            this.freespaceinfo.MouseHover += new System.EventHandler(this.freespaceinfo_MouseHover);
+            this.wddmbad.Image = ((System.Drawing.Image)(resources.GetObject("wddmbad.Image")));
+            this.wddmbad.Location = new System.Drawing.Point(28, 639);
+            this.wddmbad.Name = "wddmbad";
+            this.wddmbad.Size = new System.Drawing.Size(25, 25);
+            this.wddmbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.wddmbad.TabIndex = 98;
+            this.wddmbad.TabStop = false;
+            this.wddmbad.Visible = false;
+            this.wddmbad.MouseHover += new System.EventHandler(this.wddmbad_MouseHover);
+            // 
+            // inetgood
+            // 
+            this.inetgood.Image = ((System.Drawing.Image)(resources.GetObject("inetgood.Image")));
+            this.inetgood.Location = new System.Drawing.Point(28, 681);
+            this.inetgood.Name = "inetgood";
+            this.inetgood.Size = new System.Drawing.Size(25, 25);
+            this.inetgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inetgood.TabIndex = 116;
+            this.inetgood.TabStop = false;
+            this.inetgood.Visible = false;
+            // 
+            // inetbad
+            // 
+            this.inetbad.Image = ((System.Drawing.Image)(resources.GetObject("inetbad.Image")));
+            this.inetbad.Location = new System.Drawing.Point(28, 682);
+            this.inetbad.Name = "inetbad";
+            this.inetbad.Size = new System.Drawing.Size(25, 25);
+            this.inetbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inetbad.TabIndex = 115;
+            this.inetbad.TabStop = false;
+            this.inetbad.Visible = false;
+            this.inetbad.MouseHover += new System.EventHandler(this.inetbad_MouseHover);
             // 
             // PicCompare
             // 
@@ -1008,7 +1007,7 @@ namespace ReadySunValley
             this.PnlRight.AutoScroll = true;
             this.PnlRight.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PnlRight.Controls.Add(this.BtnPnlScreenshot);
-            this.PnlRight.Controls.Add(this.assetOpenGitHub);
+            this.PnlRight.Controls.Add(this.AssetOpenGitHub);
             this.PnlRight.Controls.Add(this.LblStatus);
             this.PnlRight.Controls.Add(this.LblSumBad);
             this.PnlRight.Controls.Add(this.LnkCompatibilityFix);
@@ -1039,19 +1038,19 @@ namespace ReadySunValley
             this.BtnPnlScreenshot.Visible = false;
             this.BtnPnlScreenshot.Click += new System.EventHandler(this.BtnPnlScreenshot_Click);
             // 
-            // assetOpenGitHub
+            // AssetOpenGitHub
             // 
-            this.assetOpenGitHub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.assetOpenGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.assetOpenGitHub.Image = ((System.Drawing.Image)(resources.GetObject("assetOpenGitHub.Image")));
-            this.assetOpenGitHub.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.assetOpenGitHub.Location = new System.Drawing.Point(359, 12);
-            this.assetOpenGitHub.Name = "assetOpenGitHub";
-            this.assetOpenGitHub.Size = new System.Drawing.Size(24, 24);
-            this.assetOpenGitHub.TabIndex = 129;
-            this.assetOpenGitHub.TabStop = false;
-            this.assetOpenGitHub.Click += new System.EventHandler(this.assetOpenGitHub_Click);
-            this.assetOpenGitHub.MouseHover += new System.EventHandler(this.assetOpenGitHub_MouseHover);
+            this.AssetOpenGitHub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AssetOpenGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AssetOpenGitHub.Image = ((System.Drawing.Image)(resources.GetObject("AssetOpenGitHub.Image")));
+            this.AssetOpenGitHub.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.AssetOpenGitHub.Location = new System.Drawing.Point(359, 12);
+            this.AssetOpenGitHub.Name = "AssetOpenGitHub";
+            this.AssetOpenGitHub.Size = new System.Drawing.Size(24, 24);
+            this.AssetOpenGitHub.TabIndex = 129;
+            this.AssetOpenGitHub.TabStop = false;
+            this.AssetOpenGitHub.Click += new System.EventHandler(this.AssetOpenGitHub_Click);
+            this.AssetOpenGitHub.MouseHover += new System.EventHandler(this.AssetOpenGitHub_MouseHover);
             // 
             // LblStatus
             // 
@@ -1213,14 +1212,6 @@ namespace ReadySunValley
             this.SizeChanged += new System.EventHandler(this.MainWindow_SizeChanged);
             this.PnlLeft.ResumeLayout(false);
             this.PnlLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.directgood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wddmgood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inetgood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bootgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freqgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partgood)).EndInit();
@@ -1228,29 +1219,37 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.screengood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.archgood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hddgood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freqbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.archbad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inetbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootbad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bootbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rambad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.directbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.screenbad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpmbad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bootgood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bootbad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hddgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hddbad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freespaceinfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.directgood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.directbad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpmbad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wddmgood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inetgood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inetbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCompare)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.PnlRight.ResumeLayout(false);
             this.PnlRight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.assetOpenGitHub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AssetOpenGitHub)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1339,7 +1338,7 @@ namespace ReadySunValley
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnRecheck;
-        private System.Windows.Forms.PictureBox assetOpenGitHub;
+        private System.Windows.Forms.PictureBox AssetOpenGitHub;
         private System.Windows.Forms.Button BtnPnlScreenshot;
     }
 }

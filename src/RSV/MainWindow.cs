@@ -1,13 +1,10 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Management;
 using System.Net;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -15,232 +12,14 @@ namespace ReadySunValley
 {
     public partial class MainWindow : Form
     {
-        private readonly string _infoApp = "ReadySunValley" + "\nVersion " + Program.GetCurrentVersionTostring() +
-                                    "\n\nChecks if your device is ready for Windows 11/Sun Valley update.\r\n\n" +
-                                    "This project was forked initially from https://github.com/mag-nif-i-cent/Affinity11\r\n\n" +
-                                    "You can also reach out to me on\n" +
-                                    "\ttwitter.com/builtbybel\r\n\n" +
-                                    "(C) 2021, Builtbybel";
-
-        // App update
-        private readonly string _releaseURL = "https://raw.githubusercontent.com/builtbybel/readysunvalley/master/appversion.txt";
-
-        public Version CurrentVersion = new Version(Application.ProductVersion);
-        public Version LatestVersion;
-
-        //Compare utilty update
-        private readonly string _uriUtility = "https://github.com/rcmaehl/WhyNotWin11/releases/download/";
-
-        private readonly string _uriUtilVersion = "https://raw.githubusercontent.com/builtbybel/ReadySunValley/main/utilversion.txt";
-
-        public Version uriUtilLatestVersion;
-
-        //UEFI or legacy mode
-        public const int ERROR_INVALID_FUNCTION = 1;
-
-        [DllImport("kernel32.dll",
-            EntryPoint = "GetFirmwareEnvironmentVariableA",
-            SetLastError = true,
-            CharSet = CharSet.Unicode,
-            ExactSpelling = true,
-            CallingConvention = CallingConvention.StdCall)]
-        public static extern int GetFirmwareType(string lpName, string lpGUID, IntPtr pBuffer, uint size);
-
-        // Internet conncetion
-        [System.Runtime.InteropServices.DllImport("wininet.dll")]
-        private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
-
-        // Detecting DirectX wrapping COM objects
-        [Guid("7D0F462F-4064-4862-BC7F-933E5058C10F")]
-        [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-        public interface IDxDiagContainer
-        {
-            void EnumChildContainerNames(uint dwIndex, string pwszContainer, uint cchContainer);
-
-            void EnumPropNames(uint dwIndex, string pwszPropName, uint cchPropName);
-
-            void GetChildContainer(string pwszContainer, out IDxDiagContainer ppInstance);
-
-            void GetNumberOfChildContainers(out uint pdwCount);
-
-            void GetNumberOfProps(out uint pdwCount);
-
-            void GetProp(string pwszPropName, out object pvarProp);
-        }
-
-        [ComImport]
-        [Guid("A65B8071-3BFE-4213-9A5B-491DA4461CA7")]
-        public class DxDiagProvider { }
-
-        [Guid("9C6B4CB0-23F8-49CC-A3ED-45A55000A6D2")]
-        [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-        public interface IDxDiagProvider
-        {
-            void Initialize(ref DXDIAG_INIT_PARAMS pParams);
-
-            void GetRootContainer(out IDxDiagContainer ppInstance);
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        public struct DXDIAG_INIT_PARAMS
-        {
-            public int dwSize;
-            public uint dwDxDiagHeaderVersion;
-            public bool bAllowWHQLChecks;
-            public IntPtr pReserved;
-        };
-
-        private void CheckAppUpdate()
-        {
-            try
-            {
-                WebRequest hreq = WebRequest.Create(_releaseURL);
-                hreq.Timeout = 10000;
-                hreq.Headers.Set("Cache-Control", "no-cache, no-store, must-revalidate");
-
-                WebResponse hres = hreq.GetResponse();
-                StreamReader sr = new StreamReader(hres.GetResponseStream());
-
-                LatestVersion = new Version(sr.ReadToEnd().Trim());
-
-                sr.Dispose();
-                hres.Dispose();
-
-                var equals = LatestVersion.CompareTo(CurrentVersion);
-
-                if (equals == 0)
-                {
-                    return; // up-to-date
-                }
-                else if (equals < 0)
-                {
-                    return; // higher than available
-                }
-                else // new version
-                {
-                    if (MessageBox.Show("A new app version " + LatestVersion + " is available.\nDo you want to goto the Github update page?\n\nPress <No> to continue with compatibility check.", "App update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // New release available!
-                    {
-                        Process.Start("https://github.com/builtbybel/readysunvalley/releases/tag/" + LatestVersion);
-                    }
-                }
-            }
-            catch { MessageBox.Show("App update check failed...", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); }
-        }
-
-        private String FormatBytes(long byteCount)
-        {
-            string[] suf = { " B", " KB", " MB", " GB", " TB", " PB", " EB" };
-            if (byteCount == 0)
-                return "0" + suf[0];
-            long bytes = Math.Abs(byteCount);
-            int place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
-            double num = Math.Round(bytes / Math.Pow(1024, place), 1);
-            return (Math.Sign(byteCount) * num).ToString() + suf[place];
-        }
-
-        private void GetProcessorArchitecture()
-        {
-            switch (typeof(string).Assembly.GetName().ProcessorArchitecture)
-            {
-                case System.Reflection.ProcessorArchitecture.X86:
-                    lbl_arch.Text = "32 Bit";
-
-                    archbad.Visible = true;
-                    archgood.Visible = false;
-                    break;
-
-                case System.Reflection.ProcessorArchitecture.Amd64:
-                    lbl_arch.Text = "64 Bit";
-
-                    archgood.Visible = true;
-                    archbad.Visible = false;
-                    break;
-
-                case System.Reflection.ProcessorArchitecture.Arm:
-                    lbl_arch.Text = "ARM";
-
-                    archgood.Visible = true;
-                    archbad.Visible = false;
-                    break;
-            }
-        }
-
-        public static bool isUEFI()
-        {
-            GetFirmwareType("", "{00000000-0000-0000-0000-000000000000}", IntPtr.Zero, 0);
-
-            if (Marshal.GetLastWin32Error() == ERROR_INVALID_FUNCTION)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        public static bool isINet()
-        {
-            return InternetGetConnectedState(out _, 0);
-        }
-
-        public string SecureBootStatus()
-        {
-            int rc = 0;
-            string key = @"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecureBoot\State";
-            string subkey = @"UEFISecureBootEnabled";
-            try
-            {
-                object value = Registry.GetValue(key, subkey, rc);
-                if (value != null)
-                    rc = (int)value;
-            }
-            catch { }
-            return $@"{(rc >= 1 ? "ON" : "OFF")}";
-        }
-
-        public string ClockSpeed()
-        {
-            string clockSpeed = "";
-            foreach (var item in new System.Management.ManagementObjectSearcher("select MaxClockSpeed from Win32_Processor").Get())
-            {
-                var clockSpeedx = (uint)item["MaxClockSpeed"];
-                clockSpeed = clockSpeedx.ToString();
-            }
-            return clockSpeed;
-        }
-
-        private long GetTotalFreeSpace(string driveName)
-        {
-            foreach (DriveInfo drive in DriveInfo.GetDrives())
-            {
-                if (drive.IsReady && drive.Name == driveName)
-                {
-                    return drive.AvailableFreeSpace;
-                }
-            }
-            return -1;
-        }
-
-        private long GetTotalSpace(string driveName)
-        {
-            foreach (DriveInfo drive in DriveInfo.GetDrives())
-            {
-                if (drive.IsReady && drive.Name == driveName)
-                {
-                    return drive.TotalSize;
-                }
-            }
-            return -1;
-        }
-
         public MainWindow()
         {
             InitializeComponent();
 
             // GUI options
-            LblMainMenu.Text = "\ue700";     // Hamburger menu
-            BtnRecheck.Text = "\ue72c";     // Refresh
+            this.Text = Helpers.Strings.Titles.AppName;  // Title
+            LblMainMenu.Text = "\ue700";                // Hamburger menu
+            BtnRecheck.Text = "\ue72c";                 // Refresh
         }
 
         private void MainWindow_Shown(object sender, EventArgs e)
@@ -248,21 +27,50 @@ namespace ReadySunValley
             DoCompatibilityCheck();
         }
 
+        private void MainWindow_SizeChanged(object sender, EventArgs e)
+        {
+            int formWidth = this.Width;
+
+            if (formWidth < 880)
+            {
+                BtnPnlScreenshot.Visible = true;
+                BtnScreenshot.Visible = false;
+            }
+            else
+            {
+                BtnScreenshot.Visible = true;
+                BtnPnlScreenshot.Visible = false;
+            }
+        }
+
         private void DoCompatibilityCheck()
         {
             int performCompatibilityCount = 0;
 
-            // Compatibility checks
+            // Run all the Compatibility checks
             this.Enabled = false;
+
+            // First checks
             LblStatus.Text = "Checking system requirements [1/13]";
+            Helpers.Utils.AppUpdate();
 
-            // Run here app also update check
-            CheckAppUpdate();
-
+            // CPU arch
             LblStatus.Text = "Checking CPU architecture [2/13]";
-            GetProcessorArchitecture();
+            lbl_arch.Text = Assessment.CPU.Architecture();
+            if (lbl_arch.Text == "64 Bit")
+            {
+                archgood.Visible = true;
+                archbad.Visible = false;
+            }
+            else
+            {
+                archbad.Visible = true;
+                archgood.Visible = false;
 
-            // Calculate and output size for each monitor, Ref. https://theezitguy.wordpress.com/category/c-sharp/
+                performCompatibilityCount += 1;
+            }
+
+            // Display size for each monitor, Ref. https://theezitguy.wordpress.com/category/c-sharp/
             LblStatus.Text = "Checking Monitor size [3/13]";
             lbl_screen.Text = "";
             screengood.Visible = true;
@@ -284,7 +92,8 @@ namespace ReadySunValley
                 }
             }
 
-            if (isUEFI())
+            // Boot Method
+            if (Assessment.Boot.isUEFI())
             {
                 lbl_type.Text = "UEFI";
                 bootgood.Visible = true;
@@ -299,8 +108,9 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
+            // CPU Clock speed
             LblStatus.Text = "Checking CPU speed [4/13]";
-            var clockspeed = ClockSpeed();
+            var clockspeed = Assessment.CPU.ClockSpeed();
             lbl_clockspeed.Text = clockspeed + " MHz Frequency";
             int x = Int32.Parse(clockspeed);
             if (x > 1000)
@@ -316,6 +126,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
+            // CPU Core counts
             LblStatus.Text = "Getting Core counts [5/13]";
             int coreCount = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
@@ -337,6 +148,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
+            // CPU Compatibility check
             LblStatus.Text = "Checking CPU Compatibility [6/13]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
@@ -385,6 +197,7 @@ namespace ReadySunValley
                 }
             }
 
+            // Partition Type
             LblStatus.Text = "Checking Partition Types [7/13]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition WHERE BootPartition=True").Get())
             {
@@ -408,8 +221,9 @@ namespace ReadySunValley
                 }
             }
 
+            // Secure Boot
             LblStatus.Text = "Checking Secure Boot Status [8/13]";
-            lbl_secureboot.Text = SecureBootStatus();
+            lbl_secureboot.Text = Assessment.SecureBoot.SecureBootStatus();
 
             if (lbl_secureboot.Text.Contains("ON"))
             {
@@ -424,6 +238,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
+            // RAM
             LblStatus.Text = "Checking RAM Compatibility [9/13]";
             long ram = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_PhysicalMemory").Get())
@@ -431,7 +246,7 @@ namespace ReadySunValley
                 string ramstr = item["Capacity"].ToString();
                 ram = ram += long.Parse(ramstr);
             }
-            lbl_ram.Text = FormatBytes(ram).ToString();
+            lbl_ram.Text = Helpers.Utils.FormatBytes(ram).ToString();
 
             if (lbl_ram.Text.Contains("GB"))
             {
@@ -452,13 +267,14 @@ namespace ReadySunValley
                 }
             }
 
+            // Storage info
             LblStatus.Text = "Checking Disk size [10/13]";
             var systemdrive = Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
 
-            long systemfreespace = GetTotalFreeSpace(systemdrive);
-            string systemfreespacestr = FormatBytes(systemfreespace).Split(' ')[0];
+            long systemfreespace = Assessment.Storage.GetTotalFreeSpace(systemdrive);
+            string systemfreespacestr = Helpers.Utils.FormatBytes(systemfreespace).Split(' ')[0];
             Double systemfreespacedouble = Convert.ToDouble(systemfreespacestr);
-            lbl_freespace.Text = FormatBytes(systemfreespace).ToString();
+            lbl_freespace.Text = Helpers.Utils.FormatBytes(systemfreespace).ToString();
 
             if (systemfreespacedouble >= 64)
             {
@@ -473,10 +289,10 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            long systemtotalspace = GetTotalSpace(systemdrive);
-            string systemspacestr = FormatBytes(systemtotalspace).Split(' ')[0];
+            long systemtotalspace = Assessment.Storage.GetTotalSpace(systemdrive);
+            string systemspacestr = Helpers.Utils.FormatBytes(systemtotalspace).Split(' ')[0];
             Double systemspacedouble = Convert.ToDouble(systemspacestr);
-            lbl_storage.Text = FormatBytes(systemtotalspace).ToString();
+            lbl_storage.Text = Helpers.Utils.FormatBytes(systemtotalspace).ToString();
 
             if (lbl_storage.Text.Contains("GB") && (systemspacedouble >= 64))
             {
@@ -496,6 +312,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
+            // DirectX & WDDM
             LblStatus.Text = "Getting DirectX && WDDM2 [11/13]";
             try
             {
@@ -556,27 +373,11 @@ namespace ReadySunValley
             }
             catch { }
 
+            // GPU
             LblStatus.Text = "Getting Graphics card [12/13]";
-            try
-            {
-                ManagementObjectSearcher graphics = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController");
+            lbl_wddm.Text += " (" + Assessment.GPU.Unit() + ")";
 
-                string gpu = string.Empty;
-                foreach (ManagementObject mo in graphics.Get())
-                {
-                    foreach (PropertyData property in mo.Properties)
-                    {
-                        if (property.Name == "Description")
-                        {
-                            gpu = property.Value.ToString();
-                            lbl_wddm.Text += " (" + gpu + ")";
-                        }
-                    }
-                }
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); }
-
-            // Ref. https://wutils.com/wmi/root/cimv2/security/microsofttpm/win32_tpm/cs-samples.html
+            // TPM, Ref. https://wutils.com/wmi/root/cimv2/security/microsofttpm/win32_tpm/cs-samples.html
             LblStatus.Text = "Getting TPM version... [10/11]";
             ManagementScope scope = new ManagementScope("\\\\.\\ROOT\\CIMV2\\Security\\MicrosoftTpm");
             ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Tpm");
@@ -616,8 +417,9 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
+            // Inet
             LblStatus.Text = "Checking Internet connection [13/13]";
-            if (isINet())
+            if (Assessment.Inet.isINet())
             {
                 lbl_inet.Text = "Available";
                 inetgood.Visible = true;
@@ -677,133 +479,149 @@ namespace ReadySunValley
             }
         }
 
+        private void BtnRecheck_Click(object sender, EventArgs e) => DoCompatibilityCheck();
+
+        private void BtnScreenshot_Click(object sender, EventArgs e) => CaptureScreen();
+
+        private void BtnPnlScreenshot_Click(object sender, EventArgs e) => CaptureScreen();
+
+        private void BtnCompareUtil_Click(object sender, EventArgs e) => GetCompareUtil();
+
+        private void LblMainMenu_Click(object sender, EventArgs e) => this.MainMenu.Show(Cursor.Position.X, Cursor.Position.Y);
+
+        private void AppInfo_Click(object sender, EventArgs e) => MessageBox.Show(Helpers.Strings.Body.AppInfo, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        private void AppHelp_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.VotePage);
+
+        private void AssetOpenGitHub_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.GitRepo);
+
         private void cpuinfo_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.cpuinfo, "Your CPU meets the soft requirements, it's just not listed on the offical list of supported processors.");
-        }
-
-        private void bootbad_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.bootbad, "Your system needs to support a UEFI boot mode, right now your system is booting using Legacy. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual or bios for more information.");
+            tt.SetToolTip(this.cpuinfo, Helpers.Strings.Hover.CPUInfo);
         }
 
         private void cpubad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.cpubad, "Your CPU doesn't meet the specification requirements, see individual info about frequency or cores below.");
+            tt.SetToolTip(this.cpubad, Helpers.Strings.Hover.CPUBad);
         }
 
         private void freqbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.freqbad, "Your CPU frequency doesn't meet the minimum requirements for Windows 11.");
+            tt.SetToolTip(this.freqbad, Helpers.Strings.Hover.FreqBad);
         }
 
         private void coresbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.coresbad, "You don't have enough processing cores to run Windows 11.");
+            tt.SetToolTip(this.coresbad, Helpers.Strings.Hover.CoresBad);
+        }
+
+        private void bootbad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.bootbad, Helpers.Strings.Hover.BootBad);
         }
 
         private void partbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.partbad, "Your system needs to support GPT partition types, right now your system is booting using MBR. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual or bios for more information.");
+            tt.SetToolTip(this.partbad, Helpers.Strings.Hover.PartBad);
         }
 
         private void screenbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.screenbad, "One or more of your monitors are too small to work on Windows 11.");
+            tt.SetToolTip(this.screenbad, Helpers.Strings.Hover.ScreenBad);
         }
 
         private void rambad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.rambad, "Your RAM does not meet the minimum requirements for Windows 11.");
+            tt.SetToolTip(this.rambad, Helpers.Strings.Hover.RAMBad);
         }
 
         private void hddbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.hddbad, "Your drive does not have enough capacity to run Windows 11.");
+            tt.SetToolTip(this.hddbad, Helpers.Strings.Hover.HDDBad);
         }
 
         private void freespaceinfo_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.freespaceinfo, "You don't have enough free space per the requirements, this doesn't mean you don't have enough total space. Just keep in mind Windows 11 requires at least 64GB of available space.");
+            tt.SetToolTip(this.freespaceinfo, Helpers.Strings.Hover.FreeSpaceInfo);
         }
 
         private void directbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.directbad, "Your DirectX version is too low. This doesn't necessarily mean that your system doesn't support higher versions. Check DXDIAG for more information.");
+            tt.SetToolTip(this.directbad, Helpers.Strings.Hover.DirectXBad);
         }
 
         private void wddmbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.wddmbad, "Your Windows Display Driver Model version does not meet the minimum requirements for Windows 11.");
+            tt.SetToolTip(this.wddmbad, Helpers.Strings.Hover.WDDMBad);
         }
 
         private void tpminfo_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.tpminfo, "Your TPM version is too low. If you’re running an older version of TPM (1.2 typically), then you may be able to update it to TPM 2.0 with a firmware update.");
+            tt.SetToolTip(this.tpminfo, Helpers.Strings.Hover.TPMInfo);
         }
 
         private void tpmbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.tpmbad, "If no TPM is present, you’ll probably find it’s been disabled in the UEFI.");
+            tt.SetToolTip(this.tpmbad, Helpers.Strings.Hover.TPMBad);
         }
 
         private void securebootbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.securebootbad, "Secure boot is disabled, or functionality is missing. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual, or bios for more information.");
+            tt.SetToolTip(this.securebootbad, Helpers.Strings.Hover.SecureBootBad);
         }
 
         private void inetbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.inetbad, "Windows 11 Home edition requires internet connectivity and a Microsoft account to complete device setup on first use. Switching a device out of Windows 11 Home in S mode also requires internet connectivity. ");
+            tt.SetToolTip(this.inetbad, Helpers.Strings.Hover.InetBad);
         }
 
         private void BtnRecheck_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.BtnRecheck, "Run check again");
+            tt.SetToolTip(this.BtnRecheck, Helpers.Strings.Hover.Recheck);
         }
 
-        private void assetOpenGitHub_MouseHover(object sender, EventArgs e)
+        private void AssetOpenGitHub_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.assetOpenGitHub, "Follow on @github.com/builtbybel/ReadySunValley");
+            tt.SetToolTip(this.AssetOpenGitHub, Helpers.Strings.Hover.AssetInfo);
         }
 
         private void GetCompareUtil()
         {
-            if (MessageBox.Show("Do you want to compare these results with the Utility \"WhyNotWin11\"?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to compare the results with the Utility \"WhyNotWin11\"?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 PBar.Visible = true;
 
-                WebRequest hreq = WebRequest.Create(_uriUtilVersion);
+                WebRequest hreq = WebRequest.Create(Helpers.Strings.Uri.UtilVersionCheck);
                 hreq.Timeout = 10000;
                 hreq.Headers.Set("Cache-Control", "no-cache, no-store, must-revalidate");
 
                 WebResponse hres = hreq.GetResponse();
                 StreamReader sr = new StreamReader(hres.GetResponseStream());
 
-                uriUtilLatestVersion = new Version(sr.ReadToEnd().Trim());
+                Helpers.Utils.uriUtilLatestVersion = new Version(sr.ReadToEnd().Trim());
 
                 sr.Dispose();
                 hres.Dispose();
 
-                var pkg = _uriUtility + uriUtilLatestVersion + "/" + "WhyNotWin11.exe";
+                var pkg = Helpers.Strings.Uri.CompareUtil + Helpers.Utils.uriUtilLatestVersion + "/" + "WhyNotWin11.exe";
 
                 try
                 {
@@ -855,7 +673,7 @@ namespace ReadySunValley
                 PicCompare.Visible = true;
                 CheckCompareMS.Text = "Back to my results";
 
-                var request = WebRequest.Create("https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv-microsoft-requirements.png?raw=true");
+                var request = WebRequest.Create(Helpers.Strings.Uri.CompareMS);
 
                 using (var response = request.GetResponse())
                 using (var stream = response.GetResponseStream())
@@ -874,80 +692,17 @@ namespace ReadySunValley
 
         private void LnkCompatibilityFix_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (MessageBox.Show("If you are attempting to install Windows 11 and receive a message stating," +
-             "\"This PC can't run Windows 11\" it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4GB of RAM." +
-             "\n\nThe good news is that Microsoft includes a new \"LabConfig\" registry key that allows you to configure settings to bypass the TPM 2.0, the 4GB memory," +
-             "and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11." +
-             "\n\nDo you want to bypass these restrictions?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // New release available!
+            if (MessageBox.Show(Helpers.Strings.Body.Bypass, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Bypass(EmbeddedResource.bypass);
-                MessageBox.Show("TPM and SecureBoot restriction has been bypassed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Assessment.Bypass.Windows11(EmbeddedResource.bypass);
+                MessageBox.Show(Helpers.Strings.Body.BypassOK, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void assetOpenGitHub_Click(object sender, EventArgs e) => Process.Start("https://github.com/builtbybel/ReadySunValley/releases");
-
-        private void BtnRecheck_Click(object sender, EventArgs e) => DoCompatibilityCheck();
-
-        private void BtnScreenshot_Click(object sender, EventArgs e) => CaptureScreen();
-
-        private void BtnPnlScreenshot_Click(object sender, EventArgs e) => CaptureScreen();
-
-        private void BtnCompareUtil_Click(object sender, EventArgs e) => GetCompareUtil();
-
-        private void LblMainMenu_Click(object sender, EventArgs e) => this.MainMenu.Show(Cursor.Position.X, Cursor.Position.Y);
-
-        private void AppInfo_Click(object sender, EventArgs e) => MessageBox.Show(_infoApp, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        private void AppHelp_Click(object sender, EventArgs e) => Process.Start("https://www.builtbybel.com/blog/19-apps/41-check-with-the-readysunvalley-app-if-your-device-works-with-windows11-sun-valley-update");
 
         private void AppUndoBypass_Click(object sender, EventArgs e)
         {
-            Bypass(EmbeddedResource.undo_bypass);
-            MessageBox.Show("System setttings are in place again.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Assessment.Bypass.Windows11(EmbeddedResource.undo_bypass);
+            MessageBox.Show(Helpers.Strings.Body.BypassUndo, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        private void Bypass(string resource)
-        {
-            System.Diagnostics.Process proc = new System.Diagnostics.Process();
-
-            proc.StartInfo.CreateNoWindow = true;
-            proc.StartInfo.RedirectStandardError = true;
-            proc.StartInfo.RedirectStandardOutput = true;
-            proc.StartInfo.UseShellExecute = false;
-
-            // Create temp filepath
-            string tempPath = System.IO.Path.GetTempPath() + @"\ReadySunValley" + Guid.NewGuid() + ".reg";
-            System.IO.StreamWriter sW = new System.IO.StreamWriter(tempPath, false, Encoding.Unicode);
-            sW.Write(resource);
-            sW.Close();
-
-            // Reg import bypass.reg
-            proc.StartInfo.FileName = "REG";
-            proc.StartInfo.Arguments = "IMPORT \"" + tempPath + "\"";
-            if (Environment.Is64BitOperatingSystem) proc.StartInfo.Arguments += " /reg:64";
-
-            proc.Start();
-            proc.WaitForExit();
-            System.IO.File.Delete(tempPath);
-        }
-
-        private void MainWindow_SizeChanged(object sender, EventArgs e)
-        {
-            int formWidth = this.Width;
-
-            if (formWidth < 880)
-            {
-                BtnPnlScreenshot.Visible = true;
-                BtnScreenshot.Visible = false;
-            }
-
-            else
-            {
-                BtnScreenshot.Visible = true;
-                BtnPnlScreenshot.Visible = false;
-            }
-        }
-
     }
 }
