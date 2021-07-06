@@ -7,7 +7,8 @@
   <br>
 </h1>
 
-<h4 align="center">Checks if your device is ready for the new Windows 11/Sun Valley update</h4>
+<h2 align="center">A replacement app for Microsoft PC Health Check</h2>
+<h3 align="center">Are you ready for Windows 11/Sun Valley update?</h3>
 
 <p align="center">
 <a href="https://github.com/builtbybel/ReadySunValley/releases/latest" target="_blank">
