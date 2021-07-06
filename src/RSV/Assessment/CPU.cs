@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ReadySunValley.Assessment
+﻿namespace ReadySunValley.Assessment
 {
     public static class CPU
     {
@@ -38,6 +36,5 @@ namespace ReadySunValley.Assessment
             }
             return clockSpeed;
         }
-
     }
 }

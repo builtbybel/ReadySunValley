@@ -1,5 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -50,11 +49,6 @@ namespace ReadySunValley.Helpers
                 }
             }
             catch { MessageBox.Show("App update check failed...", "", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-        }
-
-        public static string GetOS()
-        {
-            return (string)Registry.GetValue("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion", "ProductName", "");
         }
 
         public static String FormatBytes(long byteCount)

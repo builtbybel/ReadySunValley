@@ -17,9 +17,9 @@ namespace ReadySunValley
             InitializeComponent();
 
             // GUI options
-            this.Text = Helpers.Strings.Titles.AppName;  // Title
-            LblMainMenu.Text = "\ue700";                // Hamburger menu
-            BtnRecheck.Text = "\ue72c";                 // Refresh
+            this.Text = Helpers.Strings.Titles.AppName;     // Title
+            lblMainMenu.Text = "\ue700";                    // Hamburger menu
+            btnRecheck.Text = "\ue72c";                     // Refresh
         }
 
         private void MainWindow_Shown(object sender, EventArgs e)
@@ -31,15 +31,15 @@ namespace ReadySunValley
         {
             int formWidth = this.Width;
 
-            if (formWidth < 880)
+            if (formWidth < 880 && PicCompare.Visible == false)
             {
-                BtnPnlScreenshot.Visible = true;
-                BtnScreenshot.Visible = false;
+                btnPnlShareScreen.Visible = true;
+                btnShareScreen.Visible = false;
             }
             else
             {
-                BtnScreenshot.Visible = true;
-                BtnPnlScreenshot.Visible = false;
+                btnShareScreen.Visible = true;
+                btnPnlShareScreen.Visible = false;
             }
         }
 
@@ -47,17 +47,17 @@ namespace ReadySunValley
         {
             int performCompatibilityCount = 0;
 
-            // Run all the Compatibility checks
+            // Run all the assessments
             this.Enabled = false;
 
             // First checks
-            LblStatus.Text = "Checking system requirements [1/13]";
+            lblStatus.Text = "Checking system requirements [1/13]";
             Helpers.Utils.AppUpdate();
 
             // CPU arch
-            LblStatus.Text = "Checking CPU architecture [2/13]";
-            lbl_arch.Text = Assessment.CPU.Architecture();
-            if (lbl_arch.Text == "64 Bit")
+            lblStatus.Text = "Checking CPU architecture [2/13]";
+            lblBitnessCheck.Text = Assessment.CPU.Architecture();
+            if (lblBitnessCheck.Text == "64 Bit")
             {
                 archgood.Visible = true;
                 archbad.Visible = false;
@@ -71,10 +71,8 @@ namespace ReadySunValley
             }
 
             // Display size for each monitor, Ref. https://theezitguy.wordpress.com/category/c-sharp/
-            LblStatus.Text = "Checking Monitor size [3/13]";
-            lbl_screen.Text = "";
-            screengood.Visible = true;
-            screenbad.Visible = false;
+            lblStatus.Text = "Checking Display [3/13]";
+            lblDisplayCheck.Text = "";
             int counter = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("\\root\\wmi", "SELECT * FROM WmiMonitorBasicDisplayParams").Get())
             {
@@ -82,7 +80,7 @@ namespace ReadySunValley
                 double width = (byte)item["MaxHorizontalImageSize"] / 2.54;
                 double height = (byte)item["MaxVerticalImageSize"] / 2.54;
                 double diagonal = Math.Sqrt(width * width + height * height);
-                lbl_screen.Text = lbl_screen.Text + counter + ". " + diagonal.ToString("0.00") + " inch ";
+                lblDisplayCheck.Text += counter + ". " + diagonal.ToString("0.00") + " inch ";
                 if (diagonal <= 9)
                 {
                     screengood.Visible = false;
@@ -90,11 +88,16 @@ namespace ReadySunValley
 
                     performCompatibilityCount += 1;
                 }
+                else
+                {
+                    screengood.Visible = true;
+                    screenbad.Visible = false;
+                }
             }
 
             // Boot Method
-            lbl_boot.Text = Assessment.Boot.IsUEFI();
-            if (lbl_boot.Text.Contains("UEFI"))
+            lblBootTypeCheck.Text = Assessment.Boot.IsUEFI();
+            if (lblBootTypeCheck.Text.Contains("UEFI"))
             {
                 bootgood.Visible = true;
                 bootbad.Visible = false;
@@ -108,9 +111,9 @@ namespace ReadySunValley
             }
 
             // CPU Clock speed
-            LblStatus.Text = "Checking CPU speed [4/13]";
+            lblStatus.Text = "Checking CPU speed [4/13]";
             var clockspeed = Assessment.CPU.ClockSpeed();
-            lbl_clockspeed.Text = clockspeed + " MHz Frequency";
+            lblMhzCheck.Text = clockspeed + " MHz Frequency";
             int x = Int32.Parse(clockspeed);
             if (x > 1000)
             {
@@ -126,13 +129,13 @@ namespace ReadySunValley
             }
 
             // CPU Core counts
-            LblStatus.Text = "Getting Core counts [5/13]";
+            lblStatus.Text = "Getting Core counts [5/13]";
             int coreCount = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
                 coreCount += int.Parse(item["NumberOfCores"].ToString());
             }
-            lbl_coresnthreads.Text = coreCount + " Cores, " + Environment.ProcessorCount + " Threads";
+            lblCoresCheck.Text = coreCount + " Cores, " + Environment.ProcessorCount + " Threads";
 
             if (coreCount > 1)
             {
@@ -148,10 +151,10 @@ namespace ReadySunValley
             }
 
             // CPU Compatibility check
-            LblStatus.Text = "Checking CPU Compatibility [6/13]";
+            lblStatus.Text = "Checking CPU Compatibility [6/13]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
-                lbl_cpu.Text = item["Name"].ToString();
+                lblCPU.Text = item["Name"].ToString();
 
                 var amdbytes = Properties.Resources.amdsupport;
                 string amdsupported = System.Text.Encoding.UTF8.GetString(amdbytes);
@@ -160,7 +163,7 @@ namespace ReadySunValley
                 string intelsupported = System.Text.Encoding.UTF8.GetString(intelbytes);
 
                 string supportedCPUs = amdsupported + "\n" + intelsupported;
-                string myCPU = lbl_cpu.Text.ToUpper();
+                string myCPU = lblCPU.Text.ToUpper();
 
                 bool FoundCPU = false;
 
@@ -197,20 +200,20 @@ namespace ReadySunValley
             }
 
             // Partition Type
-            LblStatus.Text = "Checking Partition Types [7/13]";
+            lblStatus.Text = "Checking Partition Types [7/13]";
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition WHERE BootPartition=True").Get())
             {
                 if (item["Type"].ToString().Contains("System"))
                 {
                     if (item["Type"].ToString().Contains("GPT"))
                     {
-                        lbl_part.Text = "GPT";
+                        lblDiskTypeCheck.Text = "GPT";
                         partgood.Visible = true;
                         partbad.Visible = false;
                     }
                     else
                     {
-                        lbl_part.Text = "MBR";
+                        lblDiskTypeCheck.Text = "MBR";
                         partgood.Visible = false;
                         partbad.Visible = true;
 
@@ -221,11 +224,12 @@ namespace ReadySunValley
             }
 
             // Secure Boot
-            LblStatus.Text = "Checking Secure Boot Status [8/13]";
-            lbl_secureboot.Text = Assessment.SecureBoot.SecureBootStatus();
+            lblStatus.Text = "Checking Secure Boot Status [8/13]";
 
-            if (lbl_secureboot.Text.Contains("ON"))
+            if (Assessment.Boot.IsSecureBoot())
             {
+                lblSecureBootCheck.Text = "Supported";
+
                 securebootgood.Visible = true;
                 securebootbad.Visible = false;
             }
@@ -233,23 +237,24 @@ namespace ReadySunValley
             {
                 securebootgood.Visible = false;
                 securebootbad.Visible = true;
+                lblSecureBootCheck.Text = "Unsupported";
 
                 performCompatibilityCount += 1;
             }
 
             // RAM
-            LblStatus.Text = "Checking RAM Compatibility [9/13]";
+            lblStatus.Text = "Checking RAM Compatibility [9/13]";
             long ram = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_PhysicalMemory").Get())
             {
                 string ramstr = item["Capacity"].ToString();
                 ram = ram += long.Parse(ramstr);
             }
-            lbl_ram.Text = Helpers.Utils.FormatBytes(ram).ToString();
+            lblRAMCheck.Text = Helpers.Utils.FormatBytes(ram).ToString();
 
-            if (lbl_ram.Text.Contains("GB"))
+            if (lblRAMCheck.Text.Contains("GB"))
             {
-                string amt = lbl_ram.Text.ToString();
+                string amt = lblRAMCheck.Text.ToString();
                 string[] splitted = amt.Split(' ');
                 int ramtotal = int.Parse(splitted[0]);
                 if (ramtotal >= 4)
@@ -267,13 +272,13 @@ namespace ReadySunValley
             }
 
             // Storage info
-            LblStatus.Text = "Checking Disk size [10/13]";
+            lblStatus.Text = "Checking Disk size [10/13]";
             var systemdrive = Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
 
             long systemfreespace = Assessment.Storage.GetTotalFreeSpace(systemdrive);
             string systemfreespacestr = Helpers.Utils.FormatBytes(systemfreespace).Split(' ')[0];
             Double systemfreespacedouble = Convert.ToDouble(systemfreespacestr);
-            lbl_freespace.Text = Helpers.Utils.FormatBytes(systemfreespace).ToString();
+            lblFreeSpaceCheck.Text = Helpers.Utils.FormatBytes(systemfreespace).ToString();
 
             if (systemfreespacedouble >= 64)
             {
@@ -291,14 +296,14 @@ namespace ReadySunValley
             long systemtotalspace = Assessment.Storage.GetTotalSpace(systemdrive);
             string systemspacestr = Helpers.Utils.FormatBytes(systemtotalspace).Split(' ')[0];
             Double systemspacedouble = Convert.ToDouble(systemspacestr);
-            lbl_storage.Text = Helpers.Utils.FormatBytes(systemtotalspace).ToString();
+            lblStorageCheck.Text = Helpers.Utils.FormatBytes(systemtotalspace).ToString();
 
-            if (lbl_storage.Text.Contains("GB") && (systemspacedouble >= 64))
+            if (lblStorageCheck.Text.Contains("GB") && (systemspacedouble >= 64))
             {
                 hddgood.Visible = true;
                 hddbad.Visible = false;
             }
-            else if (lbl_storage.Text.Contains("TB") && (systemspacedouble >= 1))
+            else if (lblStorageCheck.Text.Contains("TB") && (systemspacedouble >= 1))
             {
                 hddgood.Visible = true;
                 hddbad.Visible = false;
@@ -312,7 +317,7 @@ namespace ReadySunValley
             }
 
             // DirectX & WDDM
-            LblStatus.Text = "Getting DirectX && WDDM2 [11/13]";
+            lblStatus.Text = "Getting DirectX && WDDM2 [11/13]";
             try
             {
                 string directxver;
@@ -332,18 +337,18 @@ namespace ReadySunValley
                         if (check.Contains("DirectX Version:"))
                         {
                             directxver = check;
-                            lbl_directx.Text = Regex.Replace(directxver, "[^0-9.]", "");
+                            lblDirectXCheck.Text = Regex.Replace(directxver, "[^0-9.]", "");
                         }
 
                         if (check.Contains("Driver Model:"))
                         {
                             wddmver = check;
-                            lbl_wddm.Text = Regex.Replace(wddmver, "[^0-9.]", "");
+                            lblWDDMCheck.Text = Regex.Replace(wddmver, "[^0-9.]", "");
                             break;
                         }
                     }
 
-                    if (lbl_directx.Text == "12")
+                    if (lblDirectXCheck.Text == "12")
                     {
                         directgood.Visible = true;
                         directbad.Visible = false;
@@ -356,7 +361,7 @@ namespace ReadySunValley
                         performCompatibilityCount += 1;
                     }
 
-                    if (lbl_wddm.Text.Contains("2") || lbl_wddm.Text.Contains("3.0"))
+                    if (lblWDDMCheck.Text.Contains("2") || lblWDDMCheck.Text.Contains("3.0"))
                     {
                         wddmbad.Visible = false;
                         wddmgood.Visible = true;
@@ -373,11 +378,11 @@ namespace ReadySunValley
             catch { }
 
             // GPU
-            LblStatus.Text = "Getting Graphics card [12/13]";
-            lbl_wddm.Text += " (" + Assessment.GPU.Unit() + ")";
+            lblStatus.Text = "Getting Graphics card [12/13]";
+            lblWDDMCheck.Text += " (" + Assessment.GPU.Unit() + ")";
 
             // TPM, Ref. https://wutils.com/wmi/root/cimv2/security/microsofttpm/win32_tpm/cs-samples.html
-            LblStatus.Text = "Getting TPM version... [10/11]";
+            lblStatus.Text = "Getting TPM version... [10/11]";
             ManagementScope scope = new ManagementScope("\\\\.\\ROOT\\CIMV2\\Security\\MicrosoftTpm");
             ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Tpm");
             ManagementObjectSearcher searcher =
@@ -390,7 +395,7 @@ namespace ReadySunValley
 
                 if (splitted[0].Contains("2.0"))
                 {
-                    lbl_tpm.Text = splitted[0];
+                    lblTPMCheck.Text = splitted[0];
 
                     tpmgood.Visible = true;
                     tpmbad.Visible = false;
@@ -398,7 +403,7 @@ namespace ReadySunValley
                 }
                 if (splitted[0].Contains("1.2"))
                 {
-                    lbl_tpm.Text = splitted[0] + " (Not supported)";
+                    lblTPMCheck.Text = splitted[0] + " (Not supported)";
 
                     tpmgood.Visible = false;
                     tpmbad.Visible = false;
@@ -407,7 +412,7 @@ namespace ReadySunValley
                     performCompatibilityCount += 1;
                 }
             }
-            if (lbl_tpm.Text == "Not present")
+            if (lblTPMCheck.Text == "Not present")
             {
                 tpmbad.Visible = true;
                 tpmgood.Visible = false;
@@ -417,16 +422,16 @@ namespace ReadySunValley
             }
 
             // Inet
-            LblStatus.Text = "Checking Internet connection [13/13]";
+            lblStatus.Text = "Checking Internet connection [13/13]";
             if (Assessment.Inet.isINet())
             {
-                lbl_inet.Text = "Available";
+                lblInetCheck.Text = "Available";
                 inetgood.Visible = true;
                 inetbad.Visible = false;
             }
             else
             {
-                lbl_inet.Text = "No";
+                lblInetCheck.Text = "No";
                 inetgood.Visible = false;
                 inetbad.Visible = true;
 
@@ -440,23 +445,38 @@ namespace ReadySunValley
             if (sum == 0)
             {
                 LblSumBad.ForeColor = Color.Green;
-                LblStatus.Visible = false;
+                lblStatus.Visible = false;
                 LblSumBad.Text = "You're ready for Sun Valley!";
 
                 // It's all good, so hide bypass options
-                LnkCompatibilityFix.Visible = false;
-                AppUndoBypass.Visible = false;
+                lnkCompatibilityFix.Visible = false;
+                menuBypassUndo.Visible = false;
             }
             else
             {
-                LblStatus.Text = "Components not ready for Windows 11";
+                lblStatus.Text = "Components not ready for Windows 11";
                 LblSumBad.ForeColor = Color.DeepPink;
             }
 
             this.Enabled = true;
         }
 
-        private void CaptureScreen()
+        private void lnkCompatibilityFix_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (MessageBox.Show(Helpers.Strings.Body.Bypass, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Assessment.Bypass.Windows11(EmbeddedResource.bypass);
+                MessageBox.Show(Helpers.Strings.Body.BypassOK, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void menuBypassUndo_Click(object sender, EventArgs e)
+        {
+            Assessment.Bypass.Windows11(EmbeddedResource.undo_bypass);
+            MessageBox.Show(Helpers.Strings.Body.BypassUndo, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void CaptureToShare()
         {
             Form f = ActiveForm;
             Bitmap bmp = new Bitmap(f.Width, f.Height);
@@ -475,24 +495,26 @@ namespace ReadySunValley
             if (result == DialogResult.OK)
             {
                 bmp.Save(dialog.FileName);
+
+                Process.Start(Helpers.Strings.Uri.ShareTwitter);
             }
         }
 
-        private void BtnRecheck_Click(object sender, EventArgs e) => DoCompatibilityCheck();
+        private void lblMainMenu_Click(object sender, EventArgs e) => this.MainMenu.Show(Cursor.Position.X, Cursor.Position.Y);
 
-        private void BtnScreenshot_Click(object sender, EventArgs e) => CaptureScreen();
+        private void assetOpenGitHub_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.GitRepo);
 
-        private void BtnPnlScreenshot_Click(object sender, EventArgs e) => CaptureScreen();
+        private void btnRecheck_Click(object sender, EventArgs e) => DoCompatibilityCheck();
 
-        private void BtnCompareUtil_Click(object sender, EventArgs e) => GetCompareUtil();
+        private void btnPnlShareScreen_Click(object sender, EventArgs e) => CaptureToShare();
 
-        private void LblMainMenu_Click(object sender, EventArgs e) => this.MainMenu.Show(Cursor.Position.X, Cursor.Position.Y);
+        private void btnShareScreen_Click(object sender, EventArgs e) => CaptureToShare();
 
-        private void AppInfo_Click(object sender, EventArgs e) => MessageBox.Show(Helpers.Strings.Body.AppInfo, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private void btnCompareUtil_Click(object sender, EventArgs e) => GetCompareUtil();
 
-        private void AppHelp_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.VotePage);
+        private void menuInfo_Click(object sender, EventArgs e) => MessageBox.Show(Helpers.Strings.Body.AppInfo, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-        private void AssetOpenGitHub_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.GitRepo);
+        private void menuVote_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.VotePage);
 
         private void cpuinfo_MouseHover(object sender, EventArgs e)
         {
@@ -593,20 +615,20 @@ namespace ReadySunValley
         private void BtnRecheck_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.BtnRecheck, Helpers.Strings.Hover.Recheck);
+            tt.SetToolTip(this.btnRecheck, Helpers.Strings.Hover.Recheck);
         }
 
         private void AssetOpenGitHub_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.AssetOpenGitHub, Helpers.Strings.Hover.AssetInfo);
+            tt.SetToolTip(this.assetOpenGitHub, Helpers.Strings.Hover.AssetInfo);
         }
 
         private void GetCompareUtil()
         {
             if (MessageBox.Show("Do you want to compare the results with the Utility \"WhyNotWin11\"?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                PBar.Visible = true;
+                pBar.Visible = true;
 
                 WebRequest hreq = WebRequest.Create(Helpers.Strings.Uri.UtilVersionCheck);
                 hreq.Timeout = 10000;
@@ -637,7 +659,7 @@ namespace ReadySunValley
 
         public void DownloadProgressChanged(Object sender, DownloadProgressChangedEventArgs e)
         {
-            PBar.Value = e.ProgressPercentage;
+            pBar.Value = e.ProgressPercentage;
         }
 
         public void Completed(object sender, AsyncCompletedEventArgs e)
@@ -651,26 +673,26 @@ namespace ReadySunValley
                 };
                 Process.Start(startInfo);
 
-                PBar.Visible = false;
+                pBar.Visible = false;
 
                 MessageBox.Show("Ready! So now put the two apps next to each other and take a look at the results.");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, this.Text);
-                PBar.Visible = false;
+                pBar.Visible = false;
             }
         }
 
         private void CheckCompareMS_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckCompareMS.Checked)
+            if (checkCompareMS.Checked)
             {
-                LblStatus.Visible = false;
+                lblStatus.Visible = false;
                 LblSumBad.Visible = false;
-                LnkCompatibilityFix.Visible = false;
+                lnkCompatibilityFix.Visible = false;
                 PicCompare.Visible = true;
-                CheckCompareMS.Text = "Back to my results";
+                checkCompareMS.Text = "Back to my results";
 
                 var request = WebRequest.Create(Helpers.Strings.Uri.CompareMS);
 
@@ -679,29 +701,14 @@ namespace ReadySunValley
 
                     PicCompare.Image = Bitmap.FromStream(stream);
             }
-            else if (!CheckCompareMS.Checked)
+            else if (!checkCompareMS.Checked)
             {
-                CheckCompareMS.Text = "Compare with Microsoft requirements";
+                checkCompareMS.Text = "Compare with Microsoft requirements";
                 PicCompare.Visible = false;
-                LblStatus.Visible = true;
+                lblStatus.Visible = true;
                 LblSumBad.Visible = true;
-                LnkCompatibilityFix.Visible = true;
+                lnkCompatibilityFix.Visible = true;
             }
-        }
-
-        private void LnkCompatibilityFix_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            if (MessageBox.Show(Helpers.Strings.Body.Bypass, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Assessment.Bypass.Windows11(EmbeddedResource.bypass);
-                MessageBox.Show(Helpers.Strings.Body.BypassOK, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void AppUndoBypass_Click(object sender, EventArgs e)
-        {
-            Assessment.Bypass.Windows11(EmbeddedResource.undo_bypass);
-            MessageBox.Show(Helpers.Strings.Body.BypassUndo, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

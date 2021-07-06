@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text;
 
 namespace ReadySunValley.Assessment
@@ -7,12 +8,11 @@ namespace ReadySunValley.Assessment
     {
         public static void Windows11(string resource)
         {
-            System.Diagnostics.Process proc = new System.Diagnostics.Process();
-
-            proc.StartInfo.CreateNoWindow = true;
-            proc.StartInfo.RedirectStandardError = true;
-            proc.StartInfo.RedirectStandardOutput = true;
-            proc.StartInfo.UseShellExecute = false;
+            Process p = new Process();
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.CreateNoWindow = true;
+            p.StartInfo.RedirectStandardError = true;
+            p.StartInfo.RedirectStandardOutput = true;
 
             // Create temp filepath
             string tempPath = System.IO.Path.GetTempPath() + @"\ReadySunValley" + Guid.NewGuid() + ".reg";
@@ -21,12 +21,12 @@ namespace ReadySunValley.Assessment
             sW.Close();
 
             // Reg import bypass.reg
-            proc.StartInfo.FileName = "REG";
-            proc.StartInfo.Arguments = "IMPORT \"" + tempPath + "\"";
-            if (Environment.Is64BitOperatingSystem) proc.StartInfo.Arguments += " /reg:64";
+            p.StartInfo.FileName = "REG";
+            p.StartInfo.Arguments = "IMPORT \"" + tempPath + "\"";
+            if (Environment.Is64BitOperatingSystem) p.StartInfo.Arguments += " /reg:64";
 
-            proc.Start();
-            proc.WaitForExit();
+            p.Start();
+            p.WaitForExit();
             System.IO.File.Delete(tempPath);
         }
     }

@@ -31,39 +31,39 @@ namespace ReadySunValley
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            this.CheckCompareMS = new System.Windows.Forms.CheckBox();
-            this.PnlLeft = new System.Windows.Forms.Panel();
-            this.BtnRecheck = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lbl_arch = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.LblMainMenu = new System.Windows.Forms.Button();
-            this.lbl_inet = new System.Windows.Forms.Label();
-            this.lbl_secureboot = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lbl_freespace = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lbl_wddm = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lbl_screen = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lbl_directx = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lbl_tpm = new System.Windows.Forms.Label();
-            this.lbl_storage = new System.Windows.Forms.Label();
-            this.lbl_ram = new System.Windows.Forms.Label();
-            this.lbl_part = new System.Windows.Forms.Label();
-            this.lbl_coresnthreads = new System.Windows.Forms.Label();
-            this.lbl_clockspeed = new System.Windows.Forms.Label();
-            this.lbl_cpu = new System.Windows.Forms.Label();
-            this.lbl_boot = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.checkCompareMS = new System.Windows.Forms.CheckBox();
+            this.pnlLeft = new System.Windows.Forms.Panel();
+            this.btnRecheck = new System.Windows.Forms.Button();
+            this.lblMhz = new System.Windows.Forms.Label();
+            this.lblCores = new System.Windows.Forms.Label();
+            this.lblBitnessCheck = new System.Windows.Forms.Label();
+            this.lblBitness = new System.Windows.Forms.Label();
+            this.lblInet = new System.Windows.Forms.Label();
+            this.lblMainMenu = new System.Windows.Forms.Button();
+            this.lblInetCheck = new System.Windows.Forms.Label();
+            this.lblSecureBootCheck = new System.Windows.Forms.Label();
+            this.lblSecureBoot = new System.Windows.Forms.Label();
+            this.lblFreeSpaceCheck = new System.Windows.Forms.Label();
+            this.blFreeSpace = new System.Windows.Forms.Label();
+            this.lblWDDMCheck = new System.Windows.Forms.Label();
+            this.lblWDDM = new System.Windows.Forms.Label();
+            this.lblDisplayCheck = new System.Windows.Forms.Label();
+            this.lblDisplay = new System.Windows.Forms.Label();
+            this.lblDirectXCheck = new System.Windows.Forms.Label();
+            this.lblDirectX = new System.Windows.Forms.Label();
+            this.lblTPMCheck = new System.Windows.Forms.Label();
+            this.lblStorageCheck = new System.Windows.Forms.Label();
+            this.lblRAMCheck = new System.Windows.Forms.Label();
+            this.lblDiskTypeCheck = new System.Windows.Forms.Label();
+            this.lblCoresCheck = new System.Windows.Forms.Label();
+            this.lblMhzCheck = new System.Windows.Forms.Label();
+            this.lblCPU = new System.Windows.Forms.Label();
+            this.lblBootTypeCheck = new System.Windows.Forms.Label();
+            this.lblTPM = new System.Windows.Forms.Label();
+            this.lblStorage = new System.Windows.Forms.Label();
+            this.lblRAM = new System.Windows.Forms.Label();
+            this.lblDiskType = new System.Windows.Forms.Label();
+            this.lblBootType = new System.Windows.Forms.Label();
             this.freqgood = new System.Windows.Forms.PictureBox();
             this.coresgood = new System.Windows.Forms.PictureBox();
             this.partgood = new System.Windows.Forms.PictureBox();
@@ -71,7 +71,6 @@ namespace ReadySunValley
             this.screengood = new System.Windows.Forms.PictureBox();
             this.securebootgood = new System.Windows.Forms.PictureBox();
             this.archgood = new System.Windows.Forms.PictureBox();
-            this.cpuinfo = new System.Windows.Forms.PictureBox();
             this.coresbad = new System.Windows.Forms.PictureBox();
             this.freqbad = new System.Windows.Forms.PictureBox();
             this.archbad = new System.Windows.Forms.PictureBox();
@@ -81,8 +80,6 @@ namespace ReadySunValley
             this.screenbad = new System.Windows.Forms.PictureBox();
             this.tpmgood = new System.Windows.Forms.PictureBox();
             this.tpminfo = new System.Windows.Forms.PictureBox();
-            this.cpubad = new System.Windows.Forms.PictureBox();
-            this.cpugood = new System.Windows.Forms.PictureBox();
             this.bootgood = new System.Windows.Forms.PictureBox();
             this.bootbad = new System.Windows.Forms.PictureBox();
             this.hddgood = new System.Windows.Forms.PictureBox();
@@ -96,26 +93,29 @@ namespace ReadySunValley
             this.wddmbad = new System.Windows.Forms.PictureBox();
             this.inetgood = new System.Windows.Forms.PictureBox();
             this.inetbad = new System.Windows.Forms.PictureBox();
+            this.cpuinfo = new System.Windows.Forms.PictureBox();
+            this.cpubad = new System.Windows.Forms.PictureBox();
+            this.cpugood = new System.Windows.Forms.PictureBox();
             this.PicCompare = new System.Windows.Forms.PictureBox();
             this.MainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.AppHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.AppUndoBypass = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVoteContent = new System.Windows.Forms.ToolStripTextBox();
+            this.menuVote = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuBypassUndo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.AppInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.PnlRight = new System.Windows.Forms.Panel();
-            this.BtnPnlScreenshot = new System.Windows.Forms.Button();
-            this.AssetOpenGitHub = new System.Windows.Forms.PictureBox();
-            this.LblStatus = new System.Windows.Forms.Label();
+            this.menuInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlRight = new System.Windows.Forms.Panel();
+            this.btnPnlShareScreen = new System.Windows.Forms.Button();
+            this.assetOpenGitHub = new System.Windows.Forms.PictureBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.LblSumBad = new System.Windows.Forms.Label();
-            this.LnkCompatibilityFix = new System.Windows.Forms.LinkLabel();
-            this.PBar = new System.Windows.Forms.ProgressBar();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnCompareUtil = new System.Windows.Forms.Button();
-            this.BtnScreenshot = new System.Windows.Forms.Button();
-            this.LblHeader = new System.Windows.Forms.Label();
-            this.LblSubHeader = new System.Windows.Forms.LinkLabel();
-            this.PnlLeft.SuspendLayout();
+            this.lnkCompatibilityFix = new System.Windows.Forms.LinkLabel();
+            this.pBar = new System.Windows.Forms.ProgressBar();
+            this.pnlMiddle = new System.Windows.Forms.Panel();
+            this.btnCompareUtil = new System.Windows.Forms.Button();
+            this.btnShareScreen = new System.Windows.Forms.Button();
+            this.lblHeader = new System.Windows.Forms.Label();
+            this.lblSubHeader = new System.Windows.Forms.LinkLabel();
+            this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.freqgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partgood)).BeginInit();
@@ -123,7 +123,6 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.screengood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.archgood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freqbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.archbad)).BeginInit();
@@ -133,8 +132,6 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.screenbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hddgood)).BeginInit();
@@ -148,432 +145,435 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetbad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCompare)).BeginInit();
             this.MainMenu.SuspendLayout();
-            this.PnlRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AssetOpenGitHub)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.assetOpenGitHub)).BeginInit();
+            this.pnlMiddle.SuspendLayout();
             this.SuspendLayout();
             // 
-            // CheckCompareMS
+            // checkCompareMS
             // 
-            this.CheckCompareMS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.checkCompareMS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CheckCompareMS.Appearance = System.Windows.Forms.Appearance.Button;
-            this.CheckCompareMS.BackColor = System.Drawing.Color.Gainsboro;
-            this.CheckCompareMS.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.CheckCompareMS.FlatAppearance.BorderSize = 0;
-            this.CheckCompareMS.FlatAppearance.CheckedBackColor = System.Drawing.Color.HotPink;
-            this.CheckCompareMS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CheckCompareMS.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckCompareMS.Location = new System.Drawing.Point(18, 208);
-            this.CheckCompareMS.Name = "CheckCompareMS";
-            this.CheckCompareMS.Size = new System.Drawing.Size(294, 32);
-            this.CheckCompareMS.TabIndex = 128;
-            this.CheckCompareMS.Text = "Compare with Microsoft ";
-            this.CheckCompareMS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.CheckCompareMS.UseVisualStyleBackColor = false;
-            this.CheckCompareMS.CheckedChanged += new System.EventHandler(this.CheckCompareMS_CheckedChanged);
-            // 
-            // PnlLeft
-            // 
-            this.PnlLeft.AutoScroll = true;
-            this.PnlLeft.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PnlLeft.Controls.Add(this.BtnRecheck);
-            this.PnlLeft.Controls.Add(this.label13);
-            this.PnlLeft.Controls.Add(this.label7);
-            this.PnlLeft.Controls.Add(this.lbl_arch);
-            this.PnlLeft.Controls.Add(this.label16);
-            this.PnlLeft.Controls.Add(this.label15);
-            this.PnlLeft.Controls.Add(this.LblMainMenu);
-            this.PnlLeft.Controls.Add(this.lbl_inet);
-            this.PnlLeft.Controls.Add(this.lbl_secureboot);
-            this.PnlLeft.Controls.Add(this.label12);
-            this.PnlLeft.Controls.Add(this.lbl_freespace);
-            this.PnlLeft.Controls.Add(this.label11);
-            this.PnlLeft.Controls.Add(this.lbl_wddm);
-            this.PnlLeft.Controls.Add(this.label10);
-            this.PnlLeft.Controls.Add(this.lbl_screen);
-            this.PnlLeft.Controls.Add(this.label9);
-            this.PnlLeft.Controls.Add(this.lbl_directx);
-            this.PnlLeft.Controls.Add(this.label8);
-            this.PnlLeft.Controls.Add(this.lbl_tpm);
-            this.PnlLeft.Controls.Add(this.lbl_storage);
-            this.PnlLeft.Controls.Add(this.lbl_ram);
-            this.PnlLeft.Controls.Add(this.lbl_part);
-            this.PnlLeft.Controls.Add(this.lbl_coresnthreads);
-            this.PnlLeft.Controls.Add(this.lbl_clockspeed);
-            this.PnlLeft.Controls.Add(this.lbl_cpu);
-            this.PnlLeft.Controls.Add(this.lbl_boot);
-            this.PnlLeft.Controls.Add(this.label6);
-            this.PnlLeft.Controls.Add(this.label5);
-            this.PnlLeft.Controls.Add(this.label4);
-            this.PnlLeft.Controls.Add(this.label3);
-            this.PnlLeft.Controls.Add(this.label1);
-            this.PnlLeft.Controls.Add(this.freqgood);
-            this.PnlLeft.Controls.Add(this.coresgood);
-            this.PnlLeft.Controls.Add(this.partgood);
-            this.PnlLeft.Controls.Add(this.ramgood);
-            this.PnlLeft.Controls.Add(this.screengood);
-            this.PnlLeft.Controls.Add(this.securebootgood);
-            this.PnlLeft.Controls.Add(this.archgood);
-            this.PnlLeft.Controls.Add(this.cpuinfo);
-            this.PnlLeft.Controls.Add(this.coresbad);
-            this.PnlLeft.Controls.Add(this.freqbad);
-            this.PnlLeft.Controls.Add(this.archbad);
-            this.PnlLeft.Controls.Add(this.securebootbad);
-            this.PnlLeft.Controls.Add(this.partbad);
-            this.PnlLeft.Controls.Add(this.rambad);
-            this.PnlLeft.Controls.Add(this.screenbad);
-            this.PnlLeft.Controls.Add(this.tpmgood);
-            this.PnlLeft.Controls.Add(this.tpminfo);
-            this.PnlLeft.Controls.Add(this.cpubad);
-            this.PnlLeft.Controls.Add(this.cpugood);
-            this.PnlLeft.Controls.Add(this.bootgood);
-            this.PnlLeft.Controls.Add(this.bootbad);
-            this.PnlLeft.Controls.Add(this.hddgood);
-            this.PnlLeft.Controls.Add(this.hddbad);
-            this.PnlLeft.Controls.Add(this.freespacegood);
-            this.PnlLeft.Controls.Add(this.freespaceinfo);
-            this.PnlLeft.Controls.Add(this.directgood);
-            this.PnlLeft.Controls.Add(this.directbad);
-            this.PnlLeft.Controls.Add(this.tpmbad);
-            this.PnlLeft.Controls.Add(this.wddmgood);
-            this.PnlLeft.Controls.Add(this.wddmbad);
-            this.PnlLeft.Controls.Add(this.inetgood);
-            this.PnlLeft.Controls.Add(this.inetbad);
-            this.PnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlLeft.Location = new System.Drawing.Point(0, 0);
-            this.PnlLeft.Name = "PnlLeft";
-            this.PnlLeft.Size = new System.Drawing.Size(423, 737);
-            this.PnlLeft.TabIndex = 1;
-            // 
-            // BtnRecheck
-            // 
-            this.BtnRecheck.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnRecheck.FlatAppearance.BorderSize = 0;
-            this.BtnRecheck.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.BtnRecheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRecheck.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F);
-            this.BtnRecheck.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BtnRecheck.Location = new System.Drawing.Point(380, 30);
-            this.BtnRecheck.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnRecheck.Name = "BtnRecheck";
-            this.BtnRecheck.Size = new System.Drawing.Size(41, 43);
-            this.BtnRecheck.TabIndex = 128;
-            this.BtnRecheck.UseVisualStyleBackColor = true;
-            this.BtnRecheck.Click += new System.EventHandler(this.BtnRecheck_Click);
-            this.BtnRecheck.MouseHover += new System.EventHandler(this.BtnRecheck_MouseHover);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(66, 149);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 21);
-            this.label13.TabIndex = 127;
-            this.label13.Text = "Mhz";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(66, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 21);
-            this.label7.TabIndex = 126;
-            this.label7.Text = "Cores";
-            // 
-            // lbl_arch
-            // 
-            this.lbl_arch.AutoSize = true;
-            this.lbl_arch.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_arch.Location = new System.Drawing.Point(219, 192);
-            this.lbl_arch.Name = "lbl_arch";
-            this.lbl_arch.Size = new System.Drawing.Size(86, 21);
-            this.lbl_arch.TabIndex = 122;
-            this.lbl_arch.Text = "Checking...";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(66, 192);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 21);
-            this.label16.TabIndex = 119;
-            this.label16.Text = "Architecture";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(66, 682);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(64, 21);
-            this.label15.TabIndex = 118;
-            this.label15.Text = "Internet";
-            // 
-            // LblMainMenu
-            // 
-            this.LblMainMenu.AutoSize = true;
-            this.LblMainMenu.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.LblMainMenu.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.LblMainMenu.FlatAppearance.BorderSize = 0;
-            this.LblMainMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.HotPink;
-            this.LblMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LblMainMenu.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMainMenu.ForeColor = System.Drawing.Color.Black;
-            this.LblMainMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LblMainMenu.Location = new System.Drawing.Point(0, 0);
-            this.LblMainMenu.Name = "LblMainMenu";
-            this.LblMainMenu.Size = new System.Drawing.Size(48, 51);
-            this.LblMainMenu.TabIndex = 113;
-            this.LblMainMenu.UseVisualStyleBackColor = false;
-            this.LblMainMenu.Click += new System.EventHandler(this.LblMainMenu_Click);
-            // 
-            // lbl_inet
-            // 
-            this.lbl_inet.AutoSize = true;
-            this.lbl_inet.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_inet.Location = new System.Drawing.Point(219, 682);
-            this.lbl_inet.Name = "lbl_inet";
-            this.lbl_inet.Size = new System.Drawing.Size(86, 21);
-            this.lbl_inet.TabIndex = 117;
-            this.lbl_inet.Text = "Checking...";
-            // 
-            // lbl_secureboot
-            // 
-            this.lbl_secureboot.AutoSize = true;
-            this.lbl_secureboot.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_secureboot.Location = new System.Drawing.Point(219, 280);
-            this.lbl_secureboot.Name = "lbl_secureboot";
-            this.lbl_secureboot.Size = new System.Drawing.Size(86, 21);
-            this.lbl_secureboot.TabIndex = 107;
-            this.lbl_secureboot.Text = "Checking...";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(66, 280);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 21);
-            this.label12.TabIndex = 104;
-            this.label12.Text = "Secure Boot";
-            // 
-            // lbl_freespace
-            // 
-            this.lbl_freespace.AutoSize = true;
-            this.lbl_freespace.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_freespace.Location = new System.Drawing.Point(219, 506);
-            this.lbl_freespace.Name = "lbl_freespace";
-            this.lbl_freespace.Size = new System.Drawing.Size(86, 21);
-            this.lbl_freespace.TabIndex = 103;
-            this.lbl_freespace.Text = "Checking...";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(66, 506);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 21);
-            this.label11.TabIndex = 100;
-            this.label11.Text = "Free Space";
-            // 
-            // lbl_wddm
-            // 
-            this.lbl_wddm.AutoSize = true;
-            this.lbl_wddm.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_wddm.Location = new System.Drawing.Point(219, 639);
-            this.lbl_wddm.Name = "lbl_wddm";
-            this.lbl_wddm.Size = new System.Drawing.Size(86, 21);
-            this.lbl_wddm.TabIndex = 99;
-            this.lbl_wddm.Text = "Checking...";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(66, 639);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 21);
-            this.label10.TabIndex = 96;
-            this.label10.Text = "WDDM2";
-            // 
-            // lbl_screen
-            // 
-            this.lbl_screen.AutoSize = true;
-            this.lbl_screen.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_screen.Location = new System.Drawing.Point(219, 414);
-            this.lbl_screen.Name = "lbl_screen";
-            this.lbl_screen.Size = new System.Drawing.Size(86, 21);
-            this.lbl_screen.TabIndex = 95;
-            this.lbl_screen.Text = "Checking...";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(66, 414);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 21);
-            this.label9.TabIndex = 92;
-            this.label9.Text = "Display";
-            // 
-            // lbl_directx
-            // 
-            this.lbl_directx.AutoSize = true;
-            this.lbl_directx.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_directx.Location = new System.Drawing.Point(219, 592);
-            this.lbl_directx.Name = "lbl_directx";
-            this.lbl_directx.Size = new System.Drawing.Size(86, 21);
-            this.lbl_directx.TabIndex = 89;
-            this.lbl_directx.Text = "Checking...";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(66, 592);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 21);
-            this.label8.TabIndex = 86;
-            this.label8.Text = "DirectX";
-            // 
-            // lbl_tpm
-            // 
-            this.lbl_tpm.AutoEllipsis = true;
-            this.lbl_tpm.AutoSize = true;
-            this.lbl_tpm.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tpm.Location = new System.Drawing.Point(219, 549);
-            this.lbl_tpm.Name = "lbl_tpm";
-            this.lbl_tpm.Size = new System.Drawing.Size(91, 21);
-            this.lbl_tpm.TabIndex = 84;
-            this.lbl_tpm.Text = "Not present";
-            // 
-            // lbl_storage
-            // 
-            this.lbl_storage.AutoSize = true;
-            this.lbl_storage.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_storage.Location = new System.Drawing.Point(219, 459);
-            this.lbl_storage.Name = "lbl_storage";
-            this.lbl_storage.Size = new System.Drawing.Size(86, 21);
-            this.lbl_storage.TabIndex = 83;
-            this.lbl_storage.Text = "Checking...";
-            // 
-            // lbl_ram
-            // 
-            this.lbl_ram.AutoSize = true;
-            this.lbl_ram.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ram.Location = new System.Drawing.Point(219, 366);
-            this.lbl_ram.Name = "lbl_ram";
-            this.lbl_ram.Size = new System.Drawing.Size(86, 21);
-            this.lbl_ram.TabIndex = 82;
-            this.lbl_ram.Text = "Checking...";
-            // 
-            // lbl_part
-            // 
-            this.lbl_part.AutoSize = true;
-            this.lbl_part.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_part.Location = new System.Drawing.Point(219, 321);
-            this.lbl_part.Name = "lbl_part";
-            this.lbl_part.Size = new System.Drawing.Size(86, 21);
-            this.lbl_part.TabIndex = 81;
-            this.lbl_part.Text = "Checking...";
-            // 
-            // lbl_coresnthreads
-            // 
-            this.lbl_coresnthreads.AutoSize = true;
-            this.lbl_coresnthreads.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_coresnthreads.Location = new System.Drawing.Point(219, 108);
-            this.lbl_coresnthreads.Name = "lbl_coresnthreads";
-            this.lbl_coresnthreads.Size = new System.Drawing.Size(86, 21);
-            this.lbl_coresnthreads.TabIndex = 80;
-            this.lbl_coresnthreads.Text = "Checking...";
-            // 
-            // lbl_clockspeed
-            // 
-            this.lbl_clockspeed.AutoSize = true;
-            this.lbl_clockspeed.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clockspeed.Location = new System.Drawing.Point(219, 149);
-            this.lbl_clockspeed.Name = "lbl_clockspeed";
-            this.lbl_clockspeed.Size = new System.Drawing.Size(86, 21);
-            this.lbl_clockspeed.TabIndex = 77;
-            this.lbl_clockspeed.Text = "Checking...";
-            // 
-            // lbl_cpu
-            // 
-            this.lbl_cpu.AutoEllipsis = true;
-            this.lbl_cpu.AutoSize = true;
-            this.lbl_cpu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cpu.Location = new System.Drawing.Point(66, 68);
-            this.lbl_cpu.Name = "lbl_cpu";
-            this.lbl_cpu.Size = new System.Drawing.Size(83, 21);
-            this.lbl_cpu.TabIndex = 75;
-            this.lbl_cpu.Text = "Checking...";
-            // 
-            // lbl_boot
-            // 
-            this.lbl_boot.AutoSize = true;
-            this.lbl_boot.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_boot.Location = new System.Drawing.Point(219, 237);
-            this.lbl_boot.Name = "lbl_boot";
-            this.lbl_boot.Size = new System.Drawing.Size(86, 21);
-            this.lbl_boot.TabIndex = 74;
-            this.lbl_boot.Text = "Checking...";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(66, 549);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 21);
-            this.label6.TabIndex = 73;
-            this.label6.Text = "TPM Version";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(66, 459);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 21);
-            this.label5.TabIndex = 70;
-            this.label5.Text = "Storage";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(66, 366);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 21);
-            this.label4.TabIndex = 67;
-            this.label4.Text = "RAM Installed";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(66, 321);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 21);
-            this.label3.TabIndex = 64;
-            this.label3.Text = "Disk Partition";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(66, 237);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 21);
-            this.label1.TabIndex = 58;
-            this.label1.Text = "Boot Method";
+            this.checkCompareMS.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkCompareMS.BackColor = System.Drawing.Color.Gainsboro;
+            this.checkCompareMS.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.checkCompareMS.FlatAppearance.BorderSize = 0;
+            this.checkCompareMS.FlatAppearance.CheckedBackColor = System.Drawing.Color.HotPink;
+            this.checkCompareMS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkCompareMS.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCompareMS.Location = new System.Drawing.Point(18, 208);
+            this.checkCompareMS.Name = "checkCompareMS";
+            this.checkCompareMS.Size = new System.Drawing.Size(318, 32);
+            this.checkCompareMS.TabIndex = 128;
+            this.checkCompareMS.Text = "Compare with Microsoft ";
+            this.checkCompareMS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkCompareMS.UseVisualStyleBackColor = false;
+            this.checkCompareMS.CheckedChanged += new System.EventHandler(this.CheckCompareMS_CheckedChanged);
+            // 
+            // pnlLeft
+            // 
+            this.pnlLeft.AutoScroll = true;
+            this.pnlLeft.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlLeft.Controls.Add(this.btnRecheck);
+            this.pnlLeft.Controls.Add(this.lblMhz);
+            this.pnlLeft.Controls.Add(this.lblCores);
+            this.pnlLeft.Controls.Add(this.lblBitnessCheck);
+            this.pnlLeft.Controls.Add(this.lblBitness);
+            this.pnlLeft.Controls.Add(this.lblInet);
+            this.pnlLeft.Controls.Add(this.lblMainMenu);
+            this.pnlLeft.Controls.Add(this.lblInetCheck);
+            this.pnlLeft.Controls.Add(this.lblSecureBootCheck);
+            this.pnlLeft.Controls.Add(this.lblSecureBoot);
+            this.pnlLeft.Controls.Add(this.lblFreeSpaceCheck);
+            this.pnlLeft.Controls.Add(this.blFreeSpace);
+            this.pnlLeft.Controls.Add(this.lblWDDMCheck);
+            this.pnlLeft.Controls.Add(this.lblWDDM);
+            this.pnlLeft.Controls.Add(this.lblDisplayCheck);
+            this.pnlLeft.Controls.Add(this.lblDisplay);
+            this.pnlLeft.Controls.Add(this.lblDirectXCheck);
+            this.pnlLeft.Controls.Add(this.lblDirectX);
+            this.pnlLeft.Controls.Add(this.lblTPMCheck);
+            this.pnlLeft.Controls.Add(this.lblStorageCheck);
+            this.pnlLeft.Controls.Add(this.lblRAMCheck);
+            this.pnlLeft.Controls.Add(this.lblDiskTypeCheck);
+            this.pnlLeft.Controls.Add(this.lblCoresCheck);
+            this.pnlLeft.Controls.Add(this.lblMhzCheck);
+            this.pnlLeft.Controls.Add(this.lblCPU);
+            this.pnlLeft.Controls.Add(this.lblBootTypeCheck);
+            this.pnlLeft.Controls.Add(this.lblTPM);
+            this.pnlLeft.Controls.Add(this.lblStorage);
+            this.pnlLeft.Controls.Add(this.lblRAM);
+            this.pnlLeft.Controls.Add(this.lblDiskType);
+            this.pnlLeft.Controls.Add(this.lblBootType);
+            this.pnlLeft.Controls.Add(this.freqgood);
+            this.pnlLeft.Controls.Add(this.coresgood);
+            this.pnlLeft.Controls.Add(this.partgood);
+            this.pnlLeft.Controls.Add(this.ramgood);
+            this.pnlLeft.Controls.Add(this.screengood);
+            this.pnlLeft.Controls.Add(this.securebootgood);
+            this.pnlLeft.Controls.Add(this.archgood);
+            this.pnlLeft.Controls.Add(this.coresbad);
+            this.pnlLeft.Controls.Add(this.freqbad);
+            this.pnlLeft.Controls.Add(this.archbad);
+            this.pnlLeft.Controls.Add(this.securebootbad);
+            this.pnlLeft.Controls.Add(this.partbad);
+            this.pnlLeft.Controls.Add(this.rambad);
+            this.pnlLeft.Controls.Add(this.screenbad);
+            this.pnlLeft.Controls.Add(this.tpmgood);
+            this.pnlLeft.Controls.Add(this.tpminfo);
+            this.pnlLeft.Controls.Add(this.bootgood);
+            this.pnlLeft.Controls.Add(this.bootbad);
+            this.pnlLeft.Controls.Add(this.hddgood);
+            this.pnlLeft.Controls.Add(this.hddbad);
+            this.pnlLeft.Controls.Add(this.freespacegood);
+            this.pnlLeft.Controls.Add(this.freespaceinfo);
+            this.pnlLeft.Controls.Add(this.directgood);
+            this.pnlLeft.Controls.Add(this.directbad);
+            this.pnlLeft.Controls.Add(this.tpmbad);
+            this.pnlLeft.Controls.Add(this.wddmgood);
+            this.pnlLeft.Controls.Add(this.wddmbad);
+            this.pnlLeft.Controls.Add(this.inetgood);
+            this.pnlLeft.Controls.Add(this.inetbad);
+            this.pnlLeft.Controls.Add(this.cpuinfo);
+            this.pnlLeft.Controls.Add(this.cpubad);
+            this.pnlLeft.Controls.Add(this.cpugood);
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(423, 746);
+            this.pnlLeft.TabIndex = 1;
+            // 
+            // btnRecheck
+            // 
+            this.btnRecheck.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRecheck.FlatAppearance.BorderSize = 0;
+            this.btnRecheck.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnRecheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecheck.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F);
+            this.btnRecheck.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRecheck.Location = new System.Drawing.Point(380, 30);
+            this.btnRecheck.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRecheck.Name = "btnRecheck";
+            this.btnRecheck.Size = new System.Drawing.Size(41, 43);
+            this.btnRecheck.TabIndex = 128;
+            this.btnRecheck.UseVisualStyleBackColor = true;
+            this.btnRecheck.Click += new System.EventHandler(this.btnRecheck_Click);
+            this.btnRecheck.MouseHover += new System.EventHandler(this.BtnRecheck_MouseHover);
+            // 
+            // lblMhz
+            // 
+            this.lblMhz.AutoSize = true;
+            this.lblMhz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMhz.Location = new System.Drawing.Point(66, 149);
+            this.lblMhz.Name = "lblMhz";
+            this.lblMhz.Size = new System.Drawing.Size(40, 21);
+            this.lblMhz.TabIndex = 127;
+            this.lblMhz.Text = "Mhz";
+            // 
+            // lblCores
+            // 
+            this.lblCores.AutoSize = true;
+            this.lblCores.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCores.Location = new System.Drawing.Point(66, 108);
+            this.lblCores.Name = "lblCores";
+            this.lblCores.Size = new System.Drawing.Size(50, 21);
+            this.lblCores.TabIndex = 126;
+            this.lblCores.Text = "Cores";
+            // 
+            // lblBitnessCheck
+            // 
+            this.lblBitnessCheck.AutoSize = true;
+            this.lblBitnessCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBitnessCheck.Location = new System.Drawing.Point(219, 192);
+            this.lblBitnessCheck.Name = "lblBitnessCheck";
+            this.lblBitnessCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblBitnessCheck.TabIndex = 122;
+            this.lblBitnessCheck.Text = "Checking...";
+            // 
+            // lblBitness
+            // 
+            this.lblBitness.AutoSize = true;
+            this.lblBitness.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBitness.Location = new System.Drawing.Point(66, 192);
+            this.lblBitness.Name = "lblBitness";
+            this.lblBitness.Size = new System.Drawing.Size(94, 21);
+            this.lblBitness.TabIndex = 119;
+            this.lblBitness.Text = "Architecture";
+            // 
+            // lblInet
+            // 
+            this.lblInet.AutoSize = true;
+            this.lblInet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInet.Location = new System.Drawing.Point(66, 682);
+            this.lblInet.Name = "lblInet";
+            this.lblInet.Size = new System.Drawing.Size(64, 21);
+            this.lblInet.TabIndex = 118;
+            this.lblInet.Text = "Internet";
+            // 
+            // lblMainMenu
+            // 
+            this.lblMainMenu.AutoSize = true;
+            this.lblMainMenu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblMainMenu.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.lblMainMenu.FlatAppearance.BorderSize = 0;
+            this.lblMainMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.HotPink;
+            this.lblMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMainMenu.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainMenu.ForeColor = System.Drawing.Color.Black;
+            this.lblMainMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.lblMainMenu.Name = "lblMainMenu";
+            this.lblMainMenu.Size = new System.Drawing.Size(48, 51);
+            this.lblMainMenu.TabIndex = 113;
+            this.lblMainMenu.UseVisualStyleBackColor = false;
+            this.lblMainMenu.Click += new System.EventHandler(this.lblMainMenu_Click);
+            // 
+            // lblInetCheck
+            // 
+            this.lblInetCheck.AutoSize = true;
+            this.lblInetCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInetCheck.Location = new System.Drawing.Point(219, 682);
+            this.lblInetCheck.Name = "lblInetCheck";
+            this.lblInetCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblInetCheck.TabIndex = 117;
+            this.lblInetCheck.Text = "Checking...";
+            // 
+            // lblSecureBootCheck
+            // 
+            this.lblSecureBootCheck.AutoSize = true;
+            this.lblSecureBootCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecureBootCheck.Location = new System.Drawing.Point(219, 280);
+            this.lblSecureBootCheck.Name = "lblSecureBootCheck";
+            this.lblSecureBootCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblSecureBootCheck.TabIndex = 107;
+            this.lblSecureBootCheck.Text = "Checking...";
+            // 
+            // lblSecureBoot
+            // 
+            this.lblSecureBoot.AutoSize = true;
+            this.lblSecureBoot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecureBoot.Location = new System.Drawing.Point(66, 280);
+            this.lblSecureBoot.Name = "lblSecureBoot";
+            this.lblSecureBoot.Size = new System.Drawing.Size(93, 21);
+            this.lblSecureBoot.TabIndex = 104;
+            this.lblSecureBoot.Text = "Secure Boot";
+            // 
+            // lblFreeSpaceCheck
+            // 
+            this.lblFreeSpaceCheck.AutoSize = true;
+            this.lblFreeSpaceCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFreeSpaceCheck.Location = new System.Drawing.Point(219, 506);
+            this.lblFreeSpaceCheck.Name = "lblFreeSpaceCheck";
+            this.lblFreeSpaceCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblFreeSpaceCheck.TabIndex = 103;
+            this.lblFreeSpaceCheck.Text = "Checking...";
+            // 
+            // blFreeSpace
+            // 
+            this.blFreeSpace.AutoSize = true;
+            this.blFreeSpace.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blFreeSpace.Location = new System.Drawing.Point(66, 506);
+            this.blFreeSpace.Name = "blFreeSpace";
+            this.blFreeSpace.Size = new System.Drawing.Size(85, 21);
+            this.blFreeSpace.TabIndex = 100;
+            this.blFreeSpace.Text = "Free Space";
+            // 
+            // lblWDDMCheck
+            // 
+            this.lblWDDMCheck.AutoSize = true;
+            this.lblWDDMCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWDDMCheck.Location = new System.Drawing.Point(219, 639);
+            this.lblWDDMCheck.Name = "lblWDDMCheck";
+            this.lblWDDMCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblWDDMCheck.TabIndex = 99;
+            this.lblWDDMCheck.Text = "Checking...";
+            // 
+            // lblWDDM
+            // 
+            this.lblWDDM.AutoSize = true;
+            this.lblWDDM.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWDDM.Location = new System.Drawing.Point(66, 639);
+            this.lblWDDM.Name = "lblWDDM";
+            this.lblWDDM.Size = new System.Drawing.Size(70, 21);
+            this.lblWDDM.TabIndex = 96;
+            this.lblWDDM.Text = "WDDM2";
+            // 
+            // lblDisplayCheck
+            // 
+            this.lblDisplayCheck.AutoSize = true;
+            this.lblDisplayCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplayCheck.Location = new System.Drawing.Point(219, 414);
+            this.lblDisplayCheck.Name = "lblDisplayCheck";
+            this.lblDisplayCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblDisplayCheck.TabIndex = 95;
+            this.lblDisplayCheck.Text = "Checking...";
+            // 
+            // lblDisplay
+            // 
+            this.lblDisplay.AutoSize = true;
+            this.lblDisplay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplay.Location = new System.Drawing.Point(66, 414);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(61, 21);
+            this.lblDisplay.TabIndex = 92;
+            this.lblDisplay.Text = "Display";
+            // 
+            // lblDirectXCheck
+            // 
+            this.lblDirectXCheck.AutoSize = true;
+            this.lblDirectXCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDirectXCheck.Location = new System.Drawing.Point(219, 592);
+            this.lblDirectXCheck.Name = "lblDirectXCheck";
+            this.lblDirectXCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblDirectXCheck.TabIndex = 89;
+            this.lblDirectXCheck.Text = "Checking...";
+            // 
+            // lblDirectX
+            // 
+            this.lblDirectX.AutoSize = true;
+            this.lblDirectX.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDirectX.Location = new System.Drawing.Point(66, 592);
+            this.lblDirectX.Name = "lblDirectX";
+            this.lblDirectX.Size = new System.Drawing.Size(60, 21);
+            this.lblDirectX.TabIndex = 86;
+            this.lblDirectX.Text = "DirectX";
+            // 
+            // lblTPMCheck
+            // 
+            this.lblTPMCheck.AutoEllipsis = true;
+            this.lblTPMCheck.AutoSize = true;
+            this.lblTPMCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTPMCheck.Location = new System.Drawing.Point(219, 549);
+            this.lblTPMCheck.Name = "lblTPMCheck";
+            this.lblTPMCheck.Size = new System.Drawing.Size(91, 21);
+            this.lblTPMCheck.TabIndex = 84;
+            this.lblTPMCheck.Text = "Not present";
+            // 
+            // lblStorageCheck
+            // 
+            this.lblStorageCheck.AutoSize = true;
+            this.lblStorageCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStorageCheck.Location = new System.Drawing.Point(219, 459);
+            this.lblStorageCheck.Name = "lblStorageCheck";
+            this.lblStorageCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblStorageCheck.TabIndex = 83;
+            this.lblStorageCheck.Text = "Checking...";
+            // 
+            // lblRAMCheck
+            // 
+            this.lblRAMCheck.AutoSize = true;
+            this.lblRAMCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRAMCheck.Location = new System.Drawing.Point(219, 366);
+            this.lblRAMCheck.Name = "lblRAMCheck";
+            this.lblRAMCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblRAMCheck.TabIndex = 82;
+            this.lblRAMCheck.Text = "Checking...";
+            // 
+            // lblDiskTypeCheck
+            // 
+            this.lblDiskTypeCheck.AutoSize = true;
+            this.lblDiskTypeCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiskTypeCheck.Location = new System.Drawing.Point(219, 321);
+            this.lblDiskTypeCheck.Name = "lblDiskTypeCheck";
+            this.lblDiskTypeCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblDiskTypeCheck.TabIndex = 81;
+            this.lblDiskTypeCheck.Text = "Checking...";
+            // 
+            // lblCoresCheck
+            // 
+            this.lblCoresCheck.AutoSize = true;
+            this.lblCoresCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoresCheck.Location = new System.Drawing.Point(219, 108);
+            this.lblCoresCheck.Name = "lblCoresCheck";
+            this.lblCoresCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblCoresCheck.TabIndex = 80;
+            this.lblCoresCheck.Text = "Checking...";
+            // 
+            // lblMhzCheck
+            // 
+            this.lblMhzCheck.AutoSize = true;
+            this.lblMhzCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMhzCheck.Location = new System.Drawing.Point(219, 149);
+            this.lblMhzCheck.Name = "lblMhzCheck";
+            this.lblMhzCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblMhzCheck.TabIndex = 77;
+            this.lblMhzCheck.Text = "Checking...";
+            // 
+            // lblCPU
+            // 
+            this.lblCPU.AutoEllipsis = true;
+            this.lblCPU.AutoSize = true;
+            this.lblCPU.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPU.Location = new System.Drawing.Point(66, 68);
+            this.lblCPU.Name = "lblCPU";
+            this.lblCPU.Size = new System.Drawing.Size(214, 21);
+            this.lblCPU.TabIndex = 75;
+            this.lblCPU.Text = "Checking CPU Compatibility...";
+            // 
+            // lblBootTypeCheck
+            // 
+            this.lblBootTypeCheck.AutoSize = true;
+            this.lblBootTypeCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBootTypeCheck.Location = new System.Drawing.Point(219, 237);
+            this.lblBootTypeCheck.Name = "lblBootTypeCheck";
+            this.lblBootTypeCheck.Size = new System.Drawing.Size(86, 21);
+            this.lblBootTypeCheck.TabIndex = 74;
+            this.lblBootTypeCheck.Text = "Checking...";
+            // 
+            // lblTPM
+            // 
+            this.lblTPM.AutoSize = true;
+            this.lblTPM.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTPM.Location = new System.Drawing.Point(66, 549);
+            this.lblTPM.Name = "lblTPM";
+            this.lblTPM.Size = new System.Drawing.Size(97, 21);
+            this.lblTPM.TabIndex = 73;
+            this.lblTPM.Text = "TPM Version";
+            // 
+            // lblStorage
+            // 
+            this.lblStorage.AutoSize = true;
+            this.lblStorage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStorage.Location = new System.Drawing.Point(66, 459);
+            this.lblStorage.Name = "lblStorage";
+            this.lblStorage.Size = new System.Drawing.Size(63, 21);
+            this.lblStorage.TabIndex = 70;
+            this.lblStorage.Text = "Storage";
+            // 
+            // lblRAM
+            // 
+            this.lblRAM.AutoSize = true;
+            this.lblRAM.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRAM.Location = new System.Drawing.Point(66, 366);
+            this.lblRAM.Name = "lblRAM";
+            this.lblRAM.Size = new System.Drawing.Size(106, 21);
+            this.lblRAM.TabIndex = 67;
+            this.lblRAM.Text = "RAM Installed";
+            // 
+            // lblDiskType
+            // 
+            this.lblDiskType.AutoSize = true;
+            this.lblDiskType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiskType.Location = new System.Drawing.Point(66, 321);
+            this.lblDiskType.Name = "lblDiskType";
+            this.lblDiskType.Size = new System.Drawing.Size(102, 21);
+            this.lblDiskType.TabIndex = 64;
+            this.lblDiskType.Text = "Disk Partition";
+            // 
+            // lblBootType
+            // 
+            this.lblBootType.AutoSize = true;
+            this.lblBootType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBootType.Location = new System.Drawing.Point(66, 237);
+            this.lblBootType.Name = "lblBootType";
+            this.lblBootType.Size = new System.Drawing.Size(100, 21);
+            this.lblBootType.TabIndex = 58;
+            this.lblBootType.Text = "Boot Method";
             // 
             // freqgood
             // 
@@ -651,18 +651,6 @@ namespace ReadySunValley
             this.archgood.TabIndex = 121;
             this.archgood.TabStop = false;
             this.archgood.Visible = false;
-            // 
-            // cpuinfo
-            // 
-            this.cpuinfo.Image = global::ReadySunValley.Properties.Resources.info;
-            this.cpuinfo.Location = new System.Drawing.Point(28, 67);
-            this.cpuinfo.Name = "cpuinfo";
-            this.cpuinfo.Size = new System.Drawing.Size(25, 25);
-            this.cpuinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpuinfo.TabIndex = 90;
-            this.cpuinfo.TabStop = false;
-            this.cpuinfo.Visible = false;
-            this.cpuinfo.MouseHover += new System.EventHandler(this.cpuinfo_MouseHover);
             // 
             // coresbad
             // 
@@ -769,28 +757,6 @@ namespace ReadySunValley
             this.tpminfo.TabStop = false;
             this.tpminfo.Visible = false;
             this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
-            // 
-            // cpubad
-            // 
-            this.cpubad.Image = ((System.Drawing.Image)(resources.GetObject("cpubad.Image")));
-            this.cpubad.Location = new System.Drawing.Point(28, 67);
-            this.cpubad.Name = "cpubad";
-            this.cpubad.Size = new System.Drawing.Size(25, 25);
-            this.cpubad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpubad.TabIndex = 63;
-            this.cpubad.TabStop = false;
-            this.cpubad.Visible = false;
-            this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
-            // 
-            // cpugood
-            // 
-            this.cpugood.Image = ((System.Drawing.Image)(resources.GetObject("cpugood.Image")));
-            this.cpugood.Location = new System.Drawing.Point(28, 67);
-            this.cpugood.Name = "cpugood";
-            this.cpugood.Size = new System.Drawing.Size(25, 25);
-            this.cpugood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpugood.TabIndex = 62;
-            this.cpugood.TabStop = false;
             // 
             // bootgood
             // 
@@ -942,6 +908,40 @@ namespace ReadySunValley
             this.inetbad.Visible = false;
             this.inetbad.MouseHover += new System.EventHandler(this.inetbad_MouseHover);
             // 
+            // cpuinfo
+            // 
+            this.cpuinfo.Image = global::ReadySunValley.Properties.Resources.info;
+            this.cpuinfo.Location = new System.Drawing.Point(28, 67);
+            this.cpuinfo.Name = "cpuinfo";
+            this.cpuinfo.Size = new System.Drawing.Size(25, 25);
+            this.cpuinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cpuinfo.TabIndex = 90;
+            this.cpuinfo.TabStop = false;
+            this.cpuinfo.Visible = false;
+            this.cpuinfo.MouseHover += new System.EventHandler(this.cpuinfo_MouseHover);
+            // 
+            // cpubad
+            // 
+            this.cpubad.Image = ((System.Drawing.Image)(resources.GetObject("cpubad.Image")));
+            this.cpubad.Location = new System.Drawing.Point(28, 67);
+            this.cpubad.Name = "cpubad";
+            this.cpubad.Size = new System.Drawing.Size(25, 25);
+            this.cpubad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cpubad.TabIndex = 63;
+            this.cpubad.TabStop = false;
+            this.cpubad.Visible = false;
+            this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
+            // 
+            // cpugood
+            // 
+            this.cpugood.Image = ((System.Drawing.Image)(resources.GetObject("cpugood.Image")));
+            this.cpugood.Location = new System.Drawing.Point(28, 67);
+            this.cpugood.Name = "cpugood";
+            this.cpugood.Size = new System.Drawing.Size(25, 25);
+            this.cpugood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cpugood.TabIndex = 62;
+            this.cpugood.TabStop = false;
+            // 
             // PicCompare
             // 
             this.PicCompare.Location = new System.Drawing.Point(9, 67);
@@ -956,115 +956,115 @@ namespace ReadySunValley
             // 
             this.MainMenu.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox1,
-            this.AppHelp,
-            this.AppUndoBypass,
+            this.menuVoteContent,
+            this.menuVote,
+            this.menuBypassUndo,
             this.toolStripSeparator1,
-            this.AppInfo});
+            this.menuInfo});
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.MainMenu.Size = new System.Drawing.Size(391, 118);
             // 
-            // toolStripTextBox1
+            // menuVoteContent
             // 
-            this.toolStripTextBox1.BackColor = System.Drawing.Color.Khaki;
-            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripTextBox1.ForeColor = System.Drawing.Color.DeepPink;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.ReadOnly = true;
-            this.toolStripTextBox1.Size = new System.Drawing.Size(330, 22);
-            this.toolStripTextBox1.Text = "Does your hardware qualify for Windows 11?";
+            this.menuVoteContent.BackColor = System.Drawing.Color.Khaki;
+            this.menuVoteContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.menuVoteContent.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuVoteContent.ForeColor = System.Drawing.Color.DeepPink;
+            this.menuVoteContent.Name = "menuVoteContent";
+            this.menuVoteContent.ReadOnly = true;
+            this.menuVoteContent.Size = new System.Drawing.Size(330, 22);
+            this.menuVoteContent.Text = "Does your hardware qualify for Windows 11?";
             // 
-            // AppHelp
+            // menuVote
             // 
-            this.AppHelp.Name = "AppHelp";
-            this.AppHelp.Size = new System.Drawing.Size(390, 28);
-            this.AppHelp.Text = "Vote here!";
-            this.AppHelp.Click += new System.EventHandler(this.AppHelp_Click);
+            this.menuVote.Name = "menuVote";
+            this.menuVote.Size = new System.Drawing.Size(390, 28);
+            this.menuVote.Text = "Vote here!";
+            this.menuVote.Click += new System.EventHandler(this.menuVote_Click);
             // 
-            // AppUndoBypass
+            // menuBypassUndo
             // 
-            this.AppUndoBypass.Name = "AppUndoBypass";
-            this.AppUndoBypass.Size = new System.Drawing.Size(390, 28);
-            this.AppUndoBypass.Text = "Undo Bypass";
-            this.AppUndoBypass.Click += new System.EventHandler(this.AppUndoBypass_Click);
+            this.menuBypassUndo.Name = "menuBypassUndo";
+            this.menuBypassUndo.Size = new System.Drawing.Size(390, 28);
+            this.menuBypassUndo.Text = "Undo Bypass";
+            this.menuBypassUndo.Click += new System.EventHandler(this.menuBypassUndo_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(387, 6);
             // 
-            // AppInfo
+            // menuInfo
             // 
-            this.AppInfo.Name = "AppInfo";
-            this.AppInfo.Size = new System.Drawing.Size(390, 28);
-            this.AppInfo.Text = "Info";
-            this.AppInfo.Click += new System.EventHandler(this.AppInfo_Click);
+            this.menuInfo.Name = "menuInfo";
+            this.menuInfo.Size = new System.Drawing.Size(390, 28);
+            this.menuInfo.Text = "Info";
+            this.menuInfo.Click += new System.EventHandler(this.menuInfo_Click);
             // 
-            // PnlRight
+            // pnlRight
             // 
-            this.PnlRight.AutoScroll = true;
-            this.PnlRight.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PnlRight.Controls.Add(this.BtnPnlScreenshot);
-            this.PnlRight.Controls.Add(this.AssetOpenGitHub);
-            this.PnlRight.Controls.Add(this.LblStatus);
-            this.PnlRight.Controls.Add(this.LblSumBad);
-            this.PnlRight.Controls.Add(this.LnkCompatibilityFix);
-            this.PnlRight.Controls.Add(this.PicCompare);
-            this.PnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PnlRight.Location = new System.Drawing.Point(749, 0);
-            this.PnlRight.Name = "PnlRight";
-            this.PnlRight.Size = new System.Drawing.Size(395, 737);
-            this.PnlRight.TabIndex = 128;
+            this.pnlRight.AutoScroll = true;
+            this.pnlRight.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlRight.Controls.Add(this.btnPnlShareScreen);
+            this.pnlRight.Controls.Add(this.assetOpenGitHub);
+            this.pnlRight.Controls.Add(this.lblStatus);
+            this.pnlRight.Controls.Add(this.LblSumBad);
+            this.pnlRight.Controls.Add(this.lnkCompatibilityFix);
+            this.pnlRight.Controls.Add(this.PicCompare);
+            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlRight.Location = new System.Drawing.Point(776, 0);
+            this.pnlRight.Name = "pnlRight";
+            this.pnlRight.Size = new System.Drawing.Size(395, 746);
+            this.pnlRight.TabIndex = 128;
             // 
-            // BtnPnlScreenshot
+            // btnPnlShareScreen
             // 
-            this.BtnPnlScreenshot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnPnlShareScreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnPnlScreenshot.BackColor = System.Drawing.Color.Gainsboro;
-            this.BtnPnlScreenshot.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.BtnPnlScreenshot.FlatAppearance.BorderSize = 0;
-            this.BtnPnlScreenshot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPnlScreenshot.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
-            this.BtnPnlScreenshot.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BtnPnlScreenshot.Location = new System.Drawing.Point(48, 146);
-            this.BtnPnlScreenshot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnPnlScreenshot.Name = "BtnPnlScreenshot";
-            this.BtnPnlScreenshot.Size = new System.Drawing.Size(294, 32);
-            this.BtnPnlScreenshot.TabIndex = 130;
-            this.BtnPnlScreenshot.Text = "Take quick Screenshot";
-            this.BtnPnlScreenshot.UseVisualStyleBackColor = false;
-            this.BtnPnlScreenshot.Visible = false;
-            this.BtnPnlScreenshot.Click += new System.EventHandler(this.BtnPnlScreenshot_Click);
+            this.btnPnlShareScreen.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnPnlShareScreen.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnPnlShareScreen.FlatAppearance.BorderSize = 0;
+            this.btnPnlShareScreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPnlShareScreen.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
+            this.btnPnlShareScreen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnPnlShareScreen.Location = new System.Drawing.Point(48, 146);
+            this.btnPnlShareScreen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPnlShareScreen.Name = "btnPnlShareScreen";
+            this.btnPnlShareScreen.Size = new System.Drawing.Size(294, 32);
+            this.btnPnlShareScreen.TabIndex = 130;
+            this.btnPnlShareScreen.Text = "Capture and Share om Twitter";
+            this.btnPnlShareScreen.UseVisualStyleBackColor = false;
+            this.btnPnlShareScreen.Visible = false;
+            this.btnPnlShareScreen.Click += new System.EventHandler(this.btnPnlShareScreen_Click);
             // 
-            // AssetOpenGitHub
+            // assetOpenGitHub
             // 
-            this.AssetOpenGitHub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AssetOpenGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AssetOpenGitHub.Image = ((System.Drawing.Image)(resources.GetObject("AssetOpenGitHub.Image")));
-            this.AssetOpenGitHub.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.AssetOpenGitHub.Location = new System.Drawing.Point(359, 12);
-            this.AssetOpenGitHub.Name = "AssetOpenGitHub";
-            this.AssetOpenGitHub.Size = new System.Drawing.Size(24, 24);
-            this.AssetOpenGitHub.TabIndex = 129;
-            this.AssetOpenGitHub.TabStop = false;
-            this.AssetOpenGitHub.Click += new System.EventHandler(this.AssetOpenGitHub_Click);
-            this.AssetOpenGitHub.MouseHover += new System.EventHandler(this.AssetOpenGitHub_MouseHover);
+            this.assetOpenGitHub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.assetOpenGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.assetOpenGitHub.Image = ((System.Drawing.Image)(resources.GetObject("assetOpenGitHub.Image")));
+            this.assetOpenGitHub.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.assetOpenGitHub.Location = new System.Drawing.Point(359, 12);
+            this.assetOpenGitHub.Name = "assetOpenGitHub";
+            this.assetOpenGitHub.Size = new System.Drawing.Size(24, 24);
+            this.assetOpenGitHub.TabIndex = 129;
+            this.assetOpenGitHub.TabStop = false;
+            this.assetOpenGitHub.Click += new System.EventHandler(this.assetOpenGitHub_Click);
+            this.assetOpenGitHub.MouseHover += new System.EventHandler(this.AssetOpenGitHub_MouseHover);
             // 
-            // LblStatus
+            // lblStatus
             // 
-            this.LblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblStatus.AutoEllipsis = true;
-            this.LblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LblStatus.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStatus.Location = new System.Drawing.Point(18, 274);
-            this.LblStatus.Name = "LblStatus";
-            this.LblStatus.Size = new System.Drawing.Size(367, 68);
-            this.LblStatus.TabIndex = 114;
-            this.LblStatus.Text = "Components not ready for Windows 11";
-            this.LblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblStatus.AutoEllipsis = true;
+            this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(18, 274);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(367, 68);
+            this.lblStatus.TabIndex = 114;
+            this.lblStatus.Text = "Components not ready for Windows 11";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LblSumBad
             // 
@@ -1080,138 +1080,138 @@ namespace ReadySunValley
             this.LblSumBad.TabIndex = 113;
             this.LblSumBad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LnkCompatibilityFix
+            // lnkCompatibilityFix
             // 
-            this.LnkCompatibilityFix.ActiveLinkColor = System.Drawing.Color.MediumVioletRed;
-            this.LnkCompatibilityFix.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lnkCompatibilityFix.ActiveLinkColor = System.Drawing.Color.MediumVioletRed;
+            this.lnkCompatibilityFix.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LnkCompatibilityFix.AutoEllipsis = true;
-            this.LnkCompatibilityFix.BackColor = System.Drawing.Color.Transparent;
-            this.LnkCompatibilityFix.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.LnkCompatibilityFix.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LnkCompatibilityFix.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.LnkCompatibilityFix.LinkColor = System.Drawing.Color.DeepPink;
-            this.LnkCompatibilityFix.Location = new System.Drawing.Point(20, 351);
-            this.LnkCompatibilityFix.Name = "LnkCompatibilityFix";
-            this.LnkCompatibilityFix.Size = new System.Drawing.Size(363, 26);
-            this.LnkCompatibilityFix.TabIndex = 128;
-            this.LnkCompatibilityFix.TabStop = true;
-            this.LnkCompatibilityFix.Text = "Click here to fix some of these failed results with a registry hack\r\n";
-            this.LnkCompatibilityFix.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkCompatibilityFix_LinkClicked);
+            this.lnkCompatibilityFix.AutoEllipsis = true;
+            this.lnkCompatibilityFix.BackColor = System.Drawing.Color.Transparent;
+            this.lnkCompatibilityFix.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.lnkCompatibilityFix.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lnkCompatibilityFix.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkCompatibilityFix.LinkColor = System.Drawing.Color.DeepPink;
+            this.lnkCompatibilityFix.Location = new System.Drawing.Point(20, 351);
+            this.lnkCompatibilityFix.Name = "lnkCompatibilityFix";
+            this.lnkCompatibilityFix.Size = new System.Drawing.Size(363, 26);
+            this.lnkCompatibilityFix.TabIndex = 128;
+            this.lnkCompatibilityFix.TabStop = true;
+            this.lnkCompatibilityFix.Text = "Click here to fix some of these failed results with a registry hack\r\n";
+            this.lnkCompatibilityFix.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCompatibilityFix_LinkClicked);
             // 
-            // PBar
+            // pBar
             // 
-            this.PBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PBar.Location = new System.Drawing.Point(12, 91);
-            this.PBar.Name = "PBar";
-            this.PBar.Size = new System.Drawing.Size(307, 5);
-            this.PBar.TabIndex = 114;
-            this.PBar.Visible = false;
+            this.pBar.Location = new System.Drawing.Point(12, 90);
+            this.pBar.Name = "pBar";
+            this.pBar.Size = new System.Drawing.Size(332, 5);
+            this.pBar.TabIndex = 114;
+            this.pBar.Visible = false;
             // 
-            // panel1
+            // pnlMiddle
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.BtnCompareUtil);
-            this.panel1.Controls.Add(this.BtnScreenshot);
-            this.panel1.Controls.Add(this.CheckCompareMS);
-            this.panel1.Controls.Add(this.PBar);
-            this.panel1.Controls.Add(this.LblHeader);
-            this.panel1.Controls.Add(this.LblSubHeader);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(423, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 734);
-            this.panel1.TabIndex = 129;
+            this.pnlMiddle.AutoScroll = true;
+            this.pnlMiddle.Controls.Add(this.btnCompareUtil);
+            this.pnlMiddle.Controls.Add(this.btnShareScreen);
+            this.pnlMiddle.Controls.Add(this.checkCompareMS);
+            this.pnlMiddle.Controls.Add(this.pBar);
+            this.pnlMiddle.Controls.Add(this.lblHeader);
+            this.pnlMiddle.Controls.Add(this.lblSubHeader);
+            this.pnlMiddle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMiddle.Location = new System.Drawing.Point(423, 0);
+            this.pnlMiddle.Name = "pnlMiddle";
+            this.pnlMiddle.Size = new System.Drawing.Size(353, 746);
+            this.pnlMiddle.TabIndex = 129;
             // 
-            // BtnCompareUtil
+            // btnCompareUtil
             // 
-            this.BtnCompareUtil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnCompareUtil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCompareUtil.BackColor = System.Drawing.Color.Gainsboro;
-            this.BtnCompareUtil.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.BtnCompareUtil.FlatAppearance.BorderSize = 0;
-            this.BtnCompareUtil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCompareUtil.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
-            this.BtnCompareUtil.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BtnCompareUtil.Location = new System.Drawing.Point(18, 248);
-            this.BtnCompareUtil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnCompareUtil.Name = "BtnCompareUtil";
-            this.BtnCompareUtil.Size = new System.Drawing.Size(294, 32);
-            this.BtnCompareUtil.TabIndex = 130;
-            this.BtnCompareUtil.Text = "Compare with App";
-            this.BtnCompareUtil.UseVisualStyleBackColor = false;
-            this.BtnCompareUtil.Click += new System.EventHandler(this.BtnCompareUtil_Click);
+            this.btnCompareUtil.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnCompareUtil.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnCompareUtil.FlatAppearance.BorderSize = 0;
+            this.btnCompareUtil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompareUtil.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
+            this.btnCompareUtil.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCompareUtil.Location = new System.Drawing.Point(18, 248);
+            this.btnCompareUtil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCompareUtil.Name = "btnCompareUtil";
+            this.btnCompareUtil.Size = new System.Drawing.Size(318, 32);
+            this.btnCompareUtil.TabIndex = 130;
+            this.btnCompareUtil.Text = "Compare with App";
+            this.btnCompareUtil.UseVisualStyleBackColor = false;
+            this.btnCompareUtil.Click += new System.EventHandler(this.btnCompareUtil_Click);
             // 
-            // BtnScreenshot
+            // btnShareScreen
             // 
-            this.BtnScreenshot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnShareScreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnScreenshot.BackColor = System.Drawing.Color.Gainsboro;
-            this.BtnScreenshot.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.BtnScreenshot.FlatAppearance.BorderSize = 0;
-            this.BtnScreenshot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnScreenshot.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
-            this.BtnScreenshot.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BtnScreenshot.Location = new System.Drawing.Point(18, 149);
-            this.BtnScreenshot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnScreenshot.Name = "BtnScreenshot";
-            this.BtnScreenshot.Size = new System.Drawing.Size(294, 32);
-            this.BtnScreenshot.TabIndex = 129;
-            this.BtnScreenshot.Text = "Take quick Screenshot";
-            this.BtnScreenshot.UseVisualStyleBackColor = false;
-            this.BtnScreenshot.Click += new System.EventHandler(this.BtnScreenshot_Click);
+            this.btnShareScreen.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnShareScreen.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnShareScreen.FlatAppearance.BorderSize = 0;
+            this.btnShareScreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShareScreen.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
+            this.btnShareScreen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnShareScreen.Location = new System.Drawing.Point(18, 149);
+            this.btnShareScreen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnShareScreen.Name = "btnShareScreen";
+            this.btnShareScreen.Size = new System.Drawing.Size(318, 32);
+            this.btnShareScreen.TabIndex = 129;
+            this.btnShareScreen.Text = "Capture and Share on Twitter";
+            this.btnShareScreen.UseVisualStyleBackColor = false;
+            this.btnShareScreen.Click += new System.EventHandler(this.btnShareScreen_Click);
             // 
-            // LblHeader
+            // lblHeader
             // 
-            this.LblHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblHeader.AutoEllipsis = true;
-            this.LblHeader.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.LblHeader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LblHeader.Location = new System.Drawing.Point(12, 21);
-            this.LblHeader.Name = "LblHeader";
-            this.LblHeader.Size = new System.Drawing.Size(292, 32);
-            this.LblHeader.TabIndex = 25;
-            this.LblHeader.Text = "Your Compatibility Results\r\n";
+            this.lblHeader.AutoEllipsis = true;
+            this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.lblHeader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblHeader.Location = new System.Drawing.Point(12, 21);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(332, 32);
+            this.lblHeader.TabIndex = 25;
+            this.lblHeader.Text = "Your Compatibility Results\r\n";
             // 
-            // LblSubHeader
+            // lblSubHeader
             // 
-            this.LblSubHeader.ActiveLinkColor = System.Drawing.Color.MediumVioletRed;
-            this.LblSubHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblSubHeader.ActiveLinkColor = System.Drawing.Color.MediumVioletRed;
+            this.lblSubHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblSubHeader.AutoEllipsis = true;
-            this.LblSubHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.LblSubHeader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LblSubHeader.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.LblSubHeader.LinkColor = System.Drawing.Color.DeepPink;
-            this.LblSubHeader.Location = new System.Drawing.Point(13, 67);
-            this.LblSubHeader.Name = "LblSubHeader";
-            this.LblSubHeader.Size = new System.Drawing.Size(221, 17);
-            this.LblSubHeader.TabIndex = 24;
-            this.LblSubHeader.TabStop = true;
-            this.LblSubHeader.Text = "*Move the cusor over a failed result to get more information";
+            this.lblSubHeader.AutoEllipsis = true;
+            this.lblSubHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.lblSubHeader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblSubHeader.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lblSubHeader.LinkColor = System.Drawing.Color.DeepPink;
+            this.lblSubHeader.Location = new System.Drawing.Point(13, 68);
+            this.lblSubHeader.Name = "lblSubHeader";
+            this.lblSubHeader.Size = new System.Drawing.Size(331, 16);
+            this.lblSubHeader.TabIndex = 24;
+            this.lblSubHeader.TabStop = true;
+            this.lblSubHeader.Text = "*Move the cusor over a failed result to get more information";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1144, 737);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.PnlLeft);
-            this.Controls.Add(this.PnlRight);
+            this.ClientSize = new System.Drawing.Size(1171, 746);
+            this.Controls.Add(this.pnlMiddle);
+            this.Controls.Add(this.pnlLeft);
+            this.Controls.Add(this.pnlRight);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpButton = true;
-            this.MinimumSize = new System.Drawing.Size(820, 776);
+            this.MinimumSize = new System.Drawing.Size(832, 776);
             this.Name = "MainWindow";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReadySunValley";
             this.Shown += new System.EventHandler(this.MainWindow_Shown);
             this.SizeChanged += new System.EventHandler(this.MainWindow_SizeChanged);
-            this.PnlLeft.ResumeLayout(false);
-            this.PnlLeft.PerformLayout();
+            this.pnlLeft.ResumeLayout(false);
+            this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.freqgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partgood)).EndInit();
@@ -1219,7 +1219,6 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.screengood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.securebootgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.archgood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freqbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.archbad)).EndInit();
@@ -1229,8 +1228,6 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.screenbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hddgood)).EndInit();
@@ -1244,43 +1241,46 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetbad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCompare)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
-            this.PnlRight.ResumeLayout(false);
-            this.PnlRight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AssetOpenGitHub)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pnlRight.ResumeLayout(false);
+            this.pnlRight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.assetOpenGitHub)).EndInit();
+            this.pnlMiddle.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel PnlLeft;
-        private System.Windows.Forms.Label lbl_secureboot;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel pnlLeft;
+        private System.Windows.Forms.Label lblSecureBootCheck;
+        private System.Windows.Forms.Label lblSecureBoot;
         private System.Windows.Forms.PictureBox securebootbad;
-        private System.Windows.Forms.Label lbl_freespace;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lbl_wddm;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lbl_screen;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lbl_directx;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lbl_tpm;
-        private System.Windows.Forms.Label lbl_storage;
-        private System.Windows.Forms.Label lbl_ram;
-        private System.Windows.Forms.Label lbl_part;
-        private System.Windows.Forms.Label lbl_coresnthreads;
-        private System.Windows.Forms.Label lbl_clockspeed;
-        private System.Windows.Forms.Label lbl_cpu;
-        private System.Windows.Forms.Label lbl_boot;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblFreeSpaceCheck;
+        private System.Windows.Forms.Label blFreeSpace;
+        private System.Windows.Forms.Label lblWDDMCheck;
+        private System.Windows.Forms.Label lblWDDM;
+        private System.Windows.Forms.Label lblDisplayCheck;
+        private System.Windows.Forms.Label lblDisplay;
+        private System.Windows.Forms.Label lblDirectXCheck;
+        private System.Windows.Forms.Label lblDirectX;
+        private System.Windows.Forms.Label lblTPMCheck;
+        private System.Windows.Forms.Label lblStorageCheck;
+        private System.Windows.Forms.Label lblRAMCheck;
+        private System.Windows.Forms.Label lblDiskTypeCheck;
+        private System.Windows.Forms.Label lblCoresCheck;
+        private System.Windows.Forms.Label lblMhzCheck;
+        private System.Windows.Forms.Label lblCPU;
+        private System.Windows.Forms.Label lblBootTypeCheck;
+        private System.Windows.Forms.Label lblTPM;
+        private System.Windows.Forms.Label lblStorage;
+        private System.Windows.Forms.Label lblRAM;
+        private System.Windows.Forms.Label lblDiskType;
+        private System.Windows.Forms.Label lblBootType;
         private System.Windows.Forms.PictureBox bootbad;
         private System.Windows.Forms.PictureBox freqbad;
         private System.Windows.Forms.PictureBox bootgood;
@@ -1305,41 +1305,41 @@ namespace ReadySunValley
         private System.Windows.Forms.PictureBox freespaceinfo;
         private System.Windows.Forms.PictureBox freespacegood;
         private System.Windows.Forms.PictureBox securebootgood;
-        private System.Windows.Forms.Button LblMainMenu;
+        private System.Windows.Forms.Button lblMainMenu;
         private System.Windows.Forms.ContextMenuStrip MainMenu;
-        private System.Windows.Forms.ToolStripMenuItem AppHelp;
-        private System.Windows.Forms.ToolStripMenuItem AppInfo;
+        private System.Windows.Forms.ToolStripMenuItem menuVote;
+        private System.Windows.Forms.ToolStripMenuItem menuInfo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lbl_inet;
+        private System.Windows.Forms.Label lblInet;
+        private System.Windows.Forms.Label lblInetCheck;
         private System.Windows.Forms.PictureBox inetgood;
         private System.Windows.Forms.PictureBox inetbad;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.Label lbl_arch;
+        private System.Windows.Forms.ToolStripTextBox menuVoteContent;
+        private System.Windows.Forms.Label lblBitnessCheck;
         private System.Windows.Forms.PictureBox archbad;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblBitness;
         private System.Windows.Forms.PictureBox archgood;
         private System.Windows.Forms.PictureBox tpmbad;
         private System.Windows.Forms.PictureBox tpmgood;
         private System.Windows.Forms.PictureBox tpminfo;
         private System.Windows.Forms.PictureBox PicCompare;
-        private System.Windows.Forms.CheckBox CheckCompareMS;
-        private System.Windows.Forms.ToolStripMenuItem AppUndoBypass;
-        private System.Windows.Forms.Panel PnlRight;
-        private System.Windows.Forms.Label LblStatus;
+        private System.Windows.Forms.CheckBox checkCompareMS;
+        private System.Windows.Forms.ToolStripMenuItem menuBypassUndo;
+        private System.Windows.Forms.Panel pnlRight;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label LblSumBad;
-        private System.Windows.Forms.ProgressBar PBar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label LblHeader;
-        private System.Windows.Forms.LinkLabel LblSubHeader;
-        private System.Windows.Forms.LinkLabel LnkCompatibilityFix;
-        private System.Windows.Forms.Button BtnScreenshot;
-        private System.Windows.Forms.Button BtnCompareUtil;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button BtnRecheck;
-        private System.Windows.Forms.PictureBox AssetOpenGitHub;
-        private System.Windows.Forms.Button BtnPnlScreenshot;
+        private System.Windows.Forms.ProgressBar pBar;
+        private System.Windows.Forms.Panel pnlMiddle;
+        private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.LinkLabel lblSubHeader;
+        private System.Windows.Forms.LinkLabel lnkCompatibilityFix;
+        private System.Windows.Forms.Button btnShareScreen;
+        private System.Windows.Forms.Button btnCompareUtil;
+        private System.Windows.Forms.Label lblMhz;
+        private System.Windows.Forms.Label lblCores;
+        private System.Windows.Forms.Button btnRecheck;
+        private System.Windows.Forms.PictureBox assetOpenGitHub;
+        private System.Windows.Forms.Button btnPnlShareScreen;
     }
 }
 

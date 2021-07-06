@@ -4,7 +4,7 @@
     {
         public class Titles
         {
-            public static readonly string AppName = "ReadySunValley" + " (" + Utils.GetOS() + ")";
+            public static readonly string AppName = "ReadySunValley" + " (" + Assessment.OS.GetOS() + Assessment.OS.Is64Bit() + ")";
         }
 
         public class Body
@@ -62,6 +62,8 @@
 
             public const string CreditsRepo = "https://github.com/mag-nif-i-cent/Affinity11";
             public const string VotePage = "https://www.builtbybel.com/blog/19-apps/41-check-with-the-readysunvalley-app-if-your-device-works-with-windows11-sun-valley-update";
+
+            public const string ShareTwitter = "https://twitter.com/intent/tweet?text=Ready%20for%20%23Windows11/Sun%20Valley%20update?%20Here%20are%20my%20results%20%23ReadySunValley%20%23app";
         }
     }
 }

@@ -97,7 +97,7 @@
     <Compile Include="Assessment\DirectX.cs" />
     <Compile Include="Assessment\GPU.cs" />
     <Compile Include="Assessment\Inet.cs" />
-    <Compile Include="Assessment\SecureBoot.cs" />
+    <Compile Include="Assessment\OS.cs" />
     <Compile Include="Assessment\Storage.cs" />
     <Compile Include="EmbeddedResource.Designer.cs">
       <AutoGen>True</AutoGen>
