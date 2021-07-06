@@ -1,3 +1,3 @@
 -----------------------------------
-In the latest 0.20.5 release the Secure Boot detection has been improved. Now its been marked as Supported/Unsupported instead of showing the status.
+In the latest 0.21.5 release the Secure Boot detection has been improved. Now its been marked as Supported/Unsupported instead of showing the status.
 More infos here https://github.com/builtbybel/ReadySunValley/issues/11
