@@ -1,2 +1,2 @@
 -----------------------------------
-This release adds detection support for Qualcomm processors (MS Support link https://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-qualcomm-processors) and fixes a ciritcal display detection bug.
+This release adds detection support for Qualcomm processors and fixes a ciritcal display detection bug.
