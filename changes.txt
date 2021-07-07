@@ -1,5 +1,2 @@
 -----------------------------------
-In the latest 0.21.5 release the Secure Boot detection has been improved. 
-Now its been marked as Supported/Unsupported instead of showing the status.
-
-More infos here https://github.com/builtbybel/ReadySunValley/issues/11
+This release adds detection support for Qualcomm processors (MS Support link https://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-qualcomm-processors) and fixes a ciritcal display detection bug.
