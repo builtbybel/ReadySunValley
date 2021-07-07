@@ -7,6 +7,7 @@ using System.Management;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
 namespace ReadySunValley
 {
@@ -70,29 +71,23 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            // Display size for each monitor, Ref. https://theezitguy.wordpress.com/category/c-sharp/
             lblStatus.Text = "Checking Display [3/13]";
-            lblDisplayCheck.Text = "";
-            int counter = 0;
-            foreach (var item in new System.Management.ManagementObjectSearcher("\\root\\wmi", "SELECT * FROM WmiMonitorBasicDisplayParams").Get())
-            {
-                counter++;
-                double width = (byte)item["MaxHorizontalImageSize"] / 2.54;
-                double height = (byte)item["MaxVerticalImageSize"] / 2.54;
-                double diagonal = Math.Sqrt(width * width + height * height);
-                lblDisplayCheck.Text += counter + ". " + diagonal.ToString("0.00") + " inch ";
-                if (diagonal <= 9)
-                {
-                    screengood.Visible = false;
-                    screenbad.Visible = true;
 
-                    performCompatibilityCount += 1;
-                }
-                else
-                {
-                    screengood.Visible = true;
-                    screenbad.Visible = false;
-                }
+            lblDisplayCheck.Text = Assessment.Display.MonitorSize();
+
+            if (double.Parse(lblDisplayCheck.Text) <= 9)
+            {
+                lblDisplayCheck.Text += " inch";
+                screengood.Visible = false;
+                screenbad.Visible = true;
+
+                performCompatibilityCount += 1;
+            }
+            else
+            {
+                lblDisplayCheck.Text += " inch";
+                screengood.Visible = true;
+                screenbad.Visible = false;
             }
 
             // Boot Method
@@ -162,7 +157,10 @@ namespace ReadySunValley
                 var intelbytes = Properties.Resources.intelsupport;
                 string intelsupported = System.Text.Encoding.UTF8.GetString(intelbytes);
 
-                string supportedCPUs = amdsupported + "\n" + intelsupported;
+                var qualcommbytes = Properties.Resources.qualcommsupport;
+                string qualcommsupported = System.Text.Encoding.UTF8.GetString(qualcommbytes);
+
+                string supportedCPUs = amdsupported + "\n" + intelsupported + "\n" + qualcommsupported;
                 string myCPU = lblCPU.Text.ToUpper();
 
                 bool FoundCPU = false;
@@ -444,17 +442,22 @@ namespace ReadySunValley
 
             if (sum == 0)
             {
+                LblSumBad.Text = "You're ready for Sun Valley!";
                 LblSumBad.ForeColor = Color.Green;
                 lblStatus.Visible = false;
-                LblSumBad.Text = "You're ready for Sun Valley!";
+                lnkMSRequirements.Visible = false;
 
                 // It's all good, so hide bypass options
                 lnkCompatibilityFix.Visible = false;
                 menuBypassUndo.Visible = false;
+
+                lnkCompatibilityFix.Visible = false;
             }
             else
             {
                 lblStatus.Text = "Components not ready for Windows 11";
+                lnkCompatibilityFix.Visible = true;
+                lnkMSRequirements.Visible = true;
                 LblSumBad.ForeColor = Color.DeepPink;
             }
 
@@ -496,7 +499,8 @@ namespace ReadySunValley
             {
                 bmp.Save(dialog.FileName);
 
-                Process.Start(Helpers.Strings.Uri.ShareTwitter);
+                Process.Start(Helpers.Strings.Uri.ShareTwitter); // Post to Twitter
+                MessageBox.Show("Don't forget to upload the results picture to Twitter.");
             }
         }
 
@@ -515,6 +519,8 @@ namespace ReadySunValley
         private void menuInfo_Click(object sender, EventArgs e) => MessageBox.Show(Helpers.Strings.Body.AppInfo, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         private void menuVote_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.VotePage);
+
+        private void lnkMSRequirements_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start(Helpers.Strings.Uri.MSSystemRequirements);
 
         private void cpuinfo_MouseHover(object sender, EventArgs e)
         {
@@ -689,6 +695,7 @@ namespace ReadySunValley
             if (checkCompareMS.Checked)
             {
                 lblStatus.Visible = false;
+                lnkMSRequirements.Visible = false;
                 LblSumBad.Visible = false;
                 lnkCompatibilityFix.Visible = false;
                 PicCompare.Visible = true;
@@ -706,6 +713,7 @@ namespace ReadySunValley
                 checkCompareMS.Text = "Compare with Microsoft requirements";
                 PicCompare.Visible = false;
                 lblStatus.Visible = true;
+                lnkMSRequirements.Visible = true;
                 LblSumBad.Visible = true;
                 lnkCompatibilityFix.Visible = true;
             }

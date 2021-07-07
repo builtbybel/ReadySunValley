@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ReadySunValley")]
-[assembly: AssemblyDescription("Windows 11 Compatibility checker")]
+[assembly: AssemblyDescription("Replacement for Microsoft PC Health Check app")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Builtbybel")]
 [assembly: AssemblyProduct("ReadySunValley")]
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.21.5")]
-[assembly: AssemblyFileVersion("0.21.5")]
+[assembly: AssemblyVersion("0.22.0")]
+[assembly: AssemblyFileVersion("0.22.0")]

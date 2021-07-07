@@ -94,7 +94,7 @@
     <Compile Include="Assessment\Boot.cs" />
     <Compile Include="Assessment\Bypass.cs" />
     <Compile Include="Assessment\CPU.cs" />
-    <Compile Include="Assessment\DirectX.cs" />
+    <Compile Include="Assessment\Display.cs" />
     <Compile Include="Assessment\GPU.cs" />
     <Compile Include="Assessment\Inet.cs" />
     <Compile Include="Assessment\OS.cs" />
@@ -122,6 +122,7 @@
     <EmbeddedResource Include="EmbeddedResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbeddedResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -142,6 +143,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\bypass.reg" />
+    <None Include="Resources\qualcommsupport.txt" />
     <None Include="Resources\undo_bypass.reg" />
   </ItemGroup>
   <ItemGroup>

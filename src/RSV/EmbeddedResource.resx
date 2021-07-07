@@ -127,6 +127,9 @@
   <data name="intelsupport" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\intelsupport.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="qualcommsupport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\qualcommsupport.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="undo_bypass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\undo_bypass.reg;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>

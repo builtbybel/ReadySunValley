@@ -104,6 +104,7 @@ namespace ReadySunValley
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlRight = new System.Windows.Forms.Panel();
+            this.lnkMSRequirements = new System.Windows.Forms.LinkLabel();
             this.btnPnlShareScreen = new System.Windows.Forms.Button();
             this.assetOpenGitHub = new System.Windows.Forms.PictureBox();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -941,6 +942,7 @@ namespace ReadySunValley
             this.cpugood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpugood.TabIndex = 62;
             this.cpugood.TabStop = false;
+            this.cpugood.Visible = false;
             // 
             // PicCompare
             // 
@@ -954,6 +956,7 @@ namespace ReadySunValley
             // 
             // MainMenu
             // 
+            this.MainMenu.BackColor = System.Drawing.SystemColors.Control;
             this.MainMenu.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuVoteContent,
@@ -963,17 +966,17 @@ namespace ReadySunValley
             this.menuInfo});
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MainMenu.Size = new System.Drawing.Size(391, 118);
+            this.MainMenu.Size = new System.Drawing.Size(391, 119);
             // 
             // menuVoteContent
             // 
             this.menuVoteContent.BackColor = System.Drawing.Color.Khaki;
             this.menuVoteContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.menuVoteContent.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuVoteContent.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuVoteContent.ForeColor = System.Drawing.Color.DeepPink;
             this.menuVoteContent.Name = "menuVoteContent";
             this.menuVoteContent.ReadOnly = true;
-            this.menuVoteContent.Size = new System.Drawing.Size(330, 22);
+            this.menuVoteContent.Size = new System.Drawing.Size(330, 23);
             this.menuVoteContent.Text = "Does your hardware qualify for Windows 11?";
             // 
             // menuVote
@@ -1006,17 +1009,34 @@ namespace ReadySunValley
             // 
             this.pnlRight.AutoScroll = true;
             this.pnlRight.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlRight.Controls.Add(this.PicCompare);
+            this.pnlRight.Controls.Add(this.lnkMSRequirements);
             this.pnlRight.Controls.Add(this.btnPnlShareScreen);
             this.pnlRight.Controls.Add(this.assetOpenGitHub);
             this.pnlRight.Controls.Add(this.lblStatus);
             this.pnlRight.Controls.Add(this.LblSumBad);
             this.pnlRight.Controls.Add(this.lnkCompatibilityFix);
-            this.pnlRight.Controls.Add(this.PicCompare);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRight.Location = new System.Drawing.Point(776, 0);
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Size = new System.Drawing.Size(395, 746);
             this.pnlRight.TabIndex = 128;
+            // 
+            // lnkMSRequirements
+            // 
+            this.lnkMSRequirements.ActiveLinkColor = System.Drawing.Color.DeepPink;
+            this.lnkMSRequirements.AutoSize = true;
+            this.lnkMSRequirements.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkMSRequirements.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkMSRequirements.LinkColor = System.Drawing.Color.Black;
+            this.lnkMSRequirements.Location = new System.Drawing.Point(20, 327);
+            this.lnkMSRequirements.Name = "lnkMSRequirements";
+            this.lnkMSRequirements.Size = new System.Drawing.Size(315, 15);
+            this.lnkMSRequirements.TabIndex = 132;
+            this.lnkMSRequirements.TabStop = true;
+            this.lnkMSRequirements.Text = "For more information, visit https://aka.ms/WindowsSysReq";
+            this.lnkMSRequirements.Visible = false;
+            this.lnkMSRequirements.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMSRequirements_LinkClicked);
             // 
             // btnPnlShareScreen
             // 
@@ -1033,7 +1053,7 @@ namespace ReadySunValley
             this.btnPnlShareScreen.Name = "btnPnlShareScreen";
             this.btnPnlShareScreen.Size = new System.Drawing.Size(294, 32);
             this.btnPnlShareScreen.TabIndex = 130;
-            this.btnPnlShareScreen.Text = "Capture and Share om Twitter";
+            this.btnPnlShareScreen.Text = "Capture and Share on Twitter";
             this.btnPnlShareScreen.UseVisualStyleBackColor = false;
             this.btnPnlShareScreen.Visible = false;
             this.btnPnlShareScreen.Click += new System.EventHandler(this.btnPnlShareScreen_Click);
@@ -1063,7 +1083,7 @@ namespace ReadySunValley
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(367, 68);
             this.lblStatus.TabIndex = 114;
-            this.lblStatus.Text = "Components not ready for Windows 11";
+            this.lblStatus.Text = "Checking system requirements...";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LblSumBad
@@ -1087,7 +1107,7 @@ namespace ReadySunValley
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lnkCompatibilityFix.AutoEllipsis = true;
             this.lnkCompatibilityFix.BackColor = System.Drawing.Color.Transparent;
-            this.lnkCompatibilityFix.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.lnkCompatibilityFix.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkCompatibilityFix.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lnkCompatibilityFix.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lnkCompatibilityFix.LinkColor = System.Drawing.Color.DeepPink;
@@ -1097,6 +1117,7 @@ namespace ReadySunValley
             this.lnkCompatibilityFix.TabIndex = 128;
             this.lnkCompatibilityFix.TabStop = true;
             this.lnkCompatibilityFix.Text = "Click here to fix some of these failed results with a registry hack\r\n";
+            this.lnkCompatibilityFix.Visible = false;
             this.lnkCompatibilityFix.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCompatibilityFix_LinkClicked);
             // 
             // pBar
@@ -1187,7 +1208,7 @@ namespace ReadySunValley
             this.lblSubHeader.LinkColor = System.Drawing.Color.DeepPink;
             this.lblSubHeader.Location = new System.Drawing.Point(13, 68);
             this.lblSubHeader.Name = "lblSubHeader";
-            this.lblSubHeader.Size = new System.Drawing.Size(331, 16);
+            this.lblSubHeader.Size = new System.Drawing.Size(331, 18);
             this.lblSubHeader.TabIndex = 24;
             this.lblSubHeader.TabStop = true;
             this.lblSubHeader.Text = "*Move the cusor over a failed result to get more information";
@@ -1340,6 +1361,7 @@ namespace ReadySunValley
         private System.Windows.Forms.Button btnRecheck;
         private System.Windows.Forms.PictureBox assetOpenGitHub;
         private System.Windows.Forms.Button btnPnlShareScreen;
+        private System.Windows.Forms.LinkLabel lnkMSRequirements;
     }
 }
 

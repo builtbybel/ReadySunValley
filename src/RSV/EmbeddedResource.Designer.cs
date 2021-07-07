@@ -239,6 +239,20 @@ namespace ReadySunValley {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die 850
+        ///7c
+        ///8c
+        ///8cx
+        ///SQ1
+        ///SQ2 ähnelt.
+        /// </summary>
+        internal static string qualcommsupport {
+            get {
+                return ResourceManager.GetString("qualcommsupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Windows Registry Editor Version 5.00
         ///
         ///[-HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig] ähnelt.
