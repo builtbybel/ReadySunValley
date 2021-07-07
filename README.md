@@ -33,12 +33,12 @@ alt="GitHub issues">
   <a href="#features">Features</a> •
   <a href="#download">Download</a> •
   <a href="#requirements">Windows 11 Requirements</a> •
+  <a href="#support">Supported processors</a> •
   <a href="#credits">Credits</a> 
 </p>
 
 ![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv.png)
 
-		
 ## Requirements
 Spec|Requirements|
 ----|----|
@@ -50,9 +50,7 @@ TPM|Trusted Platform Module (TPM) version 2.0
 Graphics card|Compatible with DirectX 12 or later with WDDM 2.0 driver
 Display|HD (720p) display greater than 9 inches diagonally, 8 bits per color channel
 Internet connection and Microsoft account|For Windows 11 Home edition: internet connectivity; Microsoft account to complete device setup on first use For all Windows 11 editions: internet access to perform updates and to download and use some features; Microsoft account for some features
-	
-	
-	
+		
 ## Features
 Lets you check if your device is ready for the above Windows 11/Sun Valley requirements.
 
@@ -60,21 +58,19 @@ Lets you check if your device is ready for the above Windows 11/Sun Valley requi
 - Bypassing TPM/Secure boot restrictions
 - Comparing your results with Microsoft requirements
 - Comparing results with another Compatibility checker [WhyNotWin11](https://github.com/rcmaehl/WhyNotWin11)
-- Grabbing a screenshot to directly share your results on social media![ReadySunValley_vQNTWJ35Eh](https://user-images.githubusercontent.com/57478606/124804519-af896580-df5a-11eb-8a5f-1f6f9e224d67.png)
-![ReadySunValley_vQNTWJ35Eh](https://user-images.githubusercontent.com/57478606/124804551-b57f4680-df5a-11eb-999a-0fc5d76ad3a7.png)
-
-
+- Grabbing a screenshot to directly share your results on social media!
 	
+## Support
+Supported processors are synchronized from these files [Intel](https://github.com/builtbybel/ReadySunValley/blob/main/src/RSV/Resources/intelsupport.txt)  | [AMD](https://github.com/builtbybel/ReadySunValley/blob/main/src/RSV/Resources/amdsupport.txt) | [Qualcomm](https://github.com/builtbybel/ReadySunValley/blob/main/src/RSV/Resources/qualcommsupport.txt)
 	
 ## Download
 
 - (Latest release) [Download](https://github.com/builtbybel/ReadySunValley/releases)
 - (Source Code) [Download](https://github.com/builtbybel/ReadySunValley/releases) 
 
-
 ## Credits
 
-This project is based upon https://github.com/mag-nif-i-cent/Affinity11
+This project is based upon the idea of https://github.com/mag-nif-i-cent/Affinity11
 
 ---
 
