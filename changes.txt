@@ -1,4 +1,4 @@
 ---------------------------------------------------
-This release ads localization support. More infos here https://github.com/builtbybel/ReadySunValley/releases/tag/0.22.0#
+This release ads localization support. More infos and howto translate the app into your native language on the Github releases page.
 
 Moreover, the release is now also available in German
