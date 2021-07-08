@@ -1,2 +1,4 @@
------------------------------------
-This release adds detection support for Qualcomm processors and fixes a ciritcal display detection bug.
+---------------------------------------------------
+This release ads localization support. More infos here https://github.com/builtbybel/ReadySunValley/releases/tag/0.22.0#
+
+Moreover, the release is now also available in German
