@@ -7,7 +7,6 @@ using System.Management;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Threading.Tasks;
 
 namespace ReadySunValley
 {
@@ -18,13 +17,62 @@ namespace ReadySunValley
             InitializeComponent();
 
             // GUI options
-            this.Text = Helpers.Strings.Titles.AppName;     // Title
-            lblMainMenu.Text = "\ue700";                    // Hamburger menu
-            btnRecheck.Text = "\ue72c";                     // Refresh
+            this.Text += " (" + Assessment.OS.GetOS() + Assessment.OS.Is64Bit() + ")";   // Title
+            lblMainMenu.Text = "\ue700";                                                 // Hamburger menu
+            btnRecheck.Text = "\ue72c";                                                  // Refresh
+        }
+
+        public void Globalization()
+        {
+            btnCompareUtil.Text = Locales.Locale.btnCompareUtil;
+            btnPnlShareScreen.Text = Locales.Locale.btnPnlShareScreen;
+            btnShareScreen.Text = Locales.Locale.btnShareScreen;
+            checkCompareMS.Text = Locales.Locale.checkCompareMS;
+            lblBitness.Text = Locales.Locale.lblBitness;
+            lblBitnessCheck.Text = Locales.Locale.lblBitnessCheck;
+            lblBootType.Text = Locales.Locale.lblBootType;
+            lblBootTypeCheck.Text = Locales.Locale.lblBootTypeCheck;
+            lblCores.Text = Locales.Locale.lblCores;
+            lblCoresCheck.Text = Locales.Locale.lblCoresCheck;
+            lblCPU.Text = Locales.Locale.lblCPU;
+            lblDirectX.Text = Locales.Locale.lblDirectX;
+            lblDirectXCheck.Text = Locales.Locale.lblDirectXCheck;
+            lblDiskType.Text = Locales.Locale.lblDiskType;
+            lblDiskTypeCheck.Text = Locales.Locale.lblDiskTypeCheck;
+            lblDisplay.Text = Locales.Locale.lblDisplay;
+            lblDisplayCheck.Text = Locales.Locale.lblDisplayCheck;
+            lblFreeSpace.Text = Locales.Locale.lblFreeSpace;
+            lblFreeSpaceCheck.Text = Locales.Locale.lblFreeSpaceCheck;
+            lblHeader.Text = Locales.Locale.lblHeader;
+            lblInet.Text = Locales.Locale.lblInet;
+            lblInetCheck.Text = Locales.Locale.lblInetCheck;
+            lblMhz.Text = Locales.Locale.lblMhz;
+            lblMhzCheck.Text = Locales.Locale.lblMhzCheck;
+            lblRAM.Text = Locales.Locale.lblRAM;
+            lblRAMCheck.Text = Locales.Locale.lblRAMCheck;
+            lblSecureBoot.Text = Locales.Locale.lblSecureBoot;
+            lblSecureBootCheck.Text = Locales.Locale.lblSecureBootCheck;
+            lblStatus.Text = Locales.Locale.lblStatus;
+            lblStorage.Text = Locales.Locale.lblStorage;
+            lblStorageCheck.Text = Locales.Locale.lblStorageCheck;
+            lblSubHeader.Text = Locales.Locale.lblSubHeader;
+            lblTPM.Text = Locales.Locale.lblTPM;
+            lblTPMCheck.Text = Locales.Locale.assessmentTPMFail;
+            lblWDDM.Text = Locales.Locale.lblWDDM;
+            lblWDDMCheck.Text = Locales.Locale.lblWDDMCheck;
+            lnkCompatibilityFix.Text = Locales.Locale.lnkCompatibilityFix;
+            menuVoteContent.Text = Locales.Locale.menuVoteContent;
+            menuVote.Text = Locales.Locale.menuVote;
+            menuBypassUndo.Text = Locales.Locale.menuBypassUndo;
+
         }
 
         private void MainWindow_Shown(object sender, EventArgs e)
         {
+            // GUI localization
+            Globalization();
+
+            // Run Assessments
             DoCompatibilityCheck();
         }
 
@@ -52,11 +100,11 @@ namespace ReadySunValley
             this.Enabled = false;
 
             // First checks
-            lblStatus.Text = "Checking system requirements [1/13]";
+            lblStatus.Text = Locales.Locale.assessmentSystemRequirements;
             Helpers.Utils.AppUpdate();
 
             // CPU arch
-            lblStatus.Text = "Checking CPU architecture [2/13]";
+            lblStatus.Text = Locales.Locale.assessmentCPUArchitecture;
             lblBitnessCheck.Text = Assessment.CPU.Architecture();
             if (lblBitnessCheck.Text == "64 Bit")
             {
@@ -71,13 +119,13 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            lblStatus.Text = "Checking Display [3/13]";
+            lblStatus.Text = Locales.Locale.assessmentDisplay;
 
             lblDisplayCheck.Text = Assessment.Display.MonitorSize();
 
             if (double.Parse(lblDisplayCheck.Text) <= 9)
             {
-                lblDisplayCheck.Text += " inch";
+                lblDisplayCheck.Text += " " + Locales.Locale.assessmentDisplayFormat;
                 screengood.Visible = false;
                 screenbad.Visible = true;
 
@@ -85,7 +133,7 @@ namespace ReadySunValley
             }
             else
             {
-                lblDisplayCheck.Text += " inch";
+                lblDisplayCheck.Text += " " + Locales.Locale.assessmentDisplayFormat;
                 screengood.Visible = true;
                 screenbad.Visible = false;
             }
@@ -106,9 +154,9 @@ namespace ReadySunValley
             }
 
             // CPU Clock speed
-            lblStatus.Text = "Checking CPU speed [4/13]";
+            lblStatus.Text = Locales.Locale.assessmentCPUSpeed;
             var clockspeed = Assessment.CPU.ClockSpeed();
-            lblMhzCheck.Text = clockspeed + " MHz Frequency";
+            lblMhzCheck.Text = clockspeed + " " + Locales.Locale.assessmentCPUSpeedFormat;
             int x = Int32.Parse(clockspeed);
             if (x > 1000)
             {
@@ -124,7 +172,7 @@ namespace ReadySunValley
             }
 
             // CPU Core counts
-            lblStatus.Text = "Getting Core counts [5/13]";
+            lblStatus.Text = Locales.Locale.assessmentCPUCores;
             int coreCount = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
@@ -146,7 +194,7 @@ namespace ReadySunValley
             }
 
             // CPU Compatibility check
-            lblStatus.Text = "Checking CPU Compatibility [6/13]";
+            lblStatus.Text = Locales.Locale.assessmentCPUCompatibility;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
                 lblCPU.Text = item["Name"].ToString();
@@ -198,7 +246,7 @@ namespace ReadySunValley
             }
 
             // Partition Type
-            lblStatus.Text = "Checking Partition Types [7/13]";
+            lblStatus.Text = Locales.Locale.assessmentPartitionType;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition WHERE BootPartition=True").Get())
             {
                 if (item["Type"].ToString().Contains("System"))
@@ -222,11 +270,11 @@ namespace ReadySunValley
             }
 
             // Secure Boot
-            lblStatus.Text = "Checking Secure Boot Status [8/13]";
+            lblStatus.Text = Locales.Locale.assessmentSecureBoot;
 
             if (Assessment.Boot.IsSecureBoot())
             {
-                lblSecureBootCheck.Text = "Supported";
+                lblSecureBootCheck.Text = Locales.Locale.assessmentSecureBootOK;
 
                 securebootgood.Visible = true;
                 securebootbad.Visible = false;
@@ -235,13 +283,13 @@ namespace ReadySunValley
             {
                 securebootgood.Visible = false;
                 securebootbad.Visible = true;
-                lblSecureBootCheck.Text = "Unsupported";
+                lblSecureBootCheck.Text = Locales.Locale.assessmentSecureBootFail;
 
                 performCompatibilityCount += 1;
             }
 
             // RAM
-            lblStatus.Text = "Checking RAM Compatibility [9/13]";
+            lblStatus.Text = Locales.Locale.assessmentRAM;
             long ram = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_PhysicalMemory").Get())
             {
@@ -270,7 +318,7 @@ namespace ReadySunValley
             }
 
             // Storage info
-            lblStatus.Text = "Checking Disk size [10/13]";
+            lblStatus.Text = Locales.Locale.assessmentStorage;
             var systemdrive = Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
 
             long systemfreespace = Assessment.Storage.GetTotalFreeSpace(systemdrive);
@@ -315,7 +363,7 @@ namespace ReadySunValley
             }
 
             // DirectX & WDDM
-            lblStatus.Text = "Getting DirectX && WDDM2 [11/13]";
+            lblStatus.Text = Locales.Locale.assessmentDirectXWDDM;
             try
             {
                 string directxver;
@@ -376,11 +424,11 @@ namespace ReadySunValley
             catch { }
 
             // GPU
-            lblStatus.Text = "Getting Graphics card [12/13]";
+            lblStatus.Text = Locales.Locale.assessmentGPU;
             lblWDDMCheck.Text += " (" + Assessment.GPU.Unit() + ")";
 
             // TPM, Ref. https://wutils.com/wmi/root/cimv2/security/microsofttpm/win32_tpm/cs-samples.html
-            lblStatus.Text = "Getting TPM version... [10/11]";
+            lblStatus.Text = Locales.Locale.assessmentTPM;
             ManagementScope scope = new ManagementScope("\\\\.\\ROOT\\CIMV2\\Security\\MicrosoftTpm");
             ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Tpm");
             ManagementObjectSearcher searcher =
@@ -401,7 +449,7 @@ namespace ReadySunValley
                 }
                 if (splitted[0].Contains("1.2"))
                 {
-                    lblTPMCheck.Text = splitted[0] + " (Not supported)";
+                    lblTPMCheck.Text = splitted[0] + " " + Locales.Locale.assessmentTPMLow;
 
                     tpmgood.Visible = false;
                     tpmbad.Visible = false;
@@ -410,7 +458,7 @@ namespace ReadySunValley
                     performCompatibilityCount += 1;
                 }
             }
-            if (lblTPMCheck.Text == "Not present")
+            if (lblTPMCheck.Text == Locales.Locale.assessmentTPMFail)
             {
                 tpmbad.Visible = true;
                 tpmgood.Visible = false;
@@ -420,16 +468,16 @@ namespace ReadySunValley
             }
 
             // Inet
-            lblStatus.Text = "Checking Internet connection [13/13]";
+            lblStatus.Text = Locales.Locale.assessmentInet;
             if (Assessment.Inet.isINet())
             {
-                lblInetCheck.Text = "Available";
+                lblInetCheck.Text = Locales.Locale.assessmentInetOK;
                 inetgood.Visible = true;
                 inetbad.Visible = false;
             }
             else
             {
-                lblInetCheck.Text = "No";
+                lblInetCheck.Text = Locales.Locale.assessmentInetFail;
                 inetgood.Visible = false;
                 inetbad.Visible = true;
 
@@ -442,10 +490,10 @@ namespace ReadySunValley
 
             if (sum == 0)
             {
-                LblSumBad.Text = "You're ready for Sun Valley!";
+                // You're ready for Sun Valley!
+                LblSumBad.Text = Locales.Locale.assessmentSummaryOK;
                 LblSumBad.ForeColor = Color.Green;
                 lblStatus.Visible = false;
-                lnkMSRequirements.Visible = false;
 
                 // It's all good, so hide bypass options
                 lnkCompatibilityFix.Visible = false;
@@ -453,11 +501,10 @@ namespace ReadySunValley
 
                 lnkCompatibilityFix.Visible = false;
             }
-            else
+            else // Components not ready for Windows 11
             {
-                lblStatus.Text = "Components not ready for Windows 11";
+                lblStatus.Text = Locales.Locale.assessmentSummaryFail;
                 lnkCompatibilityFix.Visible = true;
-                lnkMSRequirements.Visible = true;
                 LblSumBad.ForeColor = Color.DeepPink;
             }
 
@@ -466,17 +513,17 @@ namespace ReadySunValley
 
         private void lnkCompatibilityFix_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (MessageBox.Show(Helpers.Strings.Body.Bypass, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Locales.Locale.optionBypass.Replace("\\n","\n"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Assessment.Bypass.Windows11(EmbeddedResource.bypass);
-                MessageBox.Show(Helpers.Strings.Body.BypassOK, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Locales.Locale.infoBypassDone, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void menuBypassUndo_Click(object sender, EventArgs e)
         {
             Assessment.Bypass.Windows11(EmbeddedResource.undo_bypass);
-            MessageBox.Show(Helpers.Strings.Body.BypassUndo, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(Locales.Locale.infoBypassUndo, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void CaptureToShare()
@@ -500,7 +547,7 @@ namespace ReadySunValley
                 bmp.Save(dialog.FileName);
 
                 Process.Start(Helpers.Strings.Uri.ShareTwitter); // Post to Twitter
-                MessageBox.Show("Don't forget to upload the results picture to Twitter.");
+                MessageBox.Show(Locales.Locale.infoCaptureHint);
             }
         }
 
@@ -516,7 +563,7 @@ namespace ReadySunValley
 
         private void btnCompareUtil_Click(object sender, EventArgs e) => GetCompareUtil();
 
-        private void menuInfo_Click(object sender, EventArgs e) => MessageBox.Show(Helpers.Strings.Body.AppInfo, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private void menuInfo_Click(object sender, EventArgs e) => MessageBox.Show("ReadySunValley" + "\nVersion " + Program.GetCurrentVersionTostring() + "\r\n" + Locales.Locale.AppInfo.Replace("\\t", "\t"), "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         private void menuVote_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.VotePage);
 
@@ -525,114 +572,115 @@ namespace ReadySunValley
         private void cpuinfo_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.cpuinfo, Helpers.Strings.Hover.CPUInfo);
+            tt.SetToolTip(this.cpuinfo, Locales.Locale.hoveCPUInfo);
         }
 
         private void cpubad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.cpubad, Helpers.Strings.Hover.CPUBad);
+            tt.SetToolTip(this.cpubad, Locales.Locale.hoverCPUBad);
         }
 
         private void freqbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.freqbad, Helpers.Strings.Hover.FreqBad);
+            tt.SetToolTip(this.freqbad, Locales.Locale.hoverCPUSpeedBad);
         }
 
         private void coresbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.coresbad, Helpers.Strings.Hover.CoresBad);
+            tt.SetToolTip(this.coresbad, Locales.Locale.hoverCPUCoresBad);
         }
 
         private void bootbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.bootbad, Helpers.Strings.Hover.BootBad);
-        }
-
-        private void partbad_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.partbad, Helpers.Strings.Hover.PartBad);
-        }
-
-        private void screenbad_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.screenbad, Helpers.Strings.Hover.ScreenBad);
-        }
-
-        private void rambad_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.rambad, Helpers.Strings.Hover.RAMBad);
-        }
-
-        private void hddbad_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.hddbad, Helpers.Strings.Hover.HDDBad);
-        }
-
-        private void freespaceinfo_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.freespaceinfo, Helpers.Strings.Hover.FreeSpaceInfo);
-        }
-
-        private void directbad_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.directbad, Helpers.Strings.Hover.DirectXBad);
-        }
-
-        private void wddmbad_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.wddmbad, Helpers.Strings.Hover.WDDMBad);
-        }
-
-        private void tpminfo_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.tpminfo, Helpers.Strings.Hover.TPMInfo);
-        }
-
-        private void tpmbad_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.tpmbad, Helpers.Strings.Hover.TPMBad);
+            tt.SetToolTip(this.bootbad, Locales.Locale.hoverBootBad);
         }
 
         private void securebootbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.securebootbad, Helpers.Strings.Hover.SecureBootBad);
+            tt.SetToolTip(this.securebootbad, Locales.Locale.hoverSecureBootBad);
         }
+
+        private void partbad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.partbad, Locales.Locale.hoverPartitionBad);
+        }
+
+        private void screenbad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.screenbad, Locales.Locale.hoverDisplayBad);
+        }
+
+        private void rambad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.rambad, Locales.Locale.hoverRAMBad);
+        }
+
+        private void hddbad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.hddbad, Locales.Locale.hoverStorageBad);
+        }
+
+        private void freespaceinfo_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.freespaceinfo, Locales.Locale.hoverFreeSpaceInfo);
+        }
+
+        private void directbad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.directbad, Locales.Locale.hoverDiectXBad);
+        }
+
+        private void wddmbad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.wddmbad, Locales.Locale.hoverWDDMBad);
+        }
+
+        private void tpminfo_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.tpminfo, Locales.Locale.hoverTPMInfo);
+        }
+
+        private void tpmbad_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.tpmbad, Locales.Locale.hoverTPMBad);
+        }
+
 
         private void inetbad_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.inetbad, Helpers.Strings.Hover.InetBad);
+            tt.SetToolTip(this.inetbad, Locales.Locale.hoverInetBad);
         }
 
         private void BtnRecheck_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.btnRecheck, Helpers.Strings.Hover.Recheck);
+            tt.SetToolTip(this.btnRecheck, Locales.Locale.hoverRecheck);
         }
 
         private void AssetOpenGitHub_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.assetOpenGitHub, Helpers.Strings.Hover.AssetInfo);
+            tt.SetToolTip(this.assetOpenGitHub, Locales.Locale.hoverAssetInfo);
         }
 
         private void GetCompareUtil()
         {
-            if (MessageBox.Show("Do you want to compare the results with the Utility \"WhyNotWin11\"?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show(Locales.Locale.infoCompareUtil, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 pBar.Visible = true;
 
@@ -681,7 +729,7 @@ namespace ReadySunValley
 
                 pBar.Visible = false;
 
-                MessageBox.Show("Ready! So now put the two apps next to each other and take a look at the results.");
+                MessageBox.Show(Locales.Locale.infoCompareUtilDownloadMessage);
             }
             catch (Exception ex)
             {
@@ -695,11 +743,11 @@ namespace ReadySunValley
             if (checkCompareMS.Checked)
             {
                 lblStatus.Visible = false;
-                lnkMSRequirements.Visible = false;
+                lnkMSRequirements.Visible = true;
                 LblSumBad.Visible = false;
                 lnkCompatibilityFix.Visible = false;
                 PicCompare.Visible = true;
-                checkCompareMS.Text = "Back to my results";
+                checkCompareMS.Text = Locales.Locale.checkCompareMSBack;
 
                 var request = WebRequest.Create(Helpers.Strings.Uri.CompareMS);
 
@@ -710,10 +758,10 @@ namespace ReadySunValley
             }
             else if (!checkCompareMS.Checked)
             {
-                checkCompareMS.Text = "Compare with Microsoft requirements";
+                checkCompareMS.Text = Locales.Locale.checkCompareMS;
                 PicCompare.Visible = false;
                 lblStatus.Visible = true;
-                lnkMSRequirements.Visible = true;
+                lnkMSRequirements.Visible = false;
                 LblSumBad.Visible = true;
                 lnkCompatibilityFix.Visible = true;
             }

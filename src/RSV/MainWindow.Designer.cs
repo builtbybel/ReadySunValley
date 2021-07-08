@@ -44,7 +44,7 @@ namespace ReadySunValley
             this.lblSecureBootCheck = new System.Windows.Forms.Label();
             this.lblSecureBoot = new System.Windows.Forms.Label();
             this.lblFreeSpaceCheck = new System.Windows.Forms.Label();
-            this.blFreeSpace = new System.Windows.Forms.Label();
+            this.lblFreeSpace = new System.Windows.Forms.Label();
             this.lblWDDMCheck = new System.Windows.Forms.Label();
             this.lblWDDM = new System.Windows.Forms.Label();
             this.lblDisplayCheck = new System.Windows.Forms.Label();
@@ -78,8 +78,6 @@ namespace ReadySunValley
             this.partbad = new System.Windows.Forms.PictureBox();
             this.rambad = new System.Windows.Forms.PictureBox();
             this.screenbad = new System.Windows.Forms.PictureBox();
-            this.tpmgood = new System.Windows.Forms.PictureBox();
-            this.tpminfo = new System.Windows.Forms.PictureBox();
             this.bootgood = new System.Windows.Forms.PictureBox();
             this.bootbad = new System.Windows.Forms.PictureBox();
             this.hddgood = new System.Windows.Forms.PictureBox();
@@ -93,9 +91,11 @@ namespace ReadySunValley
             this.wddmbad = new System.Windows.Forms.PictureBox();
             this.inetgood = new System.Windows.Forms.PictureBox();
             this.inetbad = new System.Windows.Forms.PictureBox();
+            this.cpugood = new System.Windows.Forms.PictureBox();
             this.cpuinfo = new System.Windows.Forms.PictureBox();
             this.cpubad = new System.Windows.Forms.PictureBox();
-            this.cpugood = new System.Windows.Forms.PictureBox();
+            this.tpmgood = new System.Windows.Forms.PictureBox();
+            this.tpminfo = new System.Windows.Forms.PictureBox();
             this.PicCompare = new System.Windows.Forms.PictureBox();
             this.MainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuVoteContent = new System.Windows.Forms.ToolStripTextBox();
@@ -131,8 +131,6 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.partbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rambad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.screenbad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hddgood)).BeginInit();
@@ -146,9 +144,11 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetbad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpubad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCompare)).BeginInit();
             this.MainMenu.SuspendLayout();
             this.pnlRight.SuspendLayout();
@@ -158,27 +158,18 @@ namespace ReadySunValley
             // 
             // checkCompareMS
             // 
-            this.checkCompareMS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkCompareMS.Appearance = System.Windows.Forms.Appearance.Button;
+            resources.ApplyResources(this.checkCompareMS, "checkCompareMS");
             this.checkCompareMS.BackColor = System.Drawing.Color.Gainsboro;
             this.checkCompareMS.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.checkCompareMS.FlatAppearance.BorderSize = 0;
             this.checkCompareMS.FlatAppearance.CheckedBackColor = System.Drawing.Color.HotPink;
-            this.checkCompareMS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkCompareMS.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkCompareMS.Location = new System.Drawing.Point(18, 208);
             this.checkCompareMS.Name = "checkCompareMS";
-            this.checkCompareMS.Size = new System.Drawing.Size(318, 32);
-            this.checkCompareMS.TabIndex = 128;
-            this.checkCompareMS.Text = "Compare with Microsoft ";
-            this.checkCompareMS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkCompareMS.UseVisualStyleBackColor = false;
             this.checkCompareMS.CheckedChanged += new System.EventHandler(this.CheckCompareMS_CheckedChanged);
             // 
             // pnlLeft
             // 
-            this.pnlLeft.AutoScroll = true;
+            resources.ApplyResources(this.pnlLeft, "pnlLeft");
             this.pnlLeft.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlLeft.Controls.Add(this.btnRecheck);
             this.pnlLeft.Controls.Add(this.lblMhz);
@@ -191,7 +182,7 @@ namespace ReadySunValley
             this.pnlLeft.Controls.Add(this.lblSecureBootCheck);
             this.pnlLeft.Controls.Add(this.lblSecureBoot);
             this.pnlLeft.Controls.Add(this.lblFreeSpaceCheck);
-            this.pnlLeft.Controls.Add(this.blFreeSpace);
+            this.pnlLeft.Controls.Add(this.lblFreeSpace);
             this.pnlLeft.Controls.Add(this.lblWDDMCheck);
             this.pnlLeft.Controls.Add(this.lblWDDM);
             this.pnlLeft.Controls.Add(this.lblDisplayCheck);
@@ -225,8 +216,6 @@ namespace ReadySunValley
             this.pnlLeft.Controls.Add(this.partbad);
             this.pnlLeft.Controls.Add(this.rambad);
             this.pnlLeft.Controls.Add(this.screenbad);
-            this.pnlLeft.Controls.Add(this.tpmgood);
-            this.pnlLeft.Controls.Add(this.tpminfo);
             this.pnlLeft.Controls.Add(this.bootgood);
             this.pnlLeft.Controls.Add(this.bootbad);
             this.pnlLeft.Controls.Add(this.hddgood);
@@ -240,724 +229,405 @@ namespace ReadySunValley
             this.pnlLeft.Controls.Add(this.wddmbad);
             this.pnlLeft.Controls.Add(this.inetgood);
             this.pnlLeft.Controls.Add(this.inetbad);
+            this.pnlLeft.Controls.Add(this.cpugood);
             this.pnlLeft.Controls.Add(this.cpuinfo);
             this.pnlLeft.Controls.Add(this.cpubad);
-            this.pnlLeft.Controls.Add(this.cpugood);
-            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Controls.Add(this.tpmgood);
+            this.pnlLeft.Controls.Add(this.tpminfo);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(423, 746);
-            this.pnlLeft.TabIndex = 1;
             // 
             // btnRecheck
             // 
             this.btnRecheck.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRecheck.FlatAppearance.BorderSize = 0;
             this.btnRecheck.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnRecheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecheck.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F);
-            this.btnRecheck.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRecheck.Location = new System.Drawing.Point(380, 30);
-            this.btnRecheck.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            resources.ApplyResources(this.btnRecheck, "btnRecheck");
             this.btnRecheck.Name = "btnRecheck";
-            this.btnRecheck.Size = new System.Drawing.Size(41, 43);
-            this.btnRecheck.TabIndex = 128;
             this.btnRecheck.UseVisualStyleBackColor = true;
             this.btnRecheck.Click += new System.EventHandler(this.btnRecheck_Click);
             this.btnRecheck.MouseHover += new System.EventHandler(this.BtnRecheck_MouseHover);
             // 
             // lblMhz
             // 
-            this.lblMhz.AutoSize = true;
-            this.lblMhz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMhz.Location = new System.Drawing.Point(66, 149);
+            resources.ApplyResources(this.lblMhz, "lblMhz");
             this.lblMhz.Name = "lblMhz";
-            this.lblMhz.Size = new System.Drawing.Size(40, 21);
-            this.lblMhz.TabIndex = 127;
-            this.lblMhz.Text = "Mhz";
             // 
             // lblCores
             // 
-            this.lblCores.AutoSize = true;
-            this.lblCores.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCores.Location = new System.Drawing.Point(66, 108);
+            resources.ApplyResources(this.lblCores, "lblCores");
             this.lblCores.Name = "lblCores";
-            this.lblCores.Size = new System.Drawing.Size(50, 21);
-            this.lblCores.TabIndex = 126;
-            this.lblCores.Text = "Cores";
             // 
             // lblBitnessCheck
             // 
-            this.lblBitnessCheck.AutoSize = true;
-            this.lblBitnessCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBitnessCheck.Location = new System.Drawing.Point(219, 192);
+            resources.ApplyResources(this.lblBitnessCheck, "lblBitnessCheck");
             this.lblBitnessCheck.Name = "lblBitnessCheck";
-            this.lblBitnessCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblBitnessCheck.TabIndex = 122;
-            this.lblBitnessCheck.Text = "Checking...";
             // 
             // lblBitness
             // 
-            this.lblBitness.AutoSize = true;
-            this.lblBitness.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBitness.Location = new System.Drawing.Point(66, 192);
+            resources.ApplyResources(this.lblBitness, "lblBitness");
             this.lblBitness.Name = "lblBitness";
-            this.lblBitness.Size = new System.Drawing.Size(94, 21);
-            this.lblBitness.TabIndex = 119;
-            this.lblBitness.Text = "Architecture";
             // 
             // lblInet
             // 
-            this.lblInet.AutoSize = true;
-            this.lblInet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInet.Location = new System.Drawing.Point(66, 682);
+            resources.ApplyResources(this.lblInet, "lblInet");
             this.lblInet.Name = "lblInet";
-            this.lblInet.Size = new System.Drawing.Size(64, 21);
-            this.lblInet.TabIndex = 118;
-            this.lblInet.Text = "Internet";
             // 
             // lblMainMenu
             // 
-            this.lblMainMenu.AutoSize = true;
+            resources.ApplyResources(this.lblMainMenu, "lblMainMenu");
             this.lblMainMenu.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblMainMenu.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.lblMainMenu.FlatAppearance.BorderSize = 0;
             this.lblMainMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.HotPink;
-            this.lblMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMainMenu.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMainMenu.ForeColor = System.Drawing.Color.Black;
-            this.lblMainMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblMainMenu.Location = new System.Drawing.Point(0, 0);
             this.lblMainMenu.Name = "lblMainMenu";
-            this.lblMainMenu.Size = new System.Drawing.Size(48, 51);
-            this.lblMainMenu.TabIndex = 113;
             this.lblMainMenu.UseVisualStyleBackColor = false;
             this.lblMainMenu.Click += new System.EventHandler(this.lblMainMenu_Click);
             // 
             // lblInetCheck
             // 
-            this.lblInetCheck.AutoSize = true;
-            this.lblInetCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInetCheck.Location = new System.Drawing.Point(219, 682);
+            resources.ApplyResources(this.lblInetCheck, "lblInetCheck");
             this.lblInetCheck.Name = "lblInetCheck";
-            this.lblInetCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblInetCheck.TabIndex = 117;
-            this.lblInetCheck.Text = "Checking...";
             // 
             // lblSecureBootCheck
             // 
-            this.lblSecureBootCheck.AutoSize = true;
-            this.lblSecureBootCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSecureBootCheck.Location = new System.Drawing.Point(219, 280);
+            resources.ApplyResources(this.lblSecureBootCheck, "lblSecureBootCheck");
             this.lblSecureBootCheck.Name = "lblSecureBootCheck";
-            this.lblSecureBootCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblSecureBootCheck.TabIndex = 107;
-            this.lblSecureBootCheck.Text = "Checking...";
             // 
             // lblSecureBoot
             // 
-            this.lblSecureBoot.AutoSize = true;
-            this.lblSecureBoot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSecureBoot.Location = new System.Drawing.Point(66, 280);
+            resources.ApplyResources(this.lblSecureBoot, "lblSecureBoot");
             this.lblSecureBoot.Name = "lblSecureBoot";
-            this.lblSecureBoot.Size = new System.Drawing.Size(93, 21);
-            this.lblSecureBoot.TabIndex = 104;
-            this.lblSecureBoot.Text = "Secure Boot";
             // 
             // lblFreeSpaceCheck
             // 
-            this.lblFreeSpaceCheck.AutoSize = true;
-            this.lblFreeSpaceCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFreeSpaceCheck.Location = new System.Drawing.Point(219, 506);
+            resources.ApplyResources(this.lblFreeSpaceCheck, "lblFreeSpaceCheck");
             this.lblFreeSpaceCheck.Name = "lblFreeSpaceCheck";
-            this.lblFreeSpaceCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblFreeSpaceCheck.TabIndex = 103;
-            this.lblFreeSpaceCheck.Text = "Checking...";
             // 
-            // blFreeSpace
+            // lblFreeSpace
             // 
-            this.blFreeSpace.AutoSize = true;
-            this.blFreeSpace.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blFreeSpace.Location = new System.Drawing.Point(66, 506);
-            this.blFreeSpace.Name = "blFreeSpace";
-            this.blFreeSpace.Size = new System.Drawing.Size(85, 21);
-            this.blFreeSpace.TabIndex = 100;
-            this.blFreeSpace.Text = "Free Space";
+            resources.ApplyResources(this.lblFreeSpace, "lblFreeSpace");
+            this.lblFreeSpace.Name = "lblFreeSpace";
             // 
             // lblWDDMCheck
             // 
-            this.lblWDDMCheck.AutoSize = true;
-            this.lblWDDMCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWDDMCheck.Location = new System.Drawing.Point(219, 639);
+            resources.ApplyResources(this.lblWDDMCheck, "lblWDDMCheck");
             this.lblWDDMCheck.Name = "lblWDDMCheck";
-            this.lblWDDMCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblWDDMCheck.TabIndex = 99;
-            this.lblWDDMCheck.Text = "Checking...";
             // 
             // lblWDDM
             // 
-            this.lblWDDM.AutoSize = true;
-            this.lblWDDM.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWDDM.Location = new System.Drawing.Point(66, 639);
+            resources.ApplyResources(this.lblWDDM, "lblWDDM");
             this.lblWDDM.Name = "lblWDDM";
-            this.lblWDDM.Size = new System.Drawing.Size(70, 21);
-            this.lblWDDM.TabIndex = 96;
-            this.lblWDDM.Text = "WDDM2";
             // 
             // lblDisplayCheck
             // 
-            this.lblDisplayCheck.AutoSize = true;
-            this.lblDisplayCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplayCheck.Location = new System.Drawing.Point(219, 414);
+            resources.ApplyResources(this.lblDisplayCheck, "lblDisplayCheck");
             this.lblDisplayCheck.Name = "lblDisplayCheck";
-            this.lblDisplayCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblDisplayCheck.TabIndex = 95;
-            this.lblDisplayCheck.Text = "Checking...";
             // 
             // lblDisplay
             // 
-            this.lblDisplay.AutoSize = true;
-            this.lblDisplay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplay.Location = new System.Drawing.Point(66, 414);
+            resources.ApplyResources(this.lblDisplay, "lblDisplay");
             this.lblDisplay.Name = "lblDisplay";
-            this.lblDisplay.Size = new System.Drawing.Size(61, 21);
-            this.lblDisplay.TabIndex = 92;
-            this.lblDisplay.Text = "Display";
             // 
             // lblDirectXCheck
             // 
-            this.lblDirectXCheck.AutoSize = true;
-            this.lblDirectXCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDirectXCheck.Location = new System.Drawing.Point(219, 592);
+            resources.ApplyResources(this.lblDirectXCheck, "lblDirectXCheck");
             this.lblDirectXCheck.Name = "lblDirectXCheck";
-            this.lblDirectXCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblDirectXCheck.TabIndex = 89;
-            this.lblDirectXCheck.Text = "Checking...";
             // 
             // lblDirectX
             // 
-            this.lblDirectX.AutoSize = true;
-            this.lblDirectX.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDirectX.Location = new System.Drawing.Point(66, 592);
+            resources.ApplyResources(this.lblDirectX, "lblDirectX");
             this.lblDirectX.Name = "lblDirectX";
-            this.lblDirectX.Size = new System.Drawing.Size(60, 21);
-            this.lblDirectX.TabIndex = 86;
-            this.lblDirectX.Text = "DirectX";
             // 
             // lblTPMCheck
             // 
             this.lblTPMCheck.AutoEllipsis = true;
-            this.lblTPMCheck.AutoSize = true;
-            this.lblTPMCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTPMCheck.Location = new System.Drawing.Point(219, 549);
+            resources.ApplyResources(this.lblTPMCheck, "lblTPMCheck");
             this.lblTPMCheck.Name = "lblTPMCheck";
-            this.lblTPMCheck.Size = new System.Drawing.Size(91, 21);
-            this.lblTPMCheck.TabIndex = 84;
-            this.lblTPMCheck.Text = "Not present";
             // 
             // lblStorageCheck
             // 
-            this.lblStorageCheck.AutoSize = true;
-            this.lblStorageCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStorageCheck.Location = new System.Drawing.Point(219, 459);
+            resources.ApplyResources(this.lblStorageCheck, "lblStorageCheck");
             this.lblStorageCheck.Name = "lblStorageCheck";
-            this.lblStorageCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblStorageCheck.TabIndex = 83;
-            this.lblStorageCheck.Text = "Checking...";
             // 
             // lblRAMCheck
             // 
-            this.lblRAMCheck.AutoSize = true;
-            this.lblRAMCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRAMCheck.Location = new System.Drawing.Point(219, 366);
+            resources.ApplyResources(this.lblRAMCheck, "lblRAMCheck");
             this.lblRAMCheck.Name = "lblRAMCheck";
-            this.lblRAMCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblRAMCheck.TabIndex = 82;
-            this.lblRAMCheck.Text = "Checking...";
             // 
             // lblDiskTypeCheck
             // 
-            this.lblDiskTypeCheck.AutoSize = true;
-            this.lblDiskTypeCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiskTypeCheck.Location = new System.Drawing.Point(219, 321);
+            resources.ApplyResources(this.lblDiskTypeCheck, "lblDiskTypeCheck");
             this.lblDiskTypeCheck.Name = "lblDiskTypeCheck";
-            this.lblDiskTypeCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblDiskTypeCheck.TabIndex = 81;
-            this.lblDiskTypeCheck.Text = "Checking...";
             // 
             // lblCoresCheck
             // 
-            this.lblCoresCheck.AutoSize = true;
-            this.lblCoresCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoresCheck.Location = new System.Drawing.Point(219, 108);
+            resources.ApplyResources(this.lblCoresCheck, "lblCoresCheck");
             this.lblCoresCheck.Name = "lblCoresCheck";
-            this.lblCoresCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblCoresCheck.TabIndex = 80;
-            this.lblCoresCheck.Text = "Checking...";
             // 
             // lblMhzCheck
             // 
-            this.lblMhzCheck.AutoSize = true;
-            this.lblMhzCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMhzCheck.Location = new System.Drawing.Point(219, 149);
+            resources.ApplyResources(this.lblMhzCheck, "lblMhzCheck");
             this.lblMhzCheck.Name = "lblMhzCheck";
-            this.lblMhzCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblMhzCheck.TabIndex = 77;
-            this.lblMhzCheck.Text = "Checking...";
             // 
             // lblCPU
             // 
             this.lblCPU.AutoEllipsis = true;
-            this.lblCPU.AutoSize = true;
-            this.lblCPU.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPU.Location = new System.Drawing.Point(66, 68);
+            resources.ApplyResources(this.lblCPU, "lblCPU");
             this.lblCPU.Name = "lblCPU";
-            this.lblCPU.Size = new System.Drawing.Size(214, 21);
-            this.lblCPU.TabIndex = 75;
-            this.lblCPU.Text = "Checking CPU Compatibility...";
             // 
             // lblBootTypeCheck
             // 
-            this.lblBootTypeCheck.AutoSize = true;
-            this.lblBootTypeCheck.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBootTypeCheck.Location = new System.Drawing.Point(219, 237);
+            resources.ApplyResources(this.lblBootTypeCheck, "lblBootTypeCheck");
             this.lblBootTypeCheck.Name = "lblBootTypeCheck";
-            this.lblBootTypeCheck.Size = new System.Drawing.Size(86, 21);
-            this.lblBootTypeCheck.TabIndex = 74;
-            this.lblBootTypeCheck.Text = "Checking...";
             // 
             // lblTPM
             // 
-            this.lblTPM.AutoSize = true;
-            this.lblTPM.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTPM.Location = new System.Drawing.Point(66, 549);
+            resources.ApplyResources(this.lblTPM, "lblTPM");
             this.lblTPM.Name = "lblTPM";
-            this.lblTPM.Size = new System.Drawing.Size(97, 21);
-            this.lblTPM.TabIndex = 73;
-            this.lblTPM.Text = "TPM Version";
             // 
             // lblStorage
             // 
-            this.lblStorage.AutoSize = true;
-            this.lblStorage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStorage.Location = new System.Drawing.Point(66, 459);
+            resources.ApplyResources(this.lblStorage, "lblStorage");
             this.lblStorage.Name = "lblStorage";
-            this.lblStorage.Size = new System.Drawing.Size(63, 21);
-            this.lblStorage.TabIndex = 70;
-            this.lblStorage.Text = "Storage";
             // 
             // lblRAM
             // 
-            this.lblRAM.AutoSize = true;
-            this.lblRAM.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRAM.Location = new System.Drawing.Point(66, 366);
+            resources.ApplyResources(this.lblRAM, "lblRAM");
             this.lblRAM.Name = "lblRAM";
-            this.lblRAM.Size = new System.Drawing.Size(106, 21);
-            this.lblRAM.TabIndex = 67;
-            this.lblRAM.Text = "RAM Installed";
             // 
             // lblDiskType
             // 
-            this.lblDiskType.AutoSize = true;
-            this.lblDiskType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiskType.Location = new System.Drawing.Point(66, 321);
+            resources.ApplyResources(this.lblDiskType, "lblDiskType");
             this.lblDiskType.Name = "lblDiskType";
-            this.lblDiskType.Size = new System.Drawing.Size(102, 21);
-            this.lblDiskType.TabIndex = 64;
-            this.lblDiskType.Text = "Disk Partition";
             // 
             // lblBootType
             // 
-            this.lblBootType.AutoSize = true;
-            this.lblBootType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBootType.Location = new System.Drawing.Point(66, 237);
+            resources.ApplyResources(this.lblBootType, "lblBootType");
             this.lblBootType.Name = "lblBootType";
-            this.lblBootType.Size = new System.Drawing.Size(100, 21);
-            this.lblBootType.TabIndex = 58;
-            this.lblBootType.Text = "Boot Method";
             // 
             // freqgood
             // 
-            this.freqgood.Image = ((System.Drawing.Image)(resources.GetObject("freqgood.Image")));
-            this.freqgood.Location = new System.Drawing.Point(28, 147);
+            resources.ApplyResources(this.freqgood, "freqgood");
             this.freqgood.Name = "freqgood";
-            this.freqgood.Size = new System.Drawing.Size(25, 25);
-            this.freqgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.freqgood.TabIndex = 76;
             this.freqgood.TabStop = false;
-            this.freqgood.Visible = false;
             // 
             // coresgood
             // 
-            this.coresgood.Image = ((System.Drawing.Image)(resources.GetObject("coresgood.Image")));
-            this.coresgood.Location = new System.Drawing.Point(28, 105);
+            resources.ApplyResources(this.coresgood, "coresgood");
             this.coresgood.Name = "coresgood";
-            this.coresgood.Size = new System.Drawing.Size(25, 25);
-            this.coresgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.coresgood.TabIndex = 79;
             this.coresgood.TabStop = false;
-            this.coresgood.Visible = false;
             // 
             // partgood
             // 
-            this.partgood.Image = ((System.Drawing.Image)(resources.GetObject("partgood.Image")));
-            this.partgood.Location = new System.Drawing.Point(28, 320);
+            resources.ApplyResources(this.partgood, "partgood");
             this.partgood.Name = "partgood";
-            this.partgood.Size = new System.Drawing.Size(25, 25);
-            this.partgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.partgood.TabIndex = 65;
             this.partgood.TabStop = false;
-            this.partgood.Visible = false;
             // 
             // ramgood
             // 
-            this.ramgood.Image = ((System.Drawing.Image)(resources.GetObject("ramgood.Image")));
-            this.ramgood.Location = new System.Drawing.Point(28, 365);
+            resources.ApplyResources(this.ramgood, "ramgood");
             this.ramgood.Name = "ramgood";
-            this.ramgood.Size = new System.Drawing.Size(25, 25);
-            this.ramgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ramgood.TabIndex = 68;
             this.ramgood.TabStop = false;
-            this.ramgood.Visible = false;
             // 
             // screengood
             // 
-            this.screengood.Image = ((System.Drawing.Image)(resources.GetObject("screengood.Image")));
-            this.screengood.Location = new System.Drawing.Point(28, 413);
+            resources.ApplyResources(this.screengood, "screengood");
             this.screengood.Name = "screengood";
-            this.screengood.Size = new System.Drawing.Size(25, 25);
-            this.screengood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.screengood.TabIndex = 93;
             this.screengood.TabStop = false;
-            this.screengood.Visible = false;
             // 
             // securebootgood
             // 
-            this.securebootgood.Image = ((System.Drawing.Image)(resources.GetObject("securebootgood.Image")));
-            this.securebootgood.Location = new System.Drawing.Point(28, 280);
+            resources.ApplyResources(this.securebootgood, "securebootgood");
             this.securebootgood.Name = "securebootgood";
-            this.securebootgood.Size = new System.Drawing.Size(25, 25);
-            this.securebootgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.securebootgood.TabIndex = 105;
             this.securebootgood.TabStop = false;
-            this.securebootgood.Visible = false;
             // 
             // archgood
             // 
-            this.archgood.Image = ((System.Drawing.Image)(resources.GetObject("archgood.Image")));
-            this.archgood.Location = new System.Drawing.Point(28, 190);
+            resources.ApplyResources(this.archgood, "archgood");
             this.archgood.Name = "archgood";
-            this.archgood.Size = new System.Drawing.Size(25, 25);
-            this.archgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.archgood.TabIndex = 121;
             this.archgood.TabStop = false;
-            this.archgood.Visible = false;
             // 
             // coresbad
             // 
-            this.coresbad.Image = ((System.Drawing.Image)(resources.GetObject("coresbad.Image")));
-            this.coresbad.Location = new System.Drawing.Point(28, 105);
+            resources.ApplyResources(this.coresbad, "coresbad");
             this.coresbad.Name = "coresbad";
-            this.coresbad.Size = new System.Drawing.Size(25, 25);
-            this.coresbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.coresbad.TabIndex = 85;
             this.coresbad.TabStop = false;
-            this.coresbad.Visible = false;
             this.coresbad.MouseHover += new System.EventHandler(this.coresbad_MouseHover);
             // 
             // freqbad
             // 
-            this.freqbad.Image = ((System.Drawing.Image)(resources.GetObject("freqbad.Image")));
-            this.freqbad.Location = new System.Drawing.Point(28, 147);
+            resources.ApplyResources(this.freqbad, "freqbad");
             this.freqbad.Name = "freqbad";
-            this.freqbad.Size = new System.Drawing.Size(25, 25);
-            this.freqbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.freqbad.TabIndex = 78;
             this.freqbad.TabStop = false;
-            this.freqbad.Visible = false;
             this.freqbad.MouseHover += new System.EventHandler(this.freqbad_MouseHover);
             // 
             // archbad
             // 
-            this.archbad.Image = ((System.Drawing.Image)(resources.GetObject("archbad.Image")));
-            this.archbad.Location = new System.Drawing.Point(28, 190);
+            resources.ApplyResources(this.archbad, "archbad");
             this.archbad.Name = "archbad";
-            this.archbad.Size = new System.Drawing.Size(25, 25);
-            this.archbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.archbad.TabIndex = 120;
             this.archbad.TabStop = false;
-            this.archbad.Visible = false;
             // 
             // securebootbad
             // 
-            this.securebootbad.Image = ((System.Drawing.Image)(resources.GetObject("securebootbad.Image")));
-            this.securebootbad.Location = new System.Drawing.Point(27, 280);
+            resources.ApplyResources(this.securebootbad, "securebootbad");
             this.securebootbad.Name = "securebootbad";
-            this.securebootbad.Size = new System.Drawing.Size(25, 25);
-            this.securebootbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.securebootbad.TabIndex = 106;
             this.securebootbad.TabStop = false;
-            this.securebootbad.Visible = false;
             this.securebootbad.MouseHover += new System.EventHandler(this.securebootbad_MouseHover);
             // 
             // partbad
             // 
-            this.partbad.Image = ((System.Drawing.Image)(resources.GetObject("partbad.Image")));
-            this.partbad.Location = new System.Drawing.Point(27, 321);
+            resources.ApplyResources(this.partbad, "partbad");
             this.partbad.Name = "partbad";
-            this.partbad.Size = new System.Drawing.Size(25, 25);
-            this.partbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.partbad.TabIndex = 66;
             this.partbad.TabStop = false;
-            this.partbad.Visible = false;
             this.partbad.MouseHover += new System.EventHandler(this.partbad_MouseHover);
             // 
             // rambad
             // 
-            this.rambad.Image = ((System.Drawing.Image)(resources.GetObject("rambad.Image")));
-            this.rambad.Location = new System.Drawing.Point(27, 366);
+            resources.ApplyResources(this.rambad, "rambad");
             this.rambad.Name = "rambad";
-            this.rambad.Size = new System.Drawing.Size(25, 25);
-            this.rambad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rambad.TabIndex = 69;
             this.rambad.TabStop = false;
-            this.rambad.Visible = false;
             this.rambad.MouseHover += new System.EventHandler(this.rambad_MouseHover);
             // 
             // screenbad
             // 
-            this.screenbad.Image = ((System.Drawing.Image)(resources.GetObject("screenbad.Image")));
-            this.screenbad.Location = new System.Drawing.Point(27, 414);
+            resources.ApplyResources(this.screenbad, "screenbad");
             this.screenbad.Name = "screenbad";
-            this.screenbad.Size = new System.Drawing.Size(25, 25);
-            this.screenbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.screenbad.TabIndex = 94;
             this.screenbad.TabStop = false;
-            this.screenbad.Visible = false;
             this.screenbad.MouseHover += new System.EventHandler(this.screenbad_MouseHover);
-            // 
-            // tpmgood
-            // 
-            this.tpmgood.Image = ((System.Drawing.Image)(resources.GetObject("tpmgood.Image")));
-            this.tpmgood.Location = new System.Drawing.Point(28, 546);
-            this.tpmgood.Name = "tpmgood";
-            this.tpmgood.Size = new System.Drawing.Size(25, 25);
-            this.tpmgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tpmgood.TabIndex = 123;
-            this.tpmgood.TabStop = false;
-            this.tpmgood.Visible = false;
-            // 
-            // tpminfo
-            // 
-            this.tpminfo.Image = global::ReadySunValley.Properties.Resources.info;
-            this.tpminfo.Location = new System.Drawing.Point(28, 546);
-            this.tpminfo.Name = "tpminfo";
-            this.tpminfo.Size = new System.Drawing.Size(25, 25);
-            this.tpminfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tpminfo.TabIndex = 125;
-            this.tpminfo.TabStop = false;
-            this.tpminfo.Visible = false;
-            this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
             // 
             // bootgood
             // 
-            this.bootgood.Image = ((System.Drawing.Image)(resources.GetObject("bootgood.Image")));
-            this.bootgood.Location = new System.Drawing.Point(28, 237);
+            resources.ApplyResources(this.bootgood, "bootgood");
             this.bootgood.Name = "bootgood";
-            this.bootgood.Size = new System.Drawing.Size(25, 25);
-            this.bootgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bootgood.TabIndex = 59;
             this.bootgood.TabStop = false;
-            this.bootgood.Visible = false;
             // 
             // bootbad
             // 
-            this.bootbad.Image = ((System.Drawing.Image)(resources.GetObject("bootbad.Image")));
-            this.bootbad.Location = new System.Drawing.Point(28, 237);
+            resources.ApplyResources(this.bootbad, "bootbad");
             this.bootbad.Name = "bootbad";
-            this.bootbad.Size = new System.Drawing.Size(25, 25);
-            this.bootbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bootbad.TabIndex = 60;
             this.bootbad.TabStop = false;
-            this.bootbad.Visible = false;
             this.bootbad.MouseHover += new System.EventHandler(this.bootbad_MouseHover);
             // 
             // hddgood
             // 
-            this.hddgood.Image = ((System.Drawing.Image)(resources.GetObject("hddgood.Image")));
-            this.hddgood.Location = new System.Drawing.Point(28, 458);
+            resources.ApplyResources(this.hddgood, "hddgood");
             this.hddgood.Name = "hddgood";
-            this.hddgood.Size = new System.Drawing.Size(25, 25);
-            this.hddgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hddgood.TabIndex = 71;
             this.hddgood.TabStop = false;
-            this.hddgood.Visible = false;
             // 
             // hddbad
             // 
-            this.hddbad.Image = ((System.Drawing.Image)(resources.GetObject("hddbad.Image")));
-            this.hddbad.Location = new System.Drawing.Point(28, 459);
+            resources.ApplyResources(this.hddbad, "hddbad");
             this.hddbad.Name = "hddbad";
-            this.hddbad.Size = new System.Drawing.Size(25, 25);
-            this.hddbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hddbad.TabIndex = 72;
             this.hddbad.TabStop = false;
-            this.hddbad.Visible = false;
             this.hddbad.MouseHover += new System.EventHandler(this.hddbad_MouseHover);
             // 
             // freespacegood
             // 
-            this.freespacegood.Image = global::ReadySunValley.Properties.Resources.check;
-            this.freespacegood.Location = new System.Drawing.Point(28, 505);
+            resources.ApplyResources(this.freespacegood, "freespacegood");
             this.freespacegood.Name = "freespacegood";
-            this.freespacegood.Size = new System.Drawing.Size(25, 25);
-            this.freespacegood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.freespacegood.TabIndex = 101;
             this.freespacegood.TabStop = false;
-            this.freespacegood.Visible = false;
             // 
             // freespaceinfo
             // 
             this.freespaceinfo.Image = global::ReadySunValley.Properties.Resources.info;
-            this.freespaceinfo.Location = new System.Drawing.Point(28, 506);
+            resources.ApplyResources(this.freespaceinfo, "freespaceinfo");
             this.freespaceinfo.Name = "freespaceinfo";
-            this.freespaceinfo.Size = new System.Drawing.Size(25, 25);
-            this.freespaceinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.freespaceinfo.TabIndex = 102;
             this.freespaceinfo.TabStop = false;
-            this.freespaceinfo.Visible = false;
             this.freespaceinfo.MouseHover += new System.EventHandler(this.freespaceinfo_MouseHover);
             // 
             // directgood
             // 
-            this.directgood.Image = ((System.Drawing.Image)(resources.GetObject("directgood.Image")));
-            this.directgood.Location = new System.Drawing.Point(28, 592);
+            resources.ApplyResources(this.directgood, "directgood");
             this.directgood.Name = "directgood";
-            this.directgood.Size = new System.Drawing.Size(25, 25);
-            this.directgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.directgood.TabIndex = 87;
             this.directgood.TabStop = false;
-            this.directgood.Visible = false;
             // 
             // directbad
             // 
-            this.directbad.Image = ((System.Drawing.Image)(resources.GetObject("directbad.Image")));
-            this.directbad.Location = new System.Drawing.Point(28, 593);
+            resources.ApplyResources(this.directbad, "directbad");
             this.directbad.Name = "directbad";
-            this.directbad.Size = new System.Drawing.Size(25, 25);
-            this.directbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.directbad.TabIndex = 88;
             this.directbad.TabStop = false;
-            this.directbad.Visible = false;
             this.directbad.MouseHover += new System.EventHandler(this.directbad_MouseHover);
             // 
             // tpmbad
             // 
             this.tpmbad.Image = global::ReadySunValley.Properties.Resources.x;
-            this.tpmbad.Location = new System.Drawing.Point(28, 546);
+            resources.ApplyResources(this.tpmbad, "tpmbad");
             this.tpmbad.Name = "tpmbad";
-            this.tpmbad.Size = new System.Drawing.Size(25, 25);
-            this.tpmbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tpmbad.TabIndex = 124;
             this.tpmbad.TabStop = false;
-            this.tpmbad.Visible = false;
             this.tpmbad.MouseHover += new System.EventHandler(this.tpmbad_MouseHover);
             // 
             // wddmgood
             // 
-            this.wddmgood.Image = ((System.Drawing.Image)(resources.GetObject("wddmgood.Image")));
-            this.wddmgood.Location = new System.Drawing.Point(28, 638);
+            resources.ApplyResources(this.wddmgood, "wddmgood");
             this.wddmgood.Name = "wddmgood";
-            this.wddmgood.Size = new System.Drawing.Size(25, 25);
-            this.wddmgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.wddmgood.TabIndex = 97;
             this.wddmgood.TabStop = false;
-            this.wddmgood.Visible = false;
             // 
             // wddmbad
             // 
-            this.wddmbad.Image = ((System.Drawing.Image)(resources.GetObject("wddmbad.Image")));
-            this.wddmbad.Location = new System.Drawing.Point(28, 639);
+            resources.ApplyResources(this.wddmbad, "wddmbad");
             this.wddmbad.Name = "wddmbad";
-            this.wddmbad.Size = new System.Drawing.Size(25, 25);
-            this.wddmbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.wddmbad.TabIndex = 98;
             this.wddmbad.TabStop = false;
-            this.wddmbad.Visible = false;
             this.wddmbad.MouseHover += new System.EventHandler(this.wddmbad_MouseHover);
             // 
             // inetgood
             // 
-            this.inetgood.Image = ((System.Drawing.Image)(resources.GetObject("inetgood.Image")));
-            this.inetgood.Location = new System.Drawing.Point(28, 681);
+            resources.ApplyResources(this.inetgood, "inetgood");
             this.inetgood.Name = "inetgood";
-            this.inetgood.Size = new System.Drawing.Size(25, 25);
-            this.inetgood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.inetgood.TabIndex = 116;
             this.inetgood.TabStop = false;
-            this.inetgood.Visible = false;
             // 
             // inetbad
             // 
-            this.inetbad.Image = ((System.Drawing.Image)(resources.GetObject("inetbad.Image")));
-            this.inetbad.Location = new System.Drawing.Point(28, 682);
+            resources.ApplyResources(this.inetbad, "inetbad");
             this.inetbad.Name = "inetbad";
-            this.inetbad.Size = new System.Drawing.Size(25, 25);
-            this.inetbad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.inetbad.TabIndex = 115;
             this.inetbad.TabStop = false;
-            this.inetbad.Visible = false;
             this.inetbad.MouseHover += new System.EventHandler(this.inetbad_MouseHover);
+            // 
+            // cpugood
+            // 
+            resources.ApplyResources(this.cpugood, "cpugood");
+            this.cpugood.Name = "cpugood";
+            this.cpugood.TabStop = false;
             // 
             // cpuinfo
             // 
             this.cpuinfo.Image = global::ReadySunValley.Properties.Resources.info;
-            this.cpuinfo.Location = new System.Drawing.Point(28, 67);
+            resources.ApplyResources(this.cpuinfo, "cpuinfo");
             this.cpuinfo.Name = "cpuinfo";
-            this.cpuinfo.Size = new System.Drawing.Size(25, 25);
-            this.cpuinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpuinfo.TabIndex = 90;
             this.cpuinfo.TabStop = false;
-            this.cpuinfo.Visible = false;
             this.cpuinfo.MouseHover += new System.EventHandler(this.cpuinfo_MouseHover);
             // 
             // cpubad
             // 
-            this.cpubad.Image = ((System.Drawing.Image)(resources.GetObject("cpubad.Image")));
-            this.cpubad.Location = new System.Drawing.Point(28, 67);
+            resources.ApplyResources(this.cpubad, "cpubad");
             this.cpubad.Name = "cpubad";
-            this.cpubad.Size = new System.Drawing.Size(25, 25);
-            this.cpubad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpubad.TabIndex = 63;
             this.cpubad.TabStop = false;
-            this.cpubad.Visible = false;
             this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
             // 
-            // cpugood
+            // tpmgood
             // 
-            this.cpugood.Image = ((System.Drawing.Image)(resources.GetObject("cpugood.Image")));
-            this.cpugood.Location = new System.Drawing.Point(28, 67);
-            this.cpugood.Name = "cpugood";
-            this.cpugood.Size = new System.Drawing.Size(25, 25);
-            this.cpugood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpugood.TabIndex = 62;
-            this.cpugood.TabStop = false;
-            this.cpugood.Visible = false;
+            resources.ApplyResources(this.tpmgood, "tpmgood");
+            this.tpmgood.Name = "tpmgood";
+            this.tpmgood.TabStop = false;
+            // 
+            // tpminfo
+            // 
+            this.tpminfo.Image = global::ReadySunValley.Properties.Resources.info;
+            resources.ApplyResources(this.tpminfo, "tpminfo");
+            this.tpminfo.Name = "tpminfo";
+            this.tpminfo.TabStop = false;
+            this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
             // 
             // PicCompare
             // 
-            this.PicCompare.Location = new System.Drawing.Point(9, 67);
+            resources.ApplyResources(this.PicCompare, "PicCompare");
             this.PicCompare.Name = "PicCompare";
-            this.PicCompare.Size = new System.Drawing.Size(372, 654);
-            this.PicCompare.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PicCompare.TabIndex = 127;
             this.PicCompare.TabStop = false;
-            this.PicCompare.Visible = false;
             // 
             // MainMenu
             // 
             this.MainMenu.BackColor = System.Drawing.SystemColors.Control;
-            this.MainMenu.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.MainMenu, "MainMenu");
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuVoteContent,
             this.menuVote,
@@ -966,48 +636,42 @@ namespace ReadySunValley
             this.menuInfo});
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MainMenu.Size = new System.Drawing.Size(391, 119);
             // 
             // menuVoteContent
             // 
             this.menuVoteContent.BackColor = System.Drawing.Color.Khaki;
             this.menuVoteContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.menuVoteContent.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.menuVoteContent, "menuVoteContent");
             this.menuVoteContent.ForeColor = System.Drawing.Color.DeepPink;
             this.menuVoteContent.Name = "menuVoteContent";
             this.menuVoteContent.ReadOnly = true;
-            this.menuVoteContent.Size = new System.Drawing.Size(330, 23);
-            this.menuVoteContent.Text = "Does your hardware qualify for Windows 11?";
             // 
             // menuVote
             // 
             this.menuVote.Name = "menuVote";
-            this.menuVote.Size = new System.Drawing.Size(390, 28);
-            this.menuVote.Text = "Vote here!";
+            resources.ApplyResources(this.menuVote, "menuVote");
             this.menuVote.Click += new System.EventHandler(this.menuVote_Click);
             // 
             // menuBypassUndo
             // 
             this.menuBypassUndo.Name = "menuBypassUndo";
-            this.menuBypassUndo.Size = new System.Drawing.Size(390, 28);
-            this.menuBypassUndo.Text = "Undo Bypass";
+            resources.ApplyResources(this.menuBypassUndo, "menuBypassUndo");
             this.menuBypassUndo.Click += new System.EventHandler(this.menuBypassUndo_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(387, 6);
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // menuInfo
             // 
             this.menuInfo.Name = "menuInfo";
-            this.menuInfo.Size = new System.Drawing.Size(390, 28);
-            this.menuInfo.Text = "Info";
+            resources.ApplyResources(this.menuInfo, "menuInfo");
             this.menuInfo.Click += new System.EventHandler(this.menuInfo_Click);
             // 
             // pnlRight
             // 
-            this.pnlRight.AutoScroll = true;
+            resources.ApplyResources(this.pnlRight, "pnlRight");
             this.pnlRight.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlRight.Controls.Add(this.PicCompare);
             this.pnlRight.Controls.Add(this.lnkMSRequirements);
@@ -1016,219 +680,127 @@ namespace ReadySunValley
             this.pnlRight.Controls.Add(this.lblStatus);
             this.pnlRight.Controls.Add(this.LblSumBad);
             this.pnlRight.Controls.Add(this.lnkCompatibilityFix);
-            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(776, 0);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(395, 746);
-            this.pnlRight.TabIndex = 128;
             // 
             // lnkMSRequirements
             // 
             this.lnkMSRequirements.ActiveLinkColor = System.Drawing.Color.DeepPink;
-            this.lnkMSRequirements.AutoSize = true;
-            this.lnkMSRequirements.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lnkMSRequirements, "lnkMSRequirements");
             this.lnkMSRequirements.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lnkMSRequirements.LinkColor = System.Drawing.Color.Black;
-            this.lnkMSRequirements.Location = new System.Drawing.Point(20, 327);
             this.lnkMSRequirements.Name = "lnkMSRequirements";
-            this.lnkMSRequirements.Size = new System.Drawing.Size(315, 15);
-            this.lnkMSRequirements.TabIndex = 132;
             this.lnkMSRequirements.TabStop = true;
-            this.lnkMSRequirements.Text = "For more information, visit https://aka.ms/WindowsSysReq";
-            this.lnkMSRequirements.Visible = false;
             this.lnkMSRequirements.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMSRequirements_LinkClicked);
             // 
             // btnPnlShareScreen
             // 
-            this.btnPnlShareScreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.btnPnlShareScreen, "btnPnlShareScreen");
             this.btnPnlShareScreen.BackColor = System.Drawing.Color.Gainsboro;
             this.btnPnlShareScreen.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnPnlShareScreen.FlatAppearance.BorderSize = 0;
-            this.btnPnlShareScreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPnlShareScreen.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
-            this.btnPnlShareScreen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnPnlShareScreen.Location = new System.Drawing.Point(48, 146);
-            this.btnPnlShareScreen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPnlShareScreen.Name = "btnPnlShareScreen";
-            this.btnPnlShareScreen.Size = new System.Drawing.Size(294, 32);
-            this.btnPnlShareScreen.TabIndex = 130;
-            this.btnPnlShareScreen.Text = "Capture and Share on Twitter";
             this.btnPnlShareScreen.UseVisualStyleBackColor = false;
-            this.btnPnlShareScreen.Visible = false;
             this.btnPnlShareScreen.Click += new System.EventHandler(this.btnPnlShareScreen_Click);
             // 
             // assetOpenGitHub
             // 
-            this.assetOpenGitHub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.assetOpenGitHub, "assetOpenGitHub");
             this.assetOpenGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.assetOpenGitHub.Image = ((System.Drawing.Image)(resources.GetObject("assetOpenGitHub.Image")));
-            this.assetOpenGitHub.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.assetOpenGitHub.Location = new System.Drawing.Point(359, 12);
             this.assetOpenGitHub.Name = "assetOpenGitHub";
-            this.assetOpenGitHub.Size = new System.Drawing.Size(24, 24);
-            this.assetOpenGitHub.TabIndex = 129;
             this.assetOpenGitHub.TabStop = false;
             this.assetOpenGitHub.Click += new System.EventHandler(this.assetOpenGitHub_Click);
             this.assetOpenGitHub.MouseHover += new System.EventHandler(this.AssetOpenGitHub_MouseHover);
             // 
             // lblStatus
             // 
-            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.lblStatus, "lblStatus");
             this.lblStatus.AutoEllipsis = true;
             this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(18, 274);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(367, 68);
-            this.lblStatus.TabIndex = 114;
-            this.lblStatus.Text = "Checking system requirements...";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LblSumBad
             // 
-            this.LblSumBad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.LblSumBad, "LblSumBad");
             this.LblSumBad.AutoEllipsis = true;
             this.LblSumBad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LblSumBad.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSumBad.ForeColor = System.Drawing.Color.Black;
-            this.LblSumBad.Location = new System.Drawing.Point(14, 180);
             this.LblSumBad.Name = "LblSumBad";
-            this.LblSumBad.Size = new System.Drawing.Size(367, 105);
-            this.LblSumBad.TabIndex = 113;
-            this.LblSumBad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lnkCompatibilityFix
             // 
             this.lnkCompatibilityFix.ActiveLinkColor = System.Drawing.Color.MediumVioletRed;
-            this.lnkCompatibilityFix.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.lnkCompatibilityFix, "lnkCompatibilityFix");
             this.lnkCompatibilityFix.AutoEllipsis = true;
             this.lnkCompatibilityFix.BackColor = System.Drawing.Color.Transparent;
-            this.lnkCompatibilityFix.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkCompatibilityFix.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lnkCompatibilityFix.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lnkCompatibilityFix.LinkColor = System.Drawing.Color.DeepPink;
-            this.lnkCompatibilityFix.Location = new System.Drawing.Point(20, 351);
             this.lnkCompatibilityFix.Name = "lnkCompatibilityFix";
-            this.lnkCompatibilityFix.Size = new System.Drawing.Size(363, 26);
-            this.lnkCompatibilityFix.TabIndex = 128;
             this.lnkCompatibilityFix.TabStop = true;
-            this.lnkCompatibilityFix.Text = "Click here to fix some of these failed results with a registry hack\r\n";
-            this.lnkCompatibilityFix.Visible = false;
             this.lnkCompatibilityFix.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCompatibilityFix_LinkClicked);
             // 
             // pBar
             // 
-            this.pBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pBar.Location = new System.Drawing.Point(12, 90);
+            resources.ApplyResources(this.pBar, "pBar");
             this.pBar.Name = "pBar";
-            this.pBar.Size = new System.Drawing.Size(332, 5);
-            this.pBar.TabIndex = 114;
-            this.pBar.Visible = false;
             // 
             // pnlMiddle
             // 
-            this.pnlMiddle.AutoScroll = true;
+            resources.ApplyResources(this.pnlMiddle, "pnlMiddle");
             this.pnlMiddle.Controls.Add(this.btnCompareUtil);
             this.pnlMiddle.Controls.Add(this.btnShareScreen);
             this.pnlMiddle.Controls.Add(this.checkCompareMS);
             this.pnlMiddle.Controls.Add(this.pBar);
             this.pnlMiddle.Controls.Add(this.lblHeader);
             this.pnlMiddle.Controls.Add(this.lblSubHeader);
-            this.pnlMiddle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMiddle.Location = new System.Drawing.Point(423, 0);
             this.pnlMiddle.Name = "pnlMiddle";
-            this.pnlMiddle.Size = new System.Drawing.Size(353, 746);
-            this.pnlMiddle.TabIndex = 129;
             // 
             // btnCompareUtil
             // 
-            this.btnCompareUtil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.btnCompareUtil, "btnCompareUtil");
             this.btnCompareUtil.BackColor = System.Drawing.Color.Gainsboro;
             this.btnCompareUtil.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnCompareUtil.FlatAppearance.BorderSize = 0;
-            this.btnCompareUtil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompareUtil.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
-            this.btnCompareUtil.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCompareUtil.Location = new System.Drawing.Point(18, 248);
-            this.btnCompareUtil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCompareUtil.Name = "btnCompareUtil";
-            this.btnCompareUtil.Size = new System.Drawing.Size(318, 32);
-            this.btnCompareUtil.TabIndex = 130;
-            this.btnCompareUtil.Text = "Compare with App";
             this.btnCompareUtil.UseVisualStyleBackColor = false;
             this.btnCompareUtil.Click += new System.EventHandler(this.btnCompareUtil_Click);
             // 
             // btnShareScreen
             // 
-            this.btnShareScreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.btnShareScreen, "btnShareScreen");
             this.btnShareScreen.BackColor = System.Drawing.Color.Gainsboro;
             this.btnShareScreen.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnShareScreen.FlatAppearance.BorderSize = 0;
-            this.btnShareScreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShareScreen.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F);
-            this.btnShareScreen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnShareScreen.Location = new System.Drawing.Point(18, 149);
-            this.btnShareScreen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnShareScreen.Name = "btnShareScreen";
-            this.btnShareScreen.Size = new System.Drawing.Size(318, 32);
-            this.btnShareScreen.TabIndex = 129;
-            this.btnShareScreen.Text = "Capture and Share on Twitter";
             this.btnShareScreen.UseVisualStyleBackColor = false;
             this.btnShareScreen.Click += new System.EventHandler(this.btnShareScreen_Click);
             // 
             // lblHeader
             // 
-            this.lblHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.lblHeader, "lblHeader");
             this.lblHeader.AutoEllipsis = true;
-            this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.lblHeader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblHeader.Location = new System.Drawing.Point(12, 21);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(332, 32);
-            this.lblHeader.TabIndex = 25;
-            this.lblHeader.Text = "Your Compatibility Results\r\n";
             // 
             // lblSubHeader
             // 
             this.lblSubHeader.ActiveLinkColor = System.Drawing.Color.MediumVioletRed;
-            this.lblSubHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.lblSubHeader, "lblSubHeader");
             this.lblSubHeader.AutoEllipsis = true;
-            this.lblSubHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.lblSubHeader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblSubHeader.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblSubHeader.LinkColor = System.Drawing.Color.DeepPink;
-            this.lblSubHeader.Location = new System.Drawing.Point(13, 68);
             this.lblSubHeader.Name = "lblSubHeader";
-            this.lblSubHeader.Size = new System.Drawing.Size(331, 18);
-            this.lblSubHeader.TabIndex = 24;
             this.lblSubHeader.TabStop = true;
-            this.lblSubHeader.Text = "*Move the cusor over a failed result to get more information";
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1171, 746);
             this.Controls.Add(this.pnlMiddle);
             this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.pnlRight);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpButton = true;
-            this.MinimumSize = new System.Drawing.Size(832, 776);
             this.Name = "MainWindow";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReadySunValley";
             this.Shown += new System.EventHandler(this.MainWindow_Shown);
             this.SizeChanged += new System.EventHandler(this.MainWindow_SizeChanged);
             this.pnlLeft.ResumeLayout(false);
@@ -1247,8 +819,6 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.partbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rambad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.screenbad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bootbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hddgood)).EndInit();
@@ -1262,9 +832,11 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetbad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpubad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCompare)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
@@ -1282,7 +854,7 @@ namespace ReadySunValley
         private System.Windows.Forms.Label lblSecureBoot;
         private System.Windows.Forms.PictureBox securebootbad;
         private System.Windows.Forms.Label lblFreeSpaceCheck;
-        private System.Windows.Forms.Label blFreeSpace;
+        private System.Windows.Forms.Label lblFreeSpace;
         private System.Windows.Forms.Label lblWDDMCheck;
         private System.Windows.Forms.Label lblWDDM;
         private System.Windows.Forms.Label lblDisplayCheck;

@@ -42,7 +42,7 @@ namespace ReadySunValley.Helpers
                 }
                 else // new version
                 {
-                    if (MessageBox.Show("A new app version " + LatestVersion + " is available.\nDo you want to goto the Github update page?" + Environment.NewLine + versionContent, "App update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // New release available!
+                    if (MessageBox.Show("A new app version " + LatestVersion + " is available.\nDo you want to goto the Github update page?" + Environment.NewLine + versionContent, Locales.Locale.updateTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // New release available!
                     {
                         Process.Start(Strings.Uri.GitUpdateRepo + LatestVersion);
                     }

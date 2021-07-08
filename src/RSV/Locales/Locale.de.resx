@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppInfo" xml:space="preserve">
+    <value>
+Ersatz für Microsoft's PC Health Check app (derzeit offline!) 
+ 
+Du erreichst mich unter
+\ttwitter.com/builtbybel
+
+(C) 2021, Builtbybel</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="assessmentCPUArchitecture" xml:space="preserve">
+    <value>Prüfe CPU Architektur [2/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentCPUCompatibility" xml:space="preserve">
+    <value>Prüfe CPU Kompatibilität [6/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentCPUCores" xml:space="preserve">
+    <value>Prüfe CPU Kerne [5/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentCPUSpeed" xml:space="preserve">
+    <value>Prüfe CPU Frequenz [4/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentCPUSpeedFormat" xml:space="preserve">
+    <value>MHz</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentDirectXWDDM" xml:space="preserve">
+    <value>Prüfe DirectX &amp;&amp; WDDM2 [11/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentDisplay" xml:space="preserve">
+    <value>Prüfe Monitor [3/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentDisplayFormat" xml:space="preserve">
+    <value>Zoll</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentGPU" xml:space="preserve">
+    <value>Prüfe Grafikkarte [12/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentInet" xml:space="preserve">
+    <value>Prüfe Internetverbindung [14/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentInetFail" xml:space="preserve">
+    <value>Offline</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentInetOK" xml:space="preserve">
+    <value>Verfügbar</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentPartitionType" xml:space="preserve">
+    <value>Prüfe Partitionstyp [7/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentRAM" xml:space="preserve">
+    <value>Prüfe RAM Kompatibilität [9/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSecureBoot" xml:space="preserve">
+    <value>Prüfe Secure Boot [8/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSecureBootFail" xml:space="preserve">
+    <value>Nicht unterstützt</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSecureBootOK" xml:space="preserve">
+    <value>Unterstüzt</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentStorage" xml:space="preserve">
+    <value>Prüfe Festplattengröße [10/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSummaryFail" xml:space="preserve">
+    <value>System Anforderungen nicht bereit für Windows 11</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSummaryOK" xml:space="preserve">
+    <value>Glückwunsch, Du bist bereit für Sun Valley!</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSystemRequirements" xml:space="preserve">
+    <value>Prüfe Systemvoraussetzungen [1/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentTPM" xml:space="preserve">
+    <value>Prüfe TPM Version [13/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentTPMFail" xml:space="preserve">
+    <value>Nicht verfügbar</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentTPMLow" xml:space="preserve">
+    <value>(Nicht unterstützt)</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="btnCompareUtil" xml:space="preserve">
+    <value>Vergleiche mit App</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="btnPnlShareScreen" xml:space="preserve">
+    <value>Aufnehmen und Teilen auf Twitter</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="btnShareScreen" xml:space="preserve">
+    <value>Aufnehmen und Teilen auf Twitter</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="checkCompareMS" xml:space="preserve">
+    <value>Vergleiche mit Microsoft</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="checkCompareMSBack" xml:space="preserve">
+    <value>Zurück zu meinen Ergebnissen</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="hoveCPUInfo" xml:space="preserve">
+    <value>Deine CPU erfüllt die Mindestanforderungen, sie ist nur nicht in der offiziellen Liste der unterstützten Prozessoren aufgeführt.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverAssetInfo" xml:space="preserve">
+    <value>Quelloffen @github.com/builtbybel/readysunvalley</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverBootBad" xml:space="preserve">
+    <value>Dein System muss einen UEFI-Boot-Modus unterstützen. Im Moment bootet dein System mit der Vorgängerversion. Dies bedeutet nicht zwangsläufig, dass dein System dies nicht unterstützt. Überprüfen hierzu deine Motherboard, Systemhandbuch oder BIOS/UEFI für weitere Informationen.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverCPUBad" xml:space="preserve">
+    <value>Deine CPU erfüllt nicht die Spezifikationsanforderungen. Weitere Infos zu deiner CPU erhälts du im linken Ergebnisfenster</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverCPUCoresBad" xml:space="preserve">
+    <value>Du hast nicht genug Prozessorkerne, um Windows 11 auszuführen.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverCPUSpeedBad" xml:space="preserve">
+    <value>Deine CPU-Frequenz entspricht nicht den Mindestanforderungen für Windows 11.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverDiectXBad" xml:space="preserve">
+    <value>Deine DirectX-Version ist zu niedrig. Dies bedeutet nicht unbedingt, dass dein System keine höheren Versionen unterstützt. Prüfe dies mit DXDIAG für weitere Informationen.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverDisplayBad" xml:space="preserve">
+    <value>Deine Hauptanzeige ist zu klein, um unter Windows 11 zu arbeiten.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverFreeSpaceInfo" xml:space="preserve">
+    <value>Wenn du nicht genügend freien Speicherplatz gemäß den Anforderungen hast, bedeutet dies nicht, dass du nicht genügend Gesamtspeicherplatz hast. Denke nur daran, dass Windows 11 mindestens 64 GB freien Speicherplatz benötigt.
+Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverInetBad" xml:space="preserve">
+    <value>Windows 11 Home Edition erfordert eine Internetverbindung und ein Microsoft-Konto, um die Einrichtung des Geräts bei der ersten Verwendung abzuschließen. Das Umschalten eines Geräts aus Windows 11 Home in den S-Modus erfordert ebenfalls eine Internetverbindung.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverPartitionBad" xml:space="preserve">
+    <value>Dein System muss GPT-Partitionstypen unterstützen, im Moment bootet aber dein System mit MBR. Das bedeutet nicht unbedingt, dass dein System dies nicht unterstützt. Prüfe hierzu dein Motherboard, das Systemhandbuch oder BIOS/UEFI für weitere Informationen.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverRAMBad" xml:space="preserve">
+    <value>Dein RAM erfüllt nicht die Mindestanforderungen für Windows 11.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverRecheck" xml:space="preserve">
+    <value>Run check again</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverSecureBootBad" xml:space="preserve">
+    <value>Es fehlt die Secure Boot-Funktionalität. Du kannst aber die Secure Boot-Anforderungen mit ReadySunValley umgehen. Verwende hierzu den Reparatur-Link in der rechten Leiste.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverStorageBad" xml:space="preserve">
+    <value>Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverTPMBad" xml:space="preserve">
+    <value>Wenn kein TPM vorhanden ist, ist es ggf. nur im UEFI deaktiviert.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverTPMInfo" xml:space="preserve">
+    <value>DeineTPM-Version ist zu niedrig. Wenn du eine ältere Version von TPM verwendest(typischerweise 1.2), kannst du es möglicherweise mit einem Firmware-Update auf TPM 2.0 aktualisieren.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="hoverWDDMBad" xml:space="preserve">
+    <value>WDDM erfüllt nicht die Mindestanforderungen für Windows 11. WDDM in der Version 2.0 wird vorausgesetzt.</value>
+    <comment>Hover</comment>
+  </data>
+  <data name="infoBypassDone" xml:space="preserve">
+    <value>TPM- und Secure Boot-Einschränkungen wurden umgangen.</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoBypassUndo" xml:space="preserve">
+    <value>Bypass wurde außer Kraft gesetzt.</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoCaptureHint" xml:space="preserve">
+    <value>Nicht vergessen, das Egebnisbild auf Twitter hochzuladen.</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoCompareUtil" xml:space="preserve">
+    <value>Möchtest du die Ergebnisse mit dem Tool "WhyNotWin11" vergleichen?</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoCompareUtilDownloadMessage" xml:space="preserve">
+    <value>Bereit! Stelle nun also die beiden Apps nebeneinander und schaue dir die Ergebnisse an.</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="lblBitness" xml:space="preserve">
+    <value>Architektur</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblBitnessCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblBootType" xml:space="preserve">
+    <value>Boot Methode</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblBootTypeCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblCores" xml:space="preserve">
+    <value>Kerne</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblCoresCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblCPU" xml:space="preserve">
+    <value>Prüfe CPU Kompatibilität...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDirectX" xml:space="preserve">
+    <value>DirectX</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDirectXCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDiskType" xml:space="preserve">
+    <value>Parititionstyp</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDiskTypeCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDisplay" xml:space="preserve">
+    <value>Monitor</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDisplayCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblFreeSpace" xml:space="preserve">
+    <value>Verfügbarer Speicher</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblFreeSpaceCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblHeader" xml:space="preserve">
+    <value>Deine Windows 11 Ergebnisse</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="lblInet" xml:space="preserve">
+    <value>Internet</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblInetCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblMhz" xml:space="preserve">
+    <value>MHz</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblMhzCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblRAM" xml:space="preserve">
+    <value>RAM</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblRAMCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblSecureBoot" xml:space="preserve">
+    <value>Secure Boot</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblSecureBootCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblStatus" xml:space="preserve">
+    <value>Prüfe Systemvoraussetzungen...</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="lblStorage" xml:space="preserve">
+    <value>Installierter RAM</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblStorageCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblSubHeader" xml:space="preserve">
+    <value>*Bewege den Cursor über ein fehlgeschlagenes Ergebnis, um weitere Informationen zu erhalten</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="lblTPM" xml:space="preserve">
+    <value>TPM</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblTPMCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblWDDM" xml:space="preserve">
+    <value>WDDM2</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblWDDMCheck" xml:space="preserve">
+    <value>Prüfe...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lnkCompatibilityFix" xml:space="preserve">
+    <value>Klicke hier, um einige dieser fehlgeschlagenen Ergebnisse mit einem Registry-Hack zu beheben</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="menuBypassUndo" xml:space="preserve">
+    <value>Bypass aufheben</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="menuVote" xml:space="preserve">
+    <value>Jetzt abstimmen!</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="menuVoteContent" xml:space="preserve">
+    <value>Ist dein System für Windows 11 qualifiziert?</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="optionBypass" xml:space="preserve">
+    <value>Wenn du versuchst Windows 11 zu installieren und die Meldung "Auf diesem PC kann Windows 11 nicht ausgeführt werden" erhältst, ist es sehr wahrscheinlich, dass dein PC eine der Anforderungen wie TPM 2.0, Secure Boot oder 4 GB RAM nicht erfüllt.\n\nDie gute Nachricht ist, dass Microsoft einen neuen "LabConfig"-Registrierungsschlüssel enthält, der es dir erlaubt die TPM 2.0, 4 GB Arbeitsspeicher und Secure Boot Anforderungen zu umgehen.\n\nBitte beachte, dass durch die Deaktivierung der TPM 2.0-Anforderung die Sicherheit in Windows 11 effektiv reduziert wird.\n\nWillst du diese Einschränkungen umgehen?
+
+</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="updateTitle" xml:space="preserve">
+    <value>App update verfügbar</value>
+    <comment>GUI</comment>
+  </data>
+</root>
