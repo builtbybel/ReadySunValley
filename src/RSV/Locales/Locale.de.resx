@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -119,8 +119,10 @@
   </resheader>
   <data name="AppInfo" xml:space="preserve">
     <value>
-Ersatz für Microsoft's PC Health Check app (derzeit offline!) 
- 
+Ersatz für Microsoft's PC Health Check App (derzeit offline!) 
+
+Dieses Projekt wurde ursprünglich von https://github.com/mag-nif-i-cent/Affinity11 geforked.
+
 Du erreichst mich unter
 \ttwitter.com/builtbybel
 
@@ -128,19 +130,19 @@ Du erreichst mich unter
     <comment>Menu</comment>
   </data>
   <data name="assessmentCPUArchitecture" xml:space="preserve">
-    <value>Prüfe CPU Architektur [2/14]</value>
+    <value>Überprüfung der CPU-Architektur [2/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentCPUCompatibility" xml:space="preserve">
-    <value>Prüfe CPU Kompatibilität [6/14]</value>
+    <value>Überprüfung der CPU-Kompatibilität [6/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentCPUCores" xml:space="preserve">
-    <value>Prüfe CPU Kerne [5/14]</value>
+    <value>Überprüfung der Anzahl der CPU-Kerne [5/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentCPUSpeed" xml:space="preserve">
-    <value>Prüfe CPU Frequenz [4/14]</value>
+    <value>Überprüfung der CPU-Frequenz [4/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentCPUSpeedFormat" xml:space="preserve">
@@ -148,11 +150,11 @@ Du erreichst mich unter
     <comment>Assessment</comment>
   </data>
   <data name="assessmentDirectXWDDM" xml:space="preserve">
-    <value>Prüfe DirectX &amp;&amp; WDDM2 [11/14]</value>
+    <value>Überprüfung auf DirectX &amp;&amp; WDDM2 [11/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentDisplay" xml:space="preserve">
-    <value>Prüfe Monitor [3/14]</value>
+    <value>Überprüfung des Monitors [3/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentDisplayFormat" xml:space="preserve">
@@ -160,11 +162,11 @@ Du erreichst mich unter
     <comment>Assessment</comment>
   </data>
   <data name="assessmentGPU" xml:space="preserve">
-    <value>Prüfe Grafikkarte [12/14]</value>
+    <value>Überprüfung der Grafikkarte [12/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentInet" xml:space="preserve">
-    <value>Prüfe Internetverbindung [14/14]</value>
+    <value>Überprüfung der Internetverbindung [14/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentInetFail" xml:space="preserve">
@@ -176,15 +178,15 @@ Du erreichst mich unter
     <comment>Assessment</comment>
   </data>
   <data name="assessmentPartitionType" xml:space="preserve">
-    <value>Prüfe Partitionstyp [7/14]</value>
+    <value>Überprüfung des Partitionstyps [7/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentRAM" xml:space="preserve">
-    <value>Prüfe RAM Kompatibilität [9/14]</value>
+    <value>Überprüfung der RAM-Kompatibilität [9/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSecureBoot" xml:space="preserve">
-    <value>Prüfe Secure Boot [8/14]</value>
+    <value>Überprüfung auf Secure Boot [8/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSecureBootFail" xml:space="preserve">
@@ -196,23 +198,23 @@ Du erreichst mich unter
     <comment>Assessment</comment>
   </data>
   <data name="assessmentStorage" xml:space="preserve">
-    <value>Prüfe Festplattengröße [10/14]</value>
+    <value>Überprüfung der Festplattengröße [10/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSummaryFail" xml:space="preserve">
-    <value>System Anforderungen nicht bereit für Windows 11</value>
+    <value>Die Komponenten sind nicht bereit für Windows 11</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSummaryOK" xml:space="preserve">
-    <value>Glückwunsch, Du bist bereit für Sun Valley!</value>
+    <value>Glückwunsch, du bist bereit für Sun Valley!</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSystemRequirements" xml:space="preserve">
-    <value>Prüfe Systemvoraussetzungen [1/14]</value>
+    <value>Überprüfung der Systemvoraussetzungen [1/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentTPM" xml:space="preserve">
-    <value>Prüfe TPM Version [13/14]</value>
+    <value>Überprüfung der TPM-Version [13/14]</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentTPMFail" xml:space="preserve">
@@ -224,19 +226,19 @@ Du erreichst mich unter
     <comment>Assessment</comment>
   </data>
   <data name="btnCompareUtil" xml:space="preserve">
-    <value>Vergleiche mit App</value>
+    <value>Mit App vergleichen</value>
     <comment>GUI</comment>
   </data>
   <data name="btnPnlShareScreen" xml:space="preserve">
-    <value>Aufnehmen und Teilen auf Twitter</value>
+    <value>Aufnehmen und auf Twitter teilen</value>
     <comment>GUI</comment>
   </data>
   <data name="btnShareScreen" xml:space="preserve">
-    <value>Aufnehmen und Teilen auf Twitter</value>
+    <value>Aufnehmen und auf Twitter teilen</value>
     <comment>GUI</comment>
   </data>
   <data name="checkCompareMS" xml:space="preserve">
-    <value>Vergleiche mit Microsoft</value>
+    <value>Mit Microsoft vergleichen</value>
     <comment>GUI</comment>
   </data>
   <data name="checkCompareMSBack" xml:space="preserve">
@@ -248,15 +250,15 @@ Du erreichst mich unter
     <comment>Hover</comment>
   </data>
   <data name="hoverAssetInfo" xml:space="preserve">
-    <value>Quelloffen @github.com/builtbybel/readysunvalley</value>
+    <value>@github.com/builtbybel/readysunvalley öffnen</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverBootBad" xml:space="preserve">
-    <value>Dein System muss einen UEFI-Boot-Modus unterstützen. Im Moment bootet dein System mit der Vorgängerversion. Dies bedeutet nicht zwangsläufig, dass dein System dies nicht unterstützt. Überprüfen hierzu deine Motherboard, Systemhandbuch oder BIOS/UEFI für weitere Informationen.</value>
+    <value>Dein System muss einen UEFI-Boot-Modus unterstützen. Im Moment bootet dein System im Legacy-Modus. Dies bedeutet nicht zwangsläufig, dass dein System dies nicht unterstützt. Überprüfe hierzu dein Motherboard, das Systemhandbuch oder BIOS für weitere Informationen.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverCPUBad" xml:space="preserve">
-    <value>Deine CPU erfüllt nicht die Spezifikationsanforderungen. Weitere Infos zu deiner CPU erhälts du im linken Ergebnisfenster</value>
+    <value>Deine CPU erfüllt nicht die Spezifikationsanforderungen. Weitere Informationen zu deiner CPU erhältst du im linken Ergebnisfenster</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverCPUCoresBad" xml:space="preserve">
@@ -272,12 +274,11 @@ Du erreichst mich unter
     <comment>Hover</comment>
   </data>
   <data name="hoverDisplayBad" xml:space="preserve">
-    <value>Deine Hauptanzeige ist zu klein, um unter Windows 11 zu arbeiten.</value>
+    <value>Einer oder mehrere deiner Monitore sind für Windows 11 zu klein.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverFreeSpaceInfo" xml:space="preserve">
-    <value>Wenn du nicht genügend freien Speicherplatz gemäß den Anforderungen hast, bedeutet dies nicht, dass du nicht genügend Gesamtspeicherplatz hast. Denke nur daran, dass Windows 11 mindestens 64 GB freien Speicherplatz benötigt.
-Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
+    <value>Wenn du nicht gemäß den Anforderungen genügend freien Speicherplatz hast, bedeutet dies nicht, dass du nicht genügend Gesamtspeicherplatz hast. Denke nur daran, dass Windows 11 mindestens 64 GB freien Speicherplatz benötigt.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverInetBad" xml:space="preserve">
@@ -285,7 +286,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverPartitionBad" xml:space="preserve">
-    <value>Dein System muss GPT-Partitionstypen unterstützen, im Moment bootet aber dein System mit MBR. Das bedeutet nicht unbedingt, dass dein System dies nicht unterstützt. Prüfe hierzu dein Motherboard, das Systemhandbuch oder BIOS/UEFI für weitere Informationen.</value>
+    <value>Dein System muss GPT-Partitionstypen unterstützen. Im Moment bootet dein System aber mit MBR. Das bedeutet nicht unbedingt, dass dein System dies nicht unterstützt. Prüfe hierzu dein Motherboard, das Systemhandbuch oder das BIOS für weitere Informationen.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverRAMBad" xml:space="preserve">
@@ -301,7 +302,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverStorageBad" xml:space="preserve">
-    <value>Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
+    <value>Deine Festplatte hat nicht genügend Kapazität, um Windows 11 auszuführen.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverTPMBad" xml:space="preserve">
@@ -309,7 +310,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverTPMInfo" xml:space="preserve">
-    <value>DeineTPM-Version ist zu niedrig. Wenn du eine ältere Version von TPM verwendest(typischerweise 1.2), kannst du es möglicherweise mit einem Firmware-Update auf TPM 2.0 aktualisieren.</value>
+    <value>Deine TPM-Version ist zu niedrig. Wenn du eine ältere Version von TPM verwendest (typischerweise 1.2), kannst du es möglicherweise mit einem Firmware-Update auf TPM 2.0 aktualisieren.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverWDDMBad" xml:space="preserve">
@@ -333,7 +334,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>GUI</comment>
   </data>
   <data name="infoCompareUtilDownloadMessage" xml:space="preserve">
-    <value>Bereit! Stelle nun also die beiden Apps nebeneinander und schaue dir die Ergebnisse an.</value>
+    <value>Bereit! Lege nun die beiden Apps nebeneinander und schaue dir die Ergebnisse an.</value>
     <comment>GUI</comment>
   </data>
   <data name="lblBitness" xml:space="preserve">
@@ -341,15 +342,15 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblBitnessCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblBootType" xml:space="preserve">
-    <value>Boot Methode</value>
+    <value>Boot-Methode</value>
     <comment>Check</comment>
   </data>
   <data name="lblBootTypeCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblCores" xml:space="preserve">
@@ -357,11 +358,11 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblCoresCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblCPU" xml:space="preserve">
-    <value>Prüfe CPU Kompatibilität...</value>
+    <value>Überprüfung der CPU-Kompatibilität...</value>
     <comment>Check</comment>
   </data>
   <data name="lblDirectX" xml:space="preserve">
@@ -369,7 +370,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblDirectXCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblDiskType" xml:space="preserve">
@@ -377,7 +378,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblDiskTypeCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblDisplay" xml:space="preserve">
@@ -385,7 +386,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblDisplayCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblFreeSpace" xml:space="preserve">
@@ -393,11 +394,11 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblFreeSpaceCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblHeader" xml:space="preserve">
-    <value>Deine Windows 11 Ergebnisse</value>
+    <value>Dein Kompatibilitätsbericht</value>
     <comment>GUI</comment>
   </data>
   <data name="lblInet" xml:space="preserve">
@@ -405,7 +406,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblInetCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblMhz" xml:space="preserve">
@@ -413,7 +414,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblMhzCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblRAM" xml:space="preserve">
@@ -421,7 +422,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblRAMCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblSecureBoot" xml:space="preserve">
@@ -429,19 +430,19 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblSecureBootCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblStatus" xml:space="preserve">
-    <value>Prüfe Systemvoraussetzungen...</value>
-    <comment>GUI</comment>
+    <value>Überprüfung der Systemvoraussetzungen...</value>
+    <comment>Check</comment>
   </data>
   <data name="lblStorage" xml:space="preserve">
     <value>Installierter RAM</value>
     <comment>Check</comment>
   </data>
   <data name="lblStorageCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblSubHeader" xml:space="preserve">
@@ -453,7 +454,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblTPMCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lblWDDM" xml:space="preserve">
@@ -461,7 +462,7 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Check</comment>
   </data>
   <data name="lblWDDMCheck" xml:space="preserve">
-    <value>Prüfe...</value>
+    <value>Überprüfung...</value>
     <comment>Check</comment>
   </data>
   <data name="lnkCompatibilityFix" xml:space="preserve">
@@ -481,13 +482,11 @@ Deine Festplatte hat nicht genug Kapazität, um Windows 11 auszuführen.</value>
     <comment>Menu</comment>
   </data>
   <data name="optionBypass" xml:space="preserve">
-    <value>Wenn du versuchst Windows 11 zu installieren und die Meldung "Auf diesem PC kann Windows 11 nicht ausgeführt werden" erhältst, ist es sehr wahrscheinlich, dass dein PC eine der Anforderungen wie TPM 2.0, Secure Boot oder 4 GB RAM nicht erfüllt.\n\nDie gute Nachricht ist, dass Microsoft einen neuen "LabConfig"-Registrierungsschlüssel enthält, der es dir erlaubt die TPM 2.0, 4 GB Arbeitsspeicher und Secure Boot Anforderungen zu umgehen.\n\nBitte beachte, dass durch die Deaktivierung der TPM 2.0-Anforderung die Sicherheit in Windows 11 effektiv reduziert wird.\n\nWillst du diese Einschränkungen umgehen?
-
-</value>
-    <comment>GUI</comment>
+    <value>Wenn du versuchst Windows 11 zu installieren und die Meldung "Auf diesem PC kann Windows 11 nicht ausgeführt werden" erhältst, ist es sehr wahrscheinlich, dass dein PC eine der Anforderungen wie TPM 2.0, Secure Boot oder 4 GB RAM nicht erfüllt.\n\nDie gute Nachricht ist, dass Microsoft einen neuen "LabConfig"-Registrierungsschlüssel enthält, der es dir ermöglicht die Anforderungen für TPM 2.0, 4 GB Arbeitsspeicher und Secure Boot zu umgehen.\n\nBitte beachte, dass durch die Deaktivierung der TPM 2.0-Anforderung die Sicherheit in Windows 11 effektiv reduziert wird.\n\nWillst du diese Einschränkungen umgehen?</value>
+    <comment>Menu</comment>
   </data>
   <data name="updateTitle" xml:space="preserve">
-    <value>App update verfügbar</value>
+    <value>App-Aktualisierung verfügbar</value>
     <comment>GUI</comment>
   </data>
 </root>
