@@ -411,11 +411,11 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die You don&apos;t have enough free space per the requirements, this doesn&apos;t mean you don&apos;t have enough total space. Just keep in mind Windows 11 requires at least 64GB of available space. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die From the leaked version of Windows 11, It can be seen that the Setup file (ISO File) size is 4.54 GB. Considering that the leaked version does not have all the features, we can say that the actual file size will be between 4.5 to 6 GB.  Just keep in mind that Windows 11 requires a disk with at least 64 GB of storage space. ähnelt.
         /// </summary>
-        internal static string hoverFreeSpaceInfo {
+        internal static string hoverFreeSpaceBad {
             get {
-                return ResourceManager.GetString("hoverFreeSpaceInfo", resourceCulture);
+                return ResourceManager.GetString("hoverFreeSpaceBad", resourceCulture);
             }
         }
         

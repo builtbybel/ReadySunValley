@@ -64,7 +64,6 @@ namespace ReadySunValley
             menuVoteContent.Text = Locales.Locale.menuVoteContent;
             menuVote.Text = Locales.Locale.menuVote;
             menuBypassUndo.Text = Locales.Locale.menuBypassUndo;
-
         }
 
         private void MainWindow_Shown(object sender, EventArgs e)
@@ -326,17 +325,15 @@ namespace ReadySunValley
             Double systemfreespacedouble = Convert.ToDouble(systemfreespacestr);
             lblFreeSpaceCheck.Text = Helpers.Utils.FormatBytes(systemfreespace).ToString();
 
-            if (systemfreespacedouble >= 64)
+            if (systemfreespacedouble >= 6) // Free space
             {
                 freespacegood.Visible = true;
-                freespaceinfo.Visible = false;
+                freespacebad.Visible = false;
             }
             else
             {
                 freespacegood.Visible = false;
-                freespaceinfo.Visible = true;
-
-                performCompatibilityCount += 1;
+                freespacebad.Visible = true;
             }
 
             long systemtotalspace = Assessment.Storage.GetTotalSpace(systemdrive);
@@ -344,7 +341,7 @@ namespace ReadySunValley
             Double systemspacedouble = Convert.ToDouble(systemspacestr);
             lblStorageCheck.Text = Helpers.Utils.FormatBytes(systemtotalspace).ToString();
 
-            if (lblStorageCheck.Text.Contains("GB") && (systemspacedouble >= 64))
+            if (lblStorageCheck.Text.Contains("GB") && (systemspacedouble >= 64)) // Total space, min. 64 GB!
             {
                 hddgood.Visible = true;
                 hddbad.Visible = false;
@@ -486,26 +483,27 @@ namespace ReadySunValley
 
             // Sum good and bad
             var sum = performCompatibilityCount;
-            LblSumBad.Text = sum.ToString();
+            lblSumBad.Text = sum.ToString();
 
             if (sum == 0)
             {
                 // You're ready for Sun Valley!
-                LblSumBad.Text = Locales.Locale.assessmentSummaryOK;
-                LblSumBad.ForeColor = Color.Green;
+                lblSumBad.Text = Locales.Locale.assessmentSummaryOK;
+                lblSumBad.ForeColor = Color.Green;
                 lblStatus.Visible = false;
+                lblSumBad.Font = new Font("Segeo UI", 24.0f);
 
                 // It's all good, so hide bypass options
                 lnkCompatibilityFix.Visible = false;
                 menuBypassUndo.Visible = false;
-
                 lnkCompatibilityFix.Visible = false;
             }
             else // Components not ready for Windows 11
             {
+                // You're ready for Sun Valley!
                 lblStatus.Text = Locales.Locale.assessmentSummaryFail;
                 lnkCompatibilityFix.Visible = true;
-                LblSumBad.ForeColor = Color.DeepPink;
+                lblSumBad.ForeColor = Color.DeepPink;
             }
 
             this.Enabled = true;
@@ -513,7 +511,7 @@ namespace ReadySunValley
 
         private void lnkCompatibilityFix_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (MessageBox.Show(Locales.Locale.optionBypass.Replace("\\n","\n"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Locales.Locale.optionBypass.Replace("\\n", "\n"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Assessment.Bypass.Windows11(EmbeddedResource.bypass);
                 MessageBox.Show(Locales.Locale.infoBypassDone, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -632,7 +630,7 @@ namespace ReadySunValley
         private void freespaceinfo_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.SetToolTip(this.freespaceinfo, Locales.Locale.hoverFreeSpaceInfo);
+            tt.SetToolTip(this.freespacebad, Locales.Locale.hoverFreeSpaceBad);
         }
 
         private void directbad_MouseHover(object sender, EventArgs e)
@@ -658,7 +656,6 @@ namespace ReadySunValley
             ToolTip tt = new ToolTip();
             tt.SetToolTip(this.tpmbad, Locales.Locale.hoverTPMBad);
         }
-
 
         private void inetbad_MouseHover(object sender, EventArgs e)
         {
@@ -744,7 +741,7 @@ namespace ReadySunValley
             {
                 lblStatus.Visible = false;
                 lnkMSRequirements.Visible = true;
-                LblSumBad.Visible = false;
+                lblSumBad.Visible = false;
                 lnkCompatibilityFix.Visible = false;
                 PicCompare.Visible = true;
                 checkCompareMS.Text = Locales.Locale.checkCompareMSBack;
@@ -762,7 +759,7 @@ namespace ReadySunValley
                 PicCompare.Visible = false;
                 lblStatus.Visible = true;
                 lnkMSRequirements.Visible = false;
-                LblSumBad.Visible = true;
+                lblSumBad.Visible = true;
                 lnkCompatibilityFix.Visible = true;
             }
         }

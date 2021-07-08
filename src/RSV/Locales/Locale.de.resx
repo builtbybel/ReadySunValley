@@ -121,7 +121,9 @@
     <value>
 Ersatz für Microsoft's PC Health Check App (derzeit offline!) 
 
-Dieses Projekt wurde ursprünglich von https://github.com/mag-nif-i-cent/Affinity11 geforked.
+Credits
+- German translation overwork by timse201 - https://github.com/timse201
+- Dieses Projekt wurde ursprünglich von - https://github.com/mag-nif-i-cent/Affinity11 geforked.
 
 Du erreichst mich unter
 \ttwitter.com/builtbybel
@@ -202,7 +204,7 @@ Du erreichst mich unter
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSummaryFail" xml:space="preserve">
-    <value>Die Komponenten sind nicht bereit für Windows 11</value>
+    <value>Komponenten sind nicht bereit für Windows 11</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSummaryOK" xml:space="preserve">
@@ -277,8 +279,8 @@ Du erreichst mich unter
     <value>Einer oder mehrere deiner Monitore sind für Windows 11 zu klein.</value>
     <comment>Hover</comment>
   </data>
-  <data name="hoverFreeSpaceInfo" xml:space="preserve">
-    <value>Wenn du nicht gemäß den Anforderungen genügend freien Speicherplatz hast, bedeutet dies nicht, dass du nicht genügend Gesamtspeicherplatz hast. Denke nur daran, dass Windows 11 mindestens 64 GB freien Speicherplatz benötigt.</value>
+  <data name="hoverFreeSpaceBad" xml:space="preserve">
+    <value>Aus der durchgesickerten Version von Windows 11 ist ersichtlich, dass die Größe der Setup-Datei (ISO-Datei) 4,54 GB beträgt.  Wenn man bedenkt, dass die durchgesickerte Version nicht alle Funktionen hat, können wir sagen, dass die tatsächliche Dateigröße zwischen 4,5 und 6 GB liegen wird. Denke nur daran, dass Windows 11 einen Datenträger mit mindestens 64 GB Speicherplatz voraussetzt.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverInetBad" xml:space="preserve">

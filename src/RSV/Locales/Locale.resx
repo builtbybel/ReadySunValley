@@ -277,8 +277,8 @@ You can also reach out to me on
     <value>One or more of your monitors are too small to work on Windows 11.</value>
     <comment>Hover</comment>
   </data>
-  <data name="hoverFreeSpaceInfo" xml:space="preserve">
-    <value>You don't have enough free space per the requirements, this doesn't mean you don't have enough total space. Just keep in mind Windows 11 requires at least 64GB of available space.</value>
+  <data name="hoverFreeSpaceBad" xml:space="preserve">
+    <value>From the leaked version of Windows 11, It can be seen that the Setup file (ISO File) size is 4.54 GB. Considering that the leaked version does not have all the features, we can say that the actual file size will be between 4.5 to 6 GB.  Just keep in mind that Windows 11 requires a disk with at least 64 GB of storage space.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverInetBad" xml:space="preserve">
