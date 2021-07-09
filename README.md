@@ -32,24 +32,11 @@ alt="GitHub issues">
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#download">Download</a> •
-  <a href="#requirements">Windows 11 Requirements</a> •
   <a href="#support">Supported processors</a> •
   <a href="#credits">Credits</a> 
 </p>
 
 ![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv.png)
-
-## Requirements
-Spec|Requirements|
-----|----|
-Processor|1GHz or faster with 2 or more cores on a compatible 64-bit processor or system on a chip
-RAM|4GB
-Storage|64GB or larger storage device
-System firmware|UEFI, Secure Boot capable
-TPM|Trusted Platform Module (TPM) version 2.0
-Graphics card|Compatible with DirectX 12 or later with WDDM 2.0 driver
-Display|HD (720p) display greater than 9 inches diagonally, 8 bits per color channel
-Internet connection and Microsoft account|For Windows 11 Home edition: internet connectivity; Microsoft account to complete device setup on first use For all Windows 11 editions: internet access to perform updates and to download and use some features; Microsoft account for some features
 		
 ## Features
 Lets you check if your device is ready for the above Windows 11/Sun Valley requirements.
