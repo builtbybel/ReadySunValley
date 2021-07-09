@@ -1,5 +1,4 @@
 ---------------------------------------------------
 Build 0.23.3 fixes a critical translation bug in assessment "Boot method" It was mistakenly displayed as Secure boot.
 
-If you want to translate ReadySunValley app to your native language, with a service e.g. Crowdin, then just use the file located
-https://github.com/builtbybel/ReadySunValley/blob/main/src/RSV/Locales/Locale.resx
+If you want to translate ReadySunValley app to your native language, visit the Github releases page for further instructions.
