@@ -1,6 +1,6 @@
 
 Build 0.23.3 
 ---------------
-fixes a critical translation bug in assessment "Boot method" It was mistakenly displayed as Secure Boot.
+This build fixes a critical translation bug in assessment "Boot method". It was mistakenly displayed as Secure Boot.
 
 If you want to translate ReadySunValley app to your native language, visit the Github releases page for further instructions.
