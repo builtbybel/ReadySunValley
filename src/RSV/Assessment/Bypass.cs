@@ -4,9 +4,9 @@ using System.Text;
 
 namespace ReadySunValley.Assessment
 {
-    public static class Bypass
+    public class Bypass
     {
-        public static void Windows11(string resource)
+        public void Windows11(string resource)
         {
             Process p = new Process();
             p.StartInfo.UseShellExecute = false;

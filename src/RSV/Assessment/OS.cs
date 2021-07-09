@@ -3,14 +3,18 @@ using System;
 
 namespace ReadySunValley.Assessment
 {
-    public static class OS
+    public class OS
     {
-        public static string GetOS()
+        public string ComputerName { get; set; }
+
+        public string GetOS()
         {
+            ComputerName = Environment.MachineName;
+
             return (string)Registry.GetValue("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion", "ProductName", "");
         }
 
-        public static string Is64Bit()
+        public string Is64Bit()
         {
             string bitness = string.Empty;
 

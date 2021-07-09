@@ -1,8 +1,8 @@
 ﻿namespace ReadySunValley.Assessment
 {
-    public static class CPU
+    public class CPU
     {
-        public static string Architecture()
+        public string Architecture()
         {
             string result = string.Empty;
 
@@ -26,7 +26,7 @@
             return result;
         }
 
-        public static string ClockSpeed()
+        public string ClockSpeed()
         {
             string clockSpeed = "";
             foreach (var item in new System.Management.ManagementObjectSearcher("select MaxClockSpeed from Win32_Processor").Get())

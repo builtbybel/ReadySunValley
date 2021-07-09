@@ -12,14 +12,23 @@ namespace ReadySunValley
 {
     public partial class MainWindow : Form
     {
+        private Assessment.Boot bootInfo = new Assessment.Boot();
+        private Assessment.Bypass bypassInfo = new Assessment.Bypass();
+        private Assessment.CPU cpuInfo = new Assessment.CPU();
+        private Assessment.Display displayInfo = new Assessment.Display();
+        private Assessment.GPU gpuInfo = new Assessment.GPU();
+        private Assessment.Inet inetInfo = new Assessment.Inet();
+        private Assessment.OS osInfo = new Assessment.OS();
+        private Assessment.Storage storageInfo = new Assessment.Storage();
+
         public MainWindow()
         {
             InitializeComponent();
 
             // GUI options
-            this.Text += " (" + Assessment.OS.GetOS() + Assessment.OS.Is64Bit() + ")";   // Title
-            lblMainMenu.Text = "\ue700";                                                 // Hamburger menu
-            btnRecheck.Text = "\ue72c";                                                  // Refresh
+            this.Text += " (" + osInfo.GetOS() + osInfo.Is64Bit() + ")";    // Title
+            lblMainMenu.Text = "\ue700";                                    // Hamburger menu
+            btnRecheck.Text = "\ue72c";                                     // Refresh
         }
 
         public void Globalization()
@@ -104,7 +113,7 @@ namespace ReadySunValley
 
             // CPU arch
             lblStatus.Text = Locales.Locale.assessmentCPUArchitecture;
-            lblBitnessCheck.Text = Assessment.CPU.Architecture();
+            lblBitnessCheck.Text = cpuInfo.Architecture();
             if (lblBitnessCheck.Text == "64 Bit")
             {
                 archgood.Visible = true;
@@ -118,9 +127,9 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
+            // Display
             lblStatus.Text = Locales.Locale.assessmentDisplay;
-
-            lblDisplayCheck.Text = Assessment.Display.MonitorSize();
+            lblDisplayCheck.Text = displayInfo.MonitorSize();
 
             if (double.Parse(lblDisplayCheck.Text) <= 9)
             {
@@ -138,7 +147,7 @@ namespace ReadySunValley
             }
 
             // Boot Method
-            lblBootTypeCheck.Text = Assessment.Boot.IsUEFI();
+            lblBootTypeCheck.Text = bootInfo.IsUEFI();
             if (lblBootTypeCheck.Text.Contains("UEFI"))
             {
                 bootgood.Visible = true;
@@ -152,9 +161,9 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            // CPU Clock speed
+            // CPU Clock Speed
             lblStatus.Text = Locales.Locale.assessmentCPUSpeed;
-            var clockspeed = Assessment.CPU.ClockSpeed();
+            var clockspeed = cpuInfo.ClockSpeed();
             lblMhzCheck.Text = clockspeed + " " + Locales.Locale.assessmentCPUSpeedFormat;
             int x = Int32.Parse(clockspeed);
             if (x > 1000)
@@ -170,14 +179,14 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            // CPU Core counts
+            // CPU Core
             lblStatus.Text = Locales.Locale.assessmentCPUCores;
             int coreCount = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
                 coreCount += int.Parse(item["NumberOfCores"].ToString());
             }
-            lblCoresCheck.Text = coreCount + " Cores, " + Environment.ProcessorCount + " Threads";
+            lblCoresCheck.Text = coreCount + " " + Locales.Locale.lblCores +", " + Environment.ProcessorCount + " Threads";
 
             if (coreCount > 1)
             {
@@ -192,7 +201,7 @@ namespace ReadySunValley
                 performCompatibilityCount += 1;
             }
 
-            // CPU Compatibility check
+            // CPU Compatibility
             lblStatus.Text = Locales.Locale.assessmentCPUCompatibility;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_Processor").Get())
             {
@@ -271,7 +280,7 @@ namespace ReadySunValley
             // Secure Boot
             lblStatus.Text = Locales.Locale.assessmentSecureBoot;
 
-            if (Assessment.Boot.IsSecureBoot())
+            if (bootInfo.IsSecureBoot())
             {
                 lblSecureBootCheck.Text = Locales.Locale.assessmentSecureBootOK;
 
@@ -320,7 +329,7 @@ namespace ReadySunValley
             lblStatus.Text = Locales.Locale.assessmentStorage;
             var systemdrive = Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
 
-            long systemfreespace = Assessment.Storage.GetTotalFreeSpace(systemdrive);
+            long systemfreespace = storageInfo.GetTotalFreeSpace(systemdrive);
             string systemfreespacestr = Helpers.Utils.FormatBytes(systemfreespace).Split(' ')[0];
             Double systemfreespacedouble = Convert.ToDouble(systemfreespacestr);
             lblFreeSpaceCheck.Text = Helpers.Utils.FormatBytes(systemfreespace).ToString();
@@ -336,7 +345,7 @@ namespace ReadySunValley
                 freespacebad.Visible = true;
             }
 
-            long systemtotalspace = Assessment.Storage.GetTotalSpace(systemdrive);
+            long systemtotalspace = storageInfo.GetTotalSpace(systemdrive);
             string systemspacestr = Helpers.Utils.FormatBytes(systemtotalspace).Split(' ')[0];
             Double systemspacedouble = Convert.ToDouble(systemspacestr);
             lblStorageCheck.Text = Helpers.Utils.FormatBytes(systemtotalspace).ToString();
@@ -422,7 +431,7 @@ namespace ReadySunValley
 
             // GPU
             lblStatus.Text = Locales.Locale.assessmentGPU;
-            lblWDDMCheck.Text += " (" + Assessment.GPU.Unit() + ")";
+            lblWDDMCheck.Text += " (" + gpuInfo.Unit() + ")";
 
             // TPM, Ref. https://wutils.com/wmi/root/cimv2/security/microsofttpm/win32_tpm/cs-samples.html
             lblStatus.Text = Locales.Locale.assessmentTPM;
@@ -466,7 +475,7 @@ namespace ReadySunValley
 
             // Inet
             lblStatus.Text = Locales.Locale.assessmentInet;
-            if (Assessment.Inet.isINet())
+            if (inetInfo.isINet())
             {
                 lblInetCheck.Text = Locales.Locale.assessmentInetOK;
                 inetgood.Visible = true;
@@ -513,14 +522,14 @@ namespace ReadySunValley
         {
             if (MessageBox.Show(Locales.Locale.optionBypass.Replace("\\n", "\n"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Assessment.Bypass.Windows11(EmbeddedResource.bypass);
+                bypassInfo.Windows11(EmbeddedResource.bypass);
                 MessageBox.Show(Locales.Locale.infoBypassDone, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void menuBypassUndo_Click(object sender, EventArgs e)
         {
-            Assessment.Bypass.Windows11(EmbeddedResource.undo_bypass);
+            bypassInfo.Windows11(EmbeddedResource.undo_bypass);
             MessageBox.Show(Locales.Locale.infoBypassUndo, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -535,7 +544,7 @@ namespace ReadySunValley
                 InitialDirectory = Application.StartupPath,
                 Title = "Location",
                 Filter = "PNG Images|*.png",
-                FileName = "Compatibility-Screen-Win11-" + System.Environment.MachineName
+                FileName = "Compatibility-Screen-Win11-" + osInfo.ComputerName
             };
 
             DialogResult result = dialog.ShowDialog(this);

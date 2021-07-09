@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace ReadySunValley.Assessment
 {
-    public static class GPU
+    public class GPU
     {
-        public static string Unit()
+        public string Unit()
         {
             string result = string.Empty;
             try

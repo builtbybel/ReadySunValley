@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ReadySunValley.Helpers
 {
-    public class Utils
+    public static class Utils
     {
         public static Version CurrentVersion = new Version(Application.ProductVersion);
         public static Version LatestVersion;

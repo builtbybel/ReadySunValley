@@ -346,7 +346,7 @@ You can also reach out to me on
     <comment>Check</comment>
   </data>
   <data name="lblBootType" xml:space="preserve">
-    <value>Secure Boot</value>
+    <value>Boot Method</value>
     <comment>Check</comment>
   </data>
   <data name="lblBootTypeCheck" xml:space="preserve">

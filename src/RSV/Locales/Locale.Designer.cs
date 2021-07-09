@@ -564,7 +564,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Secure Boot ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Boot Method ähnelt.
         /// </summary>
         internal static string lblBootType {
             get {

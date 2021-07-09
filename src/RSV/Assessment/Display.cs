@@ -4,16 +4,16 @@ using System.Runtime.InteropServices;
 
 namespace ReadySunValley.Assessment
 {
-    public static class Display
+    public class Display
     {
         [DllImport("gdi32.dll")]
         private static extern int GetDeviceCaps(IntPtr hdc, int nIndex);
 
-        public static string MonitorSize()
+        public string MonitorSize()
         {
             string size = string.Empty;
 
-            Graphics graphics = Graphics.FromHwnd(IntPtr.Zero); 
+            Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
             IntPtr desktop = graphics.GetHdc();
             int monitorHeight = GetDeviceCaps(desktop, 6);
             int monitorWidth = GetDeviceCaps(desktop, 4);

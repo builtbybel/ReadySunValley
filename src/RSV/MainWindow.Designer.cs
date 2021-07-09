@@ -328,6 +328,7 @@ namespace ReadySunValley
             // 
             // lblDisplayCheck
             // 
+            this.lblDisplayCheck.AutoEllipsis = true;
             resources.ApplyResources(this.lblDisplayCheck, "lblDisplayCheck");
             this.lblDisplayCheck.Name = "lblDisplayCheck";
             // 

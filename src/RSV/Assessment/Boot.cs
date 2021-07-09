@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace ReadySunValley.Assessment
 {
-    public static class Boot
+    public class Boot
     {
-        public static string IsUEFI()
+        public string IsUEFI()
         {
             string env = "echo %firmware_type%";         // Compatible with >= Win8.1
 
@@ -26,7 +26,7 @@ namespace ReadySunValley.Assessment
         /* On systems with UEFI the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecureBoot\State\UEFISecureBootEnabled should be present
          In the Non-UEFI case this key is not present */
 
-        public static bool IsSecureBoot()
+        public bool IsSecureBoot()
         {
             try
             {

@@ -2,9 +2,9 @@
 
 namespace ReadySunValley.Assessment
 {
-    public static class Storage
+    public class Storage
     {
-        public static long GetTotalFreeSpace(string driveName)
+        public long GetTotalFreeSpace(string driveName)
         {
             foreach (DriveInfo drive in DriveInfo.GetDrives())
             {
@@ -16,7 +16,7 @@ namespace ReadySunValley.Assessment
             return -1;
         }
 
-        public static long GetTotalSpace(string driveName)
+        public long GetTotalSpace(string driveName)
         {
             foreach (DriveInfo drive in DriveInfo.GetDrives())
             {
