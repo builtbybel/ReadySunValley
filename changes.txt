@@ -1,4 +1,5 @@
 ---------------------------------------------------
-This release ads localization support. More infos and howto translate the app into your native language on the Github releases page.
+Build 0.23.1 fixes a critical translation bug in assessment "Boot method" It was mistakenly displayed as Secure boot.
 
-Moreover, the release is now also available in German
+If you want to translate ReadySunValley app to your native language, with a service e.g. Crowdin, then just use the file located
+https://github.com/builtbybel/ReadySunValley/blob/main/src/RSV/Locales/Locale.resx
