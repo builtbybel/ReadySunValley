@@ -225,8 +225,11 @@ You can also reach out to me on
     <value>(Not supported)</value>
     <comment>Assessment</comment>
   </data>
+  <data name="assetTweet" xml:space="preserve">
+    <value>Ready%20for%20%23Windows11/Sun%20Valley%20update?%20Here%20are%20my%20results%20%23ReadySunValley%20%23app</value>
+  </data>
   <data name="btnCompareUtil" xml:space="preserve">
-    <value>Compare with App</value>
+    <value>Get a second opinion</value>
     <comment>GUI</comment>
   </data>
   <data name="btnPnlShareScreen" xml:space="preserve">
@@ -326,7 +329,7 @@ You can also reach out to me on
     <comment>GUI</comment>
   </data>
   <data name="infoCaptureHint" xml:space="preserve">
-    <value>Don't forget to upload the results picture to Twitter.</value>
+    <value>Click &lt;OK&gt; to prepare the Twitter status. After that you just need to upload the result image you just created.</value>
     <comment>GUI</comment>
   </data>
   <data name="infoCompareUtil" xml:space="preserve">
@@ -375,10 +378,6 @@ You can also reach out to me on
   </data>
   <data name="lblDiskType" xml:space="preserve">
     <value>Disk Partition</value>
-    <comment>Check</comment>
-  </data>
-  <data name="lblDiskTypeCheck" xml:space="preserve">
-    <value>Checking...</value>
     <comment>Check</comment>
   </data>
   <data name="lblDisplay" xml:space="preserve">
@@ -469,6 +468,13 @@ You can also reach out to me on
     <value>Click here to fix some of these failed results with a registry hack</value>
     <comment>GUI</comment>
   </data>
+  <data name="lnkDiskTypeCheck" xml:space="preserve">
+    <value>Checking...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lnkDiskTypeInfo" xml:space="preserve">
+    <value>(List all)</value>
+  </data>
   <data name="menuBypassUndo" xml:space="preserve">
     <value>Undo Bypass</value>
     <comment>Menu</comment>
@@ -482,7 +488,7 @@ You can also reach out to me on
     <comment>Menu</comment>
   </data>
   <data name="optionBypass" xml:space="preserve">
-    <value>If you are attempting to install Windows 11 and receive a message stating, "This PC can't run Windows 11" it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4GB of RAM.\n\nThe good news is that Microsoft includes a new "LabConfig" registry key that allows you to configure settings to bypass the TPM 2.0, the 4GB memory, and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11\n\nDo you want to bypass these restrictions?</value>
+    <value>If you are attempting to install Windows 11 and receive a message stating, "This PC can't run Windows 11" it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4 GB of RAM.\n\nThe good news is that Microsoft includes a new "LabConfig" registry key that allows you to configure settings to bypass the TPM 2.0, the 4 GB memory, and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11\n\nDo you want to bypass these restrictions?</value>
     <comment>Menu</comment>
   </data>
   <data name="updateTitle" xml:space="preserve">
