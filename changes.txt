@@ -1,7 +1,7 @@
 
-Version 0.3.0
+Version 0.30
 ---------------
-This is a major release with many improvement and fixes.
+This is a major release with many improvements and fixes.
 
 Visit the Github releases page to view all version changes of this release.
           - https://github.com/builtbybel/ReadySunValley/releases
