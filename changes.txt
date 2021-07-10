@@ -3,4 +3,4 @@ Version 0.30
 ---------------
 This is a major release with many improvements and fixes.
 
-Click <Yes> to visit the Github releases page to view all version changes of this release.
+Click <Yes> to visit the Github releases page to view all changes in this release.
