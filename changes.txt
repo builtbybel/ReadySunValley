@@ -1,6 +1,7 @@
 
-Build 0.23.3 
+Version 0.3.0
 ---------------
-This build fixes a critical translation bug in assessment "Boot method". It was mistakenly displayed as Secure Boot.
+This is a major release with many improvement and fixes.
 
-If you want to translate ReadySunValley app to your native language, visit the Github releases page for further instructions.
+Visit the Github releases page to view all version changes of this release.
+          - https://github.com/builtbybel/ReadySunValley/releases
