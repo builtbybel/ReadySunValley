@@ -204,11 +204,13 @@ https://github.com/mag-nif-i-cent/Affinity11
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSummaryFail" xml:space="preserve">
-    <value>個のコンポーネントが\nWindows 11に非対応です</value>
+    <value>個のコンポーネントが
+Windows 11に非対応です</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSummaryOK" xml:space="preserve">
-    <value>Sun Valleyに\n対応しています!</value>
+    <value>Sun Valleyに
+対応しています!</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSystemRequirements" xml:space="preserve">
