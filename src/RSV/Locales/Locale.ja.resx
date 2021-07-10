@@ -121,7 +121,9 @@
     <value>
 マイクロソフトのPC正常性チェックアプリ(現在取り下げ中)の代替品
 
-このプロジェクトは https://github.com/mag-nif-i-cent/Affinity11 からフォークしました
+このプロジェクトは
+https://github.com/mag-nif-i-cent/Affinity11
+からフォークしています
  
 作者への連絡は
 \ttwitter.com/builtbybel
@@ -202,11 +204,11 @@
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSummaryFail" xml:space="preserve">
-    <value>個のコンポーネントがWindows 11に非対応です</value>
+    <value>個のコンポーネントが\nWindows 11に非対応です</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSummaryOK" xml:space="preserve">
-    <value>Sun Valleyに対応しています!</value>
+    <value>Sun Valleyに\n対応しています!</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSystemRequirements" xml:space="preserve">
