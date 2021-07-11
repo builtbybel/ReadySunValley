@@ -253,7 +253,7 @@ Windows 11に非対応です</value>
     <comment>GUI</comment>
   </data>
   <data name="hoveCPUInfo" xml:space="preserve">
-    <value>Your CPU meets the soft requirements, it's just not listed on the offical list of supported processors.</value>
+    <value>お使いのCPUは最低要件を満たしていますが、公式の対応CPU一覧には載っていません。</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverAssetInfo" xml:space="preserve">
@@ -261,11 +261,11 @@ Windows 11に非対応です</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverBootBad" xml:space="preserve">
-    <value>Your system needs to support a UEFI boot mode, right now your system is booting using Legacy. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual or BIOS for more information.</value>
+    <value>お使いのシステムがUEFI起動モードに対応している必要がありますが、現状ではレガシーモードで起動しています。お使いのシステムがUEFIに対応していないという意味ではありません。詳細はマザーボード、システムのマニュアル、BIOSをチェックしてください。</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverCPUBad" xml:space="preserve">
-    <value>Your CPU doesn't meet the specification requirements, see individual info about frequency or cores below.</value>
+    <value>お使いのCPUは仕様上の要件を満たしません。下記の周波数またはコア数に関する個別の情報を参照ください。</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverCPUCoresBad" xml:space="preserve">
@@ -277,7 +277,7 @@ Windows 11に非対応です</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverDiectXBad" xml:space="preserve">
-    <value>Your DirectX version is too low. This doesn't necessarily mean that your system doesn't support higher versions. Check DXDIAG for more information.</value>
+    <value>DirectXのバージョンが低すぎます。お使いのシステムが高いバージョンに対応していないという意味ではありません。詳細はDXDIAGをチェックしてください。</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverDisplayBad" xml:space="preserve">
@@ -289,15 +289,16 @@ Windows 11に非対応です</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverInetBad" xml:space="preserve">
-    <value>Windows 11 Home edition requires internet connectivity and a Microsoft account to complete device setup on first use. Switching a device out of Windows 11 Home in S mode also requires internet connectivity.</value>
+    <value>Windows 11 Homeエディションでは、初回使用時に機器のセットアップを完了するには、インターネット接続とマイクロソフトアカウントが必要です。
+Windows 11 HomeのSモードを解除する場合もインターネット接続が必要です。</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverPartitionBad" xml:space="preserve">
-    <value>Your system needs to support GPT partition types, right now your system is booting using MBR. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual or bios for more information.</value>
+    <value>お使いのシステムがGPTパーティションタイプに対応している必要がありますが、現状ではMBRで起動しています。お使いのシステムがGPTに対応していないという意味ではありません。詳細はマザーボード、システムのマニュアル、BIOSをチェックしてください。</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverRAMBad" xml:space="preserve">
-    <value>RAM容量がWindows 11の最低要件を満たしません</value>
+    <value>RAM容量がWindows 11の最低要件を満たしていません</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverRecheck" xml:space="preserve">
@@ -305,7 +306,7 @@ Windows 11に非対応です</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverSecureBootBad" xml:space="preserve">
-    <value>Secure Boot functionality is missing. You can bypass the Secure boot requirements with ReadySunValley. Use the repair link in the right panel.</value>
+    <value>セキュアブート機能がありません。ReadySunValleyではセキュアブートの要件を回避可能です。右のパネルの修復リンクを使います。</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverStorageBad" xml:space="preserve">
@@ -313,23 +314,23 @@ Windows 11に非対応です</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverTPMBad" xml:space="preserve">
-    <value>If no TPM is present, you’ll probably find it’s been disabled in the UEFI.</value>
+    <value>TPMが存在しない場合、おそらくUEFIで無効化されています。</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverTPMInfo" xml:space="preserve">
-    <value>Your TPM version is too low. If you’re running an older version of TPM (1.2 typically), then you may be able to update it to TPM 2.0 with a firmware update.</value>
+    <value>TPMのバージョンが低すぎます。古いバージョンのTPM(通常は1.2)が動作している場合、ファームウェア更新でTPM 2.0にアップデートできる場合があります。</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverWDDMBad" xml:space="preserve">
-    <value>Your Windows Display Driver Model version does not meet the minimum requirements for Windows 11.</value>
+    <value>Windows Display Driver ModelのバージョンがWindows 11の最低要件を満たしていません。</value>
     <comment>Hover</comment>
   </data>
   <data name="infoBypassDone" xml:space="preserve">
-    <value>TPM and Secure Boot restriction has been bypassed.</value>
+    <value>TPMとセキュアブートの制約を回避しました。</value>
     <comment>GUI</comment>
   </data>
   <data name="infoBypassUndo" xml:space="preserve">
-    <value>System setttings are in place again.</value>
+    <value>システム設定を再度復元しました。</value>
     <comment>GUI</comment>
   </data>
   <data name="infoCaptureHint" xml:space="preserve">
@@ -341,7 +342,7 @@ Windows 11に非対応です</value>
     <comment>GUI</comment>
   </data>
   <data name="infoCompareUtilDownloadMessage" xml:space="preserve">
-    <value>Ready! So now put the two apps next to each other and take a look at the results.</value>
+    <value>できました。両アプリを並べて結果を見てみましょう。</value>
     <comment>GUI</comment>
   </data>
   <data name="lblBitness" xml:space="preserve">
@@ -449,7 +450,7 @@ Windows 11に非対応です</value>
     <comment>Check</comment>
   </data>
   <data name="lblSubHeader" xml:space="preserve">
-    <value>*Move the cusor over a failed result to get more information</value>
+    <value>失敗した結果にカーソルをかぶせると詳しい情報が得られます</value>
     <comment>GUI</comment>
   </data>
   <data name="lblTPM" xml:space="preserve">
@@ -469,7 +470,7 @@ Windows 11に非対応です</value>
     <comment>Check</comment>
   </data>
   <data name="lnkCompatibilityFix" xml:space="preserve">
-    <value>Click here to fix some of these failed results with a registry hack</value>
+    <value>ここをクリックすると、失敗した結果の一部をレジストリハックで修正します。</value>
     <comment>GUI</comment>
   </data>
   <data name="lnkDiskTypeCheck" xml:space="preserve">
@@ -488,7 +489,7 @@ Windows 11に非対応です</value>
     <comment>Menu</comment>
   </data>
   <data name="menuVoteContent" xml:space="preserve">
-    <value>Does your hardware qualify for Windows 11?</value>
+    <value>お使いのハードウェアはWindows 11に適合していますか?</value>
     <comment>Menu</comment>
   </data>
   <data name="optionBypass" xml:space="preserve">
