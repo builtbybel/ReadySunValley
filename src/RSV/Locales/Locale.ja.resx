@@ -229,8 +229,11 @@ Windows 11に非対応です</value>
     <value>(非対応)</value>
     <comment>Assessment</comment>
   </data>
+  <data name="assetTweet" xml:space="preserve">
+    <value>Windows11/Sun%20Valleyの更新はOK? これは「ReadySunValley」アプリの結果です</value>
+  </data>
   <data name="btnCompareUtil" xml:space="preserve">
-    <value>アプリと比較</value>
+    <value>セカンドオピニオンを得る</value>
     <comment>GUI</comment>
   </data>
   <data name="btnPnlShareScreen" xml:space="preserve">
@@ -381,10 +384,6 @@ Windows 11に非対応です</value>
     <value>ディスクパーティション</value>
     <comment>Check</comment>
   </data>
-  <data name="lblDiskTypeCheck" xml:space="preserve">
-    <value>チェック中...</value>
-    <comment>Check</comment>
-  </data>
   <data name="lblDisplay" xml:space="preserve">
     <value>ディスプレイ</value>
     <comment>Check</comment>
@@ -472,6 +471,13 @@ Windows 11に非対応です</value>
   <data name="lnkCompatibilityFix" xml:space="preserve">
     <value>Click here to fix some of these failed results with a registry hack</value>
     <comment>GUI</comment>
+  </data>
+  <data name="lnkDiskTypeCheck" xml:space="preserve">
+    <value>チェック中...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lnkDiskTypeInfo" xml:space="preserve">
+    <value>(全ての一覧)</value>
   </data>
   <data name="menuBypassUndo" xml:space="preserve">
     <value>Undo Bypass</value>
