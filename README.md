@@ -37,7 +37,10 @@ alt="GitHub issues">
 </p>
 
 ![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv.png)
-		
+
+### Compare your result with Microsoft requirements
+![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv-opt.png)
+	
 ## Features
 Lets you check if your device is ready for the above Windows 11/Sun Valley requirements.
 
