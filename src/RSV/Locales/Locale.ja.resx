@@ -493,7 +493,7 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <comment>Menu</comment>
   </data>
   <data name="optionBypass" xml:space="preserve">
-    <value>If you are attempting to install Windows 11 and receive a message stating, "This PC can't run Windows 11" it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4GB of RAM.\n\nThe good news is that Microsoft includes a new "LabConfig" registry key that allows you to configure settings to bypass the TPM 2.0, the 4GB memory, and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11\n\nDo you want to bypass these restrictions?</value>
+    <value>Windows 11をインストールしようとして「このPCはWindows 11を実行できません」というメッセージが現れる場合、TPM 2.0、セキュアブート、4GBのRAMの要件を満たさないことが多いです。\n\nマイクロソフトは新しいレジストリキー「LabConfig」を導入し、TPM 2.0、4GBメモリ、セキュアブートの要件を回避するよう設定することが可能となりました。\n\nTPM 2.0要件を無効化することにより、Windows 11のセキュリティを低下させることに注意してください。\n\n以上の制約を回避しますか?</value>
     <comment>Menu</comment>
   </data>
   <data name="updateTitle" xml:space="preserve">
