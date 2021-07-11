@@ -33,6 +33,7 @@ namespace ReadySunValley
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.checkCompareMS = new System.Windows.Forms.CheckBox();
             this.pnlLeft = new System.Windows.Forms.Panel();
+            this.lnkDiskTypeCheck = new System.Windows.Forms.LinkLabel();
             this.btnRecheck = new System.Windows.Forms.Button();
             this.lblMhz = new System.Windows.Forms.Label();
             this.lblCores = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@ namespace ReadySunValley
             this.lblTPMCheck = new System.Windows.Forms.Label();
             this.lblStorageCheck = new System.Windows.Forms.Label();
             this.lblRAMCheck = new System.Windows.Forms.Label();
-            this.lblDiskTypeCheck = new System.Windows.Forms.Label();
             this.lblCoresCheck = new System.Windows.Forms.Label();
             this.lblMhzCheck = new System.Windows.Forms.Label();
             this.lblCPU = new System.Windows.Forms.Label();
@@ -89,15 +89,15 @@ namespace ReadySunValley
             this.wddmbad = new System.Windows.Forms.PictureBox();
             this.inetgood = new System.Windows.Forms.PictureBox();
             this.inetbad = new System.Windows.Forms.PictureBox();
-            this.cpugood = new System.Windows.Forms.PictureBox();
-            this.cpuinfo = new System.Windows.Forms.PictureBox();
-            this.cpubad = new System.Windows.Forms.PictureBox();
             this.tpmgood = new System.Windows.Forms.PictureBox();
             this.tpminfo = new System.Windows.Forms.PictureBox();
             this.freespacegood = new System.Windows.Forms.PictureBox();
             this.freespacebad = new System.Windows.Forms.PictureBox();
+            this.cpugood = new System.Windows.Forms.PictureBox();
+            this.cpuinfo = new System.Windows.Forms.PictureBox();
+            this.cpubad = new System.Windows.Forms.PictureBox();
             this.PicCompare = new System.Windows.Forms.PictureBox();
-            this.MainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuVoteContent = new System.Windows.Forms.ToolStripTextBox();
             this.menuVote = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBypassUndo = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,6 +116,8 @@ namespace ReadySunValley
             this.btnShareScreen = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
             this.lblSubHeader = new System.Windows.Forms.LinkLabel();
+            this.tt = new System.Windows.Forms.ToolTip(this.components);
+            this.menuTestingRelease = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.freqgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresgood)).BeginInit();
@@ -142,15 +144,15 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetbad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.freespacebad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCompare)).BeginInit();
-            this.MainMenu.SuspendLayout();
+            this.mainMenu.SuspendLayout();
             this.pnlRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.assetOpenGitHub)).BeginInit();
             this.pnlMiddle.SuspendLayout();
@@ -171,6 +173,7 @@ namespace ReadySunValley
             // 
             resources.ApplyResources(this.pnlLeft, "pnlLeft");
             this.pnlLeft.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlLeft.Controls.Add(this.lnkDiskTypeCheck);
             this.pnlLeft.Controls.Add(this.btnRecheck);
             this.pnlLeft.Controls.Add(this.lblMhz);
             this.pnlLeft.Controls.Add(this.lblCores);
@@ -192,7 +195,6 @@ namespace ReadySunValley
             this.pnlLeft.Controls.Add(this.lblTPMCheck);
             this.pnlLeft.Controls.Add(this.lblStorageCheck);
             this.pnlLeft.Controls.Add(this.lblRAMCheck);
-            this.pnlLeft.Controls.Add(this.lblDiskTypeCheck);
             this.pnlLeft.Controls.Add(this.lblCoresCheck);
             this.pnlLeft.Controls.Add(this.lblMhzCheck);
             this.pnlLeft.Controls.Add(this.lblCPU);
@@ -227,14 +229,24 @@ namespace ReadySunValley
             this.pnlLeft.Controls.Add(this.wddmbad);
             this.pnlLeft.Controls.Add(this.inetgood);
             this.pnlLeft.Controls.Add(this.inetbad);
-            this.pnlLeft.Controls.Add(this.cpugood);
-            this.pnlLeft.Controls.Add(this.cpuinfo);
-            this.pnlLeft.Controls.Add(this.cpubad);
             this.pnlLeft.Controls.Add(this.tpmgood);
             this.pnlLeft.Controls.Add(this.tpminfo);
             this.pnlLeft.Controls.Add(this.freespacegood);
             this.pnlLeft.Controls.Add(this.freespacebad);
+            this.pnlLeft.Controls.Add(this.cpugood);
+            this.pnlLeft.Controls.Add(this.cpuinfo);
+            this.pnlLeft.Controls.Add(this.cpubad);
             this.pnlLeft.Name = "pnlLeft";
+            // 
+            // lnkDiskTypeCheck
+            // 
+            this.lnkDiskTypeCheck.ActiveLinkColor = System.Drawing.Color.DeepPink;
+            resources.ApplyResources(this.lnkDiskTypeCheck, "lnkDiskTypeCheck");
+            this.lnkDiskTypeCheck.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkDiskTypeCheck.LinkColor = System.Drawing.Color.Black;
+            this.lnkDiskTypeCheck.Name = "lnkDiskTypeCheck";
+            this.lnkDiskTypeCheck.TabStop = true;
+            this.lnkDiskTypeCheck.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkPartitionTypeInfo_LinkClicked);
             // 
             // btnRecheck
             // 
@@ -364,11 +376,6 @@ namespace ReadySunValley
             // 
             resources.ApplyResources(this.lblRAMCheck, "lblRAMCheck");
             this.lblRAMCheck.Name = "lblRAMCheck";
-            // 
-            // lblDiskTypeCheck
-            // 
-            resources.ApplyResources(this.lblDiskTypeCheck, "lblDiskTypeCheck");
-            this.lblDiskTypeCheck.Name = "lblDiskTypeCheck";
             // 
             // lblCoresCheck
             // 
@@ -584,27 +591,6 @@ namespace ReadySunValley
             this.inetbad.TabStop = false;
             this.inetbad.MouseHover += new System.EventHandler(this.inetbad_MouseHover);
             // 
-            // cpugood
-            // 
-            resources.ApplyResources(this.cpugood, "cpugood");
-            this.cpugood.Name = "cpugood";
-            this.cpugood.TabStop = false;
-            // 
-            // cpuinfo
-            // 
-            this.cpuinfo.Image = global::ReadySunValley.Properties.Resources.info;
-            resources.ApplyResources(this.cpuinfo, "cpuinfo");
-            this.cpuinfo.Name = "cpuinfo";
-            this.cpuinfo.TabStop = false;
-            this.cpuinfo.MouseHover += new System.EventHandler(this.cpuinfo_MouseHover);
-            // 
-            // cpubad
-            // 
-            resources.ApplyResources(this.cpubad, "cpubad");
-            this.cpubad.Name = "cpubad";
-            this.cpubad.TabStop = false;
-            this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
-            // 
             // tpmgood
             // 
             resources.ApplyResources(this.tpmgood, "tpmgood");
@@ -633,24 +619,46 @@ namespace ReadySunValley
             this.freespacebad.TabStop = false;
             this.freespacebad.MouseHover += new System.EventHandler(this.freespaceinfo_MouseHover);
             // 
+            // cpugood
+            // 
+            resources.ApplyResources(this.cpugood, "cpugood");
+            this.cpugood.Name = "cpugood";
+            this.cpugood.TabStop = false;
+            // 
+            // cpuinfo
+            // 
+            this.cpuinfo.Image = global::ReadySunValley.Properties.Resources.info;
+            resources.ApplyResources(this.cpuinfo, "cpuinfo");
+            this.cpuinfo.Name = "cpuinfo";
+            this.cpuinfo.TabStop = false;
+            this.cpuinfo.MouseHover += new System.EventHandler(this.cpuinfo_MouseHover);
+            // 
+            // cpubad
+            // 
+            resources.ApplyResources(this.cpubad, "cpubad");
+            this.cpubad.Name = "cpubad";
+            this.cpubad.TabStop = false;
+            this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
+            // 
             // PicCompare
             // 
             resources.ApplyResources(this.PicCompare, "PicCompare");
             this.PicCompare.Name = "PicCompare";
             this.PicCompare.TabStop = false;
             // 
-            // MainMenu
+            // mainMenu
             // 
-            this.MainMenu.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.MainMenu, "MainMenu");
-            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainMenu.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.mainMenu, "mainMenu");
+            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuVoteContent,
             this.menuVote,
             this.menuBypassUndo,
             this.toolStripSeparator1,
-            this.menuInfo});
-            this.MainMenu.Name = "MainMenu";
-            this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuInfo,
+            this.menuTestingRelease});
+            this.mainMenu.Name = "MainMenu";
+            this.mainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             // 
             // menuVoteContent
             // 
@@ -680,8 +688,8 @@ namespace ReadySunValley
             // 
             // menuInfo
             // 
-            this.menuInfo.Name = "menuInfo";
             resources.ApplyResources(this.menuInfo, "menuInfo");
+            this.menuInfo.Name = "menuInfo";
             this.menuInfo.Click += new System.EventHandler(this.menuInfo_Click);
             // 
             // pnlRight
@@ -805,6 +813,18 @@ namespace ReadySunValley
             this.lblSubHeader.Name = "lblSubHeader";
             this.lblSubHeader.TabStop = true;
             // 
+            // tt
+            // 
+            this.tt.IsBalloon = true;
+            this.tt.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tt.UseFading = false;
+            // 
+            // menuTestingRelease
+            // 
+            resources.ApplyResources(this.menuTestingRelease, "menuTestingRelease");
+            this.menuTestingRelease.Name = "menuTestingRelease";
+            this.menuTestingRelease.Click += new System.EventHandler(this.menuTestingRelease_Click);
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
@@ -845,16 +865,16 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.wddmbad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inetbad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpminfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freespacegood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.freespacebad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpugood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpuinfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpubad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCompare)).EndInit();
-            this.MainMenu.ResumeLayout(false);
-            this.MainMenu.PerformLayout();
+            this.mainMenu.ResumeLayout(false);
+            this.mainMenu.PerformLayout();
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.assetOpenGitHub)).EndInit();
@@ -879,7 +899,6 @@ namespace ReadySunValley
         private System.Windows.Forms.Label lblTPMCheck;
         private System.Windows.Forms.Label lblStorageCheck;
         private System.Windows.Forms.Label lblRAMCheck;
-        private System.Windows.Forms.Label lblDiskTypeCheck;
         private System.Windows.Forms.Label lblCoresCheck;
         private System.Windows.Forms.Label lblMhzCheck;
         private System.Windows.Forms.Label lblCPU;
@@ -914,7 +933,7 @@ namespace ReadySunValley
         private System.Windows.Forms.PictureBox freespacegood;
         private System.Windows.Forms.PictureBox securebootgood;
         private System.Windows.Forms.Button lblMainMenu;
-        private System.Windows.Forms.ContextMenuStrip MainMenu;
+        private System.Windows.Forms.ContextMenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem menuVote;
         private System.Windows.Forms.ToolStripMenuItem menuInfo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -949,6 +968,9 @@ namespace ReadySunValley
         private System.Windows.Forms.PictureBox assetOpenGitHub;
         private System.Windows.Forms.Button btnPnlShareScreen;
         private System.Windows.Forms.LinkLabel lnkMSRequirements;
+        private System.Windows.Forms.ToolTip tt;
+        private System.Windows.Forms.LinkLabel lnkDiskTypeCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuTestingRelease;
     }
 }
 

@@ -1,6 +1,8 @@
+BOF
 850
 7c
 8c
 8cx
 SQ1
 SQ2
+EOF

@@ -227,8 +227,11 @@ Du erreichst mich unter
     <value>(Nicht unterstützt)</value>
     <comment>Assessment</comment>
   </data>
+  <data name="assetTweet" xml:space="preserve">
+    <value>Bereit%20für%20%23Windows11/Sun%20Valley%20update?%20Hier%20ist%20mein%20Kompatibilitätsbericht%20%23ReadySunValley%20%23app</value>
+  </data>
   <data name="btnCompareUtil" xml:space="preserve">
-    <value>Mit App vergleichen</value>
+    <value>Zweite Meinung einholen</value>
     <comment>GUI</comment>
   </data>
   <data name="btnPnlShareScreen" xml:space="preserve">
@@ -328,7 +331,7 @@ Du erreichst mich unter
     <comment>GUI</comment>
   </data>
   <data name="infoCaptureHint" xml:space="preserve">
-    <value>Nicht vergessen, das Egebnisbild auf Twitter hochzuladen.</value>
+    <value>Klicke auf &lt;OK&gt; um den Twitter Status vorzubereiten. Im Anschluss musst du nur noch das soeben erzeugte Ergebnisbild hochladen.</value>
     <comment>GUI</comment>
   </data>
   <data name="infoCompareUtil" xml:space="preserve">
@@ -376,11 +379,7 @@ Du erreichst mich unter
     <comment>Check</comment>
   </data>
   <data name="lblDiskType" xml:space="preserve">
-    <value>Parititionstyp</value>
-    <comment>Check</comment>
-  </data>
-  <data name="lblDiskTypeCheck" xml:space="preserve">
-    <value>Überprüfung...</value>
+    <value>Partitionstyp</value>
     <comment>Check</comment>
   </data>
   <data name="lblDisplay" xml:space="preserve">
@@ -420,7 +419,7 @@ Du erreichst mich unter
     <comment>Check</comment>
   </data>
   <data name="lblRAM" xml:space="preserve">
-    <value>RAM</value>
+    <value>Installierter RAM</value>
     <comment>Check</comment>
   </data>
   <data name="lblRAMCheck" xml:space="preserve">
@@ -440,7 +439,7 @@ Du erreichst mich unter
     <comment>Check</comment>
   </data>
   <data name="lblStorage" xml:space="preserve">
-    <value>Installierter RAM</value>
+    <value>Festplatte</value>
     <comment>Check</comment>
   </data>
   <data name="lblStorageCheck" xml:space="preserve">
@@ -470,6 +469,13 @@ Du erreichst mich unter
   <data name="lnkCompatibilityFix" xml:space="preserve">
     <value>Klicke hier, um einige dieser fehlgeschlagenen Ergebnisse mit einem Registry-Hack zu beheben</value>
     <comment>GUI</comment>
+  </data>
+  <data name="lnkDiskTypeCheck" xml:space="preserve">
+    <value>Überprüfung...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lnkDiskTypeInfo" xml:space="preserve">
+    <value>(Alle anzeigen)</value>
   </data>
   <data name="menuBypassUndo" xml:space="preserve">
     <value>Bypass aufheben</value>

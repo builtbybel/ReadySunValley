@@ -294,7 +294,16 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Compare with App ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ready%20for%20%23Windows11/Sun%20Valley%20update?%20Here%20are%20my%20results%20%23ReadySunValley%20%23app ähnelt.
+        /// </summary>
+        internal static string assetTweet {
+            get {
+                return ResourceManager.GetString("assetTweet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Get a second opinion ähnelt.
         /// </summary>
         internal static string btnCompareUtil {
             get {
@@ -519,7 +528,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Don&apos;t forget to upload the results picture to Twitter. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Click &lt;OK&gt; to prepare the Twitter status. After that you just need to upload the result image you just created. ähnelt.
         /// </summary>
         internal static string infoCaptureHint {
             get {
@@ -632,15 +641,6 @@ namespace ReadySunValley.Locales {
         internal static string lblDiskType {
             get {
                 return ResourceManager.GetString("lblDiskType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Checking... ähnelt.
-        /// </summary>
-        internal static string lblDiskTypeCheck {
-            get {
-                return ResourceManager.GetString("lblDiskTypeCheck", resourceCulture);
             }
         }
         
@@ -843,6 +843,24 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Checking... ähnelt.
+        /// </summary>
+        internal static string lnkDiskTypeCheck {
+            get {
+                return ResourceManager.GetString("lnkDiskTypeCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die (List all) ähnelt.
+        /// </summary>
+        internal static string lnkDiskTypeInfo {
+            get {
+                return ResourceManager.GetString("lnkDiskTypeInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Undo Bypass ähnelt.
         /// </summary>
         internal static string menuBypassUndo {
@@ -870,7 +888,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die If you are attempting to install Windows 11 and receive a message stating, &quot;This PC can&apos;t run Windows 11&quot; it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4GB of RAM.\n\nThe good news is that Microsoft includes a new &quot;LabConfig&quot; registry key that allows you to configure settings to bypass the TPM 2.0, the 4GB memory, and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11\n\nDo you want to bypass  [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die If you are attempting to install Windows 11 and receive a message stating, &quot;This PC can&apos;t run Windows 11&quot; it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4 GB of RAM.\n\nThe good news is that Microsoft includes a new &quot;LabConfig&quot; registry key that allows you to configure settings to bypass the TPM 2.0, the 4 GB memory, and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11\n\nDo you want to bypas [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
         internal static string optionBypass {
             get {

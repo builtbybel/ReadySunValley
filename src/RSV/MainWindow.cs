@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Management;
 using System.Net;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -26,9 +27,16 @@ namespace ReadySunValley
             InitializeComponent();
 
             // GUI options
-            this.Text += " (" + osInfo.GetOS() + osInfo.Is64Bit() + ")";    // Title
-            lblMainMenu.Text = "\ue700";                                    // Hamburger menu
-            btnRecheck.Text = "\ue72c";                                     // Refresh
+            this.Text += "(" + osInfo.GetOS() + "\x20"
+                             + osInfo.GetVersion() + "\x20"
+                             + osInfo.Is64Bit() + ")";                  // Title& OS info
+            lblMainMenu.Text = "\ue700";                                // Hamburger menu
+            btnRecheck.Text = "\ue72c";                                 // Refresh
+
+            // Some tooltip options
+            ToolTip tt = new ToolTip();
+            tt.AutoPopDelay = 15000;
+            tt.IsBalloon = true;
         }
 
         public void Globalization()
@@ -47,7 +55,7 @@ namespace ReadySunValley
             lblDirectX.Text = Locales.Locale.lblDirectX;
             lblDirectXCheck.Text = Locales.Locale.lblDirectXCheck;
             lblDiskType.Text = Locales.Locale.lblDiskType;
-            lblDiskTypeCheck.Text = Locales.Locale.lblDiskTypeCheck;
+            lnkDiskTypeCheck.Text = Locales.Locale.lnkDiskTypeCheck;
             lblDisplay.Text = Locales.Locale.lblDisplay;
             lblDisplayCheck.Text = Locales.Locale.lblDisplayCheck;
             lblFreeSpace.Text = Locales.Locale.lblFreeSpace;
@@ -186,7 +194,7 @@ namespace ReadySunValley
             {
                 coreCount += int.Parse(item["NumberOfCores"].ToString());
             }
-            lblCoresCheck.Text = coreCount + " " + Locales.Locale.lblCores +", " + Environment.ProcessorCount + " Threads";
+            lblCoresCheck.Text = coreCount + " " + Locales.Locale.lblCores + ", " + Environment.ProcessorCount + " Threads";
 
             if (coreCount > 1)
             {
@@ -255,27 +263,26 @@ namespace ReadySunValley
 
             // Partition Type
             lblStatus.Text = Locales.Locale.assessmentPartitionType;
-            foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_DiskPartition WHERE BootPartition=True").Get())
-            {
-                if (item["Type"].ToString().Contains("System"))
-                {
-                    if (item["Type"].ToString().Contains("GPT"))
-                    {
-                        lblDiskTypeCheck.Text = "GPT";
-                        partgood.Visible = true;
-                        partbad.Visible = false;
-                    }
-                    else
-                    {
-                        lblDiskTypeCheck.Text = "MBR";
-                        partgood.Visible = false;
-                        partbad.Visible = true;
+            bool FoundGPT = false;
 
-                        performCompatibilityCount += 1;
-                        break;
-                    }
+            ManagementObjectSearcher partitions = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_DiskPartition");
+            foreach (ManagementObject queryObj in partitions.Get())
+            {
+                if (queryObj["Type"].ToString().Contains("GPT"))
+                {
+                    lnkDiskTypeCheck.Text = "GPT " + Locales.Locale.lnkDiskTypeInfo;
+                    partgood.Visible = true;
+                    partbad.Visible = false;
+                    FoundGPT = true;
+                }
+                else
+                {
+                    lnkDiskTypeCheck.Text = "MBR " + Locales.Locale.lnkDiskTypeInfo;
+                    partgood.Visible = false;
+                    partbad.Visible = true;
                 }
             }
+            if (!FoundGPT) performCompatibilityCount += 1;
 
             // Secure Boot
             lblStatus.Text = Locales.Locale.assessmentSecureBoot;
@@ -370,64 +377,81 @@ namespace ReadySunValley
 
             // DirectX & WDDM
             lblStatus.Text = Locales.Locale.assessmentDirectXWDDM;
+
+            string directxver;
+            string wddmver;
+            string wddmcheck;
+            string dxpath = @"dxv.txt";
+            var psi = new ProcessStartInfo();
+
+            if (IntPtr.Size == 4 && Environment.Is64BitOperatingSystem)
+            {
+                psi.FileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "sysnative\\dxdiag");
+            }
+            else psi.FileName = System.IO.Path.Combine(Environment.SystemDirectory, "dxdiag");  // Native version
+
             try
             {
-                string directxver;
-                string wddmver;
-                string filepath = @"dxv.txt";
-                string check;
-
-                Process.Start("dxdiag", "/t " + filepath);
-                do
-                    System.Threading.Thread.Sleep(100);
-                while (!File.Exists(filepath));
-                using (var sr = new StreamReader(filepath))
+                psi.Arguments = "/t " + dxpath;
+                using (var prc = Process.Start(psi))
                 {
-                    while (sr.Peek() != -1)
+                    do
+                        System.Threading.Thread.Sleep(100);
+                    while (!File.Exists(dxpath));
+                    using (var sr = new StreamReader(dxpath))
                     {
-                        check = sr.ReadLine();
-                        if (check.Contains("DirectX Version:"))
+                        while (sr.Peek() != -1)
                         {
-                            directxver = check;
-                            lblDirectXCheck.Text = Regex.Replace(directxver, "[^0-9.]", "");
+                            wddmcheck = sr.ReadLine();
+                            if (wddmcheck.Contains("DirectX Version:"))
+                            {
+                                directxver = wddmcheck;
+                                lblDirectXCheck.Text = Regex.Replace(directxver, "[^0-9.]", "");
+                            }
+
+                            if (wddmcheck.Contains("Driver Model:"))
+                            {
+                                wddmver = wddmcheck;
+                                lblWDDMCheck.Text = Regex.Replace(wddmver, "[^0-9.]", "");
+                                break;
+                            }
                         }
 
-                        if (check.Contains("Driver Model:"))
+                        if (lblDirectXCheck.Text == "12")
                         {
-                            wddmver = check;
-                            lblWDDMCheck.Text = Regex.Replace(wddmver, "[^0-9.]", "");
-                            break;
+                            directgood.Visible = true;
+                            directbad.Visible = false;
+                        }
+                        else
+                        {
+                            directgood.Visible = false;
+                            directbad.Visible = true;
+
+                            performCompatibilityCount += 1;
+                        }
+
+                        if (lblWDDMCheck.Text.StartsWith("2.") || lblWDDMCheck.Text.StartsWith("3."))
+                        {
+                            wddmbad.Visible = false;
+                            wddmgood.Visible = true;
+                        }
+                        else
+                        {
+                            wddmbad.Visible = true;
+                            wddmgood.Visible = false;
+
+                            performCompatibilityCount += 1;
                         }
                     }
 
-                    if (lblDirectXCheck.Text == "12")
+                    prc.WaitForExit();
+                    if (prc.ExitCode != 0)
                     {
-                        directgood.Visible = true;
-                        directbad.Visible = false;
-                    }
-                    else
-                    {
-                        directgood.Visible = false;
-                        directbad.Visible = true;
-
-                        performCompatibilityCount += 1;
-                    }
-
-                    if (lblWDDMCheck.Text.Contains("2") || lblWDDMCheck.Text.Contains("3.0"))
-                    {
-                        wddmbad.Visible = false;
-                        wddmgood.Visible = true;
-                    }
-                    else
-                    {
-                        wddmbad.Visible = true;
-                        wddmgood.Visible = false;
-
-                        performCompatibilityCount += 1;
+                        throw new Exception("dxdiag failed with exit code " + prc.ExitCode.ToString());
                     }
                 }
             }
-            catch { }
+            finally { }//{ System.IO.File.Delete(dxpath);  }
 
             // GPU
             lblStatus.Text = Locales.Locale.assessmentGPU;
@@ -553,12 +577,12 @@ namespace ReadySunValley
             {
                 bmp.Save(dialog.FileName);
 
-                Process.Start(Helpers.Strings.Uri.ShareTwitter); // Post to Twitter
-                MessageBox.Show(Locales.Locale.infoCaptureHint);
+                MessageBox.Show(Locales.Locale.infoCaptureHint + " " + dialog.FileName);
+                Process.Start(Helpers.Strings.ShareTwitter); // Post to Twitter
             }
         }
 
-        private void lblMainMenu_Click(object sender, EventArgs e) => this.MainMenu.Show(Cursor.Position.X, Cursor.Position.Y);
+        private void lblMainMenu_Click(object sender, EventArgs e) => this.mainMenu.Show(Cursor.Position.X, Cursor.Position.Y);
 
         private void assetOpenGitHub_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.GitRepo);
 
@@ -570,117 +594,118 @@ namespace ReadySunValley
 
         private void btnCompareUtil_Click(object sender, EventArgs e) => GetCompareUtil();
 
+        private void menuVote_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.VotePage);
+
         private void menuInfo_Click(object sender, EventArgs e) => MessageBox.Show("ReadySunValley" + "\nVersion " + Program.GetCurrentVersionTostring() + "\r\n" + Locales.Locale.AppInfo.Replace("\\t", "\t"), "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-        private void menuVote_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.VotePage);
+        private void menuTestingRelease_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.GitTestingRelease);
 
         private void lnkMSRequirements_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start(Helpers.Strings.Uri.MSSystemRequirements);
 
+        private void lnkPartitionTypeInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ManagementObjectSearcher searcher2 = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_DiskPartition");
+
+            StringBuilder message = new StringBuilder();
+
+            foreach (ManagementObject queryObj in searcher2.Get())
+            {
+                message.AppendLine(Environment.NewLine + (string.Format("DiskIndex: {0}", queryObj["DiskIndex"].ToString()) + "\n" +
+                                                          string.Format("Index: {0}", queryObj["Index"].ToString()) + "\n" +
+                                                          string.Format(queryObj["Name"].ToString()) + "\n" +
+                                                          string.Format(queryObj["Type"].ToString())));
+            }
+
+            MessageBox.Show(message.ToString(), Locales.Locale.lblDiskType);
+        }
+
         private void cpuinfo_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.cpuinfo, Locales.Locale.hoveCPUInfo);
         }
 
         private void cpubad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.cpubad, Locales.Locale.hoverCPUBad);
         }
 
         private void freqbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.freqbad, Locales.Locale.hoverCPUSpeedBad);
         }
 
         private void coresbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.coresbad, Locales.Locale.hoverCPUCoresBad);
         }
 
         private void bootbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.bootbad, Locales.Locale.hoverBootBad);
         }
 
         private void securebootbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.securebootbad, Locales.Locale.hoverSecureBootBad);
         }
 
         private void partbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.partbad, Locales.Locale.hoverPartitionBad);
         }
 
         private void screenbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.screenbad, Locales.Locale.hoverDisplayBad);
         }
 
         private void rambad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.rambad, Locales.Locale.hoverRAMBad);
         }
 
         private void hddbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.hddbad, Locales.Locale.hoverStorageBad);
         }
 
         private void freespaceinfo_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.freespacebad, Locales.Locale.hoverFreeSpaceBad);
         }
 
         private void directbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.directbad, Locales.Locale.hoverDiectXBad);
         }
 
         private void wddmbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.wddmbad, Locales.Locale.hoverWDDMBad);
         }
 
         private void tpminfo_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.tpminfo, Locales.Locale.hoverTPMInfo);
         }
 
         private void tpmbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.tpmbad, Locales.Locale.hoverTPMBad);
         }
 
         private void inetbad_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.inetbad, Locales.Locale.hoverInetBad);
         }
 
         private void BtnRecheck_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.btnRecheck, Locales.Locale.hoverRecheck);
         }
 
         private void AssetOpenGitHub_MouseHover(object sender, EventArgs e)
         {
-            ToolTip tt = new ToolTip();
             tt.SetToolTip(this.assetOpenGitHub, Locales.Locale.hoverAssetInfo);
         }
 

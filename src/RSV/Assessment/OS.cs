@@ -14,17 +14,22 @@ namespace ReadySunValley.Assessment
             return (string)Registry.GetValue("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion", "ProductName", "");
         }
 
+        public string GetVersion()
+        {
+            return (string)Registry.GetValue("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion", "DisplayVersion", "");
+        }
+
         public string Is64Bit()
         {
             string bitness = string.Empty;
 
             if (Environment.Is64BitOperatingSystem)
             {
-                bitness = "64";
+                bitness = "64bit";
             }
             else
             {
-                bitness = "32";
+                bitness = "32bit";
             }
 
             return bitness;
