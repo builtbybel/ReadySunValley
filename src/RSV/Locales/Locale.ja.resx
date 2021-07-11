@@ -481,11 +481,11 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <value>(全ての一覧)</value>
   </data>
   <data name="menuBypassUndo" xml:space="preserve">
-    <value>Undo Bypass</value>
+    <value>回避策を取り消す</value>
     <comment>Menu</comment>
   </data>
   <data name="menuVote" xml:space="preserve">
-    <value>Vote here!</value>
+    <value>投票しましょう!</value>
     <comment>Menu</comment>
   </data>
   <data name="menuVoteContent" xml:space="preserve">
