@@ -38,7 +38,7 @@ alt="GitHub issues">
 
 ![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv.png)
 
-### Compare your result with Microsoft requirements
+### Compare your results with Microsoft requirements
 ![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv-opt.png)
 	
 ## Features
