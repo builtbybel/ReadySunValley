@@ -1,1 +1,6 @@
 
+Changes in this release
+----------------------
+- Numerous minor bug fixes
+- Improved and more dynamic GUI
+- Japanese localization
