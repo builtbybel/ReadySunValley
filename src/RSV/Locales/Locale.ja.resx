@@ -285,7 +285,7 @@ Windows 11に非対応です</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverFreeSpaceBad" xml:space="preserve">
-    <value>From the leaked version of Windows 11, It can be seen that the Setup file (ISO File) size is 4.54 GB. Considering that the leaked version does not have all the features, we can say that the actual file size will be between 4.5 to 6 GB.  Just keep in mind that Windows 11 requires a disk with at least 64 GB of storage space.</value>
+    <value>リークされたバージョンのWindows 11によると、セットアップファイル(ISOファイル)のサイズは4.54GBとみられます。リークされたバージョンは全機能を備えているわけではないことを考慮すると、実際のファイルサイズは4.5～6GB程度と考えられます。Windows 11は最低64GBのストレージ空間のディスクを必要とすることに留意してください。</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverInetBad" xml:space="preserve">
