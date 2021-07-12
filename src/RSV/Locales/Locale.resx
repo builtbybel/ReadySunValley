@@ -118,15 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppInfo" xml:space="preserve">
-    <value>
-Replacement for Microsoft PC Health Check app (currently down!) 
-
-This project was forked initially from https://github.com/mag-nif-i-cent/Affinity11
- 
-You can also reach out to me on
-\ttwitter.com/builtbybel
-
-(C) 2021, Builtbybel</value>
+    <value>\nReplacement for Microsoft PC Health Check app\n(currently down!) \n\nThis project was forked initially from: https://github.com/mag-nif-i-cent/Affinity11\n\nYou can also reach out to me on:\ntwitter.com/builtbybel\n\n(C) 2021, Builtbybel</value>
     <comment>Menu</comment>
   </data>
   <data name="assessmentCPUArchitecture" xml:space="preserve">
@@ -417,7 +409,7 @@ You can also reach out to me on
     <comment>Check</comment>
   </data>
   <data name="lblRAM" xml:space="preserve">
-    <value>RAM</value>
+    <value>Installed RAM</value>
     <comment>Check</comment>
   </data>
   <data name="lblRAMCheck" xml:space="preserve">
@@ -445,7 +437,7 @@ You can also reach out to me on
     <comment>Check</comment>
   </data>
   <data name="lblSubHeader" xml:space="preserve">
-    <value>*Move the cusor over a failed result to get more information</value>
+    <value>*Move the cursor over a failed result to get more information</value>
     <comment>GUI</comment>
   </data>
   <data name="lblTPM" xml:space="preserve">
@@ -488,7 +480,7 @@ You can also reach out to me on
     <comment>Menu</comment>
   </data>
   <data name="optionBypass" xml:space="preserve">
-    <value>If you are attempting to install Windows 11 and receive a message stating, "This PC can't run Windows 11" it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4 GB of RAM.\n\nThe good news is that Microsoft includes a new "LabConfig" registry key that allows you to configure settings to bypass the TPM 2.0, the 4 GB memory, and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11\n\nDo you want to bypass these restrictions?</value>
+    <value>If you are attempting to install Windows 11 and receive a message stating, "This PC can't run Windows 11" it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4 GB of RAM.\n\nThe good news is that Microsoft includes a new "LabConfig" registry key that allows you to configure settings to bypass the TPM 2.0, the 4 GB memory, and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11.\n\nDo you want to bypass these restrictions?</value>
     <comment>Menu</comment>
   </data>
   <data name="updateTitle" xml:space="preserve">

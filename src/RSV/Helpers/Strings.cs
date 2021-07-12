@@ -2,7 +2,7 @@
 {
     internal class Strings
     {
-        public static readonly string ShareTwitter = "https://twitter.com/intent/tweet?text=" + Locales.Locale.assetTweet;
+        public static readonly string TweetIntent = "https://twitter.com/intent/tweet?text=" + Locales.Locale.assetTweet;
 
         public static class Uri
         {

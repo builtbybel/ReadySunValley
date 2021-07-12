@@ -118,17 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppInfo" xml:space="preserve">
-    <value>
-Ersatz für Microsoft's PC Health Check App (derzeit offline!) 
-
-Credits
-- German translation overwork by timse201 - https://github.com/timse201
-- Dieses Projekt wurde ursprünglich von - https://github.com/mag-nif-i-cent/Affinity11 geforked.
-
-Du erreichst mich unter
-\ttwitter.com/builtbybel
-
-(C) 2021, Builtbybel</value>
+    <value>\nErsatz für Microsoft's PC Health Check App\n(derzeit offline!)\n\nDanksagungen:\n- German translation overwork by timse201\nhttps://github.com/timse201\n- Dieses Projekt wurde ursprünglich von - https://github.com/mag-nif-i-cent/Affinity11 geforked.\n\nDu erreichst mich unter:\ntwitter.com/builtbybel\n\n(C) 2021, Builtbybel</value>
     <comment>Menu</comment>
   </data>
   <data name="assessmentCPUArchitecture" xml:space="preserve">

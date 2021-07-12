@@ -61,15 +61,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die 
-        ///Replacement for Microsoft PC Health Check app (currently down!) 
-        ///
-        ///This project was forked initially from https://github.com/mag-nif-i-cent/Affinity11
-        /// 
-        ///You can also reach out to me on
-        ///\ttwitter.com/builtbybel
-        ///
-        ///(C) 2021, Builtbybel ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die \nReplacement for Microsoft PC Health Check app\n(currently down!) \n\nThis project was forked initially from: https://github.com/mag-nif-i-cent/Affinity11\n\nYou can also reach out to me on:\ntwitter.com/builtbybel\n\n(C) 2021, Builtbybel ähnelt.
         /// </summary>
         internal static string AppInfo {
             get {
@@ -726,7 +718,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die RAM ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Installed RAM ähnelt.
         /// </summary>
         internal static string lblRAM {
             get {
@@ -789,7 +781,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die *Move the cusor over a failed result to get more information ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die *Move the cursor over a failed result to get more information ähnelt.
         /// </summary>
         internal static string lblSubHeader {
             get {
@@ -888,7 +880,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die If you are attempting to install Windows 11 and receive a message stating, &quot;This PC can&apos;t run Windows 11&quot; it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4 GB of RAM.\n\nThe good news is that Microsoft includes a new &quot;LabConfig&quot; registry key that allows you to configure settings to bypass the TPM 2.0, the 4 GB memory, and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11\n\nDo you want to bypas [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die If you are attempting to install Windows 11 and receive a message stating, &quot;This PC can&apos;t run Windows 11&quot; it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4 GB of RAM.\n\nThe good news is that Microsoft includes a new &quot;LabConfig&quot; registry key that allows you to configure settings to bypass the TPM 2.0, the 4 GB memory, and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11.\n\nDo you want to bypa [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
         internal static string optionBypass {
             get {

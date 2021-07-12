@@ -118,17 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppInfo" xml:space="preserve">
-    <value>
-マイクロソフトのPC正常性チェックアプリ(現在取り下げ中)の代替品
-
-このプロジェクトは
-https://github.com/mag-nif-i-cent/Affinity11
-からフォークしています
- 
-作者への連絡は
-\ttwitter.com/builtbybel
-
-(C) 2021, Builtbybel</value>
+    <value>\nマイクロソフトのPC正常性チェックアプリ(現在取り下げ中)の代替品\n\nこのプロジェクトは
+https://github.com/mag-nif-i-cent/Affinity11 からフォークしています\n\nJapanese translation by yuki-gh (https://github.com/yuki-gh)\n\n作者への連絡は\ntwitter.com/builtbybel\n\n(C) 2021, Builtbybel</value>
     <comment>Menu</comment>
   </data>
   <data name="assessmentCPUArchitecture" xml:space="preserve">

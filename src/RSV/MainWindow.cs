@@ -8,6 +8,8 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+/* using System.Threading;
+ using System.Globalization; */
 
 namespace ReadySunValley
 {
@@ -24,6 +26,9 @@ namespace ReadySunValley
 
         public MainWindow()
         {
+            // Uncomment lower line and add lang code to run localization test
+            // Thread.CurrentThread.CurrentUICulture = new CultureInfo("ja");
+
             InitializeComponent();
 
             // GUI options
@@ -96,7 +101,7 @@ namespace ReadySunValley
         {
             int formWidth = this.Width;
 
-            if (formWidth < 880 && PicCompare.Visible == false)
+            if (formWidth < 880 && pbCompare.Visible == false)
             {
                 btnPnlShareScreen.Visible = true;
                 btnShareScreen.Visible = false;
@@ -305,13 +310,13 @@ namespace ReadySunValley
 
             // RAM
             lblStatus.Text = Locales.Locale.assessmentRAM;
-            long ram = 0;
+            long mem = 0;
             foreach (var item in new System.Management.ManagementObjectSearcher("select * from Win32_PhysicalMemory").Get())
             {
                 string ramstr = item["Capacity"].ToString();
-                ram = ram += long.Parse(ramstr);
+                mem += long.Parse(ramstr);
             }
-            lblRAMCheck.Text = Helpers.Utils.FormatBytes(ram).ToString();
+            lblRAMCheck.Text = Helpers.Utils.FormatBytes(mem).ToString();
 
             if (lblRAMCheck.Text.Contains("GB"))
             {
@@ -377,11 +382,6 @@ namespace ReadySunValley
 
             // DirectX & WDDM
             lblStatus.Text = Locales.Locale.assessmentDirectXWDDM;
-
-            string directxver;
-            string wddmver;
-            string wddmcheck;
-            string dxpath = @"dxv.txt";
             var psi = new ProcessStartInfo();
 
             if (IntPtr.Size == 4 && Environment.Is64BitOperatingSystem)
@@ -392,9 +392,23 @@ namespace ReadySunValley
 
             try
             {
-                psi.Arguments = "/t " + dxpath;
+                string directxver;
+                string wddmver;
+                string check;
+                string dxpath = @"dxv.txt";
+
+                psi.Arguments = "/dontskip /t " + dxpath; // don't bypass any diagnostics due to previous crashes in DxDiag.
                 using (var prc = Process.Start(psi))
                 {
+                    if (!File.Exists(dxpath))
+                    {
+                        prc.WaitForExit();
+                        if (prc.ExitCode != 0)
+                        {
+                            MessageBox.Show("dxdiag failed with exit code " + prc.ExitCode.ToString());
+                        }
+                    }
+
                     do
                         System.Threading.Thread.Sleep(100);
                     while (!File.Exists(dxpath));
@@ -402,56 +416,51 @@ namespace ReadySunValley
                     {
                         while (sr.Peek() != -1)
                         {
-                            wddmcheck = sr.ReadLine();
-                            if (wddmcheck.Contains("DirectX Version:"))
+                            check = sr.ReadLine();
+                            if (check.Contains("DirectX Version:"))
                             {
-                                directxver = wddmcheck;
+                                directxver = check;
                                 lblDirectXCheck.Text = Regex.Replace(directxver, "[^0-9.]", "");
                             }
 
-                            if (wddmcheck.Contains("Driver Model:"))
+                            if (check.Contains("Driver Model:"))
                             {
-                                wddmver = wddmcheck;
+                                wddmver = check;
                                 lblWDDMCheck.Text = Regex.Replace(wddmver, "[^0-9.]", "");
                                 break;
                             }
                         }
-
-                        if (lblDirectXCheck.Text == "12")
-                        {
-                            directgood.Visible = true;
-                            directbad.Visible = false;
-                        }
-                        else
-                        {
-                            directgood.Visible = false;
-                            directbad.Visible = true;
-
-                            performCompatibilityCount += 1;
-                        }
-
-                        if (lblWDDMCheck.Text.StartsWith("2.") || lblWDDMCheck.Text.StartsWith("3."))
-                        {
-                            wddmbad.Visible = false;
-                            wddmgood.Visible = true;
-                        }
-                        else
-                        {
-                            wddmbad.Visible = true;
-                            wddmgood.Visible = false;
-
-                            performCompatibilityCount += 1;
-                        }
                     }
 
-                    prc.WaitForExit();
-                    if (prc.ExitCode != 0)
+                    if (lblDirectXCheck.Text == "12")
                     {
-                        throw new Exception("dxdiag failed with exit code " + prc.ExitCode.ToString());
+                        directgood.Visible = true;
+                        directbad.Visible = false;
+                    }
+                    else
+                    {
+                        directgood.Visible = false;
+                        directbad.Visible = true;
+
+                        performCompatibilityCount += 1;
+                    }
+
+                    if (lblWDDMCheck.Text.StartsWith("2.") || lblWDDMCheck.Text.StartsWith("3."))
+                    {
+                        wddmbad.Visible = false;
+                        wddmgood.Visible = true;
+                    }
+                    else
+                    {
+                        wddmbad.Visible = true;
+                        wddmgood.Visible = false;
+
+                        performCompatibilityCount += 1;
                     }
                 }
             }
-            finally { }//{ System.IO.File.Delete(dxpath);  }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
 
             // GPU
             lblStatus.Text = Locales.Locale.assessmentGPU;
@@ -578,7 +587,7 @@ namespace ReadySunValley
                 bmp.Save(dialog.FileName);
 
                 MessageBox.Show(Locales.Locale.infoCaptureHint + " " + dialog.FileName);
-                Process.Start(Helpers.Strings.ShareTwitter); // Post to Twitter
+                Process.Start(Helpers.Strings.TweetIntent); // Tweet Web Intent post to Twitter
             }
         }
 
@@ -596,7 +605,7 @@ namespace ReadySunValley
 
         private void menuVote_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.VotePage);
 
-        private void menuInfo_Click(object sender, EventArgs e) => MessageBox.Show("ReadySunValley" + "\nVersion " + Program.GetCurrentVersionTostring() + "\r\n" + Locales.Locale.AppInfo.Replace("\\t", "\t"), "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private void menuInfo_Click(object sender, EventArgs e) => MessageBox.Show("ReadySunValley" + "\nVersion " + Program.GetCurrentVersionTostring() + "\r\n" + Locales.Locale.AppInfo.Replace("\\n", "\n"), "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         private void menuTestingRelease_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.GitTestingRelease);
 
@@ -777,7 +786,7 @@ namespace ReadySunValley
                 lnkMSRequirements.Visible = true;
                 lblSumBad.Visible = false;
                 lnkCompatibilityFix.Visible = false;
-                PicCompare.Visible = true;
+                pbCompare.Visible = true;
                 checkCompareMS.Text = Locales.Locale.checkCompareMSBack;
 
                 var request = WebRequest.Create(Helpers.Strings.Uri.CompareMS);
@@ -785,12 +794,12 @@ namespace ReadySunValley
                 using (var response = request.GetResponse())
                 using (var stream = response.GetResponseStream())
 
-                    PicCompare.Image = Bitmap.FromStream(stream);
+                    pbCompare.Image = Bitmap.FromStream(stream);
             }
             else if (!checkCompareMS.Checked)
             {
                 checkCompareMS.Text = Locales.Locale.checkCompareMS;
-                PicCompare.Visible = false;
+                pbCompare.Visible = false;
                 lblStatus.Visible = true;
                 lnkMSRequirements.Visible = false;
                 lblSumBad.Visible = true;
