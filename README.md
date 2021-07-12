@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h2 align="center">The "unofficial" replacement for Microsoft PC Health Check appp :grinning: (working on official)</h2>
+<h2 align="center">The "unofficial" replacement for Microsoft PC Health Check app :grinning: (working on official)</h2>
 <h3 align="center">Are you ready for Windows 11/Sun Valley update?</h3>
 
 <p align="center">
