@@ -133,6 +133,7 @@
     <EmbeddedResource Include="Locales\Locale.de.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Locales\Locale.ja.resx" />
     <EmbeddedResource Include="Locales\Locale.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Locale.Designer.cs</LastGenOutput>
