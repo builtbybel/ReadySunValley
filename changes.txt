@@ -1,6 +1,4 @@
 
 Changes in this release
 ----------------------
-- Numerous minor bug fixes
-- Improved and more dynamic GUI
-- Japanese localization
+This version adds an option which now can show you in a detailed report why your PC does not meet the Windows 11 requirements.
