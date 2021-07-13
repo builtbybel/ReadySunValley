@@ -138,7 +138,7 @@
     <comment>Assessment</comment>
   </data>
   <data name="assessmentCPUSpeedFormat" xml:space="preserve">
-    <value>MHz Frequency</value>
+    <value>MHz</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentDirectXWDDM" xml:space="preserve">
@@ -219,6 +219,7 @@
   </data>
   <data name="assetTweet" xml:space="preserve">
     <value>Ready%20for%20%23Windows11/Sun%20Valley%20update?%20Here%20are%20my%20results%20%23ReadySunValley%20%23app</value>
+    <comment>GUI</comment>
   </data>
   <data name="btnCompareUtil" xml:space="preserve">
     <value>Get a second opinion</value>
@@ -240,8 +241,15 @@
     <value>Back to my results</value>
     <comment>GUI</comment>
   </data>
+  <data name="checkReport" xml:space="preserve">
+    <value>Tell me why my PC isn’t supported</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="checkReportBack" xml:space="preserve">
+    <value>All right, okay</value>
+  </data>
   <data name="hoveCPUInfo" xml:space="preserve">
-    <value>Your CPU meets the soft requirements, it's just not listed on the offical list of supported processors.</value>
+    <value>Your CPU meets the soft requirements, it's just not listed on the official list of supported processors. This is just an information for you. The requirement is fulfilled for the time being.\n\nYou can find a list of supported processors here\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverAssetInfo" xml:space="preserve">
@@ -264,7 +272,7 @@
     <value>Your CPU frequency doesn't meet the minimum requirements for Windows 11.</value>
     <comment>Hover</comment>
   </data>
-  <data name="hoverDiectXBad" xml:space="preserve">
+  <data name="hoverDirectXBad" xml:space="preserve">
     <value>Your DirectX version is too low. This doesn't necessarily mean that your system doesn't support higher versions. Check DXDIAG for more information.</value>
     <comment>Hover</comment>
   </data>
@@ -301,7 +309,7 @@
     <comment>Hover</comment>
   </data>
   <data name="hoverTPMBad" xml:space="preserve">
-    <value>If no TPM is present, you’ll probably find it’s been disabled in the UEFI.</value>
+    <value>We could not find a TPM Module. If no TPM is present, you’ll probably find it’s been disabled in the UEFI. Otherwiese you can also bypass the TPM 2.0 requirements with ReadySunValley. Use the repair link in the right panel.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverTPMInfo" xml:space="preserve">
@@ -317,7 +325,7 @@
     <comment>GUI</comment>
   </data>
   <data name="infoBypassUndo" xml:space="preserve">
-    <value>System setttings are in place again.</value>
+    <value>System settings are in place again.</value>
     <comment>GUI</comment>
   </data>
   <data name="infoCaptureHint" xml:space="preserve">
@@ -466,6 +474,7 @@
   </data>
   <data name="lnkDiskTypeInfo" xml:space="preserve">
     <value>(List all)</value>
+    <comment>GUI</comment>
   </data>
   <data name="menuBypassUndo" xml:space="preserve">
     <value>Undo Bypass</value>

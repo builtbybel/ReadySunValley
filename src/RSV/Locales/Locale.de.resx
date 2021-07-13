@@ -219,6 +219,7 @@
   </data>
   <data name="assetTweet" xml:space="preserve">
     <value>Bereit%20für%20%23Windows11/Sun%20Valley%20update?%20Hier%20ist%20mein%20Kompatibilitätsbericht%20%23ReadySunValley%20%23app</value>
+    <comment>GUI</comment>
   </data>
   <data name="btnCompareUtil" xml:space="preserve">
     <value>Zweite Meinung einholen</value>
@@ -240,8 +241,16 @@
     <value>Zurück zu meinen Ergebnissen</value>
     <comment>GUI</comment>
   </data>
+  <data name="checkReport" xml:space="preserve">
+    <value>Zeige mir den Detailbericht an</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="checkReportBack" xml:space="preserve">
+    <value>Zurück zur Normalansicht</value>
+    <comment>GUI</comment>
+  </data>
   <data name="hoveCPUInfo" xml:space="preserve">
-    <value>Deine CPU erfüllt die Mindestanforderungen, sie ist nur nicht in der offiziellen Liste der unterstützten Prozessoren aufgeführt.</value>
+    <value>Deine CPU erfüllt die Mindestanforderungen, sie ist nur nicht in der offiziellen Liste der unterstützten Prozessoren aufgeführt. Dies ist nur eine Information für dich. Die Anforderung ist aber erstmal erfüllt.\n\nDu findest eine Liste der untersützten Prozessoren hier\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverAssetInfo" xml:space="preserve">
@@ -264,7 +273,7 @@
     <value>Deine CPU-Frequenz entspricht nicht den Mindestanforderungen für Windows 11.</value>
     <comment>Hover</comment>
   </data>
-  <data name="hoverDiectXBad" xml:space="preserve">
+  <data name="hoverDirectXBad" xml:space="preserve">
     <value>Deine DirectX-Version ist zu niedrig. Dies bedeutet nicht unbedingt, dass dein System keine höheren Versionen unterstützt. Prüfe dies mit DXDIAG für weitere Informationen.</value>
     <comment>Hover</comment>
   </data>
@@ -301,7 +310,7 @@
     <comment>Hover</comment>
   </data>
   <data name="hoverTPMBad" xml:space="preserve">
-    <value>Wenn kein TPM vorhanden ist, ist es ggf. nur im UEFI deaktiviert.</value>
+    <value>Wir konnten kein TPM-Modul finden. Wenn kein TPM vorhanden ist, ist es ggf. nur im UEFI deaktiviert. Andernfalls kannst du auch die TPM 2.0-Anforderungen mit ReadySunValley umgehen. Verwende hierzu den Reparatur-Link in der rechten Leiste.</value>
     <comment>Hover</comment>
   </data>
   <data name="hoverTPMInfo" xml:space="preserve">
@@ -466,6 +475,7 @@
   </data>
   <data name="lnkDiskTypeInfo" xml:space="preserve">
     <value>(Alle anzeigen)</value>
+    <comment>GUI</comment>
   </data>
   <data name="menuBypassUndo" xml:space="preserve">
     <value>Bypass aufheben</value>

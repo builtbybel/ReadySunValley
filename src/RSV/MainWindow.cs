@@ -8,6 +8,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+
 /* using System.Threading;
  using System.Globalization; */
 
@@ -50,6 +51,7 @@ namespace ReadySunValley
             btnPnlShareScreen.Text = Locales.Locale.btnPnlShareScreen;
             btnShareScreen.Text = Locales.Locale.btnShareScreen;
             checkCompareMS.Text = Locales.Locale.checkCompareMS;
+            checkReport.Text = Locales.Locale.checkReport;
             lblBitness.Text = Locales.Locale.lblBitness;
             lblBitnessCheck.Text = Locales.Locale.lblBitnessCheck;
             lblBootType.Text = Locales.Locale.lblBootType;
@@ -116,6 +118,7 @@ namespace ReadySunValley
         private void DoCompatibilityCheck()
         {
             int performCompatibilityCount = 0;
+            txtSumming.Text = null;
 
             // Run all the assessments
             this.Enabled = false;
@@ -151,6 +154,7 @@ namespace ReadySunValley
                 screenbad.Visible = true;
 
                 performCompatibilityCount += 1;
+                AddSumming(Locales.Locale.hoverDisplayBad);
             }
             else
             {
@@ -172,6 +176,7 @@ namespace ReadySunValley
                 bootbad.Visible = true;
 
                 performCompatibilityCount += 1;
+                AddSumming(Locales.Locale.hoverBootBad);
             }
 
             // CPU Clock Speed
@@ -190,6 +195,7 @@ namespace ReadySunValley
                 freqbad.Visible = true;
 
                 performCompatibilityCount += 1;
+                AddSumming(Locales.Locale.hoverCPUSpeedBad);
             }
 
             // CPU Core
@@ -212,6 +218,7 @@ namespace ReadySunValley
                 coresbad.Visible = true;
 
                 performCompatibilityCount += 1;
+                AddSumming(Locales.Locale.hoverCPUCoresBad);
             }
 
             // CPU Compatibility
@@ -254,6 +261,7 @@ namespace ReadySunValley
                         cpuinfo.Visible = true;
                         cpugood.Visible = false;
                         cpubad.Visible = false;
+                        AddSumming(Locales.Locale.hoveCPUInfo.Replace("\\n", Environment.NewLine));
                     }
                     else
                     {
@@ -262,6 +270,7 @@ namespace ReadySunValley
                         cpuinfo.Visible = false;
 
                         performCompatibilityCount += 1;
+                        AddSumming(Locales.Locale.hoverCPUBad);
                     }
                 }
             }
@@ -287,7 +296,11 @@ namespace ReadySunValley
                     partbad.Visible = true;
                 }
             }
-            if (!FoundGPT) performCompatibilityCount += 1;
+            if (!FoundGPT)
+            {
+                performCompatibilityCount += 1;
+                AddSumming(Locales.Locale.hoverPartitionBad);
+            }
 
             // Secure Boot
             lblStatus.Text = Locales.Locale.assessmentSecureBoot;
@@ -306,6 +319,7 @@ namespace ReadySunValley
                 lblSecureBootCheck.Text = Locales.Locale.assessmentSecureBootFail;
 
                 performCompatibilityCount += 1;
+                AddSumming(Locales.Locale.hoverSecureBootBad);
             }
 
             // RAM
@@ -334,6 +348,7 @@ namespace ReadySunValley
                     rambad.Visible = true;
 
                     performCompatibilityCount += 1;
+                    AddSumming(Locales.Locale.hoverRAMBad);
                 }
             }
 
@@ -378,6 +393,7 @@ namespace ReadySunValley
                 hddbad.Visible = true;
 
                 performCompatibilityCount += 1;
+                AddSumming(Locales.Locale.hoverStorageBad);
             }
 
             // DirectX & WDDM
@@ -443,6 +459,7 @@ namespace ReadySunValley
                         directbad.Visible = true;
 
                         performCompatibilityCount += 1;
+                        AddSumming(Locales.Locale.hoverDirectXBad);
                     }
 
                     if (lblWDDMCheck.Text.StartsWith("2.") || lblWDDMCheck.Text.StartsWith("3."))
@@ -456,6 +473,7 @@ namespace ReadySunValley
                         wddmgood.Visible = false;
 
                         performCompatibilityCount += 1;
+                        AddSumming(Locales.Locale.hoverWDDMBad);
                     }
                 }
             }
@@ -495,6 +513,7 @@ namespace ReadySunValley
                     tpminfo.Visible = true;
 
                     performCompatibilityCount += 1;
+                    AddSumming(Locales.Locale.assessmentTPMLow);
                 }
             }
             if (lblTPMCheck.Text == Locales.Locale.assessmentTPMFail)
@@ -504,6 +523,7 @@ namespace ReadySunValley
                 tpminfo.Visible = false;
 
                 performCompatibilityCount += 1;
+                AddSumming(Locales.Locale.hoverTPMBad);
             }
 
             // Inet
@@ -521,6 +541,7 @@ namespace ReadySunValley
                 inetbad.Visible = true;
 
                 performCompatibilityCount += 1;
+                AddSumming(Locales.Locale.hoverInetBad);
             }
 
             // Sum good and bad
@@ -531,6 +552,7 @@ namespace ReadySunValley
             {
                 // You're ready for Sun Valley!
                 lblSumBad.Text = Locales.Locale.assessmentSummaryOK;
+                AddSumming(Locales.Locale.assessmentSummaryOK);
                 lblSumBad.ForeColor = Color.Green;
                 lblStatus.Visible = false;
                 lblSumBad.Font = new Font("Segeo UI", 24.0f);
@@ -540,10 +562,10 @@ namespace ReadySunValley
                 menuBypassUndo.Visible = false;
                 lnkCompatibilityFix.Visible = false;
             }
-            else // Components not ready for Windows 11
+            else // This PC can't run Sun Valley!
             {
-                // You're ready for Sun Valley!
                 lblStatus.Text = Locales.Locale.assessmentSummaryFail;
+                AddSumming(sum + "\x20" + Locales.Locale.assessmentSummaryFail);
                 lnkCompatibilityFix.Visible = true;
                 lblSumBad.ForeColor = Color.DeepPink;
             }
@@ -630,7 +652,7 @@ namespace ReadySunValley
 
         private void cpuinfo_MouseHover(object sender, EventArgs e)
         {
-            tt.SetToolTip(this.cpuinfo, Locales.Locale.hoveCPUInfo);
+            tt.SetToolTip(this.cpuinfo, Locales.Locale.hoveCPUInfo.Replace("\\n", "\n"));
         }
 
         private void cpubad_MouseHover(object sender, EventArgs e)
@@ -685,7 +707,7 @@ namespace ReadySunValley
 
         private void directbad_MouseHover(object sender, EventArgs e)
         {
-            tt.SetToolTip(this.directbad, Locales.Locale.hoverDiectXBad);
+            tt.SetToolTip(this.directbad, Locales.Locale.hoverDirectXBad);
         }
 
         private void wddmbad_MouseHover(object sender, EventArgs e)
@@ -804,6 +826,30 @@ namespace ReadySunValley
                 lnkMSRequirements.Visible = false;
                 lblSumBad.Visible = true;
                 lnkCompatibilityFix.Visible = true;
+            }
+        }
+
+        private void AddSumming(string Value)
+        {
+            checkCompareMS.Text = Locales.Locale.checkCompareMS;
+            txtSumming.Text += "- " + Value + Environment.NewLine + Environment.NewLine;
+        }
+
+        private void checkReport_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkReport.Checked)
+            {
+                txtSumming.Visible = true;
+                btnShareScreen.Enabled = false;
+                btnPnlShareScreen.Enabled = false;
+                checkReport.Text = Locales.Locale.checkReportBack;
+            }
+            else if (!checkReport.Checked)
+            {
+                checkReport.Text = Locales.Locale.checkReport;
+                txtSumming.Visible = false;
+                btnShareScreen.Enabled = true;
+                btnPnlShareScreen.Enabled = true;
             }
         }
     }

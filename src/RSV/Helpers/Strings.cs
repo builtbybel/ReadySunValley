@@ -11,6 +11,7 @@
             public const string GitVersionCheck = "https://raw.githubusercontent.com/builtbybel/readysunvalley/master/appversion.txt";
             public const string GitVersionHint = "https://raw.githubusercontent.com/builtbybel/ReadySunValley/main/changes.txt";
             public const string GitTestingRelease = "https://github.com/builtbybel/ReadySunValley/issues/20";
+            public const string GitReportCommunity = "https://github.com/builtbybel/ReadySunValley/issues/new";
 
             public const string CompareMS = "https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv-microsoft-requirements.png?raw=true";
             public const string CompareUtil = "https://github.com/rcmaehl/WhyNotWin11/releases/download/";

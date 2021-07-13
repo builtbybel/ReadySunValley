@@ -106,7 +106,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die MHz Frequency ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die MHz ähnelt.
         /// </summary>
         internal static string assessmentCPUSpeedFormat {
             get {
@@ -340,7 +340,25 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Your CPU meets the soft requirements, it&apos;s just not listed on the offical list of supported processors. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Tell me why my PC isn’t supported ähnelt.
+        /// </summary>
+        internal static string checkReport {
+            get {
+                return ResourceManager.GetString("checkReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die All right, okay ähnelt.
+        /// </summary>
+        internal static string checkReportBack {
+            get {
+                return ResourceManager.GetString("checkReportBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your CPU meets the soft requirements, it&apos;s just not listed on the official list of supported processors. This is just an information for you. The requirement is fulfilled for the time being.\n\nYou can find a list of supported processors here\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors ähnelt.
         /// </summary>
         internal static string hoveCPUInfo {
             get {
@@ -396,9 +414,9 @@ namespace ReadySunValley.Locales {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your DirectX version is too low. This doesn&apos;t necessarily mean that your system doesn&apos;t support higher versions. Check DXDIAG for more information. ähnelt.
         /// </summary>
-        internal static string hoverDiectXBad {
+        internal static string hoverDirectXBad {
             get {
-                return ResourceManager.GetString("hoverDiectXBad", resourceCulture);
+                return ResourceManager.GetString("hoverDirectXBad", resourceCulture);
             }
         }
         
@@ -475,7 +493,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die If no TPM is present, you’ll probably find it’s been disabled in the UEFI. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die We could not find a TPM Module. If no TPM is present, you’ll probably find it’s been disabled in the UEFI. Otherwiese you can also bypass the TPM 2.0 requirements with ReadySunValley. Use the repair link in the right panel. ähnelt.
         /// </summary>
         internal static string hoverTPMBad {
             get {
@@ -511,7 +529,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die System setttings are in place again. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die System settings are in place again. ähnelt.
         /// </summary>
         internal static string infoBypassUndo {
             get {

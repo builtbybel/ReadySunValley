@@ -267,7 +267,7 @@ Windows 11に非対応です</value>
     <value>CPU周波数がWindows 11の最低要件を満たしません</value>
     <comment>Hover</comment>
   </data>
-  <data name="hoverDiectXBad" xml:space="preserve">
+  <data name="hoverDirectXBad" xml:space="preserve">
     <value>DirectXのバージョンが低すぎます。お使いのシステムが高いバージョンに対応していないという意味ではありません。詳細はDXDIAGをチェックしてください。</value>
     <comment>Hover</comment>
   </data>

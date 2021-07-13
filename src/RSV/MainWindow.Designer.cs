@@ -33,6 +33,7 @@ namespace ReadySunValley
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.checkCompareMS = new System.Windows.Forms.CheckBox();
             this.pnlLeft = new System.Windows.Forms.Panel();
+            this.txtSumming = new System.Windows.Forms.TextBox();
             this.lnkDiskTypeCheck = new System.Windows.Forms.LinkLabel();
             this.btnRecheck = new System.Windows.Forms.Button();
             this.lblMhz = new System.Windows.Forms.Label();
@@ -113,6 +114,7 @@ namespace ReadySunValley
             this.lnkCompatibilityFix = new System.Windows.Forms.LinkLabel();
             this.pBar = new System.Windows.Forms.ProgressBar();
             this.pnlMiddle = new System.Windows.Forms.Panel();
+            this.checkReport = new System.Windows.Forms.CheckBox();
             this.btnCompareUtil = new System.Windows.Forms.Button();
             this.btnShareScreen = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
@@ -173,6 +175,7 @@ namespace ReadySunValley
             // 
             resources.ApplyResources(this.pnlLeft, "pnlLeft");
             this.pnlLeft.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlLeft.Controls.Add(this.txtSumming);
             this.pnlLeft.Controls.Add(this.lnkDiskTypeCheck);
             this.pnlLeft.Controls.Add(this.btnRecheck);
             this.pnlLeft.Controls.Add(this.lblMhz);
@@ -237,6 +240,14 @@ namespace ReadySunValley
             this.pnlLeft.Controls.Add(this.freespacegood);
             this.pnlLeft.Controls.Add(this.freespacebad);
             this.pnlLeft.Name = "pnlLeft";
+            // 
+            // txtSumming
+            // 
+            resources.ApplyResources(this.txtSumming, "txtSumming");
+            this.txtSumming.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSumming.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSumming.Name = "txtSumming";
+            this.txtSumming.ReadOnly = true;
             // 
             // lnkDiskTypeCheck
             // 
@@ -789,6 +800,7 @@ namespace ReadySunValley
             // pnlMiddle
             // 
             resources.ApplyResources(this.pnlMiddle, "pnlMiddle");
+            this.pnlMiddle.Controls.Add(this.checkReport);
             this.pnlMiddle.Controls.Add(this.btnCompareUtil);
             this.pnlMiddle.Controls.Add(this.btnShareScreen);
             this.pnlMiddle.Controls.Add(this.checkCompareMS);
@@ -796,6 +808,17 @@ namespace ReadySunValley
             this.pnlMiddle.Controls.Add(this.lblHeader);
             this.pnlMiddle.Controls.Add(this.lblSubHeader);
             this.pnlMiddle.Name = "pnlMiddle";
+            // 
+            // checkReport
+            // 
+            resources.ApplyResources(this.checkReport, "checkReport");
+            this.checkReport.BackColor = System.Drawing.Color.Gainsboro;
+            this.checkReport.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.checkReport.FlatAppearance.BorderSize = 0;
+            this.checkReport.FlatAppearance.CheckedBackColor = System.Drawing.Color.HotPink;
+            this.checkReport.Name = "checkReport";
+            this.checkReport.UseVisualStyleBackColor = false;
+            this.checkReport.CheckedChanged += new System.EventHandler(this.checkReport_CheckedChanged);
             // 
             // btnCompareUtil
             // 
@@ -985,6 +1008,8 @@ namespace ReadySunValley
         private System.Windows.Forms.ToolTip tt;
         private System.Windows.Forms.LinkLabel lnkDiskTypeCheck;
         private System.Windows.Forms.ToolStripMenuItem menuTestingRelease;
+        private System.Windows.Forms.CheckBox checkReport;
+        private System.Windows.Forms.TextBox txtSumming;
     }
 }
 
