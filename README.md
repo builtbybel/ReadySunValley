@@ -45,7 +45,7 @@ alt="GitHub issues">
 Lets you check if your device is ready for the above Windows 11/Sun Valley requirements.
 
 ### Next to this it also features options for
-- Generateing a detailed report why your PC isn't supported
+- Generating a detailed report why your PC isn't supported
 - Bypassing TPM/Secure boot restrictions
 - Comparing your results with Microsoft requirements
 - Comparing results with another Compatibility checker [WhyNotWin11](https://github.com/rcmaehl/WhyNotWin11)
