@@ -38,13 +38,14 @@ alt="GitHub issues">
 
 ![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv.png)
 
-### Compare your results with Microsoft requirements
+### Generate detailed report why your PC isn't supported
 ![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv-opt.png)
 	
 ## Features
 Lets you check if your device is ready for the above Windows 11/Sun Valley requirements.
 
 ### Next to this it also features options for
+- Generates a detailed report why your PC isn't supported
 - Bypassing TPM/Secure boot restrictions
 - Comparing your results with Microsoft requirements
 - Comparing results with another Compatibility checker [WhyNotWin11](https://github.com/rcmaehl/WhyNotWin11)
