@@ -43,7 +43,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -157,7 +157,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\bypass.reg" />
-    <None Include="Resources\qualcommsupport.txt" />
     <None Include="Resources\undo_bypass.reg" />
   </ItemGroup>
   <ItemGroup>
@@ -177,8 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppIcon.ico" />
-    <None Include="Resources\intelsupport.txt" />
-    <None Include="Resources\amdsupport.txt" />
+    <None Include="Resources\supportedCPU.txt" />
     <None Include="Resources\fail.png" />
     <None Include="Resources\ok.png" />
     <None Include="Resources\info.png" />

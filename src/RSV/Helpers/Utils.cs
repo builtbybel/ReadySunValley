@@ -42,13 +42,14 @@ namespace ReadySunValley.Helpers
                 }
                 else // new version
                 {
-                    if (MessageBox.Show("A new app version " + LatestVersion + " is available.\nDo you want to goto the Github update page?" + Environment.NewLine + versionContent, Locales.Locale.updateTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // New release available!
+                    if (MessageBox.Show("A new app version " + LatestVersion + " is available.\nDo you want to goto the Github update page?" + Environment.NewLine + versionContent, Locales.Locale.infoUpdate, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // New release available!
                     {
                         Process.Start(Strings.Uri.GitUpdateRepo + LatestVersion);
                     }
                 }
             }
-            catch { MessageBox.Show("App update check failed...", "", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch
+            { MessageBox.Show(Locales.Locale.errorUpdate + Environment.NewLine + Locales.Locale.errorInternet); }
         }
 
         public static String FormatBytes(long byteCount)
@@ -60,6 +61,27 @@ namespace ReadySunValley.Helpers
             int place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
             double num = Math.Round(bytes / Math.Pow(1024, place), 1);
             return (Math.Sign(byteCount) * num).ToString() + suf[place];
+        }
+
+        /// <summary>
+        /// Launch Urls in richSumming control
+        /// </summary>
+        /// <param name="url"></param>
+        public static void LaunchUri(string url)
+        {
+            if (IsHttpURL(url)) Process.Start(url);
+        }
+
+        /// <summary>
+        /// Check Urls in richSumming control
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static bool IsHttpURL(string url)
+        {
+            return
+                ((!string.IsNullOrWhiteSpace(url)) &&
+                (url.ToLower().StartsWith("http")));
         }
     }
 }

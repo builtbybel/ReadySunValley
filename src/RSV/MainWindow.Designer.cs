@@ -33,7 +33,7 @@ namespace ReadySunValley
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.checkCompareMS = new System.Windows.Forms.CheckBox();
             this.pnlLeft = new System.Windows.Forms.Panel();
-            this.txtSumming = new System.Windows.Forms.TextBox();
+            this.richSumming = new System.Windows.Forms.RichTextBox();
             this.lnkDiskTypeCheck = new System.Windows.Forms.LinkLabel();
             this.btnRecheck = new System.Windows.Forms.Button();
             this.lblMhz = new System.Windows.Forms.Label();
@@ -118,7 +118,7 @@ namespace ReadySunValley
             this.btnCompareUtil = new System.Windows.Forms.Button();
             this.btnShareScreen = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.lblSubHeader = new System.Windows.Forms.LinkLabel();
+            this.lnkSubHeader = new System.Windows.Forms.LinkLabel();
             this.tt = new System.Windows.Forms.ToolTip(this.components);
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tpmgood)).BeginInit();
@@ -175,7 +175,7 @@ namespace ReadySunValley
             // 
             resources.ApplyResources(this.pnlLeft, "pnlLeft");
             this.pnlLeft.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlLeft.Controls.Add(this.txtSumming);
+            this.pnlLeft.Controls.Add(this.richSumming);
             this.pnlLeft.Controls.Add(this.lnkDiskTypeCheck);
             this.pnlLeft.Controls.Add(this.btnRecheck);
             this.pnlLeft.Controls.Add(this.lblMhz);
@@ -241,13 +241,14 @@ namespace ReadySunValley
             this.pnlLeft.Controls.Add(this.freespacebad);
             this.pnlLeft.Name = "pnlLeft";
             // 
-            // txtSumming
+            // richSumming
             // 
-            resources.ApplyResources(this.txtSumming, "txtSumming");
-            this.txtSumming.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtSumming.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSumming.Name = "txtSumming";
-            this.txtSumming.ReadOnly = true;
+            resources.ApplyResources(this.richSumming, "richSumming");
+            this.richSumming.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.richSumming.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richSumming.Name = "richSumming";
+            this.richSumming.ReadOnly = true;
+            this.richSumming.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richSumming_LinkClicked);
             // 
             // lnkDiskTypeCheck
             // 
@@ -463,7 +464,6 @@ namespace ReadySunValley
             resources.ApplyResources(this.tpminfo, "tpminfo");
             this.tpminfo.Name = "tpminfo";
             this.tpminfo.TabStop = false;
-            this.tpminfo.MouseHover += new System.EventHandler(this.tpminfo_MouseHover);
             // 
             // freqgood
             // 
@@ -548,14 +548,12 @@ namespace ReadySunValley
             resources.ApplyResources(this.coresbad, "coresbad");
             this.coresbad.Name = "coresbad";
             this.coresbad.TabStop = false;
-            this.coresbad.MouseHover += new System.EventHandler(this.coresbad_MouseHover);
             // 
             // freqbad
             // 
             resources.ApplyResources(this.freqbad, "freqbad");
             this.freqbad.Name = "freqbad";
             this.freqbad.TabStop = false;
-            this.freqbad.MouseHover += new System.EventHandler(this.freqbad_MouseHover);
             // 
             // archbad
             // 
@@ -568,63 +566,54 @@ namespace ReadySunValley
             resources.ApplyResources(this.securebootbad, "securebootbad");
             this.securebootbad.Name = "securebootbad";
             this.securebootbad.TabStop = false;
-            this.securebootbad.MouseHover += new System.EventHandler(this.securebootbad_MouseHover);
             // 
             // partbad
             // 
             resources.ApplyResources(this.partbad, "partbad");
             this.partbad.Name = "partbad";
             this.partbad.TabStop = false;
-            this.partbad.MouseHover += new System.EventHandler(this.partbad_MouseHover);
             // 
             // rambad
             // 
             resources.ApplyResources(this.rambad, "rambad");
             this.rambad.Name = "rambad";
             this.rambad.TabStop = false;
-            this.rambad.MouseHover += new System.EventHandler(this.rambad_MouseHover);
             // 
             // screenbad
             // 
             resources.ApplyResources(this.screenbad, "screenbad");
             this.screenbad.Name = "screenbad";
             this.screenbad.TabStop = false;
-            this.screenbad.MouseHover += new System.EventHandler(this.screenbad_MouseHover);
             // 
             // bootbad
             // 
             resources.ApplyResources(this.bootbad, "bootbad");
             this.bootbad.Name = "bootbad";
             this.bootbad.TabStop = false;
-            this.bootbad.MouseHover += new System.EventHandler(this.bootbad_MouseHover);
             // 
             // hddbad
             // 
             resources.ApplyResources(this.hddbad, "hddbad");
             this.hddbad.Name = "hddbad";
             this.hddbad.TabStop = false;
-            this.hddbad.MouseHover += new System.EventHandler(this.hddbad_MouseHover);
             // 
             // directbad
             // 
             resources.ApplyResources(this.directbad, "directbad");
             this.directbad.Name = "directbad";
             this.directbad.TabStop = false;
-            this.directbad.MouseHover += new System.EventHandler(this.directbad_MouseHover);
             // 
             // wddmbad
             // 
             resources.ApplyResources(this.wddmbad, "wddmbad");
             this.wddmbad.Name = "wddmbad";
             this.wddmbad.TabStop = false;
-            this.wddmbad.MouseHover += new System.EventHandler(this.wddmbad_MouseHover);
             // 
             // inetbad
             // 
             resources.ApplyResources(this.inetbad, "inetbad");
             this.inetbad.Name = "inetbad";
             this.inetbad.TabStop = false;
-            this.inetbad.MouseHover += new System.EventHandler(this.inetbad_MouseHover);
             // 
             // tpmbad
             // 
@@ -632,7 +621,6 @@ namespace ReadySunValley
             resources.ApplyResources(this.tpmbad, "tpmbad");
             this.tpmbad.Name = "tpmbad";
             this.tpmbad.TabStop = false;
-            this.tpmbad.MouseHover += new System.EventHandler(this.tpmbad_MouseHover);
             // 
             // cpuinfo
             // 
@@ -640,14 +628,12 @@ namespace ReadySunValley
             resources.ApplyResources(this.cpuinfo, "cpuinfo");
             this.cpuinfo.Name = "cpuinfo";
             this.cpuinfo.TabStop = false;
-            this.cpuinfo.MouseHover += new System.EventHandler(this.cpuinfo_MouseHover);
             // 
             // cpubad
             // 
             resources.ApplyResources(this.cpubad, "cpubad");
             this.cpubad.Name = "cpubad";
             this.cpubad.TabStop = false;
-            this.cpubad.MouseHover += new System.EventHandler(this.cpubad_MouseHover);
             // 
             // freespacegood
             // 
@@ -661,7 +647,6 @@ namespace ReadySunValley
             resources.ApplyResources(this.freespacebad, "freespacebad");
             this.freespacebad.Name = "freespacebad";
             this.freespacebad.TabStop = false;
-            this.freespacebad.MouseHover += new System.EventHandler(this.freespaceinfo_MouseHover);
             // 
             // pbCompare
             // 
@@ -795,7 +780,10 @@ namespace ReadySunValley
             // pBar
             // 
             resources.ApplyResources(this.pBar, "pBar");
+            this.pBar.MarqueeAnimationSpeed = 10;
             this.pBar.Name = "pBar";
+            this.pBar.Step = 1;
+            this.pBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             // 
             // pnlMiddle
             // 
@@ -806,7 +794,7 @@ namespace ReadySunValley
             this.pnlMiddle.Controls.Add(this.checkCompareMS);
             this.pnlMiddle.Controls.Add(this.pBar);
             this.pnlMiddle.Controls.Add(this.lblHeader);
-            this.pnlMiddle.Controls.Add(this.lblSubHeader);
+            this.pnlMiddle.Controls.Add(this.lnkSubHeader);
             this.pnlMiddle.Name = "pnlMiddle";
             // 
             // checkReport
@@ -846,15 +834,16 @@ namespace ReadySunValley
             this.lblHeader.AutoEllipsis = true;
             this.lblHeader.Name = "lblHeader";
             // 
-            // lblSubHeader
+            // lnkSubHeader
             // 
-            this.lblSubHeader.ActiveLinkColor = System.Drawing.Color.MediumVioletRed;
-            resources.ApplyResources(this.lblSubHeader, "lblSubHeader");
-            this.lblSubHeader.AutoEllipsis = true;
-            this.lblSubHeader.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lblSubHeader.LinkColor = System.Drawing.Color.DeepPink;
-            this.lblSubHeader.Name = "lblSubHeader";
-            this.lblSubHeader.TabStop = true;
+            this.lnkSubHeader.ActiveLinkColor = System.Drawing.Color.MediumVioletRed;
+            resources.ApplyResources(this.lnkSubHeader, "lnkSubHeader");
+            this.lnkSubHeader.AutoEllipsis = true;
+            this.lnkSubHeader.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkSubHeader.LinkColor = System.Drawing.Color.DeepPink;
+            this.lnkSubHeader.Name = "lnkSubHeader";
+            this.lnkSubHeader.TabStop = true;
+            this.lnkSubHeader.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSubHeader_LinkClicked);
             // 
             // tt
             // 
@@ -995,7 +984,7 @@ namespace ReadySunValley
         private System.Windows.Forms.ProgressBar pBar;
         private System.Windows.Forms.Panel pnlMiddle;
         private System.Windows.Forms.Label lblHeader;
-        private System.Windows.Forms.LinkLabel lblSubHeader;
+        private System.Windows.Forms.LinkLabel lnkSubHeader;
         private System.Windows.Forms.LinkLabel lnkCompatibilityFix;
         private System.Windows.Forms.Button btnShareScreen;
         private System.Windows.Forms.Button btnCompareUtil;
@@ -1009,7 +998,7 @@ namespace ReadySunValley
         private System.Windows.Forms.LinkLabel lnkDiskTypeCheck;
         private System.Windows.Forms.ToolStripMenuItem menuTestingRelease;
         private System.Windows.Forms.CheckBox checkReport;
-        private System.Windows.Forms.TextBox txtSumming;
+        private System.Windows.Forms.RichTextBox richSumming;
     }
 }
 

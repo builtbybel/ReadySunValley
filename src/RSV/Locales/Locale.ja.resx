@@ -220,8 +220,13 @@ Windows 11に非対応です</value>
     <value>(非対応)</value>
     <comment>Assessment</comment>
   </data>
+  <data name="assetGithub" xml:space="preserve">
+    <value>@github.com/builtbybel/readysunvalley を開く</value>
+    <comment>ToolTip</comment>
+  </data>
   <data name="assetTweet" xml:space="preserve">
     <value>Windows11/Sun%20Valleyの更新はOK? これは「ReadySunValley」アプリの結果です</value>
+    <comment>ToolTip</comment>
   </data>
   <data name="btnCompareUtil" xml:space="preserve">
     <value>セカンドオピニオンを得る</value>
@@ -243,78 +248,70 @@ Windows 11に非対応です</value>
     <value>結果へ戻る</value>
     <comment>GUI</comment>
   </data>
-  <data name="hoveCPUInfo" xml:space="preserve">
-    <value>お使いのCPUは最低要件を満たしていますが、公式の対応CPU一覧には載っていません。</value>
-    <comment>Hover</comment>
-  </data>
-  <data name="hoverAssetInfo" xml:space="preserve">
-    <value>@github.com/builtbybel/readysunvalley を開く</value>
-    <comment>Hover</comment>
-  </data>
-  <data name="hoverBootBad" xml:space="preserve">
+  <data name="descBootBad" xml:space="preserve">
     <value>お使いのシステムがUEFI起動モードに対応している必要がありますが、現状ではレガシーモードで起動しています。お使いのシステムがUEFIに対応していないという意味ではありません。詳細はマザーボード、システムのマニュアル、BIOSをチェックしてください。</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverCPUBad" xml:space="preserve">
+  <data name="descCPUBad" xml:space="preserve">
     <value>お使いのCPUは仕様上の要件を満たしません。下記の周波数またはコア数に関する個別の情報を参照ください。</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverCPUCoresBad" xml:space="preserve">
+  <data name="descCPUCoresBad" xml:space="preserve">
     <value>Windows 11の実行に十分なCPUコア数がありません</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverCPUSpeedBad" xml:space="preserve">
-    <value>CPU周波数がWindows 11の最低要件を満たしません</value>
-    <comment>Hover</comment>
+  <data name="descCPUInfo" xml:space="preserve">
+    <value>お使いのCPUは最低要件を満たしていますが、公式の対応CPU一覧には載っていません。</value>
+    <comment>Description</comment>
   </data>
-  <data name="hoverDirectXBad" xml:space="preserve">
+  <data name="descDirectXBad" xml:space="preserve">
     <value>DirectXのバージョンが低すぎます。お使いのシステムが高いバージョンに対応していないという意味ではありません。詳細はDXDIAGをチェックしてください。</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverDisplayBad" xml:space="preserve">
+  <data name="descDisplayBad" xml:space="preserve">
     <value>1つ以上のモニターがWindows 11の動作には狭すぎます</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverFreeSpaceBad" xml:space="preserve">
+  <data name="descFreeSpaceBad" xml:space="preserve">
     <value>リークされたバージョンのWindows 11によると、セットアップファイル(ISOファイル)のサイズは4.54GBとみられます。リークされたバージョンは全機能を備えているわけではないことを考慮すると、実際のファイルサイズは4.5～6GB程度と考えられます。Windows 11は最低64GBのストレージ空間のディスクを必要とすることに留意してください。</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverInetBad" xml:space="preserve">
+  <data name="descInetBad" xml:space="preserve">
     <value>Windows 11 Homeエディションでは、初回使用時に機器のセットアップを完了するには、インターネット接続とマイクロソフトアカウントが必要です。
 Windows 11 HomeのSモードを解除する場合もインターネット接続が必要です。</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverPartitionBad" xml:space="preserve">
+  <data name="descPartitionBad" xml:space="preserve">
     <value>お使いのシステムがGPTパーティションタイプに対応している必要がありますが、現状ではMBRで起動しています。お使いのシステムがGPTに対応していないという意味ではありません。詳細はマザーボード、システムのマニュアル、BIOSをチェックしてください。</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverRAMBad" xml:space="preserve">
+  <data name="descRAMBad" xml:space="preserve">
     <value>RAM容量がWindows 11の最低要件を満たしていません</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverRecheck" xml:space="preserve">
-    <value>チェックを再度実行</value>
-    <comment>Hover</comment>
+  <data name="descrCPUSpeedBad" xml:space="preserve">
+    <value>CPU周波数がWindows 11の最低要件を満たしません</value>
+    <comment>Description</comment>
   </data>
-  <data name="hoverSecureBootBad" xml:space="preserve">
+  <data name="descSecureBootBad" xml:space="preserve">
     <value>セキュアブート機能がありません。ReadySunValleyではセキュアブートの要件を回避可能です。右のパネルの修復リンクを使います。</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverStorageBad" xml:space="preserve">
+  <data name="descStorageBad" xml:space="preserve">
     <value>Windows 11の実行に十分な容量がありません</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverTPMBad" xml:space="preserve">
+  <data name="descTPMBad" xml:space="preserve">
     <value>TPMが存在しない場合、おそらくUEFIで無効化されています。</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverTPMInfo" xml:space="preserve">
+  <data name="descTPMInfo" xml:space="preserve">
     <value>TPMのバージョンが低すぎます。古いバージョンのTPM(通常は1.2)が動作している場合、ファームウェア更新でTPM 2.0にアップデートできる場合があります。</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverWDDMBad" xml:space="preserve">
+  <data name="descWDDMBad" xml:space="preserve">
     <value>Windows Display Driver ModelのバージョンがWindows 11の最低要件を満たしていません。</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
   <data name="infoBypassDone" xml:space="preserve">
     <value>TPMとセキュアブートの制約を回避しました。</value>
@@ -334,6 +331,10 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
   </data>
   <data name="infoCompareUtilDownloadMessage" xml:space="preserve">
     <value>できました。両アプリを並べて結果を見てみましょう。</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="InfoUpdate" xml:space="preserve">
+    <value>アプリの更新が利用可能</value>
     <comment>GUI</comment>
   </data>
   <data name="lblBitness" xml:space="preserve">
@@ -441,7 +442,7 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <comment>Check</comment>
   </data>
   <data name="lblSubHeader" xml:space="preserve">
-    <value>失敗した結果にカーソルをかぶせると詳しい情報が得られます</value>
+    <value>for System</value>
     <comment>GUI</comment>
   </data>
   <data name="lblTPM" xml:space="preserve">
@@ -470,6 +471,7 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
   </data>
   <data name="lnkDiskTypeInfo" xml:space="preserve">
     <value>(全ての一覧)</value>
+    <comment>GUI</comment>
   </data>
   <data name="menuBypassUndo" xml:space="preserve">
     <value>回避策を取り消す</value>
@@ -487,8 +489,8 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <value>Windows 11をインストールしようとして「このPCはWindows 11を実行できません」というメッセージが現れる場合、TPM 2.0、セキュアブート、4GBのRAMの要件を満たさないことが多いです。\n\nマイクロソフトは新しいレジストリキー「LabConfig」を導入し、TPM 2.0、4GBメモリ、セキュアブートの要件を回避するよう設定することが可能となりました。\n\nTPM 2.0要件を無効化することにより、Windows 11のセキュリティを低下させることに注意してください。\n\n以上の制約を回避しますか?</value>
     <comment>Menu</comment>
   </data>
-  <data name="updateTitle" xml:space="preserve">
-    <value>アプリの更新が利用可能</value>
-    <comment>GUI</comment>
+  <data name="ttRecheck" xml:space="preserve">
+    <value>チェックを再度実行</value>
+    <comment>ToolTip</comment>
   </data>
 </root>

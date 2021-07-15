@@ -61,16 +61,6 @@ namespace ReadySunValley.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
-        /// </summary>
-        public static byte[] amdsupport {
-            get {
-                object obj = ResourceManager.GetObject("amdsupport", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Windows Registry Editor Version 5.00
         ///
         ///[HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig]
@@ -106,22 +96,50 @@ namespace ReadySunValley.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        ///   Sucht eine lokalisierte Zeichenfolge, die 3015E
+        ///3020E
+        ///Athlon Gold 3150C
+        ///Athlon Gold 3150U
+        ///Athlon Silver 3050C
+        ///Athlon Silver 3050e
+        ///Athlon Silver 3050U
+        ///Athlon 3000G
+        ///Athlon 300GE
+        ///Athlon 300U
+        ///Athlon 320GE
+        ///Athlon Gold 3150G
+        ///Athlon Gold 3150GE
+        ///Athlon Silver 3050GE
+        ///EPYC 7232P
+        ///EPYC 7252
+        ///EPYC 7262
+        ///EPYC 7272
+        ///EPYC 7282
+        ///EPYC 7302
+        ///EPYC 7302P
+        ///EPYC 7352
+        ///EPYC 7402
+        ///EPYC 7402P
+        ///EPYC 7452
+        ///EPYC 7502
+        ///EPYC 7502P
+        ///EPYC 7532
+        ///EPYC 7542
+        ///EPYC 7552
+        ///EPYC 7642
+        ///EPYC 7662
+        ///EPYC 7702
+        ///EPYC 7702P
+        ///EPYC 7742
+        ///EPYC 7F32
+        ///EPYC 7F52
+        ///EPYC 7F72
+        ///EPYC 7H12
+        ///E [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
-        public static byte[] intelsupport {
+        public static string supportedCPU {
             get {
-                object obj = ResourceManager.GetObject("intelsupport", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
-        /// </summary>
-        public static byte[] qualcommsupport {
-            get {
-                object obj = ResourceManager.GetObject("qualcommsupport", resourceCulture);
-                return ((byte[])(obj));
+                return ResourceManager.GetString("supportedCPU", resourceCulture);
             }
         }
         

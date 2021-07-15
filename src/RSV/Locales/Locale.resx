@@ -217,6 +217,10 @@
     <value>(Not supported)</value>
     <comment>Assessment</comment>
   </data>
+  <data name="assetGithub" xml:space="preserve">
+    <value>Open @github.com/builtbybel/readysunvalley</value>
+    <comment>ToolTip</comment>
+  </data>
   <data name="assetTweet" xml:space="preserve">
     <value>Ready%20for%20%23Windows11/Sun%20Valley%20update?%20Here%20are%20my%20results%20%23ReadySunValley%20%23app</value>
     <comment>GUI</comment>
@@ -247,78 +251,77 @@
   </data>
   <data name="checkReportBack" xml:space="preserve">
     <value>All right, okay</value>
+    <comment>GUI</comment>
   </data>
-  <data name="hoveCPUInfo" xml:space="preserve">
-    <value>Your CPU meets the soft requirements, it's just not listed on the official list of supported processors. This is just an information for you. The requirement is fulfilled for the time being.\n\nYou can find a list of supported processors here\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
-    <comment>Hover</comment>
-  </data>
-  <data name="hoverAssetInfo" xml:space="preserve">
-    <value>Open @github.com/builtbybel/readysunvalley</value>
-    <comment>Hover</comment>
-  </data>
-  <data name="hoverBootBad" xml:space="preserve">
+  <data name="descBootBad" xml:space="preserve">
     <value>Your system needs to support a UEFI boot mode, right now your system is booting using Legacy. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual or BIOS for more information.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverCPUBad" xml:space="preserve">
+  <data name="descCPUBad" xml:space="preserve">
     <value>Your CPU doesn't meet the specification requirements, see individual info about frequency or cores below.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverCPUCoresBad" xml:space="preserve">
+  <data name="descCPUCoresBad" xml:space="preserve">
     <value>You don't have enough processing cores to run Windows 11."</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverCPUSpeedBad" xml:space="preserve">
+  <data name="descCPUInfo" xml:space="preserve">
+    <value>Your CPU meets the soft requirements, it's just not listed on the official list of supported processors. This is just an information for you. The requirement is fulfilled for the time being.\n\nYou can find a list of supported processors here\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descCPUSpeedBad" xml:space="preserve">
     <value>Your CPU frequency doesn't meet the minimum requirements for Windows 11.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverDirectXBad" xml:space="preserve">
+  <data name="descDirectXBad" xml:space="preserve">
     <value>Your DirectX version is too low. This doesn't necessarily mean that your system doesn't support higher versions. Check DXDIAG for more information.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverDisplayBad" xml:space="preserve">
+  <data name="descDisplayBad" xml:space="preserve">
     <value>One or more of your monitors are too small to work on Windows 11.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverFreeSpaceBad" xml:space="preserve">
+  <data name="descFreeSpaceBad" xml:space="preserve">
     <value>From the leaked version of Windows 11, It can be seen that the Setup file (ISO File) size is 4.54 GB. Considering that the leaked version does not have all the features, we can say that the actual file size will be between 4.5 to 6 GB.  Just keep in mind that Windows 11 requires a disk with at least 64 GB of storage space.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverInetBad" xml:space="preserve">
+  <data name="descInetBad" xml:space="preserve">
     <value>Windows 11 Home edition requires internet connectivity and a Microsoft account to complete device setup on first use. Switching a device out of Windows 11 Home in S mode also requires internet connectivity.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverPartitionBad" xml:space="preserve">
+  <data name="descPartitionBad" xml:space="preserve">
     <value>Your system needs to support GPT partition types, right now your system is booting using MBR. This doesn't necessarily mean that your system doesn't support it. Check your motherboard, system manual or bios for more information.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverRAMBad" xml:space="preserve">
+  <data name="descRAMBad" xml:space="preserve">
     <value>Your RAM does not meet the minimum requirements for Windows 11.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverRecheck" xml:space="preserve">
-    <value>Run check again</value>
-    <comment>Hover</comment>
-  </data>
-  <data name="hoverSecureBootBad" xml:space="preserve">
+  <data name="descSecureBootBad" xml:space="preserve">
     <value>Secure Boot functionality is missing. You can bypass the Secure boot requirements with ReadySunValley. Use the repair link in the right panel.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverStorageBad" xml:space="preserve">
+  <data name="descStorageBad" xml:space="preserve">
     <value>Your drive does not have enough capacity to run Windows 11.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverTPMBad" xml:space="preserve">
-    <value>We could not find a TPM Module. If no TPM is present, you’ll probably find it’s been disabled in the UEFI. Otherwiese you can also bypass the TPM 2.0 requirements with ReadySunValley. Use the repair link in the right panel.</value>
-    <comment>Hover</comment>
+  <data name="descTPMBad" xml:space="preserve">
+    <value>We could not find a TPM Module. If no TPM is present, you’ll probably find it’s been disabled in the UEFI. Otherwiese you can also bypass the TPM 2.0 requirements with ReadySunValley. Use the repair link in the right panel. A detailed guide on how to install Windows 11 without TPM and Secure Boot can also be found at https://www.bleepingcomputer.com/news/microsoft/how-to-bypass-the-windows-11-tpm-20-requirement/</value>
+    <comment>Description</comment>
   </data>
-  <data name="hoverTPMInfo" xml:space="preserve">
+  <data name="descTPMInfo" xml:space="preserve">
     <value>Your TPM version is too low. If you’re running an older version of TPM (1.2 typically), then you may be able to update it to TPM 2.0 with a firmware update.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverWDDMBad" xml:space="preserve">
-    <value>Your Windows Display Driver Model version does not meet the minimum requirements for Windows 11.</value>
-    <comment>Hover</comment>
+  <data name="descWDDMBad" xml:space="preserve">
+    <value>Your Windows Display Driver Model version does not meet the minimum requirements for Windows 11. Your Graphics card must be compatible with DirectX 12 or later with WDDM 2.0 driver.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="errorInternet" xml:space="preserve">
+    <value>Check your Internet connection and try again.</value>
+  </data>
+  <data name="errorUpdate" xml:space="preserve">
+    <value>App update check failed to start.</value>
   </data>
   <data name="infoBypassDone" xml:space="preserve">
     <value>TPM and Secure Boot restriction has been bypassed.</value>
@@ -338,6 +341,10 @@
   </data>
   <data name="infoCompareUtilDownloadMessage" xml:space="preserve">
     <value>Ready! So now put the two apps next to each other and take a look at the results.</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoUpdate" xml:space="preserve">
+    <value>App update available</value>
     <comment>GUI</comment>
   </data>
   <data name="lblBitness" xml:space="preserve">
@@ -445,7 +452,7 @@
     <comment>Check</comment>
   </data>
   <data name="lblSubHeader" xml:space="preserve">
-    <value>*Move the cursor over a failed result to get more information</value>
+    <value>* for System</value>
     <comment>GUI</comment>
   </data>
   <data name="lblTPM" xml:space="preserve">
@@ -492,8 +499,8 @@
     <value>If you are attempting to install Windows 11 and receive a message stating, "This PC can't run Windows 11" it is likely that you do not have a TPM 2.0 requirement, Secure Boot or 4 GB of RAM.\n\nThe good news is that Microsoft includes a new "LabConfig" registry key that allows you to configure settings to bypass the TPM 2.0, the 4 GB memory, and Secure Boot requirements.\n\nPlease note, that by disabling the TPM 2.0 requirement, you are effectively reducing the security in Windows 11.\n\nDo you want to bypass these restrictions?</value>
     <comment>Menu</comment>
   </data>
-  <data name="updateTitle" xml:space="preserve">
-    <value>App update available</value>
-    <comment>GUI</comment>
+  <data name="ttRecheck" xml:space="preserve">
+    <value>Run check again</value>
+    <comment>ToolTip</comment>
   </data>
 </root>

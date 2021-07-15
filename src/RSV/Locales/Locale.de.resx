@@ -217,6 +217,10 @@
     <value>(Nicht unterstützt)</value>
     <comment>Assessment</comment>
   </data>
+  <data name="assetGithub" xml:space="preserve">
+    <value>@github.com/builtbybel/readysunvalley öffnen</value>
+    <comment>ToolTip</comment>
+  </data>
   <data name="assetTweet" xml:space="preserve">
     <value>Bereit%20für%20%23Windows11/Sun%20Valley%20update?%20Hier%20ist%20mein%20Kompatibilitätsbericht%20%23ReadySunValley%20%23app</value>
     <comment>GUI</comment>
@@ -249,77 +253,75 @@
     <value>Zurück zur Normalansicht</value>
     <comment>GUI</comment>
   </data>
-  <data name="hoveCPUInfo" xml:space="preserve">
-    <value>Deine CPU erfüllt die Mindestanforderungen, sie ist nur nicht in der offiziellen Liste der unterstützten Prozessoren aufgeführt. Dies ist nur eine Information für dich. Die Anforderung ist aber erstmal erfüllt.\n\nDu findest eine Liste der untersützten Prozessoren hier\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
-    <comment>Hover</comment>
-  </data>
-  <data name="hoverAssetInfo" xml:space="preserve">
-    <value>@github.com/builtbybel/readysunvalley öffnen</value>
-    <comment>Hover</comment>
-  </data>
-  <data name="hoverBootBad" xml:space="preserve">
+  <data name="descBootBad" xml:space="preserve">
     <value>Dein System muss einen UEFI-Boot-Modus unterstützen. Im Moment bootet dein System im Legacy-Modus. Dies bedeutet nicht zwangsläufig, dass dein System dies nicht unterstützt. Überprüfe hierzu dein Motherboard, das Systemhandbuch oder BIOS für weitere Informationen.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverCPUBad" xml:space="preserve">
+  <data name="descCPUBad" xml:space="preserve">
     <value>Deine CPU erfüllt nicht die Spezifikationsanforderungen. Weitere Informationen zu deiner CPU erhältst du im linken Ergebnisfenster</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverCPUCoresBad" xml:space="preserve">
+  <data name="descCPUCoresBad" xml:space="preserve">
     <value>Du hast nicht genug Prozessorkerne, um Windows 11 auszuführen.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverCPUSpeedBad" xml:space="preserve">
+  <data name="descCPUInfo" xml:space="preserve">
+    <value>Deine CPU erfüllt die Mindestanforderungen, sie ist nur nicht in der offiziellen Liste der unterstützten Prozessoren aufgeführt. Dies ist nur eine Information für dich. Die Anforderung ist aber erstmal erfüllt.\n\nDu findest eine Liste der untersützten Prozessoren hier\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descCPUSpeedBad" xml:space="preserve">
     <value>Deine CPU-Frequenz entspricht nicht den Mindestanforderungen für Windows 11.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverDirectXBad" xml:space="preserve">
+  <data name="descDirectXBad" xml:space="preserve">
     <value>Deine DirectX-Version ist zu niedrig. Dies bedeutet nicht unbedingt, dass dein System keine höheren Versionen unterstützt. Prüfe dies mit DXDIAG für weitere Informationen.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverDisplayBad" xml:space="preserve">
+  <data name="descDisplayBad" xml:space="preserve">
     <value>Einer oder mehrere deiner Monitore sind für Windows 11 zu klein.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverFreeSpaceBad" xml:space="preserve">
+  <data name="descFreeSpaceBad" xml:space="preserve">
     <value>Aus der durchgesickerten Version von Windows 11 ist ersichtlich, dass die Größe der Setup-Datei (ISO-Datei) 4,54 GB beträgt.  Wenn man bedenkt, dass die durchgesickerte Version nicht alle Funktionen hat, können wir sagen, dass die tatsächliche Dateigröße zwischen 4,5 und 6 GB liegen wird. Denke nur daran, dass Windows 11 einen Datenträger mit mindestens 64 GB Speicherplatz voraussetzt.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverInetBad" xml:space="preserve">
+  <data name="descInetBad" xml:space="preserve">
     <value>Windows 11 Home Edition erfordert eine Internetverbindung und ein Microsoft-Konto, um die Einrichtung des Geräts bei der ersten Verwendung abzuschließen. Das Umschalten eines Geräts aus Windows 11 Home in den S-Modus erfordert ebenfalls eine Internetverbindung.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverPartitionBad" xml:space="preserve">
+  <data name="descPartitionBad" xml:space="preserve">
     <value>Dein System muss GPT-Partitionstypen unterstützen. Im Moment bootet dein System aber mit MBR. Das bedeutet nicht unbedingt, dass dein System dies nicht unterstützt. Prüfe hierzu dein Motherboard, das Systemhandbuch oder das BIOS für weitere Informationen.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverRAMBad" xml:space="preserve">
+  <data name="descRAMBad" xml:space="preserve">
     <value>Dein RAM erfüllt nicht die Mindestanforderungen für Windows 11.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverRecheck" xml:space="preserve">
-    <value>Run check again</value>
-    <comment>Hover</comment>
-  </data>
-  <data name="hoverSecureBootBad" xml:space="preserve">
+  <data name="descSecureBootBad" xml:space="preserve">
     <value>Es fehlt die Secure Boot-Funktionalität. Du kannst aber die Secure Boot-Anforderungen mit ReadySunValley umgehen. Verwende hierzu den Reparatur-Link in der rechten Leiste.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverStorageBad" xml:space="preserve">
+  <data name="descStorageBad" xml:space="preserve">
     <value>Deine Festplatte hat nicht genügend Kapazität, um Windows 11 auszuführen.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverTPMBad" xml:space="preserve">
-    <value>Wir konnten kein TPM-Modul finden. Wenn kein TPM vorhanden ist, ist es ggf. nur im UEFI deaktiviert. Andernfalls kannst du auch die TPM 2.0-Anforderungen mit ReadySunValley umgehen. Verwende hierzu den Reparatur-Link in der rechten Leiste.</value>
-    <comment>Hover</comment>
+  <data name="descTPMBad" xml:space="preserve">
+    <value>Wir konnten kein TPM-Modul finden. Wenn kein TPM vorhanden ist, ist es ggf. nur im UEFI deaktiviert. Andernfalls kannst du auch die TPM 2.0-Anforderungen mit ReadySunValley umgehen. Verwende hierzu den Reparatur-Link in der rechten Leiste. Was genau dahinter steckt und eine ausführliche Anleitung wie du Windows 11 auch ohne TPM und Secure Boot installieren kannst, findest du auf https://www.deskmodder.de/wiki/index.php?title=Windows_11_auch_ohne_TPM_und_Secure_Boot_installieren</value>
+    <comment>Description</comment>
   </data>
-  <data name="hoverTPMInfo" xml:space="preserve">
+  <data name="descTPMInfo" xml:space="preserve">
     <value>Deine TPM-Version ist zu niedrig. Wenn du eine ältere Version von TPM verwendest (typischerweise 1.2), kannst du es möglicherweise mit einem Firmware-Update auf TPM 2.0 aktualisieren.</value>
-    <comment>Hover</comment>
+    <comment>Description</comment>
   </data>
-  <data name="hoverWDDMBad" xml:space="preserve">
-    <value>WDDM erfüllt nicht die Mindestanforderungen für Windows 11. WDDM in der Version 2.0 wird vorausgesetzt.</value>
-    <comment>Hover</comment>
+  <data name="descWDDMBad" xml:space="preserve">
+    <value>WDDM erfüllt nicht die Mindestanforderungen für Windows 11. WDDM mit einem 2.0-Treiber wird vorausgesetzt.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="errorInternet" xml:space="preserve">
+    <value>Prüfe deine Internetverbindung und versuche es später noch einmal.</value>
+  </data>
+  <data name="errorUpdate" xml:space="preserve">
+    <value>Die Suche nach App-Updates ist fehlgeschlagen</value>
   </data>
   <data name="infoBypassDone" xml:space="preserve">
     <value>TPM- und Secure Boot-Einschränkungen wurden umgangen.</value>
@@ -339,6 +341,10 @@
   </data>
   <data name="infoCompareUtilDownloadMessage" xml:space="preserve">
     <value>Bereit! Lege nun die beiden Apps nebeneinander und schaue dir die Ergebnisse an.</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoUpdate" xml:space="preserve">
+    <value>App-Aktualisierung verfügbar</value>
     <comment>GUI</comment>
   </data>
   <data name="lblBitness" xml:space="preserve">
@@ -446,7 +452,7 @@
     <comment>Check</comment>
   </data>
   <data name="lblSubHeader" xml:space="preserve">
-    <value>*Bewege den Cursor über ein fehlgeschlagenes Ergebnis, um weitere Informationen zu erhalten</value>
+    <value>* für das System</value>
     <comment>GUI</comment>
   </data>
   <data name="lblTPM" xml:space="preserve">
@@ -493,8 +499,8 @@
     <value>Wenn du versuchst Windows 11 zu installieren und die Meldung "Auf diesem PC kann Windows 11 nicht ausgeführt werden" erhältst, ist es sehr wahrscheinlich, dass dein PC eine der Anforderungen wie TPM 2.0, Secure Boot oder 4 GB RAM nicht erfüllt.\n\nDie gute Nachricht ist, dass Microsoft einen neuen "LabConfig"-Registrierungsschlüssel enthält, der es dir ermöglicht die Anforderungen für TPM 2.0, 4 GB Arbeitsspeicher und Secure Boot zu umgehen.\n\nBitte beachte, dass durch die Deaktivierung der TPM 2.0-Anforderung die Sicherheit in Windows 11 effektiv reduziert wird.\n\nWillst du diese Einschränkungen umgehen?</value>
     <comment>Menu</comment>
   </data>
-  <data name="updateTitle" xml:space="preserve">
-    <value>App-Aktualisierung verfügbar</value>
-    <comment>GUI</comment>
+  <data name="ttRunRecheck" xml:space="preserve">
+    <value>Run check again</value>
+    <comment>ToolTip</comment>
   </data>
 </root>

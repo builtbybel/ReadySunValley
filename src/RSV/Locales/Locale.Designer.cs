@@ -286,6 +286,15 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open @github.com/builtbybel/readysunvalley ähnelt.
+        /// </summary>
+        internal static string assetGithub {
+            get {
+                return ResourceManager.GetString("assetGithub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Ready%20for%20%23Windows11/Sun%20Valley%20update?%20Here%20are%20my%20results%20%23ReadySunValley%20%23app ähnelt.
         /// </summary>
         internal static string assetTweet {
@@ -358,164 +367,164 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Your CPU meets the soft requirements, it&apos;s just not listed on the official list of supported processors. This is just an information for you. The requirement is fulfilled for the time being.\n\nYou can find a list of supported processors here\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors ähnelt.
-        /// </summary>
-        internal static string hoveCPUInfo {
-            get {
-                return ResourceManager.GetString("hoveCPUInfo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Open @github.com/builtbybel/readysunvalley ähnelt.
-        /// </summary>
-        internal static string hoverAssetInfo {
-            get {
-                return ResourceManager.GetString("hoverAssetInfo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your system needs to support a UEFI boot mode, right now your system is booting using Legacy. This doesn&apos;t necessarily mean that your system doesn&apos;t support it. Check your motherboard, system manual or BIOS for more information. ähnelt.
         /// </summary>
-        internal static string hoverBootBad {
+        internal static string descBootBad {
             get {
-                return ResourceManager.GetString("hoverBootBad", resourceCulture);
+                return ResourceManager.GetString("descBootBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your CPU doesn&apos;t meet the specification requirements, see individual info about frequency or cores below. ähnelt.
         /// </summary>
-        internal static string hoverCPUBad {
+        internal static string descCPUBad {
             get {
-                return ResourceManager.GetString("hoverCPUBad", resourceCulture);
+                return ResourceManager.GetString("descCPUBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die You don&apos;t have enough processing cores to run Windows 11.&quot; ähnelt.
         /// </summary>
-        internal static string hoverCPUCoresBad {
+        internal static string descCPUCoresBad {
             get {
-                return ResourceManager.GetString("hoverCPUCoresBad", resourceCulture);
+                return ResourceManager.GetString("descCPUCoresBad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your CPU meets the soft requirements, it&apos;s just not listed on the official list of supported processors. This is just an information for you. The requirement is fulfilled for the time being.\n\nYou can find a list of supported processors here\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors ähnelt.
+        /// </summary>
+        internal static string descCPUInfo {
+            get {
+                return ResourceManager.GetString("descCPUInfo", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your CPU frequency doesn&apos;t meet the minimum requirements for Windows 11. ähnelt.
         /// </summary>
-        internal static string hoverCPUSpeedBad {
+        internal static string descCPUSpeedBad {
             get {
-                return ResourceManager.GetString("hoverCPUSpeedBad", resourceCulture);
+                return ResourceManager.GetString("descCPUSpeedBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your DirectX version is too low. This doesn&apos;t necessarily mean that your system doesn&apos;t support higher versions. Check DXDIAG for more information. ähnelt.
         /// </summary>
-        internal static string hoverDirectXBad {
+        internal static string descDirectXBad {
             get {
-                return ResourceManager.GetString("hoverDirectXBad", resourceCulture);
+                return ResourceManager.GetString("descDirectXBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die One or more of your monitors are too small to work on Windows 11. ähnelt.
         /// </summary>
-        internal static string hoverDisplayBad {
+        internal static string descDisplayBad {
             get {
-                return ResourceManager.GetString("hoverDisplayBad", resourceCulture);
+                return ResourceManager.GetString("descDisplayBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die From the leaked version of Windows 11, It can be seen that the Setup file (ISO File) size is 4.54 GB. Considering that the leaked version does not have all the features, we can say that the actual file size will be between 4.5 to 6 GB.  Just keep in mind that Windows 11 requires a disk with at least 64 GB of storage space. ähnelt.
         /// </summary>
-        internal static string hoverFreeSpaceBad {
+        internal static string descFreeSpaceBad {
             get {
-                return ResourceManager.GetString("hoverFreeSpaceBad", resourceCulture);
+                return ResourceManager.GetString("descFreeSpaceBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Windows 11 Home edition requires internet connectivity and a Microsoft account to complete device setup on first use. Switching a device out of Windows 11 Home in S mode also requires internet connectivity. ähnelt.
         /// </summary>
-        internal static string hoverInetBad {
+        internal static string descInetBad {
             get {
-                return ResourceManager.GetString("hoverInetBad", resourceCulture);
+                return ResourceManager.GetString("descInetBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your system needs to support GPT partition types, right now your system is booting using MBR. This doesn&apos;t necessarily mean that your system doesn&apos;t support it. Check your motherboard, system manual or bios for more information. ähnelt.
         /// </summary>
-        internal static string hoverPartitionBad {
+        internal static string descPartitionBad {
             get {
-                return ResourceManager.GetString("hoverPartitionBad", resourceCulture);
+                return ResourceManager.GetString("descPartitionBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your RAM does not meet the minimum requirements for Windows 11. ähnelt.
         /// </summary>
-        internal static string hoverRAMBad {
+        internal static string descRAMBad {
             get {
-                return ResourceManager.GetString("hoverRAMBad", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Run check again ähnelt.
-        /// </summary>
-        internal static string hoverRecheck {
-            get {
-                return ResourceManager.GetString("hoverRecheck", resourceCulture);
+                return ResourceManager.GetString("descRAMBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Secure Boot functionality is missing. You can bypass the Secure boot requirements with ReadySunValley. Use the repair link in the right panel. ähnelt.
         /// </summary>
-        internal static string hoverSecureBootBad {
+        internal static string descSecureBootBad {
             get {
-                return ResourceManager.GetString("hoverSecureBootBad", resourceCulture);
+                return ResourceManager.GetString("descSecureBootBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your drive does not have enough capacity to run Windows 11. ähnelt.
         /// </summary>
-        internal static string hoverStorageBad {
+        internal static string descStorageBad {
             get {
-                return ResourceManager.GetString("hoverStorageBad", resourceCulture);
+                return ResourceManager.GetString("descStorageBad", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die We could not find a TPM Module. If no TPM is present, you’ll probably find it’s been disabled in the UEFI. Otherwiese you can also bypass the TPM 2.0 requirements with ReadySunValley. Use the repair link in the right panel. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die We could not find a TPM Module. If no TPM is present, you’ll probably find it’s been disabled in the UEFI. Otherwiese you can also bypass the TPM 2.0 requirements with ReadySunValley. Use the repair link in the right panel. A detailed guide on how to install Windows 11 without TPM and Secure Boot can also be found at https://www.bleepingcomputer.com/news/microsoft/how-to-bypass-the-windows-11-tpm-20-requirement/ ähnelt.
         /// </summary>
-        internal static string hoverTPMBad {
+        internal static string descTPMBad {
             get {
-                return ResourceManager.GetString("hoverTPMBad", resourceCulture);
+                return ResourceManager.GetString("descTPMBad", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your TPM version is too low. If you’re running an older version of TPM (1.2 typically), then you may be able to update it to TPM 2.0 with a firmware update. ähnelt.
         /// </summary>
-        internal static string hoverTPMInfo {
+        internal static string descTPMInfo {
             get {
-                return ResourceManager.GetString("hoverTPMInfo", resourceCulture);
+                return ResourceManager.GetString("descTPMInfo", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Your Windows Display Driver Model version does not meet the minimum requirements for Windows 11. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your Windows Display Driver Model version does not meet the minimum requirements for Windows 11. Your Graphics card must be compatible with DirectX 12 or later with WDDM 2.0 driver. ähnelt.
         /// </summary>
-        internal static string hoverWDDMBad {
+        internal static string descWDDMBad {
             get {
-                return ResourceManager.GetString("hoverWDDMBad", resourceCulture);
+                return ResourceManager.GetString("descWDDMBad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check your Internet connection and try again. ähnelt.
+        /// </summary>
+        internal static string errorInternet {
+            get {
+                return ResourceManager.GetString("errorInternet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die App update check failed to start. ähnelt.
+        /// </summary>
+        internal static string errorUpdate {
+            get {
+                return ResourceManager.GetString("errorUpdate", resourceCulture);
             }
         }
         
@@ -561,6 +570,15 @@ namespace ReadySunValley.Locales {
         internal static string infoCompareUtilDownloadMessage {
             get {
                 return ResourceManager.GetString("infoCompareUtilDownloadMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die App update available ähnelt.
+        /// </summary>
+        internal static string infoUpdate {
+            get {
+                return ResourceManager.GetString("infoUpdate", resourceCulture);
             }
         }
         
@@ -799,7 +817,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die *Move the cursor over a failed result to get more information ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die * for System ähnelt.
         /// </summary>
         internal static string lblSubHeader {
             get {
@@ -907,11 +925,11 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die App update available ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Run check again ähnelt.
         /// </summary>
-        internal static string updateTitle {
+        internal static string ttRecheck {
             get {
-                return ResourceManager.GetString("updateTitle", resourceCulture);
+                return ResourceManager.GetString("ttRecheck", resourceCulture);
             }
         }
     }
