@@ -32,7 +32,6 @@ alt="GitHub issues">
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#download">Download</a> •
-  <a href="#support">Supported processors</a> •
   <a href="#credits">Credits</a> 
 </p>
 
@@ -49,10 +48,7 @@ Lets you check if your device is ready for the above Windows 11/Sun Valley requi
 - Bypassing TPM/Secure boot restrictions
 - Comparing your results with Microsoft requirements
 - Comparing results with another Compatibility checker [WhyNotWin11](https://github.com/rcmaehl/WhyNotWin11)
-- Grabbing a screenshot to directly share your results on social media!
-	
-## Support
-Supported processors are synchronized from these files [Intel](https://github.com/builtbybel/ReadySunValley/blob/main/src/RSV/Resources/intelsupport.txt)  | [AMD](https://github.com/builtbybel/ReadySunValley/blob/main/src/RSV/Resources/amdsupport.txt) | [Qualcomm](https://github.com/builtbybel/ReadySunValley/blob/main/src/RSV/Resources/qualcommsupport.txt)
+- Grabbing a screenshot to directly share your results on social media!	
 	
 ## Download
 
