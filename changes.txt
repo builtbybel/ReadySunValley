@@ -1,7 +1,7 @@
 
 Changes in this release
 ----------------------
-- Optimized Compatibility report
+- Refactored Compatibility report
 - Refactored CPU Compatibility detection. File for matching the supported processors is generated in extraction/install directory of app #32
 - Disabled hover Events for descriptions. From now the detailed report Button ("Tell me why my PC isn't supported) can be used for explantations
 - File "dxv.txt" generated for diagnostics is now located in temp path (renamed to rsv.txt) #28
