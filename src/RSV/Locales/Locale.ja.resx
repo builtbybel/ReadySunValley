@@ -226,7 +226,7 @@ Windows 11に非対応です</value>
   </data>
   <data name="assetTweet" xml:space="preserve">
     <value>Windows11/Sun%20Valleyの更新はOK? これは「ReadySunValley」アプリの結果です</value>
-    <comment>ToolTip</comment>
+    <comment>GUI</comment>
   </data>
   <data name="btnCompareUtil" xml:space="preserve">
     <value>セカンドオピニオンを得る</value>
@@ -248,6 +248,14 @@ Windows 11に非対応です</value>
     <value>結果へ戻る</value>
     <comment>GUI</comment>
   </data>
+  <data name="checkReport" xml:space="preserve">
+    <value>お使いのPCが非対応である理由を見る</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="checkReportBack" xml:space="preserve">
+    <value>了解しました</value>
+    <comment>GUI</comment>
+  </data>
   <data name="descBootBad" xml:space="preserve">
     <value>お使いのシステムがUEFI起動モードに対応している必要がありますが、現状ではレガシーモードで起動しています。お使いのシステムがUEFIに対応していないという意味ではありません。詳細はマザーボード、システムのマニュアル、BIOSをチェックしてください。</value>
     <comment>Description</comment>
@@ -261,7 +269,11 @@ Windows 11に非対応です</value>
     <comment>Description</comment>
   </data>
   <data name="descCPUInfo" xml:space="preserve">
-    <value>お使いのCPUは最低要件を満たしていますが、公式の対応CPU一覧には載っていません。</value>
+    <value>お使いのCPUは最低要件を満たしていますが、公式の対応CPU一覧には載っていません。This is just an information for you. The requirement is fulfilled for the time being.\n\n対応CPU一覧は以下にあります\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descCPUSpeedBad" xml:space="preserve">
+    <value>CPU周波数がWindows 11の最低要件を満たしません</value>
     <comment>Description</comment>
   </data>
   <data name="descDirectXBad" xml:space="preserve">
@@ -289,10 +301,6 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <value>RAM容量がWindows 11の最低要件を満たしていません</value>
     <comment>Description</comment>
   </data>
-  <data name="descrCPUSpeedBad" xml:space="preserve">
-    <value>CPU周波数がWindows 11の最低要件を満たしません</value>
-    <comment>Description</comment>
-  </data>
   <data name="descSecureBootBad" xml:space="preserve">
     <value>セキュアブート機能がありません。ReadySunValleyではセキュアブートの要件を回避可能です。右のパネルの修復リンクを使います。</value>
     <comment>Description</comment>
@@ -302,7 +310,7 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <comment>Description</comment>
   </data>
   <data name="descTPMBad" xml:space="preserve">
-    <value>TPMが存在しない場合、おそらくUEFIで無効化されています。</value>
+    <value>TPMモジュールが見つかりませんでした。TPMが存在しない場合、おそらくUEFIで無効化されています。そうでない場合、ReadySunValleyではTPM 2.0の要件を回避可能です。右のパネルの修復リンクを使います。TPMとセキュアブートなしでWindows 11をインストールする詳しい方法は以下にあります。\nhttps://www.bleepingcomputer.com/news/microsoft/how-to-bypass-the-windows-11-tpm-20-requirement/</value>
     <comment>Description</comment>
   </data>
   <data name="descTPMInfo" xml:space="preserve">
@@ -310,8 +318,14 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <comment>Description</comment>
   </data>
   <data name="descWDDMBad" xml:space="preserve">
-    <value>Windows Display Driver ModelのバージョンがWindows 11の最低要件を満たしていません。</value>
+    <value>Windows Display Driver ModelのバージョンがWindows 11の最低要件を満たしていません。お使いのグラフィックカードがDirectX 12以降とWDDM 2.0ドライバに対応していなければなりません。</value>
     <comment>Description</comment>
+  </data>
+  <data name="errorInternet" xml:space="preserve">
+    <value>Check your Internet connection and try again.</value>
+  </data>
+  <data name="errorUpdate" xml:space="preserve">
+    <value>App update check failed to start.</value>
   </data>
   <data name="infoBypassDone" xml:space="preserve">
     <value>TPMとセキュアブートの制約を回避しました。</value>
@@ -322,7 +336,7 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <comment>GUI</comment>
   </data>
   <data name="infoCaptureHint" xml:space="preserve">
-    <value>結果の画像をTwitterにアップロードすることを忘れずに</value>
+    <value>OKをクリックするとTwitterの状態を準備します。その後、作成した結果の画像をアップロードする必要があります。</value>
     <comment>GUI</comment>
   </data>
   <data name="infoCompareUtil" xml:space="preserve">
@@ -333,7 +347,7 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <value>できました。両アプリを並べて結果を見てみましょう。</value>
     <comment>GUI</comment>
   </data>
-  <data name="InfoUpdate" xml:space="preserve">
+  <data name="infoUpdate" xml:space="preserve">
     <value>アプリの更新が利用可能</value>
     <comment>GUI</comment>
   </data>
