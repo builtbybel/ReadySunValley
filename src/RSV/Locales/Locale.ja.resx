@@ -269,7 +269,7 @@ Windows 11に非対応です</value>
     <comment>Description</comment>
   </data>
   <data name="descCPUInfo" xml:space="preserve">
-    <value>お使いのCPUは最低要件を満たしていますが、公式の対応CPU一覧には載っていません。This is just an information for you. The requirement is fulfilled for the time being.\n\n対応CPU一覧は以下にあります\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
+    <value>お使いのCPUは最低要件を満たしていますが、公式の対応CPU一覧には載っていません。これは参考情報です。当面の要件は満たされています。\n\n対応CPU一覧は以下にあります。\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
     <comment>Description</comment>
   </data>
   <data name="descCPUSpeedBad" xml:space="preserve">
