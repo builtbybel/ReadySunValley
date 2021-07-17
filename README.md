@@ -47,7 +47,6 @@ Lets you check if your device is ready for the above Windows 11/Sun Valley requi
 - Generating a detailed report why your PC isn't supported
 - Bypassing TPM/Secure boot restrictions
 - Comparing your results with Microsoft requirements
-- Comparing results with another Compatibility checker [WhyNotWin11](https://github.com/rcmaehl/WhyNotWin11)
 - Grabbing a screenshot to directly share your results on social media!	
 	
 ## Download
