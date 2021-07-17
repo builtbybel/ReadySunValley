@@ -496,7 +496,7 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <comment>Menu</comment>
   </data>
   <data name="menuVoteContent" xml:space="preserve">
-    <value>お使いのハードウェアはWindows 11に適合していますか?</value>
+    <value>お使いのPCはWindows 11に適合していますか?</value>
     <comment>Menu</comment>
   </data>
   <data name="optionBypass" xml:space="preserve">
