@@ -6,8 +6,8 @@
   <br>
 </h1>
 
-<h2 align="center">The "unofficial" replacement for [Microsoft PC Health Check](https://aka.ms/GetPCHealthCheckApp) app :grinning: (working on official)</h2>
-<h3 align="center">Are you ready for Windows 11/Sun Valley update?</h3>
+<h2 align="center">The "unofficial" replacement for Microsoft PC Health Check app :grinning: (working on official)</h2>
+<h3 align="center">Are you ready for Windows 11 aka Sun Valley update?</h3>
 
 <p align="center">
 <a href="https://github.com/builtbybel/ReadySunValley/releases/latest" target="_blank">
@@ -38,7 +38,7 @@ alt="GitHub issues">
 ![screenshot](https://raw.githubusercontent.com/builtbybel/ReadySunValley/main/assets/rsv-opt.png)
 
 ## Features
-Lets you check if your device is ready for the above Windows 11/Sun Valley requirements.
+To determine if your current PC will be able to run Windows 11, you can check out [this](https://www.microsoft.com/en-us/windows/windows-11-specifications) list of system specifications on Microsoft's website, or use its [PC Health Check](https://aka.ms/GetPCHealthCheckApp)k app. Unfortunately Microsoft removed temporarily this key tool people were using to see if they could update. This is where my replacement ReadySunValley app comes in.
 
 ### Next to this it also features options for
 - Generating a detailed report why your PC isn't supported
