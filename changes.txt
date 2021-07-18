@@ -1,12 +1,12 @@
 
 Changes in this release
-----------------------
+-----------------------
 - Refactored Compatibility report
 - Refactored CPU Compatibility detection. File for matching the supported processors is generated in extraction/install directory of app #32
-- Disabled hover Events for descriptions. From now the detailed report Button ("Tell me why my PC isn't supported) can be used for explantations
+- Disabled hover Events for descriptions. From now the detailed report Button ("Tell me why my PC isn't supported") can be used for explanations
 - File "dxv.txt" generated for diagnostics is now located in temp path (renamed to rsv.txt) #28
-- Fixed exception in Inet connectivity check #29
-- Fixed bug in freespace check on hard disks >1 TB #30
+- Fixed exception in Internet connectivity check #29
+- Fixed bug in free space check on hard disks >1 TB #30
 - Numerous GUI fixes #22
 - Numerous other fixes and improvements
 
