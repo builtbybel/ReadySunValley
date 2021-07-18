@@ -1,7 +1,6 @@
-
 <h1 align="center">
   <br>
-  <a href="http://www.builtbybel.com"><img src="https://github.com/builtbybel/ReadySunValley/blob/main/src/RSV/AppIcon.ico" alt="ReadySunValley" width="200"></a>
+  <a href="http://www.builtbybel.com"><img src="https://raw.githubusercontent.com/builtbybel/ReadySunValley/main/src/RSV/AppIcon.ico" alt="ReadySunValley" width="200"></a>
   <br>
   ReadySunValley
   <br>
@@ -14,7 +13,7 @@
 <a href="https://github.com/builtbybel/ReadySunValley/releases/latest" target="_blank">
 <img alt="Latest GitHub release" src="https://img.shields.io/github/release/builtbybel/readysunvalley.svg?style=flat-square" />
 </a>
-	
+
 <a href="https://github.com/builtbybel/ReadySunValley/releases" target="_blank">
 <img alt="Downloads on GitHub" src="https://img.shields.io/github/downloads/builtbybel/ReadySunValley/total.svg?style=flat-square" />
 </a>
@@ -24,22 +23,20 @@
 alt="GitHub last commit">
 <a href="https://github.com/builtbybel/ReadySunValley/issues">
 <img src="https://img.shields.io/github/issues-raw/builtbybel/readysunvalley.svg?style=flat-square&logo=github&logoColor=white"
-alt="GitHub issues">   
-  
-
+alt="GitHub issues">
 </p>
 
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> 
+  <a href="#credits">Credits</a>
 </p>
 
-![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv.png)
+![screenshot](https://raw.githubusercontent.com/builtbybel/ReadySunValley/main/assets/rsv.png)
 
 ### Generate detailed report why your PC isn't supported
-![screenshot](https://github.com/builtbybel/ReadySunValley/blob/main/assets/rsv-opt.png)
-	
+![screenshot](https://raw.githubusercontent.com/builtbybel/ReadySunValley/main/assets/rsv-opt.png)
+
 ## Features
 Lets you check if your device is ready for the above Windows 11/Sun Valley requirements.
 
@@ -47,19 +44,17 @@ Lets you check if your device is ready for the above Windows 11/Sun Valley requi
 - Generating a detailed report why your PC isn't supported
 - Bypassing TPM/Secure boot restrictions
 - Comparing your results with Microsoft requirements
-- Grabbing a screenshot to directly share your results on social media!	
-	
-## Download
+- Grabbing a screenshot to directly share your results on social media!
 
+## Download
 - (Latest release) [Download](https://github.com/builtbybel/ReadySunValley/releases)
-- (Source Code) [Download](https://github.com/builtbybel/ReadySunValley/releases) 
+- (Source Code) [Download](https://github.com/builtbybel/ReadySunValley/releases)
 
 ## Credits
-
 This project is based upon the idea of https://github.com/mag-nif-i-cent/Affinity11
 
 ---
 
-> [builtbybel.com](https://www.builtbybel.com) &nbsp;&middot;&nbsp;
+> Website [Builtbybel.com](https://www.builtbybel.com) &nbsp;&middot;&nbsp;
 > GitHub [@builtbybel](https://github.com/builtbybel) &nbsp;&middot;&nbsp;
 > Twitter [@builtbybel](https://twitter.com/builtbybel)
