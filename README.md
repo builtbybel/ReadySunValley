@@ -48,7 +48,7 @@ Lets you check if your device is ready for the above Windows 11/Sun Valley requi
 
 ## Download
 - (Latest release) [Download](https://github.com/builtbybel/ReadySunValley/releases)
-- (Source Code) [Download](https://github.com/builtbybel/ReadySunValley/releases)
+- (Latest testing release) [Download](https://github.com/builtbybel/ReadySunValley/issues/20)
 
 ## Credits
 This project is based upon the idea of https://github.com/mag-nif-i-cent/Affinity11
