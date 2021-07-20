@@ -1,13 +1,16 @@
 
 Changes in this release
 -----------------------
-- Refactored Compatibility report
-- Refactored CPU Compatibility detection. File for matching the supported processors is generated in extraction/install directory of app #32
-- Disabled hover Events for descriptions. From now the detailed report Button ("Tell me why my PC isn't supported") can be used for explanations
-- File "dxv.txt" generated for diagnostics is now located in temp path (renamed to rsv.txt) #28
-- Fixed exception in Internet connectivity check #29
-- Fixed bug in free space check on hard disks >1 TB #30
-- Numerous GUI fixes #22
-- Numerous other fixes and improvements
+- New application icon
+- This version has been technically adjusted to the app store version, which will be released soon. Some features have been removed (i.e. downloading test releases from ReadySunValley)
+- Improved storing application data (now under LocalAppDataDir\Packages\36220Builtbybel.ReadySunValley_<emPACKAGEID>\Settings)
+- Removed support for getting a second opinion with utility WhyNotWin11
+- Improved Inet connectivity check
+- Improved OS detection 
+- Added Russian localization
+- Added Ukrainian localization
+- Updated Japanese localization 
+- Fixed several localization bugs
+- UI Improvements
 
 Many thanks to the Software tester @Oleg-Chashko - https://github.com/Oleg-Chashko
