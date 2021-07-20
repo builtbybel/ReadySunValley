@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppInfo" xml:space="preserve">
+    <value>\nЭто замена приложения Microsoft's PC Health Check\n(В настоящее время, не опубликована на сайте Майкрософт!)\n\nБлагодарность:\n- На Русский язык перевёл Oleg-Chashko\nhttps://github.com/Oleg-Chashko\n- Этот проект был первоначально разработан и разветвлён от - https://github.com/mag-nif-i-cent/Affinity11.\n\nВы можете связаться с автором в:\ntwitter.com/builtbybel\n\n(C) 2021, Builtbybel</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="assessmentCPUArchitecture" xml:space="preserve">
+    <value>Проверка архитектуры процессора [2/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentCPUCompatibility" xml:space="preserve">
+    <value>Проверка совместимости процессора [6/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentCPUCores" xml:space="preserve">
+    <value>Проверка количества ядер процессора [5/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentCPUSpeed" xml:space="preserve">
+    <value>Проверка частоты процессора [4/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentCPUSpeedFormat" xml:space="preserve">
+    <value>МГц</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentDirectXWDDM" xml:space="preserve">
+    <value>Проверка наличия DirectX и &amp;&amp; WDDM2 [11/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentDisplay" xml:space="preserve">
+    <value>Проверка монитор(а/ов) [3/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentDisplayFormat" xml:space="preserve">
+    <value>дюйм(а)</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentGPU" xml:space="preserve">
+    <value>Проверка видеокарты [12/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentInet" xml:space="preserve">
+    <value>Проверка подключения к Интернету [14/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentInetFail" xml:space="preserve">
+    <value>Подключение к Интернету не обнаружено</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentInetOK" xml:space="preserve">
+    <value>Обнаружено подключение к Интернету</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentPartitionType" xml:space="preserve">
+    <value>Проверка типа разделов [7/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentRAM" xml:space="preserve">
+    <value>Проверка совместимости оперативной памяти [9/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSecureBoot" xml:space="preserve">
+    <value>Проверка Secure Boot [8/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSecureBootFail" xml:space="preserve">
+    <value>Не поддерживается</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSecureBootOK" xml:space="preserve">
+    <value>Поддерживается</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentStorage" xml:space="preserve">
+    <value>Проверка объёма диска [10/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSummaryFail" xml:space="preserve">
+    <value>Компоненты, несовместимы с Windows 11</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSummaryOK" xml:space="preserve">
+    <value>Компоненты, совместимы с Windows 11!</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentSystemRequirements" xml:space="preserve">
+    <value>Проверка системных требований [1/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentTPM" xml:space="preserve">
+    <value>Проверка версии TPM [13/14]</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentTPMFail" xml:space="preserve">
+    <value>Отсутствует</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assessmentTPMLow" xml:space="preserve">
+    <value>(Не поддерживается)</value>
+    <comment>Assessment</comment>
+  </data>
+  <data name="assetGithub" xml:space="preserve">
+    <value>Открыть: https://github.com/builtbybel/readysunvalley</value>
+    <comment>ToolTip</comment>
+  </data>
+  <data name="assetTweet" xml:space="preserve">
+    <value>Готовы%20к%20%23Windows11/Sun%20Valley%20обновлению?%20Вот%20мои%20результаты%20%23ReadySunValley%20%23приложения</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="btnCompareUtil" xml:space="preserve">
+    <value>Узнайте второе мнение</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="btnPnlShareScreen" xml:space="preserve">
+    <value>Сделайте снимок результата и поделитесь им в Twitter</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="btnShareScreen" xml:space="preserve">
+    <value>Сделайте снимок результата и поделитесь им в Twitter</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="checkCompareMS" xml:space="preserve">
+    <value>Сравните с Microsoft</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="checkCompareMSBack" xml:space="preserve">
+    <value>Вернуться к своим результатам</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="checkReport" xml:space="preserve">
+    <value>Узнайте, почему ваш компьютер несовместим</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="checkReportBack" xml:space="preserve">
+    <value>Вернуться к обычному просмотру</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="descBootBad" xml:space="preserve">
+    <value>Ваше аппаратное обеспечение должно поддерживать режим загрузки UEFI, но в настоящее время ваша система загружается с использованием загрузки Legacy. Это не обязательно означает, что ваше аппаратное обеспечение не поддерживает режим загрузки UEFI. Для получения дополнительной информации, обратитесь к руководству по материнской плате, в раздел BIOS.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descCPUBad" xml:space="preserve">
+    <value>Ваш процессор не соответствует требованиям спецификации. Для получения дополнительной информации о вашем процессоре смотрите в окне результатов слева.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descCPUCoresBad" xml:space="preserve">
+    <value>Недостаточно ядер процессора для запуска Windows 11</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descCPUInfo" xml:space="preserve">
+    <value>Ваш процессор соответствует минимальным требованиям, но его нет в официальном списке поддерживаемых процессоров. Это только вам для справки. Непосредственные требования выполнены.\n\nСписок поддерживаемых процессоров приведен ниже:\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descCPUSpeedBad" xml:space="preserve">
+    <value>Частота вашего процессора не соответствует минимальным требованиям для Windows 11.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descDirectXBad" xml:space="preserve">
+    <value>Ваша версия DirectX ниже официально поддерживаемой. С помощью DxDiag (DirectX Diagnostic Tool) можно получить подробную информацию. Выполните следующее: нажмите одновременно на клавиши клавиатуры (Win + R), в открывшемся окне «Выполнить», в поле «Открыть» введите выражение: "dxdiag" (без кавычек), а затем нажмите на кнопку "ОК".</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descDisplayBad" xml:space="preserve">
+    <value>Размер одного или нескольких ваших мониторов слишком мал для Windows 11.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descFreeSpaceBad" xml:space="preserve">
+    <value>Для Windows 11 требуется Жесткий диск или SSD с объёмом не менее 64 ГБ.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descInetBad" xml:space="preserve">
+    <value>Для завершения установки на устройство Windows 11 Домашняя версия, требуется подключение к Интернету и учетная запись Майкрософт. Отключение в Windows 11 S-режима также требует наличия интернет-соединения.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descPartitionBad" xml:space="preserve">
+    <value>Ваша система должна поддерживать типы разделов GPT, сейчас ваша система загружается с использованием MBR. Можно воспользоватся Microsoft утилитой MBR2GPT которая, преобразует жесткий диск из основной загрузочной записи (MBR) в таблицу разделов (GPT) без изменения или удаления данных на диске.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descRAMBad" xml:space="preserve">
+    <value>Объем оперативной памяти не соответствует минимальным требованиям для Windows 11.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descSecureBootBad" xml:space="preserve">
+    <value>Режим Secure Boot отсутствует. Однако вы можете обойти требования Secure Boot с помощью ReadySunValley. Воспользуйтесь ссылкой в правой панели.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descStorageBad" xml:space="preserve">
+    <value>На вашем диске недостаточно места для запуска Windows 11.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descTPMBad" xml:space="preserve">
+    <value>Модуль TPM не найден. Если TPM не существует, вероятно, он отключен в UEFI. В противном случае ReadySun Valley сможет обойти требования TPM 2.0. Воспользуйтесь ссылкой в правой панели. Ниже приведены подробные инструкции по установке Windows 11 без TPM и безопасной загрузки: https://www.deskmodder.de/wiki/index.php?title=Windows_11_auch_ohne_TPM_und_Secure_Boot_installieren</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descTPMInfo" xml:space="preserve">
+    <value>Ваша версия TPM ниже чем минимальна требуемая для Windows 11. Если вы используете более старую версию TPM (обычно 1.2), вы можете обновить ее до TPM 2.0 с помощью обновления прошивки.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="descWDDMBad" xml:space="preserve">
+    <value>Версия WDDM не соответствует минимальным требованиям для Windows 11. Ваша видеокарта должна быть совместима с DirectX 12 или более поздней версии с драйвером WDDM 2.0.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="errorInternet" xml:space="preserve">
+    <value>Проверьте подключение к Интернету и повторите попытку еще раз.</value>
+  </data>
+  <data name="errorUpdate" xml:space="preserve">
+    <value>Не удалось запустить проверку обновлений приложения.</value>
+  </data>
+  <data name="infoBypassDone" xml:space="preserve">
+    <value>Был задействован "Обходной путь", ограничения TPM и Secure Boot были сняты.</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoBypassUndo" xml:space="preserve">
+    <value>"Обходной путь" был отменен.</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoCaptureHint" xml:space="preserve">
+    <value>Нажмите &lt;OK&gt;, чтобы подготовится к загрузке в Twitter. После этого вам необходимо загрузить полученное вами изображение.</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoCompareUtil" xml:space="preserve">
+    <value>Хотите сравнить результаты с утилитой "WhyNotWin11"?</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoCompareUtilDownloadMessage" xml:space="preserve">
+    <value>Готово! Теперь поместите два приложения рядом друг с другом и посмотрите на результаты.</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="infoUpdate" xml:space="preserve">
+    <value>Доступно обновление приложения</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="lblBitness" xml:space="preserve">
+    <value>Архитектура</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblBitnessCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblBootType" xml:space="preserve">
+    <value>Тип загрузки</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblBootTypeCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblCores" xml:space="preserve">
+    <value>Ядра</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblCoresCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblCPU" xml:space="preserve">
+    <value>Проверяю совместимостимость процессора...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDirectX" xml:space="preserve">
+    <value>DirectX</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDirectXCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDiskType" xml:space="preserve">
+    <value>Раздел диска</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDisplay" xml:space="preserve">
+    <value>Монитор</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblDisplayCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblFreeSpace" xml:space="preserve">
+    <value>Свободное место</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblFreeSpaceCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblHeader" xml:space="preserve">
+    <value>Результаты проверки совместимости</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="lblInet" xml:space="preserve">
+    <value>Интернет</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblInetCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblMhz" xml:space="preserve">
+    <value>МГц</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblMhzCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblRAM" xml:space="preserve">
+    <value>Установлено оперативной памяти</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblRAMCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblSecureBoot" xml:space="preserve">
+    <value>Secure Boot</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblSecureBootCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblStatus" xml:space="preserve">
+    <value>Проверяю системные требования...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblStorage" xml:space="preserve">
+    <value>Дисковое хранилище</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblStorageCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblSubHeader" xml:space="preserve">
+    <value>* для системы</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="lblTPM" xml:space="preserve">
+    <value>TPM</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblTPMCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblWDDM" xml:space="preserve">
+    <value>WDDM2</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lblWDDMCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lnkCompatibilityFix" xml:space="preserve">
+    <value>Нажмите здесь, чтобы изменить некоторые из этих отрицательных результатов с помощью внесения изменений в реестр</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="lnkDiskTypeCheck" xml:space="preserve">
+    <value>Проверяю...</value>
+    <comment>Check</comment>
+  </data>
+  <data name="lnkDiskTypeInfo" xml:space="preserve">
+    <value>(Весь список)</value>
+    <comment>GUI</comment>
+  </data>
+  <data name="menuBypassUndo" xml:space="preserve">
+    <value>Отменить "Обходной путь"</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="menuVote" xml:space="preserve">
+    <value>Голосуйте здесь!</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="menuVoteContent" xml:space="preserve">
+    <value>Ваш компьютер совместим с Windows 11?</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="optionBypass" xml:space="preserve">
+    <value>Если вы пытаетесь установить Windows 11 и получаете сообщение "This PC can't run Windows 11", то, скорее всего, у вас нет требуемой TPM 2.0, Secure Boot или 4 ГБ оперативной памяти.\n\nПриятной новостью является то, что Microsoft добавила новый ключ реестра "LabConfig", который позволяет вам настроить параметры для обхода TPM 2.0, 4 ГБ памяти и требования включения Secure Boot.\n\nПримите во внимание, что отключение TPM 2.0 снижает уровень безопасности Windows 11.\n\nВы хотите обойти эти ограничения?</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="ttRunRecheck" xml:space="preserve">
+    <value>Выполнить проверку еще раз</value>
+    <comment>ToolTip</comment>
+  </data>
+</root>
