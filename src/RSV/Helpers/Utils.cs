@@ -10,7 +10,6 @@ namespace ReadySunValley.Helpers
     {
         public static Version CurrentVersion = new Version(Application.ProductVersion);
         public static Version LatestVersion;
-        public static Version uriUtilLatestVersion;
 
         public static void AppUpdate()
         {

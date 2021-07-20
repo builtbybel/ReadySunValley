@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -9,13 +8,18 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-/* using System.Threading;
- using System.Globalization; */
+/*using System.Threading;
+using System.Globalization; */
 
 namespace ReadySunValley
 {
     public partial class MainWindow : Form
     {
+        // Using same apps settings storage root as for the App Store version
+        // The name of <emPACKAGEID> is concatenated from the application package name and a signing certificate based postfix.
+        public static string mAppDataDir = Environment.GetFolderPath
+            (Environment.SpecialFolder.LocalApplicationData) + @"\Packages\36220Builtbybel.ReadySunValley_4mzjg7prtd9xe\Settings\";
+
         private Assessment.Boot bootInfo = new Assessment.Boot();
         private Assessment.Bypass bypassInfo = new Assessment.Bypass();
         private Assessment.CPU cpuInfo = new Assessment.CPU();
@@ -28,12 +32,13 @@ namespace ReadySunValley
         public MainWindow()
         {
             InitializeComponent();
+            InitializeAppDataDir();
+
+            // Uncomment lower line and add lang code to run localization test
+           // Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
 
             // GUI localization
             Globalization();
-
-            // Uncomment lower line and add lang code to run localization test
-            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("ja");
 
             // User Interface
             UISelection();
@@ -60,7 +65,6 @@ namespace ReadySunValley
 
         private void Globalization()
         {
-            btnCompareUtil.Text = Locales.Locale.btnCompareUtil;
             btnPnlShareScreen.Text = Locales.Locale.btnPnlShareScreen;
             btnShareScreen.Text = Locales.Locale.btnShareScreen;
             checkCompareMS.Text = Locales.Locale.checkCompareMS;
@@ -102,6 +106,16 @@ namespace ReadySunValley
             menuBypassUndo.Text = Locales.Locale.menuBypassUndo;
         }
 
+        private void InitializeAppDataDir()
+        {
+            try
+            {
+                if (!Directory.Exists(mAppDataDir))
+                    Directory.CreateDirectory(mAppDataDir);
+            }
+            catch { }
+        }
+
         private void MainWindow_Shown(object sender, EventArgs e)
         {
             // Run Assessments
@@ -131,12 +145,12 @@ namespace ReadySunValley
         }
 
         /// <summary>
-        ///  Run all the assessments
+        ///  Run all assessments
         /// </summary>
         private void DoCompatibilityCheck()
         {
-            int performCompatibilityCount = 0; // Reset compatibility count
-            richSumming.Text = null; // Reset report
+            int performCompatibilityCount = 0;          // Reset compatibility count
+            richSumming.Text = null;                    // Reset report
 
             this.Enabled = false;
 
@@ -224,7 +238,7 @@ namespace ReadySunValley
             {
                 coreCount += int.Parse(item["NumberOfCores"].ToString());
             }
-            lblCoresCheck.Text = coreCount + " " + Locales.Locale.lblCores + ", " + Environment.ProcessorCount + " Threads";
+            lblCoresCheck.Text = coreCount + "\x20" + Locales.Locale.lblCores + ", " + Environment.ProcessorCount + "\x20" + Locales.Locale.lblThreads;
 
             if (coreCount > 1)
             {
@@ -250,10 +264,10 @@ namespace ReadySunValley
             string myCPU = lblCPU.Text;
             bool FoundCPU = false;
 
-            File.WriteAllText(@"SupportedProcessors.txt", Properties.Resources.supportedCPU);
-            using (StreamReader sr = File.OpenText(@"SupportedProcessors.txt"))
+            File.WriteAllText(mAppDataDir + "SupportedProcessors.txt", Properties.Resources.supportedCPU);
+            using (StreamReader sr = File.OpenText(mAppDataDir + "SupportedProcessors.txt"))
             {
-                string[] lines = File.ReadAllLines(@"SupportedProcessors.txt");
+                string[] lines = File.ReadAllLines(mAppDataDir + "SupportedProcessors.txt");
                 for (int i = 0; i < lines.Length; i++)
                 {
                     if (myCPU.ToString().Contains(lines[i]))
@@ -421,7 +435,7 @@ namespace ReadySunValley
             lblStatus.Text = Locales.Locale.assessmentDirectXWDDM;
             var psi = new ProcessStartInfo();
 
-            if (IntPtr.Size == 4 && Environment.Is64BitOperatingSystem)
+            if (IntPtr.Size == 4 && Environment.Is64BitOperatingSystem) // 4 bytes for 32bit and 8 bytes for 64bit
             {
                 psi.FileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "sysnative\\dxdiag");
             }
@@ -432,7 +446,7 @@ namespace ReadySunValley
                 string directxver;
                 string wddmver;
                 string check;
-                string dxpath = System.IO.Path.GetTempPath() + "rsv.txt"; ;
+                string dxpath = mAppDataDir + "rsv.txt"; ;
 
                 psi.Arguments = "/dontskip /t " + dxpath; // Don't bypass any diagnostics due to previous crashes in dxdiag
                 using (var prc = Process.Start(psi))
@@ -507,49 +521,53 @@ namespace ReadySunValley
 
             // TPM, Ref. https://wutils.com/wmi/root/cimv2/security/microsofttpm/win32_tpm/cs-samples.html
             lblStatus.Text = Locales.Locale.assessmentTPM;
-            ManagementScope scope = new ManagementScope("\\\\.\\ROOT\\CIMV2\\Security\\MicrosoftTpm");
-            ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Tpm");
-            ManagementObjectSearcher searcher =
-                                    new ManagementObjectSearcher(scope, query);
-            ManagementObjectCollection queryCollection = searcher.Get();
-            foreach (ManagementObject m in queryCollection)
+            try
             {
-                string tpmver = m["SpecVersion"].ToString();
-                string[] splitted = tpmver.Split(',');
-
-                if (splitted[0].Contains("2.0"))
+                ManagementScope scope = new ManagementScope("\\\\.\\ROOT\\CIMV2\\Security\\MicrosoftTpm");
+                ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Tpm");
+                ManagementObjectSearcher searcher =
+                                        new ManagementObjectSearcher(scope, query);
+                ManagementObjectCollection queryCollection = searcher.Get();
+                foreach (ManagementObject m in queryCollection)
                 {
-                    lblTPMCheck.Text = splitted[0];
+                    string tpmver = m["SpecVersion"].ToString();
+                    string[] splitted = tpmver.Split(',');
 
-                    tpmgood.Visible = true;
-                    tpmbad.Visible = false;
-                    tpminfo.Visible = false;
+                    if (splitted[0].Contains("2.0"))
+                    {
+                        lblTPMCheck.Text = splitted[0];
+
+                        tpmgood.Visible = true;
+                        tpmbad.Visible = false;
+                        tpminfo.Visible = false;
+                    }
+                    if (splitted[0].Contains("1.2"))
+                    {
+                        lblTPMCheck.Text = splitted[0] + " " + Locales.Locale.assessmentTPMLow;
+
+                        tpmgood.Visible = false;
+                        tpmbad.Visible = false;
+                        tpminfo.Visible = true;
+
+                        performCompatibilityCount += 1;
+                        AddSumming(Locales.Locale.descTPMInfo);
+                    }
                 }
-                if (splitted[0].Contains("1.2"))
+                if (lblTPMCheck.Text == Locales.Locale.assessmentTPMFail)
                 {
-                    lblTPMCheck.Text = splitted[0] + " " + Locales.Locale.assessmentTPMLow;
-
+                    tpmbad.Visible = true;
                     tpmgood.Visible = false;
-                    tpmbad.Visible = false;
-                    tpminfo.Visible = true;
+                    tpminfo.Visible = false;
 
                     performCompatibilityCount += 1;
-                    AddSumming(Locales.Locale.assessmentTPMLow);
+                    AddSumming(Locales.Locale.descTPMBad);
                 }
             }
-            if (lblTPMCheck.Text == Locales.Locale.assessmentTPMFail)
-            {
-                tpmbad.Visible = true;
-                tpmgood.Visible = false;
-                tpminfo.Visible = false;
-
-                performCompatibilityCount += 1;
-                AddSumming(Locales.Locale.descTPMBad);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
 
             // Inet
             lblStatus.Text = Locales.Locale.assessmentInet;
-            if (inetInfo.isINet())
+            if (inetInfo.IsInet())
             {
                 lblInetCheck.Text = Locales.Locale.assessmentInetOK;
                 inetgood.Visible = true;
@@ -577,6 +595,7 @@ namespace ReadySunValley
                 lblSumBad.ForeColor = Color.Green;
                 lblStatus.Visible = false;
                 lblSumBad.Font = new Font("Segeo UI", 24.0f);
+                pbReady.Visible = true;
 
                 // It's all good, so hide bypass options
                 lnkCompatibilityFix.Visible = false;
@@ -637,8 +656,6 @@ namespace ReadySunValley
         /// <summary>
         /// Buttons/Links and menu events
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void lblMainMenu_Click(object sender, EventArgs e) => this.mainMenu.Show(Cursor.Position.X, Cursor.Position.Y);
 
         private void assetOpenGitHub_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.GitRepo);
@@ -649,13 +666,9 @@ namespace ReadySunValley
 
         private void btnShareScreen_Click(object sender, EventArgs e) => CaptureToShare();
 
-        private void btnCompareUtil_Click(object sender, EventArgs e) => GetCompareUtil();
-
         private void menuVote_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.VotePage);
 
         private void menuInfo_Click(object sender, EventArgs e) => MessageBox.Show("ReadySunValley" + "\nVersion " + Program.GetCurrentVersionTostring() + "\r\n" + Locales.Locale.AppInfo.Replace("\\n", "\n"), "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        private void menuTestingRelease_Click(object sender, EventArgs e) => Process.Start(Helpers.Strings.Uri.GitTestingRelease);
 
         private void lnkMSRequirements_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start(Helpers.Strings.Uri.MSSystemRequirements);
 
@@ -666,12 +679,13 @@ namespace ReadySunValley
         /// <summary>
         /// Tooltips
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void BtnRecheck_MouseHover(object sender, EventArgs e) => tt.SetToolTip(this.btnRecheck, Locales.Locale.ttRecheck);
 
         private void AssetOpenGitHub_MouseHover(object sender, EventArgs e) => tt.SetToolTip(this.assetOpenGitHub, Locales.Locale.assetGithub);
 
+        /// <summary>
+        /// Show all partitions
+        /// </summary>
         private void lnkPartitionTypeInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ManagementObjectSearcher searcher2 = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_DiskPartition");
@@ -687,65 +701,6 @@ namespace ReadySunValley
             }
 
             MessageBox.Show(message.ToString(), Locales.Locale.lblDiskType);
-        }
-
-        private void GetCompareUtil()
-        {
-            if (MessageBox.Show(Locales.Locale.infoCompareUtil, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-            {
-                pBar.Visible = true;
-
-                try
-                {
-                    WebRequest hreq = WebRequest.Create(Helpers.Strings.Uri.UtilVersionCheck);
-                    hreq.Timeout = 10000;
-                    hreq.Headers.Set("Cache-Control", "no-cache, no-store, must-revalidate");
-
-                    WebResponse hres = hreq.GetResponse();
-                    StreamReader sr = new StreamReader(hres.GetResponseStream());
-
-                    Helpers.Utils.uriUtilLatestVersion = new Version(sr.ReadToEnd().Trim());
-
-                    sr.Dispose();
-                    hres.Dispose();
-
-                    var pkg = Helpers.Strings.Uri.CompareUtil + Helpers.Utils.uriUtilLatestVersion + "/" + "WhyNotWin11.exe";
-
-                    WebClient wc = new WebClient();
-                    wc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressChanged);
-                    wc.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
-
-                    wc.DownloadFileAsync(new Uri(pkg), @"WhyNotWin11.exe");
-                }
-                catch { MessageBox.Show(Locales.Locale.errorInternet); }
-            }
-        }
-
-        public void DownloadProgressChanged(Object sender, DownloadProgressChangedEventArgs e)
-        {
-            pBar.Value = e.ProgressPercentage;
-        }
-
-        public void Completed(object sender, AsyncCompletedEventArgs e)
-        {
-            try
-            {
-                var startInfo = new ProcessStartInfo()
-                {
-                    FileName = "WhyNotWin11.exe",
-                    UseShellExecute = true,
-                };
-                Process.Start(startInfo);
-
-                pBar.Visible = false;
-
-                MessageBox.Show(Locales.Locale.infoCompareUtilDownloadMessage);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, this.Text);
-                pBar.Visible = false;
-            }
         }
 
         private void CheckCompareMS_CheckedChanged(object sender, EventArgs e)

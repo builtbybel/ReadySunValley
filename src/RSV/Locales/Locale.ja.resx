@@ -228,10 +228,6 @@ Windows 11に非対応です</value>
     <value>Windows11/Sun%20Valleyの更新はOK? これは「ReadySunValley」アプリの結果です</value>
     <comment>GUI</comment>
   </data>
-  <data name="btnCompareUtil" xml:space="preserve">
-    <value>セカンドオピニオンを得る</value>
-    <comment>GUI</comment>
-  </data>
   <data name="btnPnlShareScreen" xml:space="preserve">
     <value>キャプチャしてTwitterで共有</value>
     <comment>GUI</comment>

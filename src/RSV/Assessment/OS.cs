@@ -11,7 +11,13 @@ namespace ReadySunValley.Assessment
         {
             ComputerName = Environment.MachineName;
 
-            return (string)Registry.GetValue("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion", "ProductName", "");
+            RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion");
+            int osbuild = Convert.ToInt32(key.GetValue("CurrentBuildNumber"));
+            if (osbuild >= 22000)
+            {
+                return ("Windows 11 aka Sun Valley");
+            }
+            else return (string)Registry.GetValue("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion", "ProductName", "");
         }
 
         public string GetVersion()

@@ -157,7 +157,7 @@
     <value>pnlMiddle</value>
   </data>
   <data name="&gt;&gt;checkCompareMS.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="pnlLeft.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -165,803 +165,11 @@
   <data name="pnlLeft.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;richSumming.Name" xml:space="preserve">
-    <value>richSumming</value>
-  </data>
-  <data name="&gt;&gt;richSumming.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richSumming.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;richSumming.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lnkDiskTypeCheck.Name" xml:space="preserve">
-    <value>lnkDiskTypeCheck</value>
-  </data>
-  <data name="&gt;&gt;lnkDiskTypeCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lnkDiskTypeCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lnkDiskTypeCheck.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnRecheck.Name" xml:space="preserve">
-    <value>btnRecheck</value>
-  </data>
-  <data name="&gt;&gt;btnRecheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRecheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;btnRecheck.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblMhz.Name" xml:space="preserve">
-    <value>lblMhz</value>
-  </data>
-  <data name="&gt;&gt;lblMhz.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMhz.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblMhz.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblCores.Name" xml:space="preserve">
-    <value>lblCores</value>
-  </data>
-  <data name="&gt;&gt;lblCores.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCores.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblCores.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblBitnessCheck.Name" xml:space="preserve">
-    <value>lblBitnessCheck</value>
-  </data>
-  <data name="&gt;&gt;lblBitnessCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblBitnessCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblBitnessCheck.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblBitness.Name" xml:space="preserve">
-    <value>lblBitness</value>
-  </data>
-  <data name="&gt;&gt;lblBitness.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblBitness.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblBitness.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblInet.Name" xml:space="preserve">
-    <value>lblInet</value>
-  </data>
-  <data name="&gt;&gt;lblInet.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblInet.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblInet.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblMainMenu.Name" xml:space="preserve">
-    <value>lblMainMenu</value>
-  </data>
-  <data name="&gt;&gt;lblMainMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainMenu.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblMainMenu.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblInetCheck.Name" xml:space="preserve">
-    <value>lblInetCheck</value>
-  </data>
-  <data name="&gt;&gt;lblInetCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblInetCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblInetCheck.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lblSecureBootCheck.Name" xml:space="preserve">
-    <value>lblSecureBootCheck</value>
-  </data>
-  <data name="&gt;&gt;lblSecureBootCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSecureBootCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblSecureBootCheck.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lblSecureBoot.Name" xml:space="preserve">
-    <value>lblSecureBoot</value>
-  </data>
-  <data name="&gt;&gt;lblSecureBoot.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSecureBoot.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblSecureBoot.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lblFreeSpaceCheck.Name" xml:space="preserve">
-    <value>lblFreeSpaceCheck</value>
-  </data>
-  <data name="&gt;&gt;lblFreeSpaceCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblFreeSpaceCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblFreeSpaceCheck.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;lblFreeSpace.Name" xml:space="preserve">
-    <value>lblFreeSpace</value>
-  </data>
-  <data name="&gt;&gt;lblFreeSpace.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblFreeSpace.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblFreeSpace.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;lblWDDMCheck.Name" xml:space="preserve">
-    <value>lblWDDMCheck</value>
-  </data>
-  <data name="&gt;&gt;lblWDDMCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblWDDMCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblWDDMCheck.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;lblWDDM.Name" xml:space="preserve">
-    <value>lblWDDM</value>
-  </data>
-  <data name="&gt;&gt;lblWDDM.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblWDDM.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblWDDM.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;lblDisplayCheck.Name" xml:space="preserve">
-    <value>lblDisplayCheck</value>
-  </data>
-  <data name="&gt;&gt;lblDisplayCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDisplayCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblDisplayCheck.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;lblDisplay.Name" xml:space="preserve">
-    <value>lblDisplay</value>
-  </data>
-  <data name="&gt;&gt;lblDisplay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDisplay.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblDisplay.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;lblDirectXCheck.Name" xml:space="preserve">
-    <value>lblDirectXCheck</value>
-  </data>
-  <data name="&gt;&gt;lblDirectXCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDirectXCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblDirectXCheck.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;lblDirectX.Name" xml:space="preserve">
-    <value>lblDirectX</value>
-  </data>
-  <data name="&gt;&gt;lblDirectX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDirectX.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblDirectX.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;lblTPMCheck.Name" xml:space="preserve">
-    <value>lblTPMCheck</value>
-  </data>
-  <data name="&gt;&gt;lblTPMCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTPMCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblTPMCheck.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;lblStorageCheck.Name" xml:space="preserve">
-    <value>lblStorageCheck</value>
-  </data>
-  <data name="&gt;&gt;lblStorageCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblStorageCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblStorageCheck.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;lblRAMCheck.Name" xml:space="preserve">
-    <value>lblRAMCheck</value>
-  </data>
-  <data name="&gt;&gt;lblRAMCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblRAMCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblRAMCheck.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;lblCoresCheck.Name" xml:space="preserve">
-    <value>lblCoresCheck</value>
-  </data>
-  <data name="&gt;&gt;lblCoresCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCoresCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblCoresCheck.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;lblMhzCheck.Name" xml:space="preserve">
-    <value>lblMhzCheck</value>
-  </data>
-  <data name="&gt;&gt;lblMhzCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMhzCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblMhzCheck.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;lblCPU.Name" xml:space="preserve">
-    <value>lblCPU</value>
-  </data>
-  <data name="&gt;&gt;lblCPU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCPU.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblCPU.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;lblBootTypeCheck.Name" xml:space="preserve">
-    <value>lblBootTypeCheck</value>
-  </data>
-  <data name="&gt;&gt;lblBootTypeCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblBootTypeCheck.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblBootTypeCheck.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;lblTPM.Name" xml:space="preserve">
-    <value>lblTPM</value>
-  </data>
-  <data name="&gt;&gt;lblTPM.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTPM.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblTPM.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;lblStorage.Name" xml:space="preserve">
-    <value>lblStorage</value>
-  </data>
-  <data name="&gt;&gt;lblStorage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblStorage.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblStorage.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;lblRAM.Name" xml:space="preserve">
-    <value>lblRAM</value>
-  </data>
-  <data name="&gt;&gt;lblRAM.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblRAM.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblRAM.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;lblDiskType.Name" xml:space="preserve">
-    <value>lblDiskType</value>
-  </data>
-  <data name="&gt;&gt;lblDiskType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDiskType.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblDiskType.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;lblBootType.Name" xml:space="preserve">
-    <value>lblBootType</value>
-  </data>
-  <data name="&gt;&gt;lblBootType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblBootType.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;lblBootType.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;tpmgood.Name" xml:space="preserve">
-    <value>tpmgood</value>
-  </data>
-  <data name="&gt;&gt;tpmgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpmgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;tpmgood.ZOrder" xml:space="preserve">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;tpminfo.Name" xml:space="preserve">
-    <value>tpminfo</value>
-  </data>
-  <data name="&gt;&gt;tpminfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpminfo.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;tpminfo.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;freqgood.Name" xml:space="preserve">
-    <value>freqgood</value>
-  </data>
-  <data name="&gt;&gt;freqgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;freqgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;freqgood.ZOrder" xml:space="preserve">
-    <value>34</value>
-  </data>
-  <data name="&gt;&gt;coresgood.Name" xml:space="preserve">
-    <value>coresgood</value>
-  </data>
-  <data name="&gt;&gt;coresgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;coresgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;coresgood.ZOrder" xml:space="preserve">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;partgood.Name" xml:space="preserve">
-    <value>partgood</value>
-  </data>
-  <data name="&gt;&gt;partgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;partgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;partgood.ZOrder" xml:space="preserve">
-    <value>36</value>
-  </data>
-  <data name="&gt;&gt;ramgood.Name" xml:space="preserve">
-    <value>ramgood</value>
-  </data>
-  <data name="&gt;&gt;ramgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ramgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;ramgood.ZOrder" xml:space="preserve">
-    <value>37</value>
-  </data>
-  <data name="&gt;&gt;screengood.Name" xml:space="preserve">
-    <value>screengood</value>
-  </data>
-  <data name="&gt;&gt;screengood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;screengood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;screengood.ZOrder" xml:space="preserve">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;securebootgood.Name" xml:space="preserve">
-    <value>securebootgood</value>
-  </data>
-  <data name="&gt;&gt;securebootgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;securebootgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;securebootgood.ZOrder" xml:space="preserve">
-    <value>39</value>
-  </data>
-  <data name="&gt;&gt;archgood.Name" xml:space="preserve">
-    <value>archgood</value>
-  </data>
-  <data name="&gt;&gt;archgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;archgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;archgood.ZOrder" xml:space="preserve">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;bootgood.Name" xml:space="preserve">
-    <value>bootgood</value>
-  </data>
-  <data name="&gt;&gt;bootgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bootgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;bootgood.ZOrder" xml:space="preserve">
-    <value>41</value>
-  </data>
-  <data name="&gt;&gt;hddgood.Name" xml:space="preserve">
-    <value>hddgood</value>
-  </data>
-  <data name="&gt;&gt;hddgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hddgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;hddgood.ZOrder" xml:space="preserve">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;directgood.Name" xml:space="preserve">
-    <value>directgood</value>
-  </data>
-  <data name="&gt;&gt;directgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;directgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;directgood.ZOrder" xml:space="preserve">
-    <value>43</value>
-  </data>
-  <data name="&gt;&gt;wddmgood.Name" xml:space="preserve">
-    <value>wddmgood</value>
-  </data>
-  <data name="&gt;&gt;wddmgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;wddmgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;wddmgood.ZOrder" xml:space="preserve">
-    <value>44</value>
-  </data>
-  <data name="&gt;&gt;inetgood.Name" xml:space="preserve">
-    <value>inetgood</value>
-  </data>
-  <data name="&gt;&gt;inetgood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;inetgood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;inetgood.ZOrder" xml:space="preserve">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;cpugood.Name" xml:space="preserve">
-    <value>cpugood</value>
-  </data>
-  <data name="&gt;&gt;cpugood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cpugood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;cpugood.ZOrder" xml:space="preserve">
-    <value>46</value>
-  </data>
-  <data name="&gt;&gt;coresbad.Name" xml:space="preserve">
-    <value>coresbad</value>
-  </data>
-  <data name="&gt;&gt;coresbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;coresbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;coresbad.ZOrder" xml:space="preserve">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;freqbad.Name" xml:space="preserve">
-    <value>freqbad</value>
-  </data>
-  <data name="&gt;&gt;freqbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;freqbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;freqbad.ZOrder" xml:space="preserve">
-    <value>48</value>
-  </data>
-  <data name="&gt;&gt;archbad.Name" xml:space="preserve">
-    <value>archbad</value>
-  </data>
-  <data name="&gt;&gt;archbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;archbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;archbad.ZOrder" xml:space="preserve">
-    <value>49</value>
-  </data>
-  <data name="&gt;&gt;securebootbad.Name" xml:space="preserve">
-    <value>securebootbad</value>
-  </data>
-  <data name="&gt;&gt;securebootbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;securebootbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;securebootbad.ZOrder" xml:space="preserve">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;partbad.Name" xml:space="preserve">
-    <value>partbad</value>
-  </data>
-  <data name="&gt;&gt;partbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;partbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;partbad.ZOrder" xml:space="preserve">
-    <value>51</value>
-  </data>
-  <data name="&gt;&gt;rambad.Name" xml:space="preserve">
-    <value>rambad</value>
-  </data>
-  <data name="&gt;&gt;rambad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rambad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;rambad.ZOrder" xml:space="preserve">
-    <value>52</value>
-  </data>
-  <data name="&gt;&gt;screenbad.Name" xml:space="preserve">
-    <value>screenbad</value>
-  </data>
-  <data name="&gt;&gt;screenbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;screenbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;screenbad.ZOrder" xml:space="preserve">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;bootbad.Name" xml:space="preserve">
-    <value>bootbad</value>
-  </data>
-  <data name="&gt;&gt;bootbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bootbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;bootbad.ZOrder" xml:space="preserve">
-    <value>54</value>
-  </data>
-  <data name="&gt;&gt;hddbad.Name" xml:space="preserve">
-    <value>hddbad</value>
-  </data>
-  <data name="&gt;&gt;hddbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hddbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;hddbad.ZOrder" xml:space="preserve">
-    <value>55</value>
-  </data>
-  <data name="&gt;&gt;directbad.Name" xml:space="preserve">
-    <value>directbad</value>
-  </data>
-  <data name="&gt;&gt;directbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;directbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;directbad.ZOrder" xml:space="preserve">
-    <value>56</value>
-  </data>
-  <data name="&gt;&gt;wddmbad.Name" xml:space="preserve">
-    <value>wddmbad</value>
-  </data>
-  <data name="&gt;&gt;wddmbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;wddmbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;wddmbad.ZOrder" xml:space="preserve">
-    <value>57</value>
-  </data>
-  <data name="&gt;&gt;inetbad.Name" xml:space="preserve">
-    <value>inetbad</value>
-  </data>
-  <data name="&gt;&gt;inetbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;inetbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;inetbad.ZOrder" xml:space="preserve">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;tpmbad.Name" xml:space="preserve">
-    <value>tpmbad</value>
-  </data>
-  <data name="&gt;&gt;tpmbad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpmbad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;tpmbad.ZOrder" xml:space="preserve">
-    <value>59</value>
-  </data>
-  <data name="&gt;&gt;cpuinfo.Name" xml:space="preserve">
-    <value>cpuinfo</value>
-  </data>
-  <data name="&gt;&gt;cpuinfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cpuinfo.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;cpuinfo.ZOrder" xml:space="preserve">
-    <value>60</value>
-  </data>
-  <data name="&gt;&gt;cpubad.Name" xml:space="preserve">
-    <value>cpubad</value>
-  </data>
-  <data name="&gt;&gt;cpubad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cpubad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;cpubad.ZOrder" xml:space="preserve">
-    <value>61</value>
-  </data>
-  <data name="&gt;&gt;freespacegood.Name" xml:space="preserve">
-    <value>freespacegood</value>
-  </data>
-  <data name="&gt;&gt;freespacegood.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;freespacegood.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;freespacegood.ZOrder" xml:space="preserve">
-    <value>62</value>
-  </data>
-  <data name="&gt;&gt;freespacebad.Name" xml:space="preserve">
-    <value>freespacebad</value>
-  </data>
-  <data name="&gt;&gt;freespacebad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;freespacebad.Parent" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;freespacebad.ZOrder" xml:space="preserve">
-    <value>63</value>
-  </data>
-  <data name="pnlLeft.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="pnlLeft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>412, 746</value>
-  </data>
-  <data name="pnlLeft.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pnlLeft.Name" xml:space="preserve">
-    <value>pnlLeft</value>
-  </data>
-  <data name="&gt;&gt;pnlLeft.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlLeft.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlLeft.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="richSumming.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="richSumming.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
+    <value>Segoe UI Semilight, 9.75pt</value>
   </data>
   <data name="richSumming.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 65</value>
@@ -1066,7 +274,7 @@
     <value>True</value>
   </data>
   <data name="lblMhz.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblMhz.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 149</value>
@@ -1096,13 +304,13 @@
     <value>True</value>
   </data>
   <data name="lblCores.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblCores.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 108</value>
   </data>
   <data name="lblCores.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 21</value>
+    <value>49, 21</value>
   </data>
   <data name="lblCores.TabIndex" type="System.Int32, mscorlib">
     <value>126</value>
@@ -1156,13 +364,13 @@
     <value>True</value>
   </data>
   <data name="lblBitness.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblBitness.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 192</value>
   </data>
   <data name="lblBitness.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 21</value>
+    <value>92, 21</value>
   </data>
   <data name="lblBitness.TabIndex" type="System.Int32, mscorlib">
     <value>119</value>
@@ -1186,13 +394,13 @@
     <value>True</value>
   </data>
   <data name="lblInet.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblInet.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 682</value>
   </data>
   <data name="lblInet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 21</value>
+    <value>63, 21</value>
   </data>
   <data name="lblInet.TabIndex" type="System.Int32, mscorlib">
     <value>118</value>
@@ -1309,13 +517,13 @@
     <value>True</value>
   </data>
   <data name="lblSecureBoot.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblSecureBoot.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 280</value>
   </data>
   <data name="lblSecureBoot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 21</value>
+    <value>91, 21</value>
   </data>
   <data name="lblSecureBoot.TabIndex" type="System.Int32, mscorlib">
     <value>104</value>
@@ -1369,13 +577,13 @@
     <value>True</value>
   </data>
   <data name="lblFreeSpace.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblFreeSpace.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 506</value>
   </data>
   <data name="lblFreeSpace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+    <value>83, 21</value>
   </data>
   <data name="lblFreeSpace.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
@@ -1429,13 +637,13 @@
     <value>True</value>
   </data>
   <data name="lblWDDM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblWDDM.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 639</value>
   </data>
   <data name="lblWDDM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 21</value>
+    <value>69, 21</value>
   </data>
   <data name="lblWDDM.TabIndex" type="System.Int32, mscorlib">
     <value>96</value>
@@ -1489,13 +697,13 @@
     <value>True</value>
   </data>
   <data name="lblDisplay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblDisplay.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 414</value>
   </data>
   <data name="lblDisplay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 21</value>
+    <value>60, 21</value>
   </data>
   <data name="lblDisplay.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>
@@ -1549,13 +757,13 @@
     <value>True</value>
   </data>
   <data name="lblDirectX.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblDirectX.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 592</value>
   </data>
   <data name="lblDirectX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 21</value>
+    <value>59, 21</value>
   </data>
   <data name="lblDirectX.TabIndex" type="System.Int32, mscorlib">
     <value>86</value>
@@ -1729,7 +937,7 @@
     <value>True</value>
   </data>
   <data name="lblCPU.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblCPU.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 68</value>
@@ -1789,13 +997,13 @@
     <value>True</value>
   </data>
   <data name="lblTPM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblTPM.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 550</value>
   </data>
   <data name="lblTPM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 21</value>
+    <value>96, 21</value>
   </data>
   <data name="lblTPM.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
@@ -1819,13 +1027,13 @@
     <value>True</value>
   </data>
   <data name="lblStorage.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblStorage.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 459</value>
   </data>
   <data name="lblStorage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 21</value>
+    <value>61, 21</value>
   </data>
   <data name="lblStorage.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
@@ -1849,13 +1057,13 @@
     <value>True</value>
   </data>
   <data name="lblRAM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblRAM.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 366</value>
   </data>
   <data name="lblRAM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 21</value>
+    <value>105, 21</value>
   </data>
   <data name="lblRAM.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -1879,13 +1087,13 @@
     <value>True</value>
   </data>
   <data name="lblDiskType.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblDiskType.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 321</value>
   </data>
   <data name="lblDiskType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 21</value>
+    <value>101, 21</value>
   </data>
   <data name="lblDiskType.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
@@ -1909,7 +1117,7 @@
     <value>True</value>
   </data>
   <data name="lblBootType.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI Semilight, 12pt</value>
   </data>
   <data name="lblBootType.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 237</value>
@@ -9294,6 +8502,30 @@
   <data name="&gt;&gt;freespacebad.ZOrder" xml:space="preserve">
     <value>63</value>
   </data>
+  <data name="pnlLeft.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>412, 746</value>
+  </data>
+  <data name="pnlLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlLeft.Name" xml:space="preserve">
+    <value>pnlLeft</value>
+  </data>
+  <data name="&gt;&gt;pnlLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLeft.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlLeft.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="pbCompare.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 67</value>
   </data>
@@ -9327,15 +8559,6 @@
   <data name="mainMenu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.75pt</value>
   </data>
-  <data name="mainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>401, 151</value>
-  </data>
-  <data name="&gt;&gt;mainMenu.Name" xml:space="preserve">
-    <value>mainMenu</value>
-  </data>
-  <data name="&gt;&gt;mainMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="menuVoteContent.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.75pt</value>
   </data>
@@ -9345,11 +8568,17 @@
   <data name="menuVoteContent.Text" xml:space="preserve">
     <value>Does your hardware qualify for Windows 11?</value>
   </data>
+  <data name="menuVote.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.75pt</value>
+  </data>
   <data name="menuVote.Size" type="System.Drawing.Size, System.Drawing">
     <value>400, 28</value>
   </data>
   <data name="menuVote.Text" xml:space="preserve">
     <value>Vote here!</value>
+  </data>
+  <data name="menuBypassUndo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.75pt</value>
   </data>
   <data name="menuBypassUndo.Size" type="System.Drawing.Size, System.Drawing">
     <value>400, 28</value>
@@ -9378,104 +8607,93 @@
   <data name="menuTestingRelease.Text" xml:space="preserve">
     <value>Download latest testing release</value>
   </data>
+  <data name="mainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>401, 151</value>
+  </data>
+  <data name="&gt;&gt;mainMenu.Name" xml:space="preserve">
+    <value>mainMenu</value>
+  </data>
+  <data name="&gt;&gt;mainMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="pnlRight.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;lnkMSRequirements.Name" xml:space="preserve">
-    <value>lnkMSRequirements</value>
+  <data name="pbReady.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        A1ZkLYFIoUClAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="&gt;&gt;lnkMSRequirements.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pbReady.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 321</value>
   </data>
-  <data name="&gt;&gt;lnkMSRequirements.Parent" xml:space="preserve">
-    <value>pnlRight</value>
+  <data name="pbReady.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 97</value>
   </data>
-  <data name="&gt;&gt;lnkMSRequirements.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="pbReady.TabIndex" type="System.Int32, mscorlib">
+    <value>133</value>
   </data>
-  <data name="&gt;&gt;btnPnlShareScreen.Name" xml:space="preserve">
-    <value>btnPnlShareScreen</value>
+  <data name="pbReady.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;btnPnlShareScreen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pbReady.Name" xml:space="preserve">
+    <value>pbReady</value>
   </data>
-  <data name="&gt;&gt;btnPnlShareScreen.Parent" xml:space="preserve">
-    <value>pnlRight</value>
-  </data>
-  <data name="&gt;&gt;btnPnlShareScreen.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;assetOpenGitHub.Name" xml:space="preserve">
-    <value>assetOpenGitHub</value>
-  </data>
-  <data name="&gt;&gt;assetOpenGitHub.Type" xml:space="preserve">
+  <data name="&gt;&gt;pbReady.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;assetOpenGitHub.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pbReady.Parent" xml:space="preserve">
     <value>pnlRight</value>
   </data>
-  <data name="&gt;&gt;assetOpenGitHub.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblStatus.Name" xml:space="preserve">
-    <value>lblStatus</value>
-  </data>
-  <data name="&gt;&gt;lblStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblStatus.Parent" xml:space="preserve">
-    <value>pnlRight</value>
-  </data>
-  <data name="&gt;&gt;lblStatus.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblSumBad.Name" xml:space="preserve">
-    <value>lblSumBad</value>
-  </data>
-  <data name="&gt;&gt;lblSumBad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSumBad.Parent" xml:space="preserve">
-    <value>pnlRight</value>
-  </data>
-  <data name="&gt;&gt;lblSumBad.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lnkCompatibilityFix.Name" xml:space="preserve">
-    <value>lnkCompatibilityFix</value>
-  </data>
-  <data name="&gt;&gt;lnkCompatibilityFix.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lnkCompatibilityFix.Parent" xml:space="preserve">
-    <value>pnlRight</value>
-  </data>
-  <data name="&gt;&gt;lnkCompatibilityFix.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="pnlRight.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="pnlRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>776, 0</value>
-  </data>
-  <data name="pnlRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>395, 746</value>
-  </data>
-  <data name="pnlRight.TabIndex" type="System.Int32, mscorlib">
-    <value>128</value>
-  </data>
-  <data name="&gt;&gt;pnlRight.Name" xml:space="preserve">
-    <value>pnlRight</value>
-  </data>
-  <data name="&gt;&gt;pnlRight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlRight.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlRight.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;pbReady.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lnkMSRequirements.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -9511,7 +8729,7 @@
     <value>pnlRight</value>
   </data>
   <data name="&gt;&gt;lnkMSRequirements.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnPnlShareScreen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -9553,7 +8771,7 @@
     <value>pnlRight</value>
   </data>
   <data name="&gt;&gt;btnPnlShareScreen.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="assetOpenGitHub.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -9595,7 +8813,7 @@
     <value>pnlRight</value>
   </data>
   <data name="&gt;&gt;assetOpenGitHub.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblStatus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -9628,7 +8846,7 @@
     <value>pnlRight</value>
   </data>
   <data name="&gt;&gt;lblStatus.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblSumBad.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -9658,7 +8876,7 @@
     <value>pnlRight</value>
   </data>
   <data name="&gt;&gt;lblSumBad.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lnkCompatibilityFix.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -9695,34 +8913,31 @@
     <value>pnlRight</value>
   </data>
   <data name="&gt;&gt;lnkCompatibilityFix.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
-  <data name="pBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="pnlRight.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
   </data>
-  <data name="pBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 90</value>
+  <data name="pnlRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>776, 0</value>
   </data>
-  <data name="pBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 5</value>
+  <data name="pnlRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>395, 746</value>
   </data>
-  <data name="pBar.TabIndex" type="System.Int32, mscorlib">
-    <value>114</value>
+  <data name="pnlRight.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
   </data>
-  <data name="pBar.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;pnlRight.Name" xml:space="preserve">
+    <value>pnlRight</value>
   </data>
-  <data name="&gt;&gt;pBar.Name" xml:space="preserve">
-    <value>pBar</value>
+  <data name="&gt;&gt;pnlRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pnlRight.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;pBar.Parent" xml:space="preserve">
-    <value>pnlMiddle</value>
-  </data>
-  <data name="&gt;&gt;pBar.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;pnlRight.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="pnlMiddle.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9743,7 +8958,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 188</value>
+    <value>18, 209</value>
   </data>
   <data name="checkReport.Size" type="System.Drawing.Size, System.Drawing">
     <value>332, 32</value>
@@ -9768,45 +8983,6 @@
   </data>
   <data name="&gt;&gt;checkReport.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="btnCompareUtil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="btnCompareUtil.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnCompareUtil.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semilight, 11.25pt</value>
-  </data>
-  <data name="btnCompareUtil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnCompareUtil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 287</value>
-  </data>
-  <data name="btnCompareUtil.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="btnCompareUtil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>332, 32</value>
-  </data>
-  <data name="btnCompareUtil.TabIndex" type="System.Int32, mscorlib">
-    <value>130</value>
-  </data>
-  <data name="btnCompareUtil.Text" xml:space="preserve">
-    <value>Compare with App</value>
-  </data>
-  <data name="&gt;&gt;btnCompareUtil.Name" xml:space="preserve">
-    <value>btnCompareUtil</value>
-  </data>
-  <data name="&gt;&gt;btnCompareUtil.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCompareUtil.Parent" xml:space="preserve">
-    <value>pnlMiddle</value>
-  </data>
-  <data name="&gt;&gt;btnCompareUtil.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="btnShareScreen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -9845,13 +9021,13 @@
     <value>pnlMiddle</value>
   </data>
   <data name="&gt;&gt;btnShareScreen.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="lblHeader.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="lblHeader.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
+    <value>Segoe UI Semibold, 18pt, style=Bold</value>
   </data>
   <data name="lblHeader.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -9879,7 +9055,7 @@
     <value>pnlMiddle</value>
   </data>
   <data name="&gt;&gt;lblHeader.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="lnkSubHeader.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -9912,7 +9088,7 @@
     <value>pnlMiddle</value>
   </data>
   <data name="&gt;&gt;lnkSubHeader.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="pnlMiddle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

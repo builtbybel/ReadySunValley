@@ -304,15 +304,6 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Get a second opinion ähnelt.
-        /// </summary>
-        internal static string btnCompareUtil {
-            get {
-                return ResourceManager.GetString("btnCompareUtil", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Capture and Share on Twitter ähnelt.
         /// </summary>
         internal static string btnPnlShareScreen {
@@ -376,7 +367,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Your CPU doesn&apos;t meet the specification requirements, see individual info about frequency or cores below. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your CPU doesn&apos;t meet the specification requirements.\n\nYou can find a list of supported processors here\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors ähnelt.
         /// </summary>
         internal static string descCPUBad {
             get {
@@ -439,7 +430,7 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Windows 11 Home edition requires internet connectivity and a Microsoft account to complete device setup on first use. Switching a device out of Windows 11 Home in S mode also requires internet connectivity. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die We weren&apos;t able to connect to the internet. Windows 11 Home edition requires internet connectivity and a Microsoft account to complete device setup on first use. Switching a device out of Windows 11 Home in S mode also requires internet connectivity. ähnelt.
         /// </summary>
         internal static string descInetBad {
             get {
@@ -561,15 +552,6 @@ namespace ReadySunValley.Locales {
         internal static string infoCompareUtil {
             get {
                 return ResourceManager.GetString("infoCompareUtil", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Ready! So now put the two apps next to each other and take a look at the results. ähnelt.
-        /// </summary>
-        internal static string infoCompareUtilDownloadMessage {
-            get {
-                return ResourceManager.GetString("infoCompareUtilDownloadMessage", resourceCulture);
             }
         }
         
@@ -817,11 +799,20 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die * for System ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die *for System ähnelt.
         /// </summary>
         internal static string lblSubHeader {
             get {
                 return ResourceManager.GetString("lblSubHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Threads ähnelt.
+        /// </summary>
+        internal static string lblThreads {
+            get {
+                return ResourceManager.GetString("lblThreads", resourceCulture);
             }
         }
         

@@ -104,18 +104,16 @@ namespace ReadySunValley
             this.menuBypassUndo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuTestingRelease = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlRight = new System.Windows.Forms.Panel();
+            this.pbReady = new System.Windows.Forms.PictureBox();
             this.lnkMSRequirements = new System.Windows.Forms.LinkLabel();
             this.btnPnlShareScreen = new System.Windows.Forms.Button();
             this.assetOpenGitHub = new System.Windows.Forms.PictureBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblSumBad = new System.Windows.Forms.Label();
             this.lnkCompatibilityFix = new System.Windows.Forms.LinkLabel();
-            this.pBar = new System.Windows.Forms.ProgressBar();
             this.pnlMiddle = new System.Windows.Forms.Panel();
             this.checkReport = new System.Windows.Forms.CheckBox();
-            this.btnCompareUtil = new System.Windows.Forms.Button();
             this.btnShareScreen = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
             this.lnkSubHeader = new System.Windows.Forms.LinkLabel();
@@ -156,6 +154,7 @@ namespace ReadySunValley
             ((System.ComponentModel.ISupportInitialize)(this.pbCompare)).BeginInit();
             this.mainMenu.SuspendLayout();
             this.pnlRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReady)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetOpenGitHub)).BeginInit();
             this.pnlMiddle.SuspendLayout();
             this.SuspendLayout();
@@ -663,17 +662,16 @@ namespace ReadySunValley
             this.menuVote,
             this.menuBypassUndo,
             this.toolStripSeparator1,
-            this.menuInfo,
-            this.menuTestingRelease});
+            this.menuInfo,});
             this.mainMenu.Name = "MainMenu";
             this.mainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             // 
             // menuVoteContent
             // 
-            this.menuVoteContent.BackColor = System.Drawing.Color.Khaki;
+            this.menuVoteContent.BackColor = System.Drawing.Color.Magenta;
             this.menuVoteContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.menuVoteContent, "menuVoteContent");
-            this.menuVoteContent.ForeColor = System.Drawing.Color.DeepPink;
+            this.menuVoteContent.ForeColor = System.Drawing.Color.White;
             this.menuVoteContent.Margin = new System.Windows.Forms.Padding(3);
             this.menuVoteContent.Name = "menuVoteContent";
             this.menuVoteContent.Padding = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -681,14 +679,14 @@ namespace ReadySunValley
             // 
             // menuVote
             // 
-            this.menuVote.Name = "menuVote";
             resources.ApplyResources(this.menuVote, "menuVote");
+            this.menuVote.Name = "menuVote";
             this.menuVote.Click += new System.EventHandler(this.menuVote_Click);
             // 
             // menuBypassUndo
             // 
-            this.menuBypassUndo.Name = "menuBypassUndo";
             resources.ApplyResources(this.menuBypassUndo, "menuBypassUndo");
+            this.menuBypassUndo.Name = "menuBypassUndo";
             this.menuBypassUndo.Click += new System.EventHandler(this.menuBypassUndo_Click);
             // 
             // toolStripSeparator1
@@ -702,17 +700,12 @@ namespace ReadySunValley
             this.menuInfo.Name = "menuInfo";
             this.menuInfo.Click += new System.EventHandler(this.menuInfo_Click);
             // 
-            // menuTestingRelease
-            // 
-            resources.ApplyResources(this.menuTestingRelease, "menuTestingRelease");
-            this.menuTestingRelease.Name = "menuTestingRelease";
-            this.menuTestingRelease.Click += new System.EventHandler(this.menuTestingRelease_Click);
-            // 
             // pnlRight
             // 
             resources.ApplyResources(this.pnlRight, "pnlRight");
             this.pnlRight.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlRight.Controls.Add(this.pbCompare);
+            this.pnlRight.Controls.Add(this.pbReady);
             this.pnlRight.Controls.Add(this.lnkMSRequirements);
             this.pnlRight.Controls.Add(this.btnPnlShareScreen);
             this.pnlRight.Controls.Add(this.assetOpenGitHub);
@@ -720,6 +713,12 @@ namespace ReadySunValley
             this.pnlRight.Controls.Add(this.lblSumBad);
             this.pnlRight.Controls.Add(this.lnkCompatibilityFix);
             this.pnlRight.Name = "pnlRight";
+            // 
+            // pbReady
+            // 
+            resources.ApplyResources(this.pbReady, "pbReady");
+            this.pbReady.Name = "pbReady";
+            this.pbReady.TabStop = false;
             // 
             // lnkMSRequirements
             // 
@@ -777,22 +776,12 @@ namespace ReadySunValley
             this.lnkCompatibilityFix.TabStop = true;
             this.lnkCompatibilityFix.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCompatibilityFix_LinkClicked);
             // 
-            // pBar
-            // 
-            resources.ApplyResources(this.pBar, "pBar");
-            this.pBar.MarqueeAnimationSpeed = 10;
-            this.pBar.Name = "pBar";
-            this.pBar.Step = 1;
-            this.pBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            // 
             // pnlMiddle
             // 
             resources.ApplyResources(this.pnlMiddle, "pnlMiddle");
             this.pnlMiddle.Controls.Add(this.checkReport);
-            this.pnlMiddle.Controls.Add(this.btnCompareUtil);
             this.pnlMiddle.Controls.Add(this.btnShareScreen);
             this.pnlMiddle.Controls.Add(this.checkCompareMS);
-            this.pnlMiddle.Controls.Add(this.pBar);
             this.pnlMiddle.Controls.Add(this.lblHeader);
             this.pnlMiddle.Controls.Add(this.lnkSubHeader);
             this.pnlMiddle.Name = "pnlMiddle";
@@ -807,16 +796,6 @@ namespace ReadySunValley
             this.checkReport.Name = "checkReport";
             this.checkReport.UseVisualStyleBackColor = false;
             this.checkReport.CheckedChanged += new System.EventHandler(this.checkReport_CheckedChanged);
-            // 
-            // btnCompareUtil
-            // 
-            resources.ApplyResources(this.btnCompareUtil, "btnCompareUtil");
-            this.btnCompareUtil.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnCompareUtil.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnCompareUtil.FlatAppearance.BorderSize = 0;
-            this.btnCompareUtil.Name = "btnCompareUtil";
-            this.btnCompareUtil.UseVisualStyleBackColor = false;
-            this.btnCompareUtil.Click += new System.EventHandler(this.btnCompareUtil_Click);
             // 
             // btnShareScreen
             // 
@@ -902,6 +881,7 @@ namespace ReadySunValley
             this.mainMenu.PerformLayout();
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReady)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetOpenGitHub)).EndInit();
             this.pnlMiddle.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -981,13 +961,11 @@ namespace ReadySunValley
         private System.Windows.Forms.Panel pnlRight;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblSumBad;
-        private System.Windows.Forms.ProgressBar pBar;
         private System.Windows.Forms.Panel pnlMiddle;
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.LinkLabel lnkSubHeader;
         private System.Windows.Forms.LinkLabel lnkCompatibilityFix;
         private System.Windows.Forms.Button btnShareScreen;
-        private System.Windows.Forms.Button btnCompareUtil;
         private System.Windows.Forms.Label lblMhz;
         private System.Windows.Forms.Label lblCores;
         private System.Windows.Forms.Button btnRecheck;
@@ -996,9 +974,9 @@ namespace ReadySunValley
         private System.Windows.Forms.LinkLabel lnkMSRequirements;
         private System.Windows.Forms.ToolTip tt;
         private System.Windows.Forms.LinkLabel lnkDiskTypeCheck;
-        private System.Windows.Forms.ToolStripMenuItem menuTestingRelease;
         private System.Windows.Forms.CheckBox checkReport;
         private System.Windows.Forms.RichTextBox richSumming;
+        private System.Windows.Forms.PictureBox pbReady;
     }
 }
 

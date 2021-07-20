@@ -225,10 +225,6 @@
     <value>Bereit%20für%20%23Windows11/Sun%20Valley%20update?%20Hier%20ist%20mein%20Kompatibilitätsbericht%20%23ReadySunValley%20%23app</value>
     <comment>GUI</comment>
   </data>
-  <data name="btnCompareUtil" xml:space="preserve">
-    <value>Zweite Meinung einholen</value>
-    <comment>GUI</comment>
-  </data>
   <data name="btnPnlShareScreen" xml:space="preserve">
     <value>Aufnehmen und auf Twitter teilen</value>
     <comment>GUI</comment>
@@ -258,7 +254,7 @@
     <comment>Description</comment>
   </data>
   <data name="descCPUBad" xml:space="preserve">
-    <value>Deine CPU erfüllt nicht die Spezifikationsanforderungen. Weitere Informationen zu deiner CPU erhältst du im linken Ergebnisfenster</value>
+    <value>Deine CPU erfüllt nicht die Spezifikationsanforderungen.\n\nDu findest eine Liste der unterstüzten Prozessoren hier\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
     <comment>Description</comment>
   </data>
   <data name="descCPUCoresBad" xml:space="preserve">
@@ -266,7 +262,7 @@
     <comment>Description</comment>
   </data>
   <data name="descCPUInfo" xml:space="preserve">
-    <value>Deine CPU erfüllt die Mindestanforderungen, sie ist nur nicht in der offiziellen Liste der unterstützten Prozessoren aufgeführt. Dies ist nur eine Information für dich. Die Anforderung ist aber erstmal erfüllt.\n\nDu findest eine Liste der untersützten Prozessoren hier\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
+    <value>Deine CPU erfüllt die Mindestanforderungen, sie ist nur nicht in der offiziellen Liste der unterstützten Prozessoren aufgeführt. Dies ist nur eine Information für dich. Die Anforderung ist aber erstmal erfüllt.\n\nDu findest eine Liste der unterstüzten Prozessoren hier\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
     <comment>Description</comment>
   </data>
   <data name="descCPUSpeedBad" xml:space="preserve">
@@ -286,7 +282,7 @@
     <comment>Description</comment>
   </data>
   <data name="descInetBad" xml:space="preserve">
-    <value>Windows 11 Home Edition erfordert eine Internetverbindung und ein Microsoft-Konto, um die Einrichtung des Geräts bei der ersten Verwendung abzuschließen. Das Umschalten eines Geräts aus Windows 11 Home in den S-Modus erfordert ebenfalls eine Internetverbindung.</value>
+    <value>Wir sind nicht in der Lage, uns mit dem Internet zu verbinden. Windows 11 Home Edition erfordert eine Internetverbindung und ein Microsoft-Konto, um die Einrichtung des Geräts bei der ersten Verwendung abzuschließen. Das Umschalten eines Geräts aus Windows 11 Home in den S-Modus erfordert ebenfalls eine Internetverbindung.</value>
     <comment>Description</comment>
   </data>
   <data name="descPartitionBad" xml:space="preserve">
@@ -337,10 +333,6 @@
   </data>
   <data name="infoCompareUtil" xml:space="preserve">
     <value>Möchtest du die Ergebnisse mit dem Tool "WhyNotWin11" vergleichen?</value>
-    <comment>GUI</comment>
-  </data>
-  <data name="infoCompareUtilDownloadMessage" xml:space="preserve">
-    <value>Bereit! Lege nun die beiden Apps nebeneinander und schaue dir die Ergebnisse an.</value>
     <comment>GUI</comment>
   </data>
   <data name="infoUpdate" xml:space="preserve">
@@ -452,8 +444,12 @@
     <comment>Check</comment>
   </data>
   <data name="lblSubHeader" xml:space="preserve">
-    <value>* für das System</value>
+    <value>*für das System</value>
     <comment>GUI</comment>
+  </data>
+  <data name="lblThreads" xml:space="preserve">
+    <value>Threads</value>
+    <comment>Check</comment>
   </data>
   <data name="lblTPM" xml:space="preserve">
     <value>TPM</value>

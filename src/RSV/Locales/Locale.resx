@@ -225,10 +225,6 @@
     <value>Ready%20for%20%23Windows11/Sun%20Valley%20update?%20Here%20are%20my%20results%20%23ReadySunValley%20%23app</value>
     <comment>GUI</comment>
   </data>
-  <data name="btnCompareUtil" xml:space="preserve">
-    <value>Get a second opinion</value>
-    <comment>GUI</comment>
-  </data>
   <data name="btnPnlShareScreen" xml:space="preserve">
     <value>Capture and Share on Twitter</value>
     <comment>GUI</comment>
@@ -258,7 +254,7 @@
     <comment>Description</comment>
   </data>
   <data name="descCPUBad" xml:space="preserve">
-    <value>Your CPU doesn't meet the specification requirements, see individual info about frequency or cores below.</value>
+    <value>Your CPU doesn't meet the specification requirements.\n\nYou can find a list of supported processors here\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
     <comment>Description</comment>
   </data>
   <data name="descCPUCoresBad" xml:space="preserve">
@@ -286,7 +282,7 @@
     <comment>Description</comment>
   </data>
   <data name="descInetBad" xml:space="preserve">
-    <value>Windows 11 Home edition requires internet connectivity and a Microsoft account to complete device setup on first use. Switching a device out of Windows 11 Home in S mode also requires internet connectivity.</value>
+    <value>We weren't able to connect to the internet. Windows 11 Home edition requires internet connectivity and a Microsoft account to complete device setup on first use. Switching a device out of Windows 11 Home in S mode also requires internet connectivity.</value>
     <comment>Description</comment>
   </data>
   <data name="descPartitionBad" xml:space="preserve">
@@ -337,10 +333,6 @@
   </data>
   <data name="infoCompareUtil" xml:space="preserve">
     <value>Do you want to compare the results with the Utility "WhyNotWin11"?</value>
-    <comment>GUI</comment>
-  </data>
-  <data name="infoCompareUtilDownloadMessage" xml:space="preserve">
-    <value>Ready! So now put the two apps next to each other and take a look at the results.</value>
     <comment>GUI</comment>
   </data>
   <data name="infoUpdate" xml:space="preserve">
@@ -452,8 +444,12 @@
     <comment>Check</comment>
   </data>
   <data name="lblSubHeader" xml:space="preserve">
-    <value>* for System</value>
+    <value>*for System</value>
     <comment>GUI</comment>
+  </data>
+  <data name="lblThreads" xml:space="preserve">
+    <value>Threads</value>
+    <comment>Check</comment>
   </data>
   <data name="lblTPM" xml:space="preserve">
     <value>TPM</value>

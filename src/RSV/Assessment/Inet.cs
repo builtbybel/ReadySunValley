@@ -1,13 +1,24 @@
-﻿namespace ReadySunValley.Assessment
+﻿using System.Net;
+
+namespace ReadySunValley.Assessment
 {
     public class Inet
     {
-        [System.Runtime.InteropServices.DllImport("wininet.dll")]
-        private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
-
-        public bool isINet()
+        //Check Internet Connection Function
+        public bool IsInet()
         {
-            return InternetGetConnectedState(out _, 0);
+            try
+            {
+                using (var CheckInternet = new WebClient())
+                using (CheckInternet.OpenRead("http://clients3.google.com/generate_204"))
+                {
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
