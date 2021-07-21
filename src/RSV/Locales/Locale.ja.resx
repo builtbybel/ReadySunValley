@@ -339,10 +339,6 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <value>結果を"WhyNotWin11"ユーティリティと比較しますか?</value>
     <comment>GUI</comment>
   </data>
-  <data name="infoCompareUtilDownloadMessage" xml:space="preserve">
-    <value>できました。両アプリを並べて結果を見てみましょう。</value>
-    <comment>GUI</comment>
-  </data>
   <data name="infoUpdate" xml:space="preserve">
     <value>アプリの更新が利用可能</value>
     <comment>GUI</comment>
@@ -454,6 +450,10 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
   <data name="lblSubHeader" xml:space="preserve">
     <value>for System</value>
     <comment>GUI</comment>
+  </data>
+  <data name="lblThreads" xml:space="preserve">
+    <value>スレッド</value>
+    <comment>Check</comment>
   </data>
   <data name="lblTPM" xml:space="preserve">
     <value>TPM</value>
