@@ -1,16 +1,6 @@
 
 Changes in this release
 -----------------------
-- New application icon
-- This version has been technically adjusted to the app store version, which will be released soon. Some features have been removed (i.e. downloading test releases from ReadySunValley)
-- Improved storing application data (now under LocalAppDataDir\Packages\36220Builtbybel.ReadySunValley_<emPACKAGEID>\Settings)
-- Removed support for getting a second opinion with utility WhyNotWin11
-- Improved Inet connectivity check
-- Improved OS detection 
-- Added Russian localization
-- Added Ukrainian localization
-- Updated Japanese localization 
-- Fixed several localization bugs
-- UI Improvements
-
-Many thanks to the Software tester @Oleg-Chashko - https://github.com/Oleg-Chashko
+- ReadySunValley is now available in the Microsoft Store (Get it from here: https://www.microsoft.com/store/apps/9PLQZ0W4FLQS)
+- For securits reasons the does not longer starts with elevated privileges. You will be prompted to launch the application as administartor if hardware detections fail. This especially applies for the app store version, which must always be started with elevated rights.
+- Improved tpm, secure boot and parition detection
