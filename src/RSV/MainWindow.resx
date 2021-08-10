@@ -135,7 +135,7 @@
     <value>18, 247</value>
   </data>
   <data name="checkCompareMS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>332, 32</value>
+    <value>349, 32</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="checkCompareMS.TabIndex" type="System.Int32, mscorlib">
@@ -178,7 +178,7 @@
     <value>Vertical</value>
   </data>
   <data name="richSumming.Size" type="System.Drawing.Size, System.Drawing">
-    <value>385, 674</value>
+    <value>368, 674</value>
   </data>
   <data name="richSumming.TabIndex" type="System.Int32, mscorlib">
     <value>131</value>
@@ -247,7 +247,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnRecheck.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 0</value>
+    <value>346, 0</value>
   </data>
   <data name="btnRecheck.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -8509,7 +8509,7 @@
     <value>0, 0</value>
   </data>
   <data name="pnlLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>412, 746</value>
+    <value>395, 746</value>
   </data>
   <data name="pnlLeft.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -8598,17 +8598,8 @@
   <data name="menuInfo.Text" xml:space="preserve">
     <value>Info</value>
   </data>
-  <data name="menuTestingRelease.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 12.75pt, style=Bold</value>
-  </data>
-  <data name="menuTestingRelease.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 28</value>
-  </data>
-  <data name="menuTestingRelease.Text" xml:space="preserve">
-    <value>Download latest testing release</value>
-  </data>
   <data name="mainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>401, 151</value>
+    <value>401, 123</value>
   </data>
   <data name="&gt;&gt;mainMenu.Name" xml:space="preserve">
     <value>mainMenu</value>
@@ -8961,7 +8952,7 @@
     <value>18, 209</value>
   </data>
   <data name="checkReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>332, 32</value>
+    <value>349, 32</value>
   </data>
   <data name="checkReport.TabIndex" type="System.Int32, mscorlib">
     <value>130</value>
@@ -9003,7 +8994,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="btnShareScreen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>332, 32</value>
+    <value>349, 32</value>
   </data>
   <data name="btnShareScreen.TabIndex" type="System.Int32, mscorlib">
     <value>129</value>
@@ -9036,7 +9027,7 @@
     <value>12, 21</value>
   </data>
   <data name="lblHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 32</value>
+    <value>363, 32</value>
   </data>
   <data name="lblHeader.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -9070,7 +9061,7 @@
     <value>13, 68</value>
   </data>
   <data name="lnkSubHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 18</value>
+    <value>362, 18</value>
   </data>
   <data name="lnkSubHeader.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -9094,10 +9085,10 @@
     <value>Top</value>
   </data>
   <data name="pnlMiddle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 0</value>
+    <value>395, 0</value>
   </data>
   <data name="pnlMiddle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 746</value>
+    <value>381, 746</value>
   </data>
   <data name="pnlMiddle.TabIndex" type="System.Int32, mscorlib">
     <value>129</value>
@@ -9169,12 +9160,6 @@
     <value>menuInfo</value>
   </data>
   <data name="&gt;&gt;menuInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuTestingRelease.Name" xml:space="preserve">
-    <value>menuTestingRelease</value>
-  </data>
-  <data name="&gt;&gt;menuTestingRelease.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tt.Name" xml:space="preserve">

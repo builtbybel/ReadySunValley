@@ -335,6 +335,9 @@
     <value>Do you want to compare the results with the Utility "WhyNotWin11"?</value>
     <comment>GUI</comment>
   </data>
+  <data name="infoElevation" xml:space="preserve">
+    <value>Elevated rights are required for TPM and Secure Boot detection.\n\nPlease run the app as administrator.</value>
+  </data>
   <data name="infoUpdate" xml:space="preserve">
     <value>App update available</value>
     <comment>GUI</comment>

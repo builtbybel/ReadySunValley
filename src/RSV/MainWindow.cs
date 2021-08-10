@@ -15,6 +15,7 @@ namespace ReadySunValley
 {
     public partial class MainWindow : Form
     {
+
         // Using same apps settings storage root as for the App Store version
         // The name of <emPACKAGEID> is concatenated from the application package name and a signing certificate based postfix.
         public static string mAppDataDir = Environment.GetFolderPath
@@ -35,7 +36,7 @@ namespace ReadySunValley
             InitializeAppDataDir();
 
             // Uncomment lower line and add lang code to run localization test
-           // Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
+            // Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
 
             // GUI localization
             Globalization();
@@ -120,6 +121,11 @@ namespace ReadySunValley
         {
             // Run Assessments
             DoCompatibilityCheck();
+
+            // Check elevation
+            if (!Helpers.Utils.IsAdministrator())
+                MessageBox.Show(Locales.Locale.infoElevation.Replace("\\n", "\n"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
         }
 
         private void MainWindow_SizeChanged(object sender, EventArgs e)
@@ -308,7 +314,7 @@ namespace ReadySunValley
             lblStatus.Text = Locales.Locale.assessmentPartitionType;
             bool FoundGPT = false;
 
-            ManagementObjectSearcher partitions = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_DiskPartition");
+            ManagementObjectSearcher partitions = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_DiskPartition WHERE BootPartition=True");
             foreach (ManagementObject queryObj in partitions.Get())
             {
                 if (queryObj["Type"].ToString().Contains("GPT"))
@@ -437,16 +443,16 @@ namespace ReadySunValley
 
             if (IntPtr.Size == 4 && Environment.Is64BitOperatingSystem) // 4 bytes for 32bit and 8 bytes for 64bit
             {
-                psi.FileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "sysnative\\dxdiag");
+                psi.FileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "sysnative\\dxdiag");
             }
-            else psi.FileName = System.IO.Path.Combine(Environment.SystemDirectory, "dxdiag");  // Native version
+            else psi.FileName = Path.Combine(Environment.SystemDirectory, "dxdiag");  // Native version
 
             try
             {
                 string directxver;
                 string wddmver;
                 string check;
-                string dxpath = mAppDataDir + "rsv.txt"; ;
+                string dxpath = mAppDataDir + "dxv.txt"; ;
 
                 psi.Arguments = "/dontskip /t " + dxpath; // Don't bypass any diagnostics due to previous crashes in dxdiag
                 using (var prc = Process.Start(psi))
@@ -519,31 +525,54 @@ namespace ReadySunValley
             lblStatus.Text = Locales.Locale.assessmentGPU;
             lblWDDMCheck.Text += " (" + gpuInfo.Unit() + ")";
 
-            // TPM, Ref. https://wutils.com/wmi/root/cimv2/security/microsofttpm/win32_tpm/cs-samples.html
+            // TPM, Ref. https://www.prajwaldesai.com/check-tpm-status-command-line/
             lblStatus.Text = Locales.Locale.assessmentTPM;
-            try
+
+            Version tpmver = null;
+            bool tpmEnabled = false;
+
+            var proc = new Process
             {
-                ManagementScope scope = new ManagementScope("\\\\.\\ROOT\\CIMV2\\Security\\MicrosoftTpm");
-                ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Tpm");
-                ManagementObjectSearcher searcher =
-                                        new ManagementObjectSearcher(scope, query);
-                ManagementObjectCollection queryCollection = searcher.Get();
-                foreach (ManagementObject m in queryCollection)
+                StartInfo = new ProcessStartInfo
                 {
-                    string tpmver = m["SpecVersion"].ToString();
-                    string[] splitted = tpmver.Split(',');
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    FileName = @"C:\Windows\System32\Wbem\wmic.exe",
+                    Arguments = @"/namespace:\\root\CIMV2\Security\MicrosoftTpm path Win32_Tpm get /value",
+                    CreateNoWindow = true,
+                    WindowStyle = ProcessWindowStyle.Hidden,
+                    Verb = "runas"
+                }
+            };
 
-                    if (splitted[0].Contains("2.0"))
+            proc.Start();
+            string file = proc.StandardOutput.ReadToEnd();
+            proc.WaitForExit();
+
+            using (StreamWriter c = new StreamWriter(mAppDataDir + @"tpm.txt")) { c.Write(file); }
+
+            using (StreamReader sr = File.OpenText(mAppDataDir + @"tpm.txt"))
+            {
+                string[] splitted = File.ReadAllLines(mAppDataDir + @"tpm.txt");
+                sr.Close();
+
+                foreach (string m in splitted)
+                {
+                    if (m == "IsEnabled_InitialValue=TRUE")
                     {
-                        lblTPMCheck.Text = splitted[0];
-
-                        tpmgood.Visible = true;
-                        tpmbad.Visible = false;
-                        tpminfo.Visible = false;
+                        tpmEnabled = true;
                     }
-                    if (splitted[0].Contains("1.2"))
+                    else if (m.Contains("SpecVersion="))
                     {
-                        lblTPMCheck.Text = splitted[0] + " " + Locales.Locale.assessmentTPMLow;
+                        tpmver = new Version(m.Replace("SpecVersion=", string.Empty).Split(',')[0].TrimStart().TrimEnd());
+                    }
+                }
+
+                if (tpmEnabled)
+                {
+                    if (tpmver < new Version("2.0"))
+                    {
+                        lblTPMCheck.Text = "Version " + tpmver + " " + Locales.Locale.assessmentTPMLow;
 
                         tpmgood.Visible = false;
                         tpmbad.Visible = false;
@@ -552,8 +581,16 @@ namespace ReadySunValley
                         performCompatibilityCount += 1;
                         AddSumming(Locales.Locale.descTPMInfo);
                     }
+                    else
+                    {
+                        lblTPMCheck.Text = "Version " + tpmver;
+
+                        tpmgood.Visible = true;
+                        tpmbad.Visible = false;
+                        tpminfo.Visible = false;
+                    }
                 }
-                if (lblTPMCheck.Text == Locales.Locale.assessmentTPMFail)
+                else
                 {
                     tpmbad.Visible = true;
                     tpmgood.Visible = false;
@@ -563,7 +600,6 @@ namespace ReadySunValley
                     AddSumming(Locales.Locale.descTPMBad);
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
 
             // Inet
             lblStatus.Text = Locales.Locale.assessmentInet;

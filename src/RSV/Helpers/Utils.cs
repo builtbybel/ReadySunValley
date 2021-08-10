@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Security.Principal;
 using System.Windows.Forms;
 
 namespace ReadySunValley.Helpers
@@ -60,6 +61,13 @@ namespace ReadySunValley.Helpers
             int place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
             double num = Math.Round(bytes / Math.Pow(1024, place), 1);
             return (Math.Sign(byteCount) * num).ToString() + suf[place];
+        }
+
+        // Check elevation
+        public static bool IsAdministrator()
+        {
+            return (new WindowsPrincipal(WindowsIdentity.GetCurrent()))
+                      .IsInRole(WindowsBuiltInRole.Administrator);
         }
 
         /// <summary>

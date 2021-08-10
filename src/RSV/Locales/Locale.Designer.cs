@@ -556,6 +556,15 @@ namespace ReadySunValley.Locales {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Elevated rights are required for TPM and Secure Boot detection.\n\nPlease run the app as administrator. ähnelt.
+        /// </summary>
+        internal static string infoElevation {
+            get {
+                return ResourceManager.GetString("infoElevation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die App update available ähnelt.
         /// </summary>
         internal static string infoUpdate {

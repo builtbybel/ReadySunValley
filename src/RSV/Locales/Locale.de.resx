@@ -335,6 +335,9 @@
     <value>Möchtest du die Ergebnisse mit dem Tool "WhyNotWin11" vergleichen?</value>
     <comment>GUI</comment>
   </data>
+  <data name="infoElevation" xml:space="preserve">
+    <value>Es sind erhöhte Rechte sind für die Erkennung von TPM und Secure Boot erforderlich.\n\nBitte führe die App als Administrator aus.</value>
+  </data>
   <data name="infoUpdate" xml:space="preserve">
     <value>App-Aktualisierung verfügbar</value>
     <comment>GUI</comment>

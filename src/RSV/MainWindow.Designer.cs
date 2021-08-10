@@ -662,7 +662,7 @@ namespace ReadySunValley
             this.menuVote,
             this.menuBypassUndo,
             this.toolStripSeparator1,
-            this.menuInfo,});
+            this.menuInfo});
             this.mainMenu.Name = "MainMenu";
             this.mainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             // 
