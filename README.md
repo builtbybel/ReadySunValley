@@ -47,8 +47,9 @@ To determine if your current PC will be able to run Windows 11, you can check ou
 - Grabbing a screenshot to directly share your results on social media!
 
 ## Download
-- (Latest release) [Download](https://github.com/builtbybel/ReadySunValley/releases)
-- (Latest testing release) [Download](https://github.com/builtbybel/ReadySunValley/issues/20)
+- (Get it from Microsoft Store) https://www.microsoft.com/store/apps/9PLQZ0W4FLQS
+- (Latest release on GitHub) [Download](https://github.com/builtbybel/ReadySunValley/releases)
+- (Latest testing release on GitHub) [Download](https://github.com/builtbybel/ReadySunValley/issues/20)
 
 ## Credits
 This project is based upon the idea of https://github.com/mag-nif-i-cent/Affinity11
