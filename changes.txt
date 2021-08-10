@@ -3,4 +3,4 @@ Changes in this release
 -----------------------
 - ReadySunValley is now available in the Microsoft Store (Get it from here: https://www.microsoft.com/store/apps/9PLQZ0W4FLQS)
 - For securits reasons the does not longer starts with elevated privileges. You will be prompted to launch the application as administartor if hardware detections fail. This especially applies for the app store version, which must always be started with elevated rights.
-- Improved tpm, secure boot and parition detection
+- Improved tpm, secure boot and partition detection
