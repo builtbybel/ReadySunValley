@@ -339,6 +339,9 @@ Windows 11 HomeのSモードを解除する場合もインターネット接続�
     <value>結果を"WhyNotWin11"ユーティリティと比較しますか?</value>
     <comment>GUI</comment>
   </data>
+  <data name="infoElevation" xml:space="preserve">
+    <value>TPMとセキュアブートの検出には権限昇格が必要です。\n\n本アプリを管理者権限で実行してください。</value>
+  </data>
   <data name="infoUpdate" xml:space="preserve">
     <value>アプリの更新が利用可能</value>
     <comment>GUI</comment>
