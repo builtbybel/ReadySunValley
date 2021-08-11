@@ -2,3 +2,7 @@
 Changes in this release
 -----------------------
 - If elevated privileges are required for hardware detection, the app now automatically reports this and prompts you to restart in administrative context
+
+INFO
+------
+The app store version will be rolled out a little later and updated automatically. You can ignore this update message.
