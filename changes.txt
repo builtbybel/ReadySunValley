@@ -1,4 +1,4 @@
 
 Changes in this release
 -----------------------
-- If elevated privileges are required for hardware detection, the app now automatically reports this and prompts you to restart in administrative context.
+- If elevated privileges are required for hardware detection, the app now automatically reports this and prompts you to restart in administrative context
