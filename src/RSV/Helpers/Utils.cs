@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Reflection;
 using System.Security.Principal;
 using System.Windows.Forms;
 
@@ -61,6 +62,32 @@ namespace ReadySunValley.Helpers
             int place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
             double num = Math.Round(bytes / Math.Pow(1024, place), 1);
             return (Math.Sign(byteCount) * num).ToString() + suf[place];
+        }
+
+        public static void RelaunchIfNotAdministrator()
+        {
+            if (!IsAdministrator())
+            {
+                if (MessageBox.Show(Locales.Locale.infoElevation.Replace("\\n", "\n"), "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    ProcessStartInfo proc = new ProcessStartInfo();
+                    proc.UseShellExecute = true;
+                    proc.WorkingDirectory = Environment.CurrentDirectory;
+                    proc.FileName = Assembly.GetEntryAssembly().CodeBase;
+                    proc.Verb = "runas";
+                    try
+                    {
+                        Process.Start(proc);
+                        Environment.Exit(0);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Environment.Exit(0);
+                    }
+                }
+            }
         }
 
         // Check elevation

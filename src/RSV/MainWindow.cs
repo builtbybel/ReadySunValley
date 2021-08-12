@@ -15,7 +15,6 @@ namespace ReadySunValley
 {
     public partial class MainWindow : Form
     {
-
         // Using same apps settings storage root as for the App Store version
         // The name of <emPACKAGEID> is concatenated from the application package name and a signing certificate based postfix.
         public static string mAppDataDir = Environment.GetFolderPath
@@ -43,6 +42,15 @@ namespace ReadySunValley
 
             // User Interface
             UISelection();
+        }
+
+        private void MainWindow_Shown(object sender, EventArgs e)
+        {
+            // Run Assessments
+            DoCompatibilityCheck();
+
+            // Check elevation
+            Helpers.Utils.RelaunchIfNotAdministrator();
         }
 
         private void UISelection()
@@ -115,17 +123,6 @@ namespace ReadySunValley
                     Directory.CreateDirectory(mAppDataDir);
             }
             catch { }
-        }
-
-        private void MainWindow_Shown(object sender, EventArgs e)
-        {
-            // Run Assessments
-            DoCompatibilityCheck();
-
-            // Check elevation
-            if (!Helpers.Utils.IsAdministrator())
-                MessageBox.Show(Locales.Locale.infoElevation.Replace("\\n", "\n"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
         }
 
         private void MainWindow_SizeChanged(object sender, EventArgs e)

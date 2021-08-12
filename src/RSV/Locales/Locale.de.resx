@@ -186,7 +186,7 @@
     <comment>Assessment</comment>
   </data>
   <data name="assessmentSecureBootOK" xml:space="preserve">
-    <value>Unterstüzt</value>
+    <value>Unterstützt</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentStorage" xml:space="preserve">
@@ -336,7 +336,7 @@
     <comment>GUI</comment>
   </data>
   <data name="infoElevation" xml:space="preserve">
-    <value>Es sind erhöhte Rechte sind für die Erkennung von TPM und Secure Boot erforderlich.\n\nBitte führe die App als Administrator aus.</value>
+    <value>Es sind erhöhte Rechte für die Erkennung von TPM und Secure Boot erforderlich.\n\nDarf ReadySunValley mit administrativen Rechten gestartet werden?</value>
   </data>
   <data name="infoUpdate" xml:space="preserve">
     <value>App-Aktualisierung verfügbar</value>
