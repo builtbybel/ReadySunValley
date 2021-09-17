@@ -139,7 +139,7 @@ https://github.com/mag-nif-i-cent/Affinity11 からフォークしています\n
     <comment>Assessment</comment>
   </data>
   <data name="assessmentCPUSpeedFormat" xml:space="preserve">
-    <value>MHz 周波数</value>
+    <value>MHz</value>
     <comment>Assessment</comment>
   </data>
   <data name="assessmentDirectXWDDM" xml:space="preserve">
@@ -257,7 +257,7 @@ Windows 11に非対応です</value>
     <comment>Description</comment>
   </data>
   <data name="descCPUBad" xml:space="preserve">
-    <value>お使いのCPUは仕様上の要件を満たしません。下記の周波数またはコア数に関する個別の情報を参照ください。</value>
+    <value>お使いのCPUは仕様上の要件を満たしません。\n\n対応CPU一覧は以下にあります。\n\nIntel:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-intel-processors\n\nAMD:\nhttps://docs.microsoft.com/en-us/windows-hardware/design/minimum/supported/windows-11-supported-amd-processors</value>
     <comment>Description</comment>
   </data>
   <data name="descCPUCoresBad" xml:space="preserve">
