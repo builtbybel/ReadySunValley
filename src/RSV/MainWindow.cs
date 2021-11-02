@@ -643,6 +643,11 @@ namespace ReadySunValley
                 lblSumBad.ForeColor = Color.DeepPink;
             }
 
+            // Some advertising for ThisIsWin11 @https://github.com/builtbybel/ThisIsWin11
+            AddSumming("--------------------------------" + Environment.NewLine +
+                     "Don't forget to give ThisIsWin11 a try after your upgrade to Windows 11.\n" +
+                     "ThisIsWin11 guides you step by step in getting to know and setting up Windows 11.\n\n" +
+                     "Get it from here: https://github.com/builtbybel/ThisIsWin11");
             this.Enabled = true;
         }
 
