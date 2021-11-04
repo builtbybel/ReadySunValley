@@ -14,11 +14,12 @@
                     break;
 
                 case System.Reflection.ProcessorArchitecture.Amd64:
+                    
                     result = "64 Bit";
-
                     break;
 
                 case System.Reflection.ProcessorArchitecture.Arm:
+                    
                     result = "ARM";
                     break;
             }
