@@ -52,7 +52,7 @@ To determine if your current PC will be able to run Windows 11, you can check ou
 - (Latest testing release on GitHub) [Download](https://github.com/builtbybel/ReadySunValley/issues/20)
 
 ## Credits
-This project is based upon the idea of https://github.com/mag-nif-i-cent/Affinity11
+This project is based upon the idea of https://github.com/lProtolMan/Affinity11
 
 ---
 
